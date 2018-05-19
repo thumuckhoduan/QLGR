@@ -1,0 +1,14 @@
+_ Cách ð?t tên SQL:
+tên b?ng:tal+tên b?ng(vi?t hoa ch? cái ð?u)
+tên thu?c tính: vi?t thý?ng
+_ Cách Ð?t tên item:vi?t hoa ch? cái ð?u +(BUS,DAL,DTO)
+_ Cách Ð?t tên form:frm+tên vi?t thý?ng
+_ Cách Ð?t tên DTO: vi?t t?t ki?u d? li?u + tên thý?ng
+_ Cách ð?t tên hàm BUS + DAL: vi?t thý?ng
+_ Cách ð?t tên toolbox:vi?t t?t + vi?t hoa ch? cái ð?u
++ Textbox:tb
++ combobox:cb
++ datetimepicker:dtp
++ button: bt
++ datagridview:dgv
+_ Cách g?i class: vi?t thý?ng +(BUS,DAL,DTO)
