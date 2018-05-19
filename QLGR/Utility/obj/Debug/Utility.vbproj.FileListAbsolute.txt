@@ -1,0 +1,151 @@
+D:\QLHS - O3\Utility\bin\Debug\Utility.dll
+D:\QLHS - O3\Utility\bin\Debug\Utility.pdb
+D:\QLHS - O3\Utility\bin\Debug\Utility.xml
+D:\QLHS - O3\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+D:\QLHS - O3\Utility\obj\Debug\Utility.Resources.resources
+D:\QLHS - O3\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\QLHS - O3\Utility\obj\Debug\Utility.dll
+D:\QLHS - O3\Utility\obj\Debug\Utility.xml
+D:\QLHS - O3\Utility\obj\Debug\Utility.pdb
+F:\QLHS - O3\Utility\bin\Debug\Utility.dll
+F:\QLHS - O3\Utility\bin\Debug\Utility.pdb
+F:\QLHS - O3\Utility\bin\Debug\Utility.xml
+F:\QLHS - O3\Utility\obj\Debug\Utility.Resources.resources
+F:\QLHS - O3\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+F:\QLHS - O3\Utility\obj\Debug\Utility.dll
+F:\QLHS - O3\Utility\obj\Debug\Utility.xml
+F:\QLHS - O3\Utility\obj\Debug\Utility.pdb
+D:\HoanNg\HOANNG\QLHS - O3\Utility\bin\Debug\Utility.dll
+D:\HoanNg\HOANNG\QLHS - O3\Utility\bin\Debug\Utility.pdb
+D:\HoanNg\HOANNG\QLHS - O3\Utility\bin\Debug\Utility.xml
+D:\HoanNg\HOANNG\QLHS - O3\Utility\obj\Debug\Utility.Resources.resources
+D:\HoanNg\HOANNG\QLHS - O3\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\HoanNg\HOANNG\QLHS - O3\Utility\obj\Debug\Utility.dll
+D:\HoanNg\HOANNG\QLHS - O3\Utility\obj\Debug\Utility.xml
+D:\HoanNg\HOANNG\QLHS - O3\Utility\obj\Debug\Utility.pdb
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\bin\Debug\Utility.dll
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\bin\Debug\Utility.pdb
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\bin\Debug\Utility.xml
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\obj\Debug\Utility.Resources.resources
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\obj\Debug\Utility.dll
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\obj\Debug\Utility.xml
+D:\HoanNg\HOANNG\QLHS - O3 - Fail\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\bin\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\bin\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\bin\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.Resources.resources
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 5.0\QLHS - O5\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\bin\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\bin\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\bin\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.Resources.resources
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 6.0\QLHS - O5\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\bin\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\bin\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\bin\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.Resources.resources
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 7.0\QLHS - O5\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+D:\Project QLHS - 3 Layers 8.0\Utility\bin\Debug\Utility.dll
+D:\Project QLHS - 3 Layers 8.0\Utility\bin\Debug\Utility.pdb
+D:\Project QLHS - 3 Layers 8.0\Utility\bin\Debug\Utility.xml
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.Resources.resources
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.dll
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.xml
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.pdb
+D:\Project QLHS - 3 Layers 8.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\bin\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\bin\Debug\Utility.pdb
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\bin\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 13.0\Utility\obj\Debug\Utility.pdb
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.pdb
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 18.0\Utility\bin\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.Resources.resources
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 18.0\Utility\obj\Debug\Utility.pdb
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.pdb
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.dll
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.xml
+C:\Users\Administrator\Desktop\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.pdb
+E:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.Resources.resources
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.dll
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.xml
+E:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.pdb
+D:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.dll
+D:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.pdb
+D:\Project QLHS - 3 Layers 21.0\Utility\bin\Debug\Utility.xml
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.Resources.resources
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.dll
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.xml
+D:\Project QLHS - 3 Layers 21.0\Utility\obj\Debug\Utility.pdb
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.dll
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.pdb
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.xml
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.Resources.resources
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.dll
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.xml
+D:\HoanNg\HOANNG\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.pdb
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.dll
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.pdb
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\bin\Debug\Utility.xml
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.vbproj.GenerateResource.cache
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.dll
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.xml
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.pdb
+C:\Users\DELL\Downloads\Project QLHS - 3 Layers 22.0\Utility\obj\Debug\Utility.vbprojAssemblyReference.cache
+C:\Users\DELL\source\repos\QLGR\Utility\bin\Debug\Utility.dll
+C:\Users\DELL\source\repos\QLGR\Utility\bin\Debug\Utility.pdb
+C:\Users\DELL\source\repos\QLGR\Utility\bin\Debug\Utility.xml
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.vbprojAssemblyReference.cache
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.vbproj.GenerateResource.cache
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.dll
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.xml
+C:\Users\DELL\source\repos\QLGR\Utility\obj\Debug\Utility.pdb

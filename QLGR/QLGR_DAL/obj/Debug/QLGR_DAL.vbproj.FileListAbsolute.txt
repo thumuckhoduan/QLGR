@@ -1,0 +1,17 @@
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DAL.dll
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DAL.pdb
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DAL.xml
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DTO.dll
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\Utility.dll
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DTO.pdb
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\QLGR_DTO.xml
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\Utility.pdb
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\bin\Debug\Utility.xml
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.vbprojAssemblyReference.cache
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.Resources.resources
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.vbproj.GenerateResource.cache
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.vbproj.CoreCompileInputs.cache
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.vbproj.CopyComplete
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.dll
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.xml
+c:\Users\DELL\source\repos\QLGR\QLGR_DAL\obj\Debug\QLGR_DAL.pdb
