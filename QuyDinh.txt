@@ -1,14 +1,17 @@
-_ Cách ð?t tên SQL:
-tên b?ng:tal+tên b?ng(vi?t hoa ch? cái ð?u)
-tên thu?c tính: vi?t thý?ng
-_ Cách Ð?t tên item:vi?t hoa ch? cái ð?u +(BUS,DAL,DTO)
-_ Cách Ð?t tên form:frm+tên vi?t thý?ng
-_ Cách Ð?t tên DTO: vi?t t?t ki?u d? li?u + tên thý?ng
-_ Cách ð?t tên hàm BUS + DAL: vi?t thý?ng
-_ Cách ð?t tên toolbox:vi?t t?t + vi?t hoa ch? cái ð?u
+_ Cách ðat tên SQL:
+tên bang:tbl+tên bang(viet hoa chu cái ðau)
+tên thuoc tính: viet thýong
+_ Cách Ðat tên item:viet hoa chu cái ðau +(BUS,DAL,DTO)
+_ Cách Ðat tên form:frm+tên viet thýong
+_ Cách Ðat tên DTO: viet tat kieu du lieu + tên thýong
++interger:i
++string:str
++date:dtp
+_ Cách ðat tên hàm BUS + DAL: viet thýong
+_ Cách ðat tên toolbox:viet tat + viet hoa chu cái ðau
 + Textbox:tb
 + combobox:cb
 + datetimepicker:dtp
 + button: bt
 + datagridview:dgv
-_ Cách g?i class: vi?t thý?ng +(BUS,DAL,DTO)
+_ Cách goi class: viet thýong +(BUS,DAL,DTO)
