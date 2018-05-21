@@ -28,7 +28,7 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub loadListXe()
-        ' Load LoaiHocSinh list
+        ' Load LoaiXe list
         Dim listXe = New List(Of XeDTO)
         Dim result As Result
         result = xeBUS.selectAll(listXe)
@@ -63,23 +63,13 @@ Public Class frmQuanLyXe
         clBienSo.DataPropertyName = "bienso"
         dgvQuanLyXe.Columns.Add(clBienSo)
 
-        Dim clChuXe = New DataGridViewTextBoxColumn()
-        clChuXe.Name = "chuxe"
-        clChuXe.HeaderText = "Chủ Xe"
-        clChuXe.DataPropertyName = "chuxe"
-        dgvQuanLyXe.Columns.Add(clChuXe)
+        Dim clMaChuXe = New DataGridViewTextBoxColumn()
+        clMaChuXe.Name = "machuxe"
+        clMaChuXe.HeaderText = "Mã Chủ Xe"
+        clMaChuXe.DataPropertyName = "machuxe"
+        dgvQuanLyXe.Columns.Add(clMaChuXe)
 
-        Dim clDiaChi = New DataGridViewTextBoxColumn()
-        clDiaChi.Name = "diachi"
-        clDiaChi.HeaderText = "Địa Chỉ"
-        clDiaChi.DataPropertyName = "diachi"
-        dgvQuanLyXe.Columns.Add(clDiaChi)
 
-        Dim clDienThoai = New DataGridViewTextBoxColumn()
-        clDienThoai.Name = "dienthoai"
-        clDienThoai.HeaderText = "Điện Thoại"
-        clDienThoai.DataPropertyName = "dienthoai"
-        dgvQuanLyXe.Columns.Add(clDienThoai)
 
         Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvQuanLyXe.DataSource)
         myCurrencyManager.Refresh()
@@ -98,11 +88,9 @@ Public Class frmQuanLyXe
 
                 '1. Mapping data from GUI control
                 xeDTO.maxe = Convert.ToInt32(txtMaXe.Text)
-                xeDTO.dienthoai = txtDienThoai.Text
-                xeDTO.chuxe = txtChuXe.Text
-                xeDTO.diachi = txtDiaChi.Text
                 xeDTO.bienso = txtBienSo.Text
                 xeDTO.mahieuxe = Convert.ToInt32(cbMaHieuXe.Text)
+                xeDTO.machuxe = txtMaChuXe.Text
 
 
 
@@ -120,9 +108,8 @@ Public Class frmQuanLyXe
                         txtMaXe.Text = xeDTO.maxe
                         cbMaHieuXe.Text = xeDTO.mahieuxe
                         txtBienSo.Text = xeDTO.bienso
-                        txtChuXe.Text = xeDTO.chuxe
-                        txtDiaChi.Text = xeDTO.diachi
-                        txtDienThoai.Text = xeDTO.dienthoai
+                        txtMaChuXe.Text = xeDTO.machuxe
+
 
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)
@@ -154,9 +141,8 @@ Public Class frmQuanLyXe
                 txtMaXe.Text = xeDTO.maxe
                 cbMaHieuXe.Text = xeDTO.mahieuxe
                 txtBienSo.Text = xeDTO.bienso
-                txtChuXe.Text = xeDTO.chuxe
-                txtDiaChi.Text = xeDTO.diachi
-                txtDienThoai.Text = xeDTO.dienthoai
+                txtMaChuXe.Text = xeDTO.machuxe
+
             Catch ex As Exception
                 Console.WriteLine(ex.StackTrace)
             End Try
@@ -198,9 +184,8 @@ Public Class frmQuanLyXe
                                     txtMaXe.Text = xeDTO.maxe
                                     cbMaHieuXe.Text = xeDTO.mahieuxe
                                     txtBienSo.Text = xeDTO.bienso
-                                    txtChuXe.Text = xeDTO.chuxe
-                                    txtDiaChi.Text = xeDTO.diachi
-                                    txtDienThoai.Text = xeDTO.dienthoai
+                                    txtMaChuXe.Text = xeDTO.machuxe
+
                                 Catch ex As Exception
                                     Console.WriteLine(ex.StackTrace)
                                 End Try
@@ -223,4 +208,6 @@ Public Class frmQuanLyXe
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
     End Sub
+
+
 End Class

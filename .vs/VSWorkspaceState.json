@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QLGR",
-    "\\QLGR\\QLGR_BUS",
-    "\\QLGR\\QLGR_DAL"
+    "\\QLGR"
   ],
-  "SelectedNode": "\\QLGR\\QLGR_DAL\\XeDAL.vb",
+  "SelectedNode": "\\QuyDinh.txt",
   "PreviewInSolutionExplorer": false
 }

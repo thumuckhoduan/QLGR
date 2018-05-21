@@ -28,7 +28,7 @@ Partial Class frmQuanLyXe
         Me.btnCapNhat = New System.Windows.Forms.Button()
         Me.txtMaXe = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtChuXe = New System.Windows.Forms.TextBox()
+        Me.txtMaChuXe = New System.Windows.Forms.TextBox()
         Me.txtBienSo = New System.Windows.Forms.TextBox()
         Me.txtDienThoai = New System.Windows.Forms.TextBox()
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
@@ -99,12 +99,12 @@ Partial Class frmQuanLyXe
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "Mã Xe"
         '
-        'txtChuXe
+        'txtMaChuXe
         '
-        Me.txtChuXe.Location = New System.Drawing.Point(348, 332)
-        Me.txtChuXe.Name = "txtChuXe"
-        Me.txtChuXe.Size = New System.Drawing.Size(184, 20)
-        Me.txtChuXe.TabIndex = 47
+        Me.txtMaChuXe.Location = New System.Drawing.Point(348, 332)
+        Me.txtMaChuXe.Name = "txtMaChuXe"
+        Me.txtMaChuXe.Size = New System.Drawing.Size(184, 20)
+        Me.txtMaChuXe.TabIndex = 47
         '
         'txtBienSo
         '
@@ -223,7 +223,7 @@ Partial Class frmQuanLyXe
         Me.Controls.Add(Me.cbHieuXe)
         Me.Controls.Add(Me.cbMaHieuXe)
         Me.Controls.Add(Me.txtHieuXe)
-        Me.Controls.Add(Me.txtChuXe)
+        Me.Controls.Add(Me.txtMaChuXe)
         Me.Controls.Add(Me.txtBienSo)
         Me.Controls.Add(Me.txtDienThoai)
         Me.Controls.Add(Me.txtDiaChi)
@@ -253,7 +253,7 @@ Partial Class frmQuanLyXe
     Friend WithEvents btnCapNhat As Button
     Friend WithEvents txtMaXe As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtChuXe As TextBox
+    Friend WithEvents txtMaChuXe As TextBox
     Friend WithEvents txtBienSo As TextBox
     Friend WithEvents txtDienThoai As TextBox
     Friend WithEvents txtDiaChi As TextBox

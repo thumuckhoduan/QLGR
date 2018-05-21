@@ -8,3 +8,13 @@ c:\Users\DELL\source\repos\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.CoreCompileIn
 c:\Users\DELL\source\repos\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
 c:\Users\DELL\source\repos\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
 c:\Users\DELL\source\repos\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.dll
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.pdb
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.xml
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.Resources.resources
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
+C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb

@@ -1,7 +1,7 @@
 ﻿Imports QLGR_BUS
 Imports QLGR_DTO
 Imports Utility
-Public Class QuanLySuaXe
+Public Class frmQuanLySuaXe
     Private xeBUS As XeBUS
     Private suaxeBUS As TiepNhanSuaXeBUS
 

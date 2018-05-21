@@ -1,1 +1,1 @@
-SQLCMD -S DESKTOP-09EIQ17\SERVERS -E -i CreateDB.sql
+SQLCMD -S ADMIN -E -i CreateDB.sql

@@ -1,4 +1,4 @@
-﻿Public Class ManHinhChinh
+﻿Public Class frmManHinhChinh
     Private Sub ThêmHiệuXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThêmHiệuXeToolStripMenuItem.Click
         Dim frm As ThemHieuXe = New ThemHieuXe()
         frm.MdiParent = Me
@@ -8,30 +8,33 @@
 
 
     Private Sub TiếpNhậnSữaXeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TiếpNhậnSữaXeToolStripMenuItem.Click
-        Dim frm As TiepNhanSuaXe = New TiepNhanSuaXe()
+        Dim frm As frmTiepNhanSuaXe = New frmTiepNhanSuaXe()
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
     Private Sub QuảnLýHiệuXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýHiệuXeToolStripMenuItem.Click
-        Dim frm As QuanLyHieuXe = New QuanLyHieuXe()
+        Dim frm As frmQuanLyHieuXe = New frmQuanLyHieuXe()
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
-    Private Sub QuảnLýSữaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSữaXeToolStripMenuItem.Click
-        Dim frm As QuanLySuaXe = New QuanLySuaXe()
-        frm.MdiParent = Me
-        frm.Show()
+
+
+
+    Private Sub ManHinhChinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
-    Private Sub QuảnLýXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýXeToolStripMenuItem.Click
+    Private Sub QuảnLýXeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuảnLýXeToolStripMenuItem1.Click
         Dim frm As frmQuanLyXe = New frmQuanLyXe()
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
-    Private Sub ManHinhChinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub QuảnLýSửaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSửaXeToolStripMenuItem.Click
+        Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 End Class

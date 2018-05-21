@@ -2,7 +2,7 @@
 Imports QLGR_DTO
 Imports Utility
 
-Public Class QuanLyHieuXe
+Public Class frmQuanLyHieuXe
     Private hieuxeBUS As hieuxeBUS
 
     Private Sub QuanLyHieuXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ManHinhChinh
+Partial Class frmManHinhChinh
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,12 +30,14 @@ Partial Class ManHinhChinh
         Me.HiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ThêmHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuảnLýXeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuảnLýSửaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.QuảnLýXeToolStripMenuItem1, Me.QuảnLýSửaXeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -86,6 +88,18 @@ Partial Class ManHinhChinh
         Me.QuảnLýHiệuXeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.QuảnLýHiệuXeToolStripMenuItem.Text = "Quản Lý Hiệu Xe"
         '
+        'QuảnLýXeToolStripMenuItem1
+        '
+        Me.QuảnLýXeToolStripMenuItem1.Name = "QuảnLýXeToolStripMenuItem1"
+        Me.QuảnLýXeToolStripMenuItem1.Size = New System.Drawing.Size(78, 20)
+        Me.QuảnLýXeToolStripMenuItem1.Text = "Quản Lý Xe"
+        '
+        'QuảnLýSửaXeToolStripMenuItem
+        '
+        Me.QuảnLýSửaXeToolStripMenuItem.Name = "QuảnLýSửaXeToolStripMenuItem"
+        Me.QuảnLýSửaXeToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
+        Me.QuảnLýSửaXeToolStripMenuItem.Text = "Quản Lý Sửa Xe"
+        '
         'ManHinhChinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -112,4 +126,6 @@ Partial Class ManHinhChinh
     Friend WithEvents QuảnLýHiệuXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýSữaXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýXeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuảnLýXeToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents QuảnLýSửaXeToolStripMenuItem As ToolStripMenuItem
 End Class

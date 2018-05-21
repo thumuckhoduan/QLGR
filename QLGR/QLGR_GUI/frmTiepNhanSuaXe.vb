@@ -2,7 +2,7 @@
 Imports QLGR_BUS
 Imports Utility
 
-Public Class TiepNhanSuaXe
+Public Class frmTiepNhanSuaXe
     Private SuaXeBUS As TiepNhanSuaXeBUS
     Private xeBUS As XeBUS
     Private hieuxeBUS As HieuXeBUS
@@ -57,20 +57,15 @@ Public Class TiepNhanSuaXe
             SuaXeDTO.maxe = txtMaHieuXe.Text
             SuaXeDTO.ngaytiepnhan = dtpNgayTiepNhan.Value
 
-            xeDTO.maxe = txtMaSuaXe.Text
-            xeDTO.dienthoai = txtDienThoai.Text
-            xeDTO.chuxe = txtChuXe.Text
-            xeDTO.diachi = txtDiaChi.Text
-            xeDTO.bienso = txtBienSo.Text
-            xeDTO.mahieuxe = txtMaHieuXe.Text
+
 
 
 
             Dim result1 As Result
-            Dim result2 As Result
+
             result1 = SuaXeBUS.insert(SuaXeDTO)
-            result2 = xeBUS.insert(xeDTO)
-            If (result1.FlagResult = True And result2.FlagResult = True) Then
+
+            If (result1.FlagResult = True) Then
                 MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim nextMSX = 0
                 result1 = SuaXeBUS.buildMaSuaXe(nextMSX)

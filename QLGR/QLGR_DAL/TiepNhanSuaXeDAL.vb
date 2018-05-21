@@ -80,34 +80,7 @@ Public Class TiepNhanSuaXeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
-    Public Function delete(masuaxe As Integer) As Result
 
-        Dim query As String = String.Empty
-        query &= " DELETE FROM [tblTiepNhanSuaXe] "
-        query &= " WHERE "
-        query &= " [masuaxe] = @masuaxe "
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                    .Parameters.AddWithValue("@masuaxe", masuaxe)
-                End With
-                Try
-                    conn.Open()
-                    comm.ExecuteNonQuery()
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    System.Console.WriteLine(ex.StackTrace)
-                    Return New Result(False, "Xóa đơn sữa xe không thành công", ex.StackTrace)
-                End Try
-            End Using
-        End Using
-        Return New Result(True)  ' thanh cong
-    End Function
     Public Function selectALL(ByRef listsuaxe As List(Of TiepNhanSuaXeDTO)) As Result
 
         Dim query As String = String.Empty

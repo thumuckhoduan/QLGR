@@ -2,17 +2,17 @@
     Private imaphieuthu As Integer
     Private imaxe As Integer
     Private dtpngaythu As DateTime
-    Private strtienthu As String
+    Private strsotienthu As String
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(maphieuthu As Integer, maxe As Integer, ngaythu As String, tienthu As String)
+    Public Sub New(maphieuthu As Integer, maxe As Integer, ngaythu As String, sotienthu As String)
         Me.imaphieuthu = maphieuthu
         Me.imaxe = maxe
         Me.dtpngaythu = ngaythu
-        Me.strtienthu = tienthu
+        Me.strsotienthu = sotienthu
     End Sub
 
     Public Property maphieuthu As Integer
@@ -42,12 +42,12 @@
         End Set
     End Property
 
-    Public Property tienthu As String
+    Public Property sotienthu As String
         Get
-            Return strtienthu
+            Return strsotienthu
         End Get
         Set(value As String)
-            strtienthu = value
+            strsotienthu = value
         End Set
     End Property
 End Class
