@@ -50,8 +50,8 @@ Public Class XeDAL
     Public Function insert(s As XeDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblXe] ([maxe], [mahieuxe], [bienso], [chuxe], [diachi], [dienthoai])"
-        query &= "VALUES (@maxe,@mahieuxe,@bienso,@chuxe,@diachi,@dienthoai)"
+        query &= "INSERT INTO [tblXe] ([maxe], [mahieuxe], [machuxe],[bienso])"
+        query &= "VALUES (@maxe,@mahieuxe,@machuxe,@bienso)"
 
         Dim nextMX = "1"
         buildMaXe(nextMX)
@@ -65,10 +65,8 @@ Public Class XeDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@maxe", s.maxe)
                     .Parameters.AddWithValue("@mahieuxe", s.mahieuxe)
+                    .Parameters.AddWithValue("@machuxe", s.machuxe)
                     .Parameters.AddWithValue("@bienso", s.bienso)
-                    .Parameters.AddWithValue("@chuxe", s.chuxe)
-                    .Parameters.AddWithValue("@diachi", s.diachi)
-                    .Parameters.AddWithValue("@dienthoai", s.dienthoai)
                 End With
                 Try
                     conn.Open()
@@ -86,7 +84,7 @@ Public Class XeDAL
     Public Function selectALL(ByRef listLoaiXe As List(Of XeDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [maxe], [mahieuxe], [bienso], [chuxe], [diachi], [dienthoai]"
+        query &= " SELECT [maxe], [mahieuxe], [machuxe],[bienso]"
         query &= " FROM [tblXe]"
 
 
@@ -104,7 +102,7 @@ Public Class XeDAL
                     If reader.HasRows = True Then
                         listLoaiXe.Clear()
                         While reader.Read()
-                            listLoaiXe.Add(New XeDTO(reader("maxe"), reader("mahieuxe"), reader("chuxe"), reader("bienso"), reader("diachi"), reader("dienthoai")))
+                            listLoaiXe.Add(New XeDTO(reader("maxe"), reader("mahieuxe"), reader("machuxe"), reader("bienso")))
                         End While
                     End If
                 Catch ex As Exception
@@ -124,9 +122,7 @@ Public Class XeDAL
         query &= " UPDATE [tblXe] SET"
         query &= " [mahieuxe] = @mahieuxe "
         query &= " ,[bienso] = @bienso "
-        query &= " ,[chuxe] = @chuxe "
-        query &= " ,[diachi] = @diachi "
-        query &= " ,[dienthoai] = @dienthoai "
+        query &= " ,[machuxe] = @machuxe "
         query &= "WHERE "
         query &= " [maxe] = @maxe "
 
@@ -138,10 +134,8 @@ Public Class XeDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@maxe", xeDTO.maxe)
                     .Parameters.AddWithValue("@mahieuxe", xeDTO.mahieuxe)
+                    .Parameters.AddWithValue("@machuxe", xeDTO.machuxe)
                     .Parameters.AddWithValue("@bienso", xeDTO.bienso)
-                    .Parameters.AddWithValue("@chuxe", xeDTO.chuxe)
-                    .Parameters.AddWithValue("@diachi", xeDTO.diachi)
-                    .Parameters.AddWithValue("@dienthoai", xeDTO.dienthoai)
                 End With
                 Try
                     conn.Open()
