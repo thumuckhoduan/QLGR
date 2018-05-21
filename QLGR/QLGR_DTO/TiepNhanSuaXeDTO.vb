@@ -1,7 +1,7 @@
 ﻿Public Class TiepNhanSuaXeDTO
     Private imasuaxe As Integer
     Private imaxe As Integer
-    Private dtpngaytiepnhan As Date
+    Private dtpngaytiepnhan As DateTime
 
     Public Sub New()
 
