@@ -251,4 +251,8 @@ Public Class frmQuanLyXe
     Private Sub cbDiaChi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDiaChi.SelectedIndexChanged
         txtDiaChi.Text = cbDiaChi.Text
     End Sub
+
+    Private Sub cbHieuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHieuXe.SelectedIndexChanged
+        txtHieuXe.Text = cbHieuXe.Text
+    End Sub
 End Class
