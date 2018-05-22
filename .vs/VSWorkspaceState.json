@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QLGR"
+    "\\QLGR",
+    "\\QLGR\\QLGR_GUI"
   ],
-  "SelectedNode": "\\QuyDinh.txt",
+  "SelectedNode": "\\QLGR\\Utility",
   "PreviewInSolutionExplorer": false
 }
