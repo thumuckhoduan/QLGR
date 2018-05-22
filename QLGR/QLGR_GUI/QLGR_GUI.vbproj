@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmQuanLyChuXe.Designer.vb">
+      <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyChuXe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuanLyXe.designer.vb">
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmQuanLyChuXe.resx">
+      <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>
     </EmbeddedResource>

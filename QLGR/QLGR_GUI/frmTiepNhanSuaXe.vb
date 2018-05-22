@@ -3,16 +3,20 @@ Imports QLGR_BUS
 Imports Utility
 
 Public Class frmTiepNhanSuaXe
-    Private SuaXeBUS As TiepNhanSuaXeBUS
+    Private suaxeBUS As TiepNhanSuaXeBUS
     Private xeBUS As XeBUS
     Private hieuxeBUS As HieuXeBUS
+    Private chuxeBUS As ChuXeBUS
     Private Sub TiepNhanSuaXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        SuaXeBUS = New TiepNhanSuaXeBUS()
+        suaxeBUS = New TiepNhanSuaXeBUS()
         xeBUS = New XeBUS()
+        chuxeBUS = New ChuXeBUS()
+        hieuxeBUS = New HieuXeBUS()
+
         Dim nextMSX = 0
         Dim result As Result
-        result = SuaXeBUS.buildMaSuaXe(nextMSX)
+        result = suaxeBUS.buildMaSuaXe(nextMSX)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy mã sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -20,9 +24,7 @@ Public Class frmTiepNhanSuaXe
             Return
         End If
         txtMaSuaXe.Text = nextMSX
-        Dim hieuxeBUS As HieuXeBUS
         Dim listHieuXe = New List(Of HieuXeDTO)
-        hieuxeBUS = New HieuXeBUS()
         result = hieuxeBUS.selectAll(listHieuXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách hiệu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -46,41 +48,53 @@ Public Class frmTiepNhanSuaXe
         txtMaHieuXe.Text = hieuxeDTO.mahieuxe
     End Sub
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
-        If (SuaXeBUS.isfull(dtpNgayTiepNhan.Value) = False) Then
+        If (suaxeBUS.isfull(dtpNgayTiepNhan.Value) = False) Then
+            Dim result1 As Result
+
             Dim xeDTO As XeDTO
             xeDTO = New XeDTO()
             Dim SuaXeDTO As TiepNhanSuaXeDTO
             SuaXeDTO = New TiepNhanSuaXeDTO()
-
+            Dim chuxeDTO As ChuXeDTO
+            chuxeDTO = New ChuXeDTO()
 
             SuaXeDTO.masuaxe = txtMaSuaXe.Text
             SuaXeDTO.maxe = txtMaHieuXe.Text
             SuaXeDTO.ngaytiepnhan = dtpNgayTiepNhan.Value
 
+            Dim nextma = 0
 
+            chuxeDTO.diachi = txtDiaChi.Text
+            chuxeDTO.dienthoai = txtDienThoai.Text
+            chuxeDTO.email = txtEmail.Text
+            chuxeDTO.tenchuxe = txtChuXe.Text
+            chuxeDTO.tienno = "0"
+            result1 = chuxeBUS.buildMaChuXe(nextma)
+            chuxeDTO.machuxe = nextma
 
+            xeDTO.machuxe = nextma
+            result1 = xeBUS.buildMaXe(nextma)
+            xeDTO.maxe = nextma
+            xeDTO.mahieuxe = txtMaHieuXe.Text
+            xeDTO.bienso = txtBienSo.Text
 
-
-            Dim result1 As Result
-
-            result1 = SuaXeBUS.insert(SuaXeDTO)
-
+            result1 = suaxeBUS.insert(SuaXeDTO)
+            result1 = chuxeBUS.insert(chuxeDTO)
+            result1 = xeBUS.insert(xeDTO)
             If (result1.FlagResult = True) Then
                 MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Dim nextMSX = 0
-                result1 = SuaXeBUS.buildMaSuaXe(nextMSX)
+                result1 = suaxeBUS.buildMaSuaXe(nextma)
                 If (result1.FlagResult = False) Then
                     MessageBox.Show("Lấy danh tự động mã sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Me.Close()
                     Return
                 End If
-                txtMaSuaXe.Text = nextMSX
+                txtMaSuaXe.Text = nextma
             Else
                 MessageBox.Show("Thêm đơn sữa xe không thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Else
             MessageBox.Show("Đã Full")
-
         End If
     End Sub
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click

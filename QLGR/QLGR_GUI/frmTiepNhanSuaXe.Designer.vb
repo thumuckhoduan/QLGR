@@ -40,6 +40,8 @@ Partial Class frmTiepNhanSuaXe
         Me.dtpNgayTiepNhan = New System.Windows.Forms.DateTimePicker()
         Me.btLuu = New System.Windows.Forms.Button()
         Me.btDong = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -107,7 +109,7 @@ Partial Class frmTiepNhanSuaXe
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(175, 286)
+        Me.Label7.Location = New System.Drawing.Point(175, 339)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(85, 13)
         Me.Label7.TabIndex = 7
@@ -125,14 +127,14 @@ Partial Class frmTiepNhanSuaXe
         'cbHieuXe
         '
         Me.cbHieuXe.FormattingEnabled = True
-        Me.cbHieuXe.Location = New System.Drawing.Point(312, 117)
+        Me.cbHieuXe.Location = New System.Drawing.Point(312, 109)
         Me.cbHieuXe.Name = "cbHieuXe"
         Me.cbHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbHieuXe.TabIndex = 9
         '
         'txtMaHieuXe
         '
-        Me.txtMaHieuXe.Location = New System.Drawing.Point(312, 78)
+        Me.txtMaHieuXe.Location = New System.Drawing.Point(312, 77)
         Me.txtMaHieuXe.Name = "txtMaHieuXe"
         Me.txtMaHieuXe.ReadOnly = True
         Me.txtMaHieuXe.Size = New System.Drawing.Size(184, 20)
@@ -140,7 +142,7 @@ Partial Class frmTiepNhanSuaXe
         '
         'txtDiaChi
         '
-        Me.txtDiaChi.Location = New System.Drawing.Point(312, 214)
+        Me.txtDiaChi.Location = New System.Drawing.Point(312, 218)
         Me.txtDiaChi.Name = "txtDiaChi"
         Me.txtDiaChi.Size = New System.Drawing.Size(184, 20)
         Me.txtDiaChi.TabIndex = 11
@@ -168,14 +170,14 @@ Partial Class frmTiepNhanSuaXe
         '
         'dtpNgayTiepNhan
         '
-        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(312, 286)
+        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(312, 333)
         Me.dtpNgayTiepNhan.Name = "dtpNgayTiepNhan"
         Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(184, 20)
         Me.dtpNgayTiepNhan.TabIndex = 15
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(156, 326)
+        Me.btLuu.Location = New System.Drawing.Point(141, 392)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(75, 23)
         Me.btLuu.TabIndex = 16
@@ -184,18 +186,36 @@ Partial Class frmTiepNhanSuaXe
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(521, 326)
+        Me.btDong.Location = New System.Drawing.Point(544, 392)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 17
         Me.btDong.Text = "Đóng"
         Me.btDong.UseVisualStyleBackColor = True
         '
-        'TiepNhanSuaXe
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(175, 299)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(32, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Email"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(312, 292)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(184, 20)
+        Me.txtEmail.TabIndex = 19
+        '
+        'frmTiepNhanSuaXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btLuu)
         Me.Controls.Add(Me.dtpNgayTiepNhan)
@@ -214,7 +234,7 @@ Partial Class frmTiepNhanSuaXe
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtMaSuaXe)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "TiepNhanSuaXe"
+        Me.Name = "frmTiepNhanSuaXe"
         Me.Text = "TiepNhanSuaXe"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -239,4 +259,6 @@ Partial Class frmTiepNhanSuaXe
     Friend WithEvents dtpNgayTiepNhan As DateTimePicker
     Friend WithEvents btLuu As Button
     Friend WithEvents btDong As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtEmail As TextBox
 End Class

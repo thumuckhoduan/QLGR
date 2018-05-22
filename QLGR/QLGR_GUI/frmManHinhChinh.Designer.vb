@@ -30,14 +30,13 @@ Partial Class frmManHinhChinh
         Me.HiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ThêmHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuảnLýXeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýSửaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.QuảnLýXeToolStripMenuItem1, Me.QuảnLýSửaXeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.QuảnLýSửaXeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -54,19 +53,19 @@ Partial Class frmManHinhChinh
         'TiếpNhậnSữaXeToolStripMenuItem
         '
         Me.TiếpNhậnSữaXeToolStripMenuItem.Name = "TiếpNhậnSữaXeToolStripMenuItem"
-        Me.TiếpNhậnSữaXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.TiếpNhậnSữaXeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TiếpNhậnSữaXeToolStripMenuItem.Text = "Tiếp Nhận Sữa Xe"
         '
         'QuảnLýSữaXeToolStripMenuItem
         '
         Me.QuảnLýSữaXeToolStripMenuItem.Name = "QuảnLýSữaXeToolStripMenuItem"
-        Me.QuảnLýSữaXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.QuảnLýSữaXeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.QuảnLýSữaXeToolStripMenuItem.Text = "Quản Lý Sữa Xe"
         '
         'QuảnLýXeToolStripMenuItem
         '
         Me.QuảnLýXeToolStripMenuItem.Name = "QuảnLýXeToolStripMenuItem"
-        Me.QuảnLýXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.QuảnLýXeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.QuảnLýXeToolStripMenuItem.Text = "Quản Lý Xe"
         '
         'HiệuXeToolStripMenuItem
@@ -88,19 +87,13 @@ Partial Class frmManHinhChinh
         Me.QuảnLýHiệuXeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.QuảnLýHiệuXeToolStripMenuItem.Text = "Quản Lý Hiệu Xe"
         '
-        'QuảnLýXeToolStripMenuItem1
-        '
-        Me.QuảnLýXeToolStripMenuItem1.Name = "QuảnLýXeToolStripMenuItem1"
-        Me.QuảnLýXeToolStripMenuItem1.Size = New System.Drawing.Size(78, 20)
-        Me.QuảnLýXeToolStripMenuItem1.Text = "Quản Lý Xe"
-        '
         'QuảnLýSửaXeToolStripMenuItem
         '
         Me.QuảnLýSửaXeToolStripMenuItem.Name = "QuảnLýSửaXeToolStripMenuItem"
         Me.QuảnLýSửaXeToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.QuảnLýSửaXeToolStripMenuItem.Text = "Quản Lý Sửa Xe"
         '
-        'ManHinhChinh
+        'frmManHinhChinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -108,7 +101,7 @@ Partial Class frmManHinhChinh
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "ManHinhChinh"
+        Me.Name = "frmManHinhChinh"
         Me.Text = "Quản Lý Gara"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
@@ -126,6 +119,5 @@ Partial Class frmManHinhChinh
     Friend WithEvents QuảnLýHiệuXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýSữaXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýXeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents QuảnLýXeToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents QuảnLýSửaXeToolStripMenuItem As ToolStripMenuItem
 End Class

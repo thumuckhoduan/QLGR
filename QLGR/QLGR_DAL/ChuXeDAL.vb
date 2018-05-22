@@ -11,7 +11,7 @@ Public Class ChuXeDAL
     Public Sub New(ConnectionString As String)
         Me.connectionString = ConnectionString
     End Sub
-    Public Function buildmachuxe(ByRef nextMSX As String) As Result 'ex: 18222229
+    Public Function buildmachuxe(ByRef nextMSX As Integer) As Result 'ex: 18222229
         Dim query As String = String.Empty
         query &= "SELECT TOP 1 [machuxe] "
         query &= "FROM [tblChuXe] "
