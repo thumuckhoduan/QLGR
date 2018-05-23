@@ -148,3 +148,4 @@ C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbproj.CopyComplete
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChuXe.resources
