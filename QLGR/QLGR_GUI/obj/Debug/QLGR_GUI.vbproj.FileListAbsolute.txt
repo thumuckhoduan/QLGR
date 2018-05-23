@@ -139,7 +139,6 @@ C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyXe.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmManHinhChinh.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.Resources.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLySuaXe.resources
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.ThemHieuXe.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmTiepNhanSuaXe.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyHieuXe.resources
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbproj.GenerateResource.cache
@@ -149,3 +148,5 @@ C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
 C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChuXe.resources
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmThemHieuXe.resources
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmTimKiem.resources

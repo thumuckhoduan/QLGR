@@ -78,9 +78,10 @@ Public Class frmTiepNhanSuaXe
             xeDTO.mahieuxe = txtMaHieuXe.Text
             xeDTO.bienso = txtBienSo.Text
 
-            result1 = suaxeBUS.insert(SuaXeDTO)
             result1 = chuxeBUS.insert(chuxeDTO)
             result1 = xeBUS.insert(xeDTO)
+            result1 = suaxeBUS.insert(SuaXeDTO)
+
             If (result1.FlagResult = True) Then
                 MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 result1 = suaxeBUS.buildMaSuaXe(nextma)
