@@ -26,14 +26,27 @@
 
     End Sub
 
+
+    Private Sub QuảnLýXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýXeToolStripMenuItem.Click
+        Dim frm As frmQuanLyXe = New frmQuanLyXe()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub QuảnLýSữaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSữaXeToolStripMenuItem.Click
+        Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
     Private Sub QuảnLýXeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuảnLýXeToolStripMenuItem1.Click
         Dim frm As frmQuanLyXe = New frmQuanLyXe()
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
-    Private Sub QuảnLýSửaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSửaXeToolStripMenuItem.Click
-        Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
+    Private Sub QuảnLýChủXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýChủXeToolStripMenuItem.Click
+        Dim frm As frmQuanLyChuXe = New frmQuanLyChuXe()
         frm.MdiParent = Me
         frm.Show()
     End Sub

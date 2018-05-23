@@ -11,7 +11,7 @@
 
     End Sub
 
-    Public Sub New(machuxe As Integer, tenchuxe As String, dienthoai As String, diachi As String, email As String, tienno As String)
+    Public Sub New(machuxe As Integer, tenchuxe As String, diachi As String, dienthoai As String, email As String, tienno As String)
         Me.imachuxe = machuxe
         Me.strtenchuxe = tenchuxe
         Me.strdiachi = diachi
