@@ -127,7 +127,7 @@ Partial Class frmTiepNhanSuaXe
         'cbHieuXe
         '
         Me.cbHieuXe.FormattingEnabled = True
-        Me.cbHieuXe.Location = New System.Drawing.Point(312, 109)
+        Me.cbHieuXe.Location = New System.Drawing.Point(312, 117)
         Me.cbHieuXe.Name = "cbHieuXe"
         Me.cbHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbHieuXe.TabIndex = 9
@@ -213,7 +213,7 @@ Partial Class frmTiepNhanSuaXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(797, 450)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btDong)

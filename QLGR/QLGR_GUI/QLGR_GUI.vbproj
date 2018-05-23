@@ -112,10 +112,10 @@
     <Compile Include="frmQuanLySuaXe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemHieuXe.Designer.vb">
-      <DependentUpon>ThemHieuXe.vb</DependentUpon>
+    <Compile Include="frmThemHieuXe.Designer.vb">
+      <DependentUpon>frmThemHieuXe.vb</DependentUpon>
     </Compile>
-    <Compile Include="ThemHieuXe.vb">
+    <Compile Include="frmThemHieuXe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTiepNhanSuaXe.Designer.vb">
@@ -128,6 +128,12 @@
       <DependentUpon>frmQuanLyHieuXe.vb</DependentUpon>
     </Compile>
     <Compile Include="frmQuanLyHieuXe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.Designer.vb">
+      <DependentUpon>frmTimKiem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiem.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -150,14 +156,17 @@
     <EmbeddedResource Include="frmQuanLySuaXe.resx">
       <DependentUpon>frmQuanLySuaXe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemHieuXe.resx">
-      <DependentUpon>ThemHieuXe.vb</DependentUpon>
+    <EmbeddedResource Include="frmThemHieuXe.resx">
+      <DependentUpon>frmThemHieuXe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepNhanSuaXe.resx">
       <DependentUpon>frmTiepNhanSuaXe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyHieuXe.resx">
       <DependentUpon>frmQuanLyHieuXe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

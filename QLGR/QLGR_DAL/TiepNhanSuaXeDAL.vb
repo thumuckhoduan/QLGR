@@ -174,19 +174,24 @@ Public Class TiepNhanSuaXeDAL
         End Using
         Return New Result(True)  ' thanh cong
     End Function
-    Public Function demdonsuaxe(ngaytiepnhan As Date, dem As Integer) As Result
+    Public Function demdonsuaxe(ngaytiepnhan As Date, ByRef dem As Integer) As Result
         Dim query As String = String.Empty
         query &= "SELECT COUNT(*) AS [count]"
         query &= " FROM [tblTiepNhanSuaXe] "
         query &= " WHERE "
-        query &= " [ngaytiepnhan]=@ngaytiepnhan "
+        query &= " Year([ngaytiepnhan]) =@nam "
+        query &= "AND Month([ngaytiepnhan])=@thang "
+        query &= "AND Day([ngaytiepnhan])=@ngay "
+
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
                 With comm
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@ngaytiepnhan", ngaytiepnhan)
+                    .Parameters.AddWithValue("@nam", ngaytiepnhan.Year)
+                    .Parameters.AddWithValue("@thang", ngaytiepnhan.Month)
+                    .Parameters.AddWithValue("@ngay", ngaytiepnhan.Day)
                 End With
                 Try
                     conn.Open()

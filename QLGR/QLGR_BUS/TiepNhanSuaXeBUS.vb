@@ -12,7 +12,7 @@ Public Class TiepNhanSuaXeBUS
     Public Function isfull(ngaytiepnhan As DateTime) As Boolean
         Dim dem As Integer
         demdonsuaxe(ngaytiepnhan, dem)
-        If (dem >= 1) Then
+        If (dem >= 30) Then
             Return True
         End If
         Return False
@@ -33,7 +33,7 @@ Public Class TiepNhanSuaXeBUS
     Public Function delete(masuaxe As Integer) As Result
         Return TiepNhanSuaXeDAL.delete(masuaxe)
     End Function
-    Public Function demdonsuaxe(ngaytiepnhan As DateTime, dem As Integer) As Result
+    Public Function demdonsuaxe(ngaytiepnhan As DateTime, ByRef dem As Integer) As Result
         Return TiepNhanSuaXeDAL.demdonsuaxe(ngaytiepnhan, dem)
     End Function
 End Class

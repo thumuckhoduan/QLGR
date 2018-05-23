@@ -30,15 +30,24 @@ Partial Class frmManHinhChinh
         Me.HiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ThêmHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýHiệuXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+<<<<<<< HEAD
         Me.QuảnLýSửaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýXeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýChủXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+=======
+        Me.QuảnLýChủXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TìmKiếmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+>>>>>>> b1340896a1c9deeed1597928cc72aa4ccc47ecd9
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+<<<<<<< HEAD
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.QuảnLýSửaXeToolStripMenuItem, Me.QuảnLýXeToolStripMenuItem1, Me.QuảnLýChủXeToolStripMenuItem})
+=======
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.QuảnLýChủXeToolStripMenuItem, Me.TìmKiếmToolStripMenuItem})
+>>>>>>> b1340896a1c9deeed1597928cc72aa4ccc47ecd9
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -89,11 +98,17 @@ Partial Class frmManHinhChinh
         Me.QuảnLýHiệuXeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.QuảnLýHiệuXeToolStripMenuItem.Text = "Quản Lý Hiệu Xe"
         '
-        'QuảnLýSửaXeToolStripMenuItem
+        'QuảnLýChủXeToolStripMenuItem
         '
-        Me.QuảnLýSửaXeToolStripMenuItem.Name = "QuảnLýSửaXeToolStripMenuItem"
-        Me.QuảnLýSửaXeToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
-        Me.QuảnLýSửaXeToolStripMenuItem.Text = "Quản Lý Sửa Xe"
+        Me.QuảnLýChủXeToolStripMenuItem.Name = "QuảnLýChủXeToolStripMenuItem"
+        Me.QuảnLýChủXeToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
+        Me.QuảnLýChủXeToolStripMenuItem.Text = "Quản Lý Chủ Xe"
+        '
+        'TìmKiếmToolStripMenuItem
+        '
+        Me.TìmKiếmToolStripMenuItem.Name = "TìmKiếmToolStripMenuItem"
+        Me.TìmKiếmToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.TìmKiếmToolStripMenuItem.Text = "Tìm Kiếm"
         '
         'QuảnLýXeToolStripMenuItem1
         '
@@ -133,7 +148,12 @@ Partial Class frmManHinhChinh
     Friend WithEvents QuảnLýHiệuXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýSữaXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýXeToolStripMenuItem As ToolStripMenuItem
+<<<<<<< HEAD
     Friend WithEvents QuảnLýSửaXeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýXeToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents QuảnLýChủXeToolStripMenuItem As ToolStripMenuItem
+=======
+    Friend WithEvents QuảnLýChủXeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TìmKiếmToolStripMenuItem As ToolStripMenuItem
+>>>>>>> b1340896a1c9deeed1597928cc72aa4ccc47ecd9
 End Class

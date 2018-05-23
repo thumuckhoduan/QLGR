@@ -1,7 +1,7 @@
 ﻿Imports QLGR_BUS
 Imports QLGR_DTO
 Imports Utility
-Public Class ThemHieuXe
+Public Class frmThemHieuXe
     Private hieuxeBUS As HieuXeBUS
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
