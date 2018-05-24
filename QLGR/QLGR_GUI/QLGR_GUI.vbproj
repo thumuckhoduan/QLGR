@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmManHinhChinh.Designer.vb">
+      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManHinhChinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuanLyChuXe.Designer.vb">
       <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>
     </Compile>
@@ -82,13 +88,6 @@
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>
     </Compile>
     <Compile Include="frmQuanLyXe.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManHinhChinh.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManHinhChinh.Designer.vb">
-      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -138,14 +137,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmManHinhChinh.resx">
+      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyChuXe.resx">
       <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManHinhChinh.resx">
-      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
