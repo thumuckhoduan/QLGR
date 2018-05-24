@@ -25,11 +25,6 @@ Public Class frmTimKiem
         cbHieuXe.ValueMember = "tenhieuxe"
         cbHieuXe.DisplayMember = cbHieuXe.ValueMember
 
-        txtChuXe.Text = String.Empty
-        txtBienSo.Text = String.Empty
-        txtTienNoMin.Text = 0
-        txtTienNoMax.Text = 0
-
     End Sub
 
     Private Sub btTimKiem_Click(sender As Object, e As EventArgs) Handles btTimKiem.Click
@@ -40,65 +35,9 @@ Public Class frmTimKiem
         Dim chuxeDTO As ChuXeDTO
         chuxeDTO = New ChuXeDTO()
 
-        loadlisttimkiem()
-    End Sub
-    Private Sub loadlisttimkiem()
-        Dim tenchuxe As String
-        Dim tiennomin As Integer
-        Dim tiennomax As Integer
-
-        tenchuxe = txtChuXe.Text
-        tiennomin = Convert.ToInt32(txtTienNoMin.Text)
-        tiennomax = Convert.ToInt32(txtTienNoMax.Text)
-
-        Dim listtienno = New List(Of ChuXeDTO)
-        Dim listchuxe = New List(Of ChuXeDTO)
-        Dim listhieuxe = New List(Of XeDTO)
-        Dim listbienso = New List(Of XeDTO)
-        Dim result As Result
-
-        result = chuxeBUS.selectallby_tienno(tiennomin, tiennomax, listtienno)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Tìm Kiếm với tiền nợ không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Return
-        End If
-
-        result = chuxeBUS.selectallby_chuxe(tenchuxe, listchuxe)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Tìm Kiếm với tiền nợ không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Return
-        End If
-
-        dgvTimKiem.Columns.Clear()
-        dgvTimKiem.DataSource = Nothing
-
-        dgvTimKiem.AutoGenerateColumns = False
-        dgvTimKiem.AllowUserToAddRows = False
-        dgvTimKiem.DataSource = listchuxe
-
-        Dim clmachuxe = New DataGridViewTextBoxColumn()
-        clmachuxe.Name = "machuxe"
-        clmachuxe.HeaderText = "Mã Chủ Xe"
-        clmachuxe.DataPropertyName = "machuxe"
-        dgvTimKiem.Columns.Add(clmachuxe)
-
-        Dim clMaHieuXe = New DataGridViewTextBoxColumn()
-        clMaHieuXe.Name = "tenchuxe"
-        clMaHieuXe.HeaderText = "Tên Chủ Xe"
-        clMaHieuXe.DataPropertyName = "tenchuxe"
-        dgvTimKiem.Columns.Add(clMaHieuXe)
-
-        Dim cltienno = New DataGridViewTextBoxColumn()
-        cltienno.Name = "tienno"
-        cltienno.HeaderText = "Tiền Nợ"
-        cltienno.DataPropertyName = "tienno"
-        dgvTimKiem.Columns.Add(cltienno)
-
-        Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvTimKiem.DataSource)
-        myCurrencyManager.Refresh()
     End Sub
 
+    Private Sub txtChuXe_TextChanged(sender As Object, e As EventArgs) Handles txtChuXe.TextChanged
 
+    End Sub
 End Class

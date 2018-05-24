@@ -35,6 +35,8 @@ Partial Class frmTimKiem
         Me.txtTienNoMax = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtBienSo = New System.Windows.Forms.TextBox()
         CType(Me.dgvTimKiem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,9 +52,9 @@ Partial Class frmTimKiem
         '
         'txtChuXe
         '
-        Me.txtChuXe.Location = New System.Drawing.Point(267, 20)
+        Me.txtChuXe.Location = New System.Drawing.Point(497, 17)
         Me.txtChuXe.Name = "txtChuXe"
-        Me.txtChuXe.Size = New System.Drawing.Size(220, 20)
+        Me.txtChuXe.Size = New System.Drawing.Size(163, 20)
         Me.txtChuXe.TabIndex = 1
         '
         'cbHieuXe
@@ -74,7 +76,7 @@ Partial Class frmTimKiem
         'LaBel2
         '
         Me.LaBel2.AutoSize = True
-        Me.LaBel2.Location = New System.Drawing.Point(175, 20)
+        Me.LaBel2.Location = New System.Drawing.Point(372, 24)
         Me.LaBel2.Name = "LaBel2"
         Me.LaBel2.Size = New System.Drawing.Size(42, 13)
         Me.LaBel2.TabIndex = 4
@@ -148,6 +150,23 @@ Partial Class frmTimKiem
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "đến"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(25, 20)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(60, 13)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "Mã Chủ Xe"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(155, 17)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox3.TabIndex = 14
+        '
         'txtBienSo
         '
         Me.txtBienSo.Location = New System.Drawing.Point(155, 55)
@@ -161,6 +180,8 @@ Partial Class frmTimKiem
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.txtBienSo)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtTienNoMax)
@@ -195,5 +216,7 @@ Partial Class frmTimKiem
     Friend WithEvents txtTienNoMax As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents txtBienSo As TextBox
 End Class

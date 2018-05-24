@@ -28,13 +28,3 @@ D:\VB\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.CoreCompileInputs.cache
 D:\VB\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
 D:\VB\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
 D:\VB\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.dll
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.pdb
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.xml
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbprojAssemblyReference.cache
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.Resources.resources
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.GenerateResource.cache
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
-C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb

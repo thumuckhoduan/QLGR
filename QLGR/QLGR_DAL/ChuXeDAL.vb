@@ -111,7 +111,7 @@ Public Class ChuXeDAL
         End Using
         Return New Result(True)  ' thanh cong
     End Function
-    Public Function selectALL(ByRef listchuxe As List(Of ChuXeDTO)) As Result
+    Public Function selectALL(ByRef listsuaxe As List(Of ChuXeDTO)) As Result
 
         Dim query As String = String.Empty
         query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno]"
@@ -130,9 +130,9 @@ Public Class ChuXeDAL
                     Dim reader As SqlDataReader
                     reader = comm.ExecuteReader()
                     If reader.HasRows = True Then
-                        listchuxe.Clear()
+                        listsuaxe.Clear()
                         While reader.Read()
-                            listchuxe.Add(New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno")))
+                            listsuaxe.Add(New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno")))
                         End While
                     End If
                 Catch ex As Exception
@@ -145,7 +145,7 @@ Public Class ChuXeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
-    Public Function update(chuxeDTO As ChuXeDTO) As Result
+    Public Function update(suaxeDTO As ChuXeDTO) As Result
 
         Dim query As String = String.Empty
         query &= " UPDATE [tblChuXe] SET"
@@ -165,12 +165,12 @@ Public Class ChuXeDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@machuxe", chuxeDTO.machuxe)
-                    .Parameters.AddWithValue("@tenchuxe", chuxeDTO.tenchuxe)
-                    .Parameters.AddWithValue("@diachi", chuxeDTO.diachi)
-                    .Parameters.AddWithValue("@dienthoai", chuxeDTO.dienthoai)
-                    .Parameters.AddWithValue("@email", chuxeDTO.email)
-                    .Parameters.AddWithValue("@tienno", chuxeDTO.tienno)
+                    .Parameters.AddWithValue("@machuxe", suaxeDTO.machuxe)
+                    .Parameters.AddWithValue("@tenchuxe", suaxeDTO.tenchuxe)
+                    .Parameters.AddWithValue("@diachi", suaxeDTO.diachi)
+                    .Parameters.AddWithValue("@dienthoai", suaxeDTO.dienthoai)
+                    .Parameters.AddWithValue("@email", suaxeDTO.email)
+                    .Parameters.AddWithValue("@tienno", suaxeDTO.tienno)
                 End With
                 Try
                     conn.Open()
@@ -185,80 +185,5 @@ Public Class ChuXeDAL
         Return New Result(True)
     End Function
 
-    Public Function selectallby_tienno(tiennomin As Integer, tiennomax As Integer, ByRef listchuxe As List(Of ChuXeDTO)) As Result
 
-        Dim query As String = String.Empty
-        query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno] "
-        query &= " FROM [tblChuXe] "
-        query &= " WHERE "
-        query &= " [tienno] BETWEEN @tiennomin AND @tiennomax "
-
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                    .Parameters.AddWithValue("@tiennomin", tiennomin)
-                    .Parameters.AddWithValue("@tiennomax", tiennomax)
-                End With
-                Try
-                    conn.Open()
-                    Dim reader As SqlDataReader
-                    reader = comm.ExecuteReader()
-                    If reader.HasRows = True Then
-                        listchuxe.Clear()
-                        While reader.Read()
-                            listchuxe.Add(New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno")))
-                        End While
-                    End If
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    ' them that bai!!!
-                    Return New Result(False, "Lấy tất cả chu xe không thành công", ex.StackTrace)
-                End Try
-            End Using
-        End Using
-        Return New Result(True) ' thanh cong
-    End Function
-
-    Public Function selectallby_chuxe(tenchuxe As String, ByRef listchuxe As List(Of ChuXeDTO)) As Result
-
-        Dim query As String = String.Empty
-        query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno] "
-        query &= " FROM [tblChuXe] "
-        query &= " WHERE "
-        query &= " [tenchuxe] LIKE '%@tenchuxe%' "
-
-
-        Using conn As New SqlConnection(connectionString)
-            Using comm As New SqlCommand()
-                With comm
-                    .Connection = conn
-                    .CommandType = CommandType.Text
-                    .CommandText = query
-                    .Parameters.AddWithValue("@tenchuxe", tenchuxe)
-                End With
-                Try
-                    conn.Open()
-                    Dim reader As SqlDataReader
-                    reader = comm.ExecuteReader()
-                    If reader.HasRows = True Then
-                        listchuxe.Clear()
-                        While reader.Read()
-                            listchuxe.Add(New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno")))
-                        End While
-                    End If
-                Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
-                    conn.Close()
-                    ' them that bai!!!
-                    Return New Result(False, "Lấy tất cả chu xe không thành công", ex.StackTrace)
-                End Try
-            End Using
-        End Using
-        Return New Result(True) ' thanh cong
-    End Function
 End Class

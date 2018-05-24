@@ -5,13 +5,13 @@
     Private strdienthoai As String
     Private strdiachi As String
     Private stremail As String
-    Private strtienno As Integer
+    Private strtienno As String
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(machuxe As Integer, tenchuxe As String, diachi As String, dienthoai As String, email As String, tienno As Integer)
+    Public Sub New(machuxe As Integer, tenchuxe As String, diachi As String, dienthoai As String, email As String, tienno As String)
         Me.imachuxe = machuxe
         Me.strtenchuxe = tenchuxe
         Me.strdiachi = diachi
@@ -65,11 +65,11 @@
         End Set
     End Property
 
-    Public Property tienno As Integer
+    Public Property tienno As String
         Get
             Return strtienno
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strtienno = value
         End Set
     End Property
