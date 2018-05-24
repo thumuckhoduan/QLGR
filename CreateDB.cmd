@@ -1,0 +1,1 @@
+SQLCMD -S ADMIN -E -i CreateDB.sql
