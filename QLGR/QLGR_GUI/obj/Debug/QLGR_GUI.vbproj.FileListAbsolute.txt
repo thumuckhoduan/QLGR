@@ -188,3 +188,5 @@ D:\VB\QLGR2\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbproj.CopyComplete
 D:\VB\QLGR2\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 D:\VB\QLGR2\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 D:\VB\QLGR2\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.PhieuThuTien.resources
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmPhieuThuTien.resources

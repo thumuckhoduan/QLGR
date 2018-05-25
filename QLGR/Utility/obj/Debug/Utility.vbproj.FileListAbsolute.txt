@@ -159,3 +159,13 @@ D:\VB\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
 D:\VB\QLGR\QLGR\Utility\obj\Debug\Utility.dll
 D:\VB\QLGR\QLGR\Utility\obj\Debug\Utility.xml
 D:\VB\QLGR\QLGR\Utility\obj\Debug\Utility.pdb
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.dll
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.pdb
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.xml
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbprojAssemblyReference.cache
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.GenerateResource.cache
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.dll
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.xml
+C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.pdb

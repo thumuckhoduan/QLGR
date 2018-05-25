@@ -135,10 +135,19 @@
     <Compile Include="frmTimKiem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPhieuThuTien.Designer.vb">
+      <DependentUpon>frmPhieuThuTien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuThuTien.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmManHinhChinh.resx">
       <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThuTien.resx">
+      <DependentUpon>frmPhieuThuTien.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyChuXe.resx">
       <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>

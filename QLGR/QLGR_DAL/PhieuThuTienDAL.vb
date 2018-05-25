@@ -14,7 +14,7 @@ Public Class PhieuThuTienDAL
     Public Function buildmaphieuthu(ByRef nextMSX As String) As Result 'ex: 18222229
         Dim query As String = String.Empty
         query &= "SELECT TOP 1 [maphieuthu] "
-        query &= "FROM [tblChuXe] "
+        query &= "FROM [tblPhieuThuTien] "
         query &= "ORDER BY [maphieuthu] DESC "
 
         Using conn As New SqlConnection(connectionString)

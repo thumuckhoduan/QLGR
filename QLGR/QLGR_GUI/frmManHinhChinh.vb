@@ -46,4 +46,10 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub LậpPhiếuThuTiềnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LậpPhiếuThuTiềnToolStripMenuItem.Click
+        Dim frm As frmPhieuThuTien = New frmPhieuThuTien
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class
