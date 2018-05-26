@@ -223,14 +223,14 @@ Public Class XeDAL
     Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As Integer, tiennomax As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [tenchuxe], [tenhieuxe], [bienso], [tienno]"
+        query &= " SELECT [tblChuXe].[tenchuxe], [tblHieuXe].[tenhieuxe],[tblXe].[bienso],[tblChuXe].[tienno]"
         query &= " FROM [tblXe],[tblHieuXe],[tblChuXe]"
-        query &= " WHERE [tblXe.mahieuxe]=[tblHieuXe.mahieuxe] "
-        query &= " AND [tblChuXe.machuxe]=[tblXe.machuxe] "
-        query &= " AND [tblChuXe.tenchuxe] LIKE @tenchuxe "
-        query &= " AND [tblHieuXe.tenhieuxe] LIKE @tenhieuxe "
-        query &= " AND [tblXe.bienso] LIKE @bienso "
-        query &= " AND [tblXe.tiennomin] BETWEEN @tiennomin AND @tiennomax "
+        query &= " WHERE [tblXe].[mahieuxe]=[tblHieuXe].[mahieuxe] "
+        query &= " AND [tblChuXe].[machuxe]=[tblXe].[machuxe] "
+        query &= " AND [tblChuXe].[tenchuxe] LIKE " * " + @tenchuxe + " * " "
+        'query &= " AND [tblHieuXe].[tenhieuxe] LIKE '@tenhieuxe''*' "
+        'query &= " AND [tblXe].[bienso] LIKE @bienso "
+        'query &= " AND [tblChuXe].[tienno] BETWEEN @tiennomin AND @tiennomax "
 
 
 
@@ -241,10 +241,10 @@ Public Class XeDAL
                     .CommandType = CommandType.Text
                     .CommandText = query
                     .Parameters.AddWithValue("@tenchuxe", chuxe)
-                    .Parameters.AddWithValue("@tenhieuxe", hieuxe)
-                    .Parameters.AddWithValue("@bienso", bienso)
-                    .Parameters.AddWithValue("@tiennomin", tiennomin)
-                    .Parameters.AddWithValue("@tiennomax", tiennomax)
+                    '.Parameters.AddWithValue("@tenhieuxe", hieuxe)
+                    '.Parameters.AddWithValue("@bienso", bienso)
+                    '.Parameters.AddWithValue("@tiennomin", tiennomin)
+                    '.Parameters.AddWithValue("@tiennomax", tiennomax)
                 End With
                 Try
                     conn.Open()
@@ -260,7 +260,7 @@ Public Class XeDAL
                     Console.WriteLine(ex.StackTrace)
                     conn.Close()
                     ' them that bai!!!
-                    Return New Result(False, "Tra C?u không thành công", ex.StackTrace)
+                    Return New Result(False, "Tra Cuu không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using

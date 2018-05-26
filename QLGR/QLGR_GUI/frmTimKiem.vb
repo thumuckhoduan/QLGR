@@ -13,7 +13,7 @@ Public Class frmTimKiem
         Dim listHieuXe = New List(Of HieuXeDTO)
         result = hieuxeBUS.selectAll(listHieuXe)
         If (result.FlagResult = False) Then
-            MessageBox.Show("L?y danh sách hi?u xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Lay danh sách hieu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
             Return
@@ -60,25 +60,25 @@ Public Class frmTimKiem
 
         Dim clchuxe = New DataGridViewTextBoxColumn()
         clchuxe.Name = "tenchuxe"
-        clchuxe.HeaderText = "Tên Ch? Xe"
+        clchuxe.HeaderText = "Tên Chủ Xe"
         clchuxe.DataPropertyName = "chuxe"
         dgvTimKiem.Columns.Add(clchuxe)
 
         Dim clhieuxe = New DataGridViewTextBoxColumn()
         clhieuxe.Name = "hieuxe"
-        clhieuxe.HeaderText = "Hi?u Xe"
+        clhieuxe.HeaderText = "Hiệu Xe"
         clhieuxe.DataPropertyName = "hieuxe"
         dgvTimKiem.Columns.Add(clhieuxe)
 
         Dim clbienso = New DataGridViewTextBoxColumn()
         clbienso.Name = "bienso"
-        clbienso.HeaderText = "Bi?n s?"
+        clbienso.HeaderText = "Biển số"
         clbienso.DataPropertyName = "bienso"
         dgvTimKiem.Columns.Add(clbienso)
 
         Dim cltienno = New DataGridViewTextBoxColumn()
         cltienno.Name = "tienno"
-        cltienno.HeaderText = "Ti?n N?"
+        cltienno.HeaderText = "Tiền Nợ"
         cltienno.DataPropertyName = "tienno"
         dgvTimKiem.Columns.Add(cltienno)
 
