@@ -50,7 +50,7 @@ Public Class XeDAL
     Public Function insert(s As XeDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblXe] ([maxe], [mahieuxe], [machuxe],[bienso])"
+        query &= "INSERT INTO [tblXe] ([maxe], [mahieuxe], [machuxe], [bienso])"
         query &= "VALUES (@maxe,@mahieuxe,@machuxe,@bienso)"
 
         Dim nextMX = "1"
@@ -182,12 +182,12 @@ Public Class XeDAL
     Public Function selectALL_ByMaChuXe(iMaChuXe As Integer, ByRef listXe As List(Of XeDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [maxe], [mahieuxe], [machuxe], [bienso] "
+        query &= " SELECT [tblXe].[maxe], [tblXe].[mahieuxe], [tblXe].[machuxe], [tblXe].[bienso] "
         query &= " FROM [tblXe] "
         query &= "     ,[tblChuXe] "
         query &= " WHERE "
-        query &= "     [tblXe].[machuxe] = [tblChuXe].[machuxe]"
-        query &= "     AND [tblChuXe].[machuxe] = @machuxe"
+        query &= "     [tblXe].[machuxe] = [tblChuXe].[machuxe] "
+        query &= "     AND [tblXe].[machuxe] = @machuxe "
 
 
 
