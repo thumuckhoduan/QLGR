@@ -37,7 +37,7 @@ Public Class XeBUS
         '1. verify data here!!
 
         '2. insert to DB
-        Return selectall_ByMaChuXe(iMaChuXe, listXe)
+        Return XeDAL.selectALL_ByMaChuXe(iMaChuXe, listXe)
     End Function
     Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As Integer, tiennomax As Integer, ByRef timkiem As List(Of TimKiemDTO)) As Result
         '1. verify data here!!
