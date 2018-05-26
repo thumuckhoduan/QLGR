@@ -7,6 +7,12 @@ Public Class frmPhieuThuTien
     Private xeBUS As XeBUS
 
     Private Sub PhieuThuTien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        cbEmail.Hide()
+        cbDiaChi.Hide()
+        cbDiaChi.Hide()
+        cbDienThoai.Hide()
+
         phieuthutienBUS = New PhieuThuTienBUS()
         xeBUS = New XeBUS()
         Dim listXe = New List(Of XeDTO)
@@ -36,6 +42,21 @@ Public Class frmPhieuThuTien
         cbMaChuXe.ValueMember = "tenchuxe"
         cbTenChuXe.DisplayMember = cbMaChuXe.ValueMember
 
+        cbEmail.DataSource = cbMaChuXe.DataSource
+        cbMaChuXe.ValueMember = "email"
+        cbEmail.DisplayMember = cbMaChuXe.ValueMember
+
+        cbDiaChi.DataSource = cbMaChuXe.DataSource
+        cbMaChuXe.ValueMember = "diachi"
+        cbDiaChi.DisplayMember = cbMaChuXe.ValueMember
+
+        cbDienThoai.DataSource = cbMaChuXe.DataSource
+        cbMaChuXe.ValueMember = "dienthoai"
+        cbDienThoai.DisplayMember = cbMaChuXe.ValueMember
+
+        txtEmail.Text = cbEmail.Text
+        txtDiaChi.Text = cbDiaChi.Text
+        txtDienThoai.Text = cbDienThoai.Text
 
     End Sub
 
@@ -113,5 +134,19 @@ Public Class frmPhieuThuTien
             Return
 
         End Try
+    End Sub
+
+    Private Sub cbEmail_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmail.SelectedIndexChanged
+        txtEmail.Text = cbEmail.Text
+
+
+    End Sub
+
+    Private Sub cbDiaChi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDiaChi.SelectedIndexChanged
+        txtDiaChi.Text = cbDiaChi.Text
+    End Sub
+
+    Private Sub cbDienThoai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDienThoai.SelectedIndexChanged
+        txtDienThoai.Text = cbDienThoai.Text
     End Sub
 End Class
