@@ -4,9 +4,12 @@ Imports Utility
 Public Class frmPhieuThuTien
     Private phieuthutienBUS As PhieuThuTienBUS
     Private chuxeBUS As ChuXeBUS
+    Private xeBUS As XeBUS
+
     Private Sub PhieuThuTien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         phieuthutienBUS = New PhieuThuTienBUS()
-
+        xeBUS = New XeBUS()
+        Dim listXe = New List(Of XeDTO)
         Dim result As Result
         Dim nextMPTT = 0
 
@@ -32,6 +35,22 @@ Public Class frmPhieuThuTien
         cbMaChuXe.DisplayMember = "machuxe"
         cbMaChuXe.ValueMember = "tenchuxe"
         cbTenChuXe.DisplayMember = cbMaChuXe.ValueMember
+
+
+    End Sub
+
+    Private Sub loadBienSo(MaChuXe As Integer)
+
+        Dim listXe = New List(Of XeDTO)
+        xeBUS = New XeBUS()
+        Dim result As Result
+        result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
+        If (Result.FlagResult = False) Then
+            MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(Result.SystemMessage)
+            Me.Close()
+            Return
+        End If
 
     End Sub
 
@@ -72,5 +91,16 @@ Public Class frmPhieuThuTien
 
     End Sub
 
+
+
+    Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
+        Try
+            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
+            loadBienSo(chuxeDTO.machuxe)
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
+    End Sub
 
 End Class

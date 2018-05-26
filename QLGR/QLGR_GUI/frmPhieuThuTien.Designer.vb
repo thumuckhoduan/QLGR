@@ -43,7 +43,7 @@ Partial Class frmPhieuThuTien
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.cbBienSo = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -224,13 +224,13 @@ Partial Class frmPhieuThuTien
         Me.ComboBox4.Size = New System.Drawing.Size(133, 21)
         Me.ComboBox4.TabIndex = 21
         '
-        'ComboBox5
+        'cbBienSo
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(289, 133)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(187, 21)
-        Me.ComboBox5.TabIndex = 22
+        Me.cbBienSo.FormattingEnabled = True
+        Me.cbBienSo.Location = New System.Drawing.Point(289, 133)
+        Me.cbBienSo.Name = "cbBienSo"
+        Me.cbBienSo.Size = New System.Drawing.Size(187, 21)
+        Me.cbBienSo.TabIndex = 22
         '
         'Label9
         '
@@ -256,7 +256,7 @@ Partial Class frmPhieuThuTien
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtDiaChi)
-        Me.Controls.Add(Me.ComboBox5)
+        Me.Controls.Add(Me.cbBienSo)
         Me.Controls.Add(Me.ComboBox4)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
@@ -306,7 +306,7 @@ Partial Class frmPhieuThuTien
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents cbBienSo As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtDiaChi As TextBox
 End Class
