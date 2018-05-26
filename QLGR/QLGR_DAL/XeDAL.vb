@@ -179,5 +179,91 @@ Public Class XeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+    Public Function selectALL_ByMaChuXe(iMaChuXe As Integer, ByRef listXe As List(Of XeDTO)) As Result
 
+        Dim query As String = String.Empty
+        query &= " SELECT [maxe], [mahieuxe], [machuxe], [bienso] "
+        query &= " FROM [tblXe] "
+        query &= "     ,[tblChuXe] "
+        query &= " WHERE "
+        query &= "     [tblXe].[machuxe] = [tblChuXe].[machuxe]"
+        query &= "     AND [tblChuXe].[machuxe] = @machuxe"
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@machuxe", iMaChuXe)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listXe.Clear()
+                        While reader.Read()
+                            listXe.Add(New XeDTO(reader("maxe"), reader("mahieuxe"), reader("machuxe"), reader("bienso")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy tất cả xe theo chủ xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
+    Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tienno As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= " SELECT [tenchuxe], [tenhieuxe], [bienso], [tienno]"
+        query &= " FROM [tblXe],[tblHieuXe],[tblChuXe]"
+        query &= " WHERE [tblXe.mahieuxe]=[tblHieuXe.mahieuxe] "
+        query &= " AND [tblChuXe.machuxe]=[tblXe.machuxe] "
+        query &= " AND [tblChuXe.tenchuxe] LIKE @tenchuxe "
+        query &= " AND [tblHieuXe.tenhieuxe] LIKE @tenhieuxe "
+        query &= " AND [tblXe.bienso] LIKE @bienso "
+        query &= " AND [tblXe.tienno] LIKE @tienno "
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@tenchuxe", chuxe)
+                    .Parameters.AddWithValue("@tenhieuxe", hieuxe)
+                    .Parameters.AddWithValue("@bienso", bienso)
+                    .Parameters.AddWithValue("@tienno", tienno)
+
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listtimkiem.Clear()
+                        While reader.Read()
+                            listtimkiem.Add(New TimKiemDTO(reader("tenchuxe"), reader("tenhieuxe"), reader("bienso"), reader("tienno")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Tra Cứu không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class
