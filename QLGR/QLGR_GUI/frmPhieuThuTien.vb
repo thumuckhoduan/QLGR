@@ -42,7 +42,6 @@ Public Class frmPhieuThuTien
     Private Sub loadBienSo(MaChuXe As Integer)
 
         Dim listXe = New List(Of XeDTO)
-        xeBUS = New XeBUS()
         Dim result As Result
         result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
         If (Result.FlagResult = False) Then
@@ -51,7 +50,9 @@ Public Class frmPhieuThuTien
             Me.Close()
             Return
         End If
-
+        cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
+        cbBienSo.DisplayMember = "bienso"
+        cbBienSo.ValueMember = "bienso"
     End Sub
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
@@ -103,4 +104,14 @@ Public Class frmPhieuThuTien
         End Try
     End Sub
 
+    Private Sub cbMaChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaChuXe.SelectedIndexChanged
+        Try
+            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
+            loadBienSo(chuxeDTO.machuxe)
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+
+        End Try
+    End Sub
 End Class
