@@ -26,7 +26,6 @@ Partial Class frmPhieuThuTien
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbTenChuXe = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtBienSo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -40,11 +39,18 @@ Partial Class frmPhieuThuTien
         Me.cbMaChuXe = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtMaPhieuThuTien = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtDiaChi = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtDienThoai
         '
-        Me.txtDienThoai.Location = New System.Drawing.Point(289, 235)
+        Me.txtDienThoai.Location = New System.Drawing.Point(289, 257)
         Me.txtDienThoai.Name = "txtDienThoai"
         Me.txtDienThoai.ReadOnly = True
         Me.txtDienThoai.Size = New System.Drawing.Size(187, 20)
@@ -76,14 +82,6 @@ Partial Class frmPhieuThuTien
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Biển Số"
         '
-        'txtBienSo
-        '
-        Me.txtBienSo.Location = New System.Drawing.Point(289, 133)
-        Me.txtBienSo.Name = "txtBienSo"
-        Me.txtBienSo.ReadOnly = True
-        Me.txtBienSo.Size = New System.Drawing.Size(187, 20)
-        Me.txtBienSo.TabIndex = 4
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -96,7 +94,7 @@ Partial Class frmPhieuThuTien
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(195, 235)
+        Me.Label4.Location = New System.Drawing.Point(195, 257)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 13)
         Me.Label4.TabIndex = 6
@@ -194,11 +192,75 @@ Partial Class frmPhieuThuTien
         Me.txtMaPhieuThuTien.Size = New System.Drawing.Size(187, 20)
         Me.txtMaPhieuThuTien.TabIndex = 17
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(529, 133)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(133, 21)
+        Me.ComboBox1.TabIndex = 18
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(529, 232)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(133, 21)
+        Me.ComboBox2.TabIndex = 19
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(529, 184)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(133, 21)
+        Me.ComboBox3.TabIndex = 20
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(529, 94)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(133, 21)
+        Me.ComboBox4.TabIndex = 21
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(289, 133)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox5.TabIndex = 22
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(195, 219)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(41, 13)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Địa Chỉ"
+        '
+        'txtDiaChi
+        '
+        Me.txtDiaChi.Location = New System.Drawing.Point(289, 219)
+        Me.txtDiaChi.Name = "txtDiaChi"
+        Me.txtDiaChi.ReadOnly = True
+        Me.txtDiaChi.Size = New System.Drawing.Size(187, 20)
+        Me.txtDiaChi.TabIndex = 23
+        '
         'frmPhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.txtDiaChi)
+        Me.Controls.Add(Me.ComboBox5)
+        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.txtMaPhieuThuTien)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cbMaChuXe)
@@ -212,7 +274,6 @@ Partial Class frmPhieuThuTien
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtBienSo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbTenChuXe)
         Me.Controls.Add(Me.Label1)
@@ -228,7 +289,6 @@ Partial Class frmPhieuThuTien
     Friend WithEvents Label1 As Label
     Friend WithEvents cbTenChuXe As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtBienSo As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents txtEmail As TextBox
@@ -242,4 +302,11 @@ Partial Class frmPhieuThuTien
     Friend WithEvents cbMaChuXe As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txtMaPhieuThuTien As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtDiaChi As TextBox
 End Class
