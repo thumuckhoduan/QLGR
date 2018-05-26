@@ -220,7 +220,7 @@ Public Class XeDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tienno As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
+    Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As Integer, tiennomax As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
 
         Dim query As String = String.Empty
         query &= " SELECT [tenchuxe], [tenhieuxe], [bienso], [tienno]"
@@ -230,7 +230,7 @@ Public Class XeDAL
         query &= " AND [tblChuXe.tenchuxe] LIKE @tenchuxe "
         query &= " AND [tblHieuXe.tenhieuxe] LIKE @tenhieuxe "
         query &= " AND [tblXe.bienso] LIKE @bienso "
-        query &= " AND [tblXe.tienno] LIKE @tienno "
+        query &= " AND [tblXe.tiennomin] BETWEEN @tiennomin AND @tiennomax "
 
 
 
@@ -243,8 +243,8 @@ Public Class XeDAL
                     .Parameters.AddWithValue("@tenchuxe", chuxe)
                     .Parameters.AddWithValue("@tenhieuxe", hieuxe)
                     .Parameters.AddWithValue("@bienso", bienso)
-                    .Parameters.AddWithValue("@tienno", tienno)
-
+                    .Parameters.AddWithValue("@tiennomin", tiennomin)
+                    .Parameters.AddWithValue("@tiennomax", tiennomax)
                 End With
                 Try
                     conn.Open()
@@ -260,7 +260,7 @@ Public Class XeDAL
                     Console.WriteLine(ex.StackTrace)
                     conn.Close()
                     ' them that bai!!!
-                    Return New Result(False, "Tra Cứu không thành công", ex.StackTrace)
+                    Return New Result(False, "Tra C?u không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using

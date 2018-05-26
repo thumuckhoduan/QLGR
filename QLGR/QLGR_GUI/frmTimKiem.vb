@@ -1,21 +1,20 @@
-﻿Imports QLGR_DTO
+﻿
+Imports QLGR_DTO
 Imports QLGR_BUS
 Imports Utility
 Public Class frmTimKiem
     Private hieuxeBUS As HieuXeBUS
-    Private chuxeBUS As ChuXeBUS
     Private xeBUS As XeBUS
     Private Sub frmTimKiem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hieuxeBUS = New HieuXeBUS()
-        chuxeBUS = New ChuXeBUS()
         xeBUS = New XeBUS()
         Dim result As Result
 
         Dim listHieuXe = New List(Of HieuXeDTO)
-        Result = hieuxeBUS.selectAll(listHieuXe)
-        If (Result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách hiệu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(Result.SystemMessage)
+        result = hieuxeBUS.selectAll(listHieuXe)
+        If (result.FlagResult = False) Then
+            MessageBox.Show("L?y danh sách hi?u xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
             Me.Close()
             Return
         End If
@@ -35,45 +34,51 @@ Public Class frmTimKiem
     Private Sub btTimKiem_Click(sender As Object, e As EventArgs) Handles btTimKiem.Click
         Dim xeDTO As XeDTO
         xeDTO = New XeDTO()
-        Dim hieuxeDTO As HieuXeDTO
-        hieuxeDTO = New HieuXeDTO()
-        Dim chuxeDTO As ChuXeDTO
-        chuxeDTO = New ChuXeDTO()
-
         loadlisttimkiem()
     End Sub
     Private Sub loadlisttimkiem()
-
+        Dim chuxe As String
+        Dim hieuxe As String
+        Dim bienso As String
+        Dim tiennomin As Integer
+        Dim tiennomax As Integer
         Dim listtimkiem = New List(Of TimKiemDTO)
+
+        chuxe = txtChuXe.Text
+        hieuxe = cbHieuXe.Text
+        bienso = txtBienSo.Text
+        tiennomin = txtTienNoMin.Text
+        tiennomax = txtTienNoMax.Text
+
+        xeBUS.tracuu(chuxe, hieuxe, bienso, tiennomin, tiennomax, listtimkiem)
 
         dgvTimKiem.Columns.Clear()
         dgvTimKiem.DataSource = Nothing
-
         dgvTimKiem.AutoGenerateColumns = False
         dgvTimKiem.AllowUserToAddRows = False
         dgvTimKiem.DataSource = listtimkiem
 
         Dim clchuxe = New DataGridViewTextBoxColumn()
         clchuxe.Name = "tenchuxe"
-        clchuxe.HeaderText = "Tên Chủ Xe"
+        clchuxe.HeaderText = "Tên Ch? Xe"
         clchuxe.DataPropertyName = "chuxe"
         dgvTimKiem.Columns.Add(clchuxe)
 
         Dim clhieuxe = New DataGridViewTextBoxColumn()
         clhieuxe.Name = "hieuxe"
-        clhieuxe.HeaderText = "Hiệu Xe"
+        clhieuxe.HeaderText = "Hi?u Xe"
         clhieuxe.DataPropertyName = "hieuxe"
         dgvTimKiem.Columns.Add(clhieuxe)
 
         Dim clbienso = New DataGridViewTextBoxColumn()
         clbienso.Name = "bienso"
-        clbienso.HeaderText = "Biển số"
+        clbienso.HeaderText = "Bi?n s?"
         clbienso.DataPropertyName = "bienso"
         dgvTimKiem.Columns.Add(clbienso)
 
         Dim cltienno = New DataGridViewTextBoxColumn()
         cltienno.Name = "tienno"
-        cltienno.HeaderText = "Tiền Nợ"
+        cltienno.HeaderText = "Ti?n N?"
         cltienno.DataPropertyName = "tienno"
         dgvTimKiem.Columns.Add(cltienno)
 
