@@ -52,4 +52,16 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub ThêmPhụTùngToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThêmPhụTùngToolStripMenuItem.Click
+        Dim frm As frmThemPhuTung = New frmThemPhuTung
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub QuảnLýPhụTùngToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýPhụTùngToolStripMenuItem.Click
+        Dim frm As frmQuanLyPhuTung = New frmQuanLyPhuTung
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

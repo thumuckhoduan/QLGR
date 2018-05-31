@@ -81,6 +81,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="PhieuThuTienBUS.vb" />
+    <Compile Include="PhuTungBUS.vb" />
     <Compile Include="TiepNhanSuaXeBUS.vb" />
     <Compile Include="XeBUS.vb" />
   </ItemGroup>

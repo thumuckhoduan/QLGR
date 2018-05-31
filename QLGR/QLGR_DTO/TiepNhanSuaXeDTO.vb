@@ -10,7 +10,6 @@
     Public Sub New(masuaxe As Integer, maxe As Integer, ngaytiepnhan As Date)
         Me.imasuaxe = masuaxe
         Me.imaxe = maxe
-
         Me.dtpngaytiepnhan = ngaytiepnhan
     End Sub
 

@@ -90,7 +90,7 @@ Public Class frmQuanLyHieuXe
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
         Dim currentRowIndex As Integer = dgvDanhSachHieuXe.CurrentCellAddress.Y 'current row selected
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachHieuXe.RowCount) Then
-            Select Case MsgBox("Bạn có thực sự muốn xóa Môn học có mã: " + txbMaHieuXe.Text, MsgBoxStyle.YesNo, "Information")
+            Select Case MsgBox("Bạn có thực sự muốn xóa hiệu xe có mã: " + txbMaHieuXe.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
 

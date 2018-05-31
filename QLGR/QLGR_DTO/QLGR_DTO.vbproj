@@ -81,6 +81,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="PhieuThuTienDTO.vb" />
+    <Compile Include="PhuTungDTO.vb" />
     <Compile Include="TiepNhanSuaXeDTO.vb" />
     <Compile Include="TimKiemDTO.vb" />
     <Compile Include="XeDTO.vb" />

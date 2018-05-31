@@ -221,14 +221,13 @@ Public Class XeDAL
     End Function
 
     Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As Integer, tiennomax As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
-
         Dim query As String = String.Empty
         query &= " SELECT [tblChuXe].[tenchuxe], [tblHieuXe].[tenhieuxe],[tblXe].[bienso],[tblChuXe].[tienno]"
         query &= " FROM [tblXe],[tblHieuXe],[tblChuXe]"
         query &= " WHERE [tblXe].[mahieuxe]=[tblHieuXe].[mahieuxe] "
         query &= " AND [tblChuXe].[machuxe]=[tblXe].[machuxe] "
-        query &= " AND [tblChuXe].[tenchuxe] LIKE " * " + @tenchuxe + " * " "
-        'query &= " AND [tblHieuXe].[tenhieuxe] LIKE '@tenhieuxe''*' "
+        query &= " AND [tblChuXe].[tenchuxe] like @tenchuxe '%'"
+        'query &= " AND [tblHieuXe].[tenhieuxe] = @tenhieuxe "
         'query &= " AND [tblXe].[bienso] LIKE @bienso "
         'query &= " AND [tblChuXe].[tienno] BETWEEN @tiennomin AND @tiennomax "
 

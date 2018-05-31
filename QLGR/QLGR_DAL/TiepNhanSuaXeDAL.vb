@@ -11,7 +11,7 @@ Public Class TiepNhanSuaXeDAL
     Public Sub New(ConnectionString As String)
         Me.connectionString = ConnectionString
     End Sub
-    Public Function buildMaSuaXe(ByRef nextMSX As String) As Result 'ex: 18222229
+    Public Function buildMaSuaXe(ByRef nextMSX As Integer) As Result 'ex: 18222229
         Dim query As String = String.Empty
         query &= "SELECT TOP 1 [masuaxe] "
         query &= "FROM [tblTiepNhanSuaXe] "
@@ -146,7 +146,7 @@ Public Class TiepNhanSuaXeDAL
         End Using
         Return New Result(True) 
     End Function
-    Public Function delete(masuaxe As String) As Result
+    Public Function delete(masuaxe As Integer) As Result
 
         Dim query As String = String.Empty
         query &= " DELETE FROM [tblTiepNhanSuaXe] "

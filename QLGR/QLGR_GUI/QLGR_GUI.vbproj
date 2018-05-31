@@ -90,6 +90,12 @@
     <Compile Include="frmQuanLyXe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmThemPhuTung.Designer.vb">
+      <DependentUpon>frmThemPhuTung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemPhuTung.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -141,6 +147,12 @@
     <Compile Include="frmPhieuThuTien.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmQuanLyPhuTung.Designer.vb">
+      <DependentUpon>frmQuanLyPhuTung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyPhuTung.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmManHinhChinh.resx">
@@ -154,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemPhuTung.resx">
+      <DependentUpon>frmThemPhuTung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -175,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimKiem.resx">
       <DependentUpon>frmTimKiem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyPhuTung.resx">
+      <DependentUpon>frmQuanLyPhuTung.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
