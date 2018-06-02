@@ -226,8 +226,8 @@ Public Class XeDAL
         query &= " FROM [tblXe],[tblHieuXe],[tblChuXe]"
         query &= " WHERE [tblXe].[mahieuxe]=[tblHieuXe].[mahieuxe] "
         query &= " AND [tblChuXe].[machuxe]=[tblXe].[machuxe] "
-        query &= " AND [tblChuXe].[tenchuxe] like @tenchuxe '%'"
-        'query &= " AND [tblHieuXe].[tenhieuxe] = @tenhieuxe "
+        query &= " AND [tblChuXe].[tenchuxe] like '%' + @tenchuxe + '%' "
+        query &= " AND [tblHieuXe].[tenhieuxe] = @tenhieuxe "
         'query &= " AND [tblXe].[bienso] LIKE @bienso "
         'query &= " AND [tblChuXe].[tienno] BETWEEN @tiennomin AND @tiennomax "
 
@@ -240,7 +240,7 @@ Public Class XeDAL
                     .CommandType = CommandType.Text
                     .CommandText = query
                     .Parameters.AddWithValue("@tenchuxe", chuxe)
-                    '.Parameters.AddWithValue("@tenhieuxe", hieuxe)
+                    .Parameters.AddWithValue("@tenhieuxe", hieuxe)
                     '.Parameters.AddWithValue("@bienso", bienso)
                     '.Parameters.AddWithValue("@tiennomin", tiennomin)
                     '.Parameters.AddWithValue("@tiennomax", tiennomax)
