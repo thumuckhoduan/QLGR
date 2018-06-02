@@ -55,6 +55,10 @@ Public Class frmPhieuThuTien
         cbMaChuXe.ValueMember = "dienthoai"
         cbDienThoai.DisplayMember = cbMaChuXe.ValueMember
 
+        cbTienNo.DataSource = cbMaChuXe.DataSource
+        cbMaChuXe.ValueMember = "tienno"
+        cbTienNo.DisplayMember = cbMaChuXe.ValueMember
+
         txtEmail.Text = cbEmail.Text
         txtDiaChi.Text = cbDiaChi.Text
         txtDienThoai.Text = cbDienThoai.Text
@@ -92,10 +96,12 @@ Public Class frmPhieuThuTien
         phieuthuDTO.maxe = Convert.ToInt32(cbMaXe.Text)
         phieuthuDTO.sotienthu = txtSoTienThu.Text
         phieuthuDTO.ngaythu = dtpNgayThuTien.Value
-        'chuxeDTO.tenchuxe = cbTenChuXe.Text
-        'chuxeDTO.diachi = txtDiaChi.Text
-        'chuxeDTO.dienthoai = txtDienThoai.Text
-
+        chuxeDTO.machuxe = cbMaChuXe.Text
+        chuxeDTO.tenchuxe = cbTenChuXe.Text
+        chuxeDTO.diachi = txtDiaChi.Text
+        chuxeDTO.dienthoai = txtDienThoai.Text
+        chuxeDTO.tienno = Convert.ToInt32(cbTienNo.Text) + Convert.ToInt32(txtSoTienThu.Text)
+        chuxeDTO.email = txtEmail.Text
 
 
         '3. Insert to DB
@@ -119,6 +125,17 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Thêm phiếu thu tiền không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
+
+
+        chuxeBUS = New ChuXeBUS()
+        result = chuxeBUS.update(chuxeDTO)
+        If (result.FlagResult = True) Then
+            MessageBox.Show("Cộng số tiền thu thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("Cộng số tiền thu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
+
 
     End Sub
 
@@ -157,5 +174,9 @@ Public Class frmPhieuThuTien
 
     Private Sub cbDienThoai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDienThoai.SelectedIndexChanged
         txtDienThoai.Text = cbDienThoai.Text
+    End Sub
+
+    Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
+        Me.Close()
     End Sub
 End Class

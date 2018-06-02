@@ -46,6 +46,7 @@ Partial Class frmPhieuThuTien
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
         Me.cbMaXe = New System.Windows.Forms.ComboBox()
+        Me.cbTienNo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtDienThoai
@@ -249,11 +250,20 @@ Partial Class frmPhieuThuTien
         Me.cbMaXe.Size = New System.Drawing.Size(133, 21)
         Me.cbMaXe.TabIndex = 25
         '
+        'cbTienNo
+        '
+        Me.cbTienNo.FormattingEnabled = True
+        Me.cbTienNo.Location = New System.Drawing.Point(529, 299)
+        Me.cbTienNo.Name = "cbTienNo"
+        Me.cbTienNo.Size = New System.Drawing.Size(133, 21)
+        Me.cbTienNo.TabIndex = 26
+        '
         'frmPhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cbTienNo)
         Me.Controls.Add(Me.cbMaXe)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtDiaChi)
@@ -309,4 +319,5 @@ Partial Class frmPhieuThuTien
     Friend WithEvents Label9 As Label
     Friend WithEvents txtDiaChi As TextBox
     Friend WithEvents cbMaXe As ComboBox
+    Friend WithEvents cbTienNo As ComboBox
 End Class
