@@ -148,7 +148,7 @@ Public Class PhuTungDAL
         Dim query As String = String.Empty
         query &= " UPDATE [tblPhuTung] SET"
         query &= " [tenphutung] = @tenphutung "
-        query &= " [soluongton] = @soluongton "
+        query &= " ,[soluongton] = @soluongton "
         query &= "WHERE "
         query &= " [maphutung] = @maphutung "
 
