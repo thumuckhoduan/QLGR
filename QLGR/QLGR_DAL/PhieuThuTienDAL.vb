@@ -50,8 +50,8 @@ Public Class PhieuThuTienDAL
     Public Function insert(s As PhieuThuTienDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblChuXe] ([maphieuthu], [maxe], [ngaythu], [sotienthu])"
-        query &= "VALUES (@maphieuthu,@maxe,@ngaythu,@sotienthu)"
+        query &= "INSERT INTO [tblPhieuThuTien] ([maphieuthu], [maxe], [ngaythu], [sotienthu])"
+        query &= "VALUES (@maphieuthu, @maxe, @ngaythu, @sotienthu)"
 
         'get MS
         Dim nextMPT = "1"

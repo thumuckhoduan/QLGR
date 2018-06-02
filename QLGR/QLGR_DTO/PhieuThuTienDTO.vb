@@ -8,7 +8,7 @@
 
     End Sub
 
-    Public Sub New(maphieuthu As Integer, maxe As Integer, ngaythu As String, sotienthu As String)
+    Public Sub New(maphieuthu As Integer, maxe As Integer, ngaythu As DateTime, sotienthu As String)
         Me.imaphieuthu = maphieuthu
         Me.imaxe = maxe
         Me.dtpngaythu = ngaythu
@@ -33,11 +33,11 @@
         End Set
     End Property
 
-    Public Property ngaythu As Date
+    Public Property ngaythu As DateTime
         Get
             Return dtpngaythu
         End Get
-        Set(value As Date)
+        Set(value As DateTime)
             dtpngaythu = value
         End Set
     End Property

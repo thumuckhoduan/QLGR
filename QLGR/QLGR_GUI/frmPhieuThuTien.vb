@@ -12,6 +12,7 @@ Public Class frmPhieuThuTien
         cbDiaChi.Hide()
         cbDiaChi.Hide()
         cbDienThoai.Hide()
+        cbMaXe.Hide()
 
         phieuthutienBUS = New PhieuThuTienBUS()
         xeBUS = New XeBUS()
@@ -73,7 +74,11 @@ Public Class frmPhieuThuTien
         End If
         cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
         cbBienSo.DisplayMember = "bienso"
-        cbBienSo.ValueMember = "bienso"
+        cbBienSo.ValueMember = "maxe"
+
+        cbMaXe.DataSource = cbBienSo.DataSource
+        cbMaXe.DisplayMember = cbBienSo.ValueMember
+
     End Sub
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
@@ -84,14 +89,18 @@ Public Class frmPhieuThuTien
 
         '1. Mapping data from GUI control
         phieuthuDTO.maphieuthu = Convert.ToInt32(txtMaPhieuThuTien.Text)
-        chuxeDTO.tenchuxe = cbTenChuXe.Text
-        chuxeDTO.diachi = txtDiaChi.Text
-        chuxeDTO.dienthoai = txtDienThoai.Text
+        phieuthuDTO.maxe = Convert.ToInt32(cbMaXe.Text)
+        phieuthuDTO.sotienthu = txtSoTienThu.Text
+        phieuthuDTO.ngaythu = dtpNgayThuTien.Value
+        'chuxeDTO.tenchuxe = cbTenChuXe.Text
+        'chuxeDTO.diachi = txtDiaChi.Text
+        'chuxeDTO.dienthoai = txtDienThoai.Text
 
 
 
         '3. Insert to DB
         Dim result As Result
+        phieuthutienBUS = New PhieuThuTienBUS()
         result = phieuthutienBUS.insert(phieuthuDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Thêm phiếu thu tiền thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -45,6 +45,7 @@ Partial Class frmPhieuThuTien
         Me.cbBienSo = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
+        Me.cbMaXe = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtDienThoai
@@ -75,7 +76,7 @@ Partial Class frmPhieuThuTien
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(195, 136)
+        Me.Label2.Location = New System.Drawing.Point(195, 143)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 3
@@ -218,7 +219,7 @@ Partial Class frmPhieuThuTien
         'cbBienSo
         '
         Me.cbBienSo.FormattingEnabled = True
-        Me.cbBienSo.Location = New System.Drawing.Point(289, 133)
+        Me.cbBienSo.Location = New System.Drawing.Point(289, 140)
         Me.cbBienSo.Name = "cbBienSo"
         Me.cbBienSo.Size = New System.Drawing.Size(187, 21)
         Me.cbBienSo.TabIndex = 22
@@ -240,11 +241,20 @@ Partial Class frmPhieuThuTien
         Me.txtDiaChi.Size = New System.Drawing.Size(187, 20)
         Me.txtDiaChi.TabIndex = 23
         '
+        'cbMaXe
+        '
+        Me.cbMaXe.FormattingEnabled = True
+        Me.cbMaXe.Location = New System.Drawing.Point(529, 140)
+        Me.cbMaXe.Name = "cbMaXe"
+        Me.cbMaXe.Size = New System.Drawing.Size(133, 21)
+        Me.cbMaXe.TabIndex = 25
+        '
         'frmPhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cbMaXe)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtDiaChi)
         Me.Controls.Add(Me.cbBienSo)
@@ -298,4 +308,5 @@ Partial Class frmPhieuThuTien
     Friend WithEvents cbBienSo As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtDiaChi As TextBox
+    Friend WithEvents cbMaXe As ComboBox
 End Class
