@@ -13,7 +13,7 @@ Public Class frmPhieuThuTien
         cbDiaChi.Hide()
         cbDienThoai.Hide()
         cbMaXe.Hide()
-
+        cbTienNo.Hide()
         phieuthutienBUS = New PhieuThuTienBUS()
         xeBUS = New XeBUS()
         Dim listXe = New List(Of XeDTO)
@@ -100,7 +100,7 @@ Public Class frmPhieuThuTien
         chuxeDTO.tenchuxe = cbTenChuXe.Text
         chuxeDTO.diachi = txtDiaChi.Text
         chuxeDTO.dienthoai = txtDienThoai.Text
-        chuxeDTO.tienno = Convert.ToInt32(cbTienNo.Text) + Convert.ToInt32(txtSoTienThu.Text)
+        chuxeDTO.tienno = Convert.ToInt32(cbTienNo.Text) - Convert.ToInt32(txtSoTienThu.Text)
         chuxeDTO.email = txtEmail.Text
 
 
