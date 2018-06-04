@@ -78,6 +78,12 @@
     <Compile Include="frmManHinhChinh.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPhieuSuaChua.Designer.vb">
+      <DependentUpon>frmPhieuSuaChua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhieuSuaChua.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmQuanLyChuXe.Designer.vb">
       <DependentUpon>frmQuanLyChuXe.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmManHinhChinh.resx">
       <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuSuaChua.resx">
+      <DependentUpon>frmPhieuSuaChua.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuThuTien.resx">
       <DependentUpon>frmPhieuThuTien.vb</DependentUpon>
