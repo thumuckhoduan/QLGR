@@ -104,3 +104,5 @@ C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbpro
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmDoanhSo.resources
+C:\Users\DELL\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmPhieuSuaChua.resources
