@@ -24,6 +24,7 @@ Public Class frmTiepNhanSuaXe
             Return
         End If
         txtMaSuaXe.Text = nextMSX
+
         Dim listHieuXe = New List(Of HieuXeDTO)
         result = hieuxeBUS.selectAll(listHieuXe)
         If (result.FlagResult = False) Then

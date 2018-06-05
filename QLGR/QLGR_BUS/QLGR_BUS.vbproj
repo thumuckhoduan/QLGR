@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietDoanhSoBUS.vb" />
+    <Compile Include="ChiTietSuaChuaBUS.vb" />
     <Compile Include="ChuXeBUS.vb" />
     <Compile Include="DoanhSoBUS.vb" />
     <Compile Include="HieuXeBUS.vb" />
@@ -82,6 +83,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PhieuSuaChuaBUS.vb" />
     <Compile Include="PhieuThuTienBUS.vb" />
     <Compile Include="PhuTungBUS.vb" />
     <Compile Include="TiepNhanSuaXeBUS.vb" />

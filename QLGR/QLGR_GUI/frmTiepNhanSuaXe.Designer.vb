@@ -51,7 +51,7 @@ Partial Class frmTiepNhanSuaXe
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Mã Sữa Xe"
+        Me.Label1.Text = "Mã Sửa Xe"
         '
         'txtMaSuaXe
         '

@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietDoanhSoDAL.vb" />
+    <Compile Include="ChiTietSuaChuaDAL.vb" />
     <Compile Include="ChuXeDAL.vb" />
     <Compile Include="DoanhSoDAL.vb" />
     <Compile Include="HieuXeDAL.vb" />

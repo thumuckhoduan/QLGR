@@ -30,7 +30,6 @@ C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\bin\Debug\QLGR_DTO.pdb
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\bin\Debug\QLGR_DTO.xml
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\bin\Debug\Utility.pdb
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\bin\Debug\Utility.xml
-C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.vbprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.Resources.resources
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.vbproj.GenerateResource.cache
 C:\Users\Administrator\source\repos\QLGR\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.vbproj.CoreCompileInputs.cache
@@ -138,3 +137,4 @@ C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.vbpro
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.dll
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.xml
 C:\Users\Administrator\Source\Repos\QLGR6\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.pdb
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\QLGR_BUS\obj\Debug\QLGR_BUS.vbprojResolveAssemblyReference.cache

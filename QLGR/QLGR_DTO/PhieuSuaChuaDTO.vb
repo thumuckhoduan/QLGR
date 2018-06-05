@@ -2,13 +2,13 @@
     Private imaphieusuachua As Integer
     Private imaxe As Integer
     Private strnoidung As String
-    Private ithanhtien As String
+    Private ithanhtien As Integer
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(maphieusuachua As Integer, maxe As Integer, noidung As String, thanhtien As String)
+    Public Sub New(maphieusuachua As Integer, noidung As String, maxe As Integer, thanhtien As Integer)
         Me.imaphieusuachua = maphieusuachua
         Me.strnoidung = noidung
         Me.imaxe = maxe
@@ -34,11 +34,11 @@
         End Set
     End Property
 
-    Public Property thanhtien As String
+    Public Property thanhtien As Integer
         Get
             Return ithanhtien
         End Get
-        Set(value As String)
+        Set(value As Integer)
             ithanhtien = value
         End Set
     End Property
