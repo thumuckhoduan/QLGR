@@ -106,7 +106,7 @@ Partial Class frmDoanhSo
         '
         'txtNam
         '
-        Me.txtNam.Location = New System.Drawing.Point(465, 25)
+        Me.txtNam.Location = New System.Drawing.Point(507, 25)
         Me.txtNam.Name = "txtNam"
         Me.txtNam.Size = New System.Drawing.Size(149, 20)
         Me.txtNam.TabIndex = 9
