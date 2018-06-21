@@ -33,4 +33,10 @@ Public Class PhieuSuaChuaBUS
         '2. insert to DB
         Return phieusuachuaDAL.delete(maphieusuachua)
     End Function
+    Public Function tongthanhtien(thang As Integer, nam As Integer, ByRef tong As Integer) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return phieusuachuaDAL.tongthanhtien(thang, nam, tong)
+    End Function
 End Class

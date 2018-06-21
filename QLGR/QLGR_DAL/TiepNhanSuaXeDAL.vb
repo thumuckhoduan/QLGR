@@ -213,4 +213,68 @@ Public Class TiepNhanSuaXeDAL
         End Using
         Return New Result(True)
     End Function
+    Public Function select_thang(nam As Integer, ByRef listthang As List(Of Integer)) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT DISTINCT Month([ngaytiepnhan]) As [thang] "
+        query &= " FROM [tblTiepNhanSuaXe] "
+        query &= " WHERE Year([ngaytiepnhan])=@nam "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@nam", nam)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listthang.Clear()
+                        While reader.Read()
+                            listthang.Add(Convert.ToInt32(reader("thang")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy list tháng không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) '
+    End Function
+    Public Function select_nam(ByRef listnam As List(Of Integer)) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT DISTINCT Year([ngaytiepnhan]) As [nam] "
+        query &= " FROM [tblTiepNhanSuaXe] "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listnam.Clear()
+                        While reader.Read()
+                            listnam.Add(Convert.ToInt32(reader("nam")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy list năm không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) '
+    End Function
 End Class

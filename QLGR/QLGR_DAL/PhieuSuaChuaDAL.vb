@@ -50,7 +50,7 @@ Public Class PhieuSuaChuaDAL
     Public Function insert(s As PhieuSuaChuaDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblPhieuSuaChua] ([maphieusuachua], [noidung], [maxe], [thanhtien])"
+        query &= "INSERT INTO [tblPhieuSuaChua] ([maphieusuachua], [noidung], [masuaxe], [thanhtien])"
         query &= "VALUES (@maphieusuachua,@noidung,@maxe,@thanhtien)"
 
         'get MS
@@ -66,7 +66,7 @@ Public Class PhieuSuaChuaDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@maphieusuachua", s.maphieusuachua)
                     .Parameters.AddWithValue("@noidung", s.noidung)
-                    .Parameters.AddWithValue("@maxe", s.maxe)
+                    .Parameters.AddWithValue("@maxe", s.masuaxe)
                     .Parameters.AddWithValue("@thanhtien", s.thanhtien)
 
                 End With
@@ -113,7 +113,7 @@ Public Class PhieuSuaChuaDAL
     Public Function selectALL(ByRef listchuxe As List(Of PhieuSuaChuaDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [maphieusuachua], [noidung], [maxe], [thanhtien]"
+        query &= " SELECT [maphieusuachua], [noidung], [masuaxe], [thanhtien]"
         query &= " FROM [tblPhieuSuaChua]"
 
 
@@ -131,7 +131,7 @@ Public Class PhieuSuaChuaDAL
                     If reader.HasRows = True Then
                         listchuxe.Clear()
                         While reader.Read()
-                            listchuxe.Add(New PhieuSuaChuaDTO(reader("maphieusuachua"), reader("noidung"), reader("maxe"), reader("thanhtien")))
+                            listchuxe.Add(New PhieuSuaChuaDTO(reader("maphieusuachua"), reader("noidung"), reader("masuaxe"), reader("thanhtien")))
                         End While
                     End If
                 Catch ex As Exception
@@ -165,7 +165,7 @@ Public Class PhieuSuaChuaDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@maphieusuachua", phieusuachuaDTO.maphieusuachua)
                     .Parameters.AddWithValue("@noidung", phieusuachuaDTO.noidung)
-                    .Parameters.AddWithValue("@maxe", phieusuachuaDTO.maxe)
+                    .Parameters.AddWithValue("@masuaxe", phieusuachuaDTO.masuaxe)
                     .Parameters.AddWithValue("@thanhtien", phieusuachuaDTO.thanhtien)
 
                 End With
@@ -181,4 +181,43 @@ Public Class PhieuSuaChuaDAL
         End Using
         Return New Result(True)
     End Function
+    Public Function tongthanhtien(thang As Integer, nam As Integer, ByRef tong As Integer) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT SUM([thanhtien]) AS [tong] "
+        query &= "FROM [tblPhieuSuaChua],[tblTiepNhanSuaXe] "
+        query &= "WHERE "
+        query &= "[tblPhieuSuaChua].[masuaxe]=[tblTiepNhanSuaXe].[masuaxe] "
+        query &= "AND Year([ngaytiepnhan])=@nam "
+        query &= "AND Month([ngaytiepnhan])=@thang "
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@thang", thang)
+                    .Parameters.AddWithValue("@nam", nam)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    Dim idOnDB As Integer
+                    idOnDB = Nothing
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            idOnDB = reader("tong")
+                        End While
+                    End If
+                    tong = idOnDB
+                Catch ex As Exception
+                    conn.Close()
+                    Return New Result(False, "Tính tổng thành tiền không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
 End Class

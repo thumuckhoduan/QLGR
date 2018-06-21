@@ -15,4 +15,5 @@ Public Class DoanhSoBUS
     Public Function buildmadoanhso(ByRef nextMDS As Integer) As Result
         Return doanhsoDAL.buildmadoanhso(nextMDS)
     End Function
+
 End Class

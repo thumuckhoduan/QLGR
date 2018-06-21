@@ -169,3 +169,11 @@ C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.CoreCompileInpu
 C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.dll
 C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.xml
 C:\Users\DELL\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.pdb
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.dll
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.pdb
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\bin\Debug\Utility.xml
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.GenerateResource.Cache
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.dll
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.xml
+C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.pdb

@@ -30,7 +30,7 @@ Partial Class frmDoanhSo
         Me.lbTongDoanhThu = New System.Windows.Forms.Label()
         Me.btLuu = New System.Windows.Forms.Button()
         Me.btDong = New System.Windows.Forms.Button()
-        Me.txtNam = New System.Windows.Forms.TextBox()
+        Me.cbNam = New System.Windows.Forms.ComboBox()
         CType(Me.dgvDoanhThu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,7 +46,6 @@ Partial Class frmDoanhSo
         'cbThang
         '
         Me.cbThang.FormattingEnabled = True
-        Me.cbThang.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
         Me.cbThang.Location = New System.Drawing.Point(197, 25)
         Me.cbThang.Name = "cbThang"
         Me.cbThang.Size = New System.Drawing.Size(121, 21)
@@ -104,19 +103,21 @@ Partial Class frmDoanhSo
         Me.btDong.Text = "Đóng"
         Me.btDong.UseVisualStyleBackColor = True
         '
-        'txtNam
+        'cbNam
         '
-        Me.txtNam.Location = New System.Drawing.Point(507, 25)
-        Me.txtNam.Name = "txtNam"
-        Me.txtNam.Size = New System.Drawing.Size(149, 20)
-        Me.txtNam.TabIndex = 9
+        Me.cbNam.FormattingEnabled = True
+        Me.cbNam.Location = New System.Drawing.Point(493, 31)
+        Me.cbNam.Name = "cbNam"
+        Me.cbNam.Size = New System.Drawing.Size(121, 21)
+        Me.cbNam.TabIndex = 9
+        Me.cbNam.Text = "2018"
         '
         'frmDoanhSo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.txtNam)
+        Me.Controls.Add(Me.cbNam)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btLuu)
         Me.Controls.Add(Me.lbTongDoanhThu)
@@ -141,5 +142,5 @@ Partial Class frmDoanhSo
     Friend WithEvents lbTongDoanhThu As Label
     Friend WithEvents btLuu As Button
     Friend WithEvents btDong As Button
-    Friend WithEvents txtNam As TextBox
+    Friend WithEvents cbNam As ComboBox
 End Class

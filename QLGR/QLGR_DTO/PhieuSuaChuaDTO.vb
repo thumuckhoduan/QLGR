@@ -1,6 +1,6 @@
 ﻿Public Class PhieuSuaChuaDTO
     Private imaphieusuachua As Integer
-    Private imaxe As Integer
+    Private imasuaxe As Integer
     Private strnoidung As String
     Private ithanhtien As Integer
 
@@ -8,10 +8,10 @@
 
     End Sub
 
-    Public Sub New(maphieusuachua As Integer, noidung As String, maxe As Integer, thanhtien As Integer)
+    Public Sub New(maphieusuachua As Integer, noidung As String, masuaxe As Integer, thanhtien As Integer)
         Me.imaphieusuachua = maphieusuachua
         Me.strnoidung = noidung
-        Me.imaxe = maxe
+        Me.imasuaxe = masuaxe
         Me.ithanhtien = thanhtien
 
     End Sub
@@ -25,12 +25,12 @@
         End Set
     End Property
 
-    Public Property maxe As Integer
+    Public Property masuaxe As Integer
         Get
-            Return imaxe
+            Return imasuaxe
         End Get
         Set(value As Integer)
-            imaxe = value
+            imasuaxe = value
         End Set
     End Property
 
