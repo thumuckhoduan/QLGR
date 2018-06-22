@@ -72,7 +72,7 @@
     End Sub
 
     Private Sub DoanhSốToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DoanhSốToolStripMenuItem.Click
-        Dim frm As frmDoanhSo = New frmDoanhSo()
+        Dim frm As frmBaoCaoDoanhSo = New frmBaoCaoDoanhSo()
         frm.MdiParent = Me
         frm.Show()
     End Sub

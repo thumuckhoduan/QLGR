@@ -117,9 +117,9 @@ Public Class frmPhieuSuaChua
 
         '1. Mapping data from GUI control
         phieusuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
-        phieusuachuaDTO.masuaxe = Convert.ToInt32(cbMaXe.Text)
+        phieusuachuaDTO.maxe = Convert.ToInt32(cbMaXe.Text)
         phieusuachuaDTO.noidung = txtNoiDung.Text
-        phieusuachuaDTO.masuaxe = cbMaXe.Text
+        phieusuachuaDTO.maxe = cbMaXe.Text
         phieusuachuaDTO.thanhtien = Convert.ToInt32(txtThanhTien.Text) + Convert.ToInt32(txtTienCong.Text) + (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
 
         chitietsuachuaDTO.machitietsuachua = Convert.ToInt32(txtMaChiTietSuaChua.Text)

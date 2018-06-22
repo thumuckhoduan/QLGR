@@ -36,10 +36,4 @@ Public Class TiepNhanSuaXeBUS
     Public Function demdonsuaxe(ngaytiepnhan As DateTime, ByRef dem As Integer) As Result
         Return TiepNhanSuaXeDAL.demdonsuaxe(ngaytiepnhan, dem)
     End Function
-    Public Function select_thang(nam As Integer, ByRef listthang As List(Of Integer)) As Result
-        Return TiepNhanSuaXeDAL.select_thang(nam, listthang)
-    End Function
-    Public Function select_nam(ByRef listnam As List(Of Integer)) As Result
-        Return TiepNhanSuaXeDAL.select_nam(listnam)
-    End Function
 End Class

@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Imports QLGR_DTO
 Imports Utility
-Public Class DoanhSoDAL
+Public Class BaoCaoDoanhSoDAL
     Private connectionString As String
 
     Public Sub New()
@@ -14,7 +14,7 @@ Public Class DoanhSoDAL
     Public Function buildmadoanhso(ByRef nextMDS As String) As Result 'ex: 18222229
         Dim query As String = String.Empty
         query &= "SELECT TOP 1 [madoanhso] "
-        query &= "FROM [tblDoanhSo] "
+        query &= "FROM [tblBaoCaoDoanhSo] "
         query &= "ORDER BY [madoanhso] DESC "
 
         Using conn As New SqlConnection(connectionString)
@@ -47,11 +47,11 @@ Public Class DoanhSoDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
-    Public Function insert(s As DoanhSoDTO) As Result
+    Public Function insert(s As BaoCaoDoanhSoDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblDoanhSo] ([madoanhso], [thang], [nam], [tongdoanhthu])"
-        query &= "VALUES (@madoanhso, @thang, @nam, @tongdoanhthu)"
+        query &= "INSERT INTO [tblBaoCaoDoanhSo] ([madoanhso], [thang], [nam], [tongdoanhthu],[ngaytao])"
+        query &= "VALUES (@madoanhso, @thang, @nam, @tongdoanhthu,@ngaytao)"
 
         'get MS
         Dim nextMDS = "1"
@@ -68,7 +68,7 @@ Public Class DoanhSoDAL
                     .Parameters.AddWithValue("@thang", s.thang)
                     .Parameters.AddWithValue("@nam", s.nam)
                     .Parameters.AddWithValue("@tongdoanhthu", s.tongdoanhthu)
-
+                    .Parameters.AddWithValue("@ngaytao", s.ngaytao)
                 End With
                 Try
                     conn.Open()

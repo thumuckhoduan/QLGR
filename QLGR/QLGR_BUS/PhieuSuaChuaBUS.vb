@@ -39,4 +39,10 @@ Public Class PhieuSuaChuaBUS
         '2. insert to DB
         Return phieusuachuaDAL.tongthanhtien(thang, nam, tong)
     End Function
+    Public Function select_thang(nam As Integer, ByRef listthang As List(Of Integer)) As Result
+        Return phieusuachuaDAL.select_thang(nam, listthang)
+    End Function
+    Public Function select_nam(ByRef listnam As List(Of Integer)) As Result
+        Return phieusuachuaDAL.select_nam(listnam)
+    End Function
 End Class

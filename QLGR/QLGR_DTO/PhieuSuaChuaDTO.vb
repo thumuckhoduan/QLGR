@@ -1,19 +1,19 @@
 ﻿Public Class PhieuSuaChuaDTO
     Private imaphieusuachua As Integer
-    Private imasuaxe As Integer
+    Private imaxe As Integer
     Private strnoidung As String
     Private ithanhtien As Integer
-
+    Private dtpngaysuachua As DateTime
     Public Sub New()
 
     End Sub
 
-    Public Sub New(maphieusuachua As Integer, noidung As String, masuaxe As Integer, thanhtien As Integer)
+    Public Sub New(maphieusuachua As Integer, noidung As String, maxe As Integer, thanhtien As Integer, ngaysuachua As DateTime)
         Me.imaphieusuachua = maphieusuachua
         Me.strnoidung = noidung
-        Me.imasuaxe = masuaxe
+        Me.imaxe = maxe
         Me.ithanhtien = thanhtien
-
+        Me.dtpngaysuachua = ngaysuachua
     End Sub
 
     Public Property maphieusuachua As Integer
@@ -25,12 +25,12 @@
         End Set
     End Property
 
-    Public Property masuaxe As Integer
+    Public Property maxe As Integer
         Get
-            Return imasuaxe
+            Return imaxe
         End Get
         Set(value As Integer)
-            imasuaxe = value
+            imaxe = value
         End Set
     End Property
 
@@ -49,6 +49,15 @@
         End Get
         Set(value As String)
             strnoidung = value
+        End Set
+    End Property
+
+    Public Property ngaysuachua As Date
+        Get
+            Return dtpngaysuachua
+        End Get
+        Set(value As Date)
+            dtpngaysuachua = value
         End Set
     End Property
 End Class

@@ -35,11 +35,9 @@ Public Class ChiTietDoanhSoDAL
                             idOnDB = reader("machitiet")
                         End While
                     End If
-                    ' new ID = current ID + 1
                     nextMCT = idOnDB + 1
                 Catch ex As Exception
                     conn.Close()
-                    ' them that bai!!!
                     nextMCT = 1
                     Return New Result(False, "Lấy ID kế tiếp của mã chi tiết doanh số không thành công", ex.StackTrace)
                 End Try
@@ -78,6 +76,56 @@ Public Class ChiTietDoanhSoDAL
                     conn.Close()
                     System.Console.WriteLine(ex.StackTrace)
                     Return New Result(False, "Thêm Chi Tiet Doanh Số không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+    Public Function taochitietbaocao(thang As Integer, nam As Integer, ByRef list As List(Of dgvbaocaodoanhso), tongthanhtien As Integer) As Result
+        Dim query As String = String.Empty
+
+
+        query &= "SELECT [tblHieuXe].[mahieuxe],[tenhieuxe], count(*) AS [tongsoluot],  SUM([tblPhieuSuaChua].[thanhtien]) AS [thanhtien] "
+        query &= "FROM [tblXe],[tblHieuXe],[tblPhieuSuaChua] "
+        query &= "WHERE "
+        query &= "[tblHieuXe].[mahieuxe] = [tblXe].[mahieuxe] "
+        query &= "AND [tblXe].[maxe]  = [tblPhieuSuaChua].[maxe] "
+        query &= "AND Year([ngaysuachua])  = @nam "
+        query &= "AND Month([ngaysuachua])  = @thang "
+        query &= "GROUP BY [tblHieuXe].[mahieuxe],[tenhieuxe]"
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@thang", thang)
+                    .Parameters.AddWithValue("@nam", nam)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        list.Clear()
+                        While reader.Read()
+                            Dim CTDS = New dgvbaocaodoanhso()
+                            CTDS.mahieuxe = reader("mahieuxe")
+                            CTDS.tenhieuxe = reader("tenhieuxe")
+                            CTDS.soluotsua = reader("tongsoluot")
+                            CTDS.thanhtien = reader("thanhtien")
+                            CTDS.tile = CTDS.thanhtien / tongthanhtien * 100
+                            list.Add(CTDS)
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "tạo báo cáo không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using

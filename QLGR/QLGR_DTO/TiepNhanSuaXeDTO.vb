@@ -7,7 +7,7 @@
 
     End Sub
 
-    Public Sub New(masuaxe As Integer, maxe As Integer, ngaytiepnhan As Date)
+    Public Sub New(masuaxe As Integer, maxe As Integer, ngaytiepnhan As DateTime)
         Me.imasuaxe = masuaxe
         Me.imaxe = maxe
         Me.dtpngaytiepnhan = ngaytiepnhan
@@ -15,7 +15,7 @@
 
 
 
-    Public Property ngaytiepnhan As Date
+    Public Property ngaytiepnhan As DateTime
         Get
             Return dtpngaytiepnhan
         End Get
