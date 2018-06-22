@@ -144,6 +144,9 @@ Public Class PhieuSuaChuaDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+
+
     Public Function update(phieusuachuaDTO As PhieuSuaChuaDTO) As Result
 
         Dim query As String = String.Empty
@@ -165,7 +168,7 @@ Public Class PhieuSuaChuaDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@maphieusuachua", phieusuachuaDTO.maphieusuachua)
                     .Parameters.AddWithValue("@noidung", phieusuachuaDTO.noidung)
-                    .Parameters.AddWithValue("@masuaxe", phieusuachuaDTO.maxe)
+                    .Parameters.AddWithValue("@maxe", phieusuachuaDTO.maxe)
                     .Parameters.AddWithValue("@thanhtien", phieusuachuaDTO.thanhtien)
                     .Parameters.AddWithValue("@ngaysuachua", phieusuachuaDTO.ngaysuachua)
 

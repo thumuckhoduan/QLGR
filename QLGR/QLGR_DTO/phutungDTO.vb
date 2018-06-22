@@ -2,12 +2,14 @@
     Private imaphutung As Integer
     Private strtenphutung As String
     Private isoluongton As Integer
+    Private idongia As Integer
     Public Sub New()
     End Sub
-    Public Sub New(maphutung As Integer, tenphutung As String, soluongton As Integer)
+    Public Sub New(maphutung As Integer, tenphutung As String, soluongton As Integer, dongia As Integer)
         Me.maphutung = maphutung
         Me.tenphutung = tenphutung
         Me.soluongton = soluongton
+        Me.idongia = dongia
     End Sub
 
     Public Property maphutung As Integer
@@ -34,6 +36,15 @@
         End Get
         Set(value As Integer)
             isoluongton = value
+        End Set
+    End Property
+
+    Public Property dongia As Integer
+        Get
+            Return idongia
+        End Get
+        Set(value As Integer)
+            idongia = value
         End Set
     End Property
 End Class

@@ -10,9 +10,10 @@
 
     End Sub
 
-    Public Sub New(maphieusuachua As Integer, machitietsuachua As Integer, maphutung As Integer, soluong As Integer, dongia As Integer, tiencong As Integer)
-        Me.imaphieusuachua = maphieusuachua
+    Public Sub New(machitietsuachua As Integer, maphieusuachua As Integer, maphutung As Integer, soluong As Integer, dongia As Integer, tiencong As Integer)
         Me.imachitietsuachua = machitietsuachua
+        Me.imaphieusuachua = maphieusuachua
+
         Me.imaphutung = maphutung
         Me.isoluong = soluong
         Me.idongia = dongia

@@ -145,6 +145,47 @@ Public Class ChiTietSuaChuaDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+    Public Function selectALL_ByMaPhieuSuaChua(iMaPhieuSuaChua As Integer, ByRef listChiTietSuaChua As List(Of ChiTietSuaChuaDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= " SELECT [tblChiTietSuaChua].[machitietsuachua],[tblChiTietSuaChua].[maphieusuachua] ,[tblChiTietSuaChua].[maphutung],[tblChiTietSuaChua].[soluong],[tblChiTietSuaChua].[dongia],[tblChiTietSuaChua].[tiencong] "
+        query &= " FROM [tblChiTietSuaChua] "
+        query &= "     ,[tblPhieuSuaChua] "
+        query &= " WHERE "
+        query &= "     [tblChiTietSuaChua].[maphieusuachua] = [tblPhieuSuaChua].[maphieusuachua]"
+        query &= "     AND [tblChiTietSuaChua].[maphieusuachua] = @maphieusuachua"
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listChiTietSuaChua.Clear()
+                        While reader.Read()
+                            listChiTietSuaChua.Add(New ChiTietSuaChuaDTO(reader("machitietsuachua"), reader("maphieusuachua"), reader("maphutung"), reader("soluong"), reader("dongia"), reader("tiencong")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả chi tiết sửa chữa không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
     Public Function update(ChiTietSuaChuaDTO As ChiTietSuaChuaDTO) As Result
 
         Dim query As String = String.Empty

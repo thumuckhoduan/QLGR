@@ -21,6 +21,12 @@ Public Class ChiTietSuaChuaBUS
         '2. insert to DB
         Return ChiTietSuaChuaDAL.selectALL(listchitietsuachua)
     End Function
+    Public Function selectALL_ByMaPhieuSuaChua(iMaPhieuSuaChua As Integer, ByRef listChiTietSuaChua As List(Of ChiTietSuaChuaDTO)) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return ChiTietSuaChuaDAL.selectALL_ByMaPhieuSuaChua(iMaPhieuSuaChua, listChiTietSuaChua)
+    End Function
     Public Function update(chitietsuachuaDTO As ChiTietSuaChuaDTO) As Result
         '1. verify data here!!
 

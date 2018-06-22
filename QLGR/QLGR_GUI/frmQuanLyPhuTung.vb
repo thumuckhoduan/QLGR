@@ -7,7 +7,6 @@ Public Class frmQuanLyPhuTung
 
     Private Sub QuanLyHieuXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         phutungBUS = New PhuTungBUS()
-
         loadlistphutung()
     End Sub
     Private Sub loadlistphutung()

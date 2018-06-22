@@ -30,7 +30,6 @@ Partial Class frmPhieuSuaChua
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.dgvPhieuSuaChua = New System.Windows.Forms.DataGridView()
         Me.cbMaPhuTung = New System.Windows.Forms.ComboBox()
         Me.cbTenPhuTung = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -55,7 +54,12 @@ Partial Class frmPhieuSuaChua
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtSoLuong = New System.Windows.Forms.TextBox()
         Me.cbSoLuongTon = New System.Windows.Forms.ComboBox()
-        CType(Me.dgvPhieuSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dtpNgaySuaChua = New System.Windows.Forms.DateTimePicker()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cbMaPhieuSuaChua = New System.Windows.Forms.ComboBox()
+        Me.btnTaoMoi = New System.Windows.Forms.Button()
+        Me.dgvPhieuChiTietSuaChua = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvPhieuChiTietSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -114,7 +118,7 @@ Partial Class frmPhieuSuaChua
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(473, 59)
+        Me.Label6.Location = New System.Drawing.Point(538, 59)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
         Me.Label6.TabIndex = 10
@@ -123,24 +127,16 @@ Partial Class frmPhieuSuaChua
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(267, 59)
+        Me.Label7.Location = New System.Drawing.Point(302, 61)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 13)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Mã Phụ Tùng"
         '
-        'dgvPhieuSuaChua
-        '
-        Me.dgvPhieuSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPhieuSuaChua.Location = New System.Drawing.Point(280, 161)
-        Me.dgvPhieuSuaChua.Name = "dgvPhieuSuaChua"
-        Me.dgvPhieuSuaChua.Size = New System.Drawing.Size(397, 137)
-        Me.dgvPhieuSuaChua.TabIndex = 14
-        '
         'cbMaPhuTung
         '
         Me.cbMaPhuTung.FormattingEnabled = True
-        Me.cbMaPhuTung.Location = New System.Drawing.Point(345, 56)
+        Me.cbMaPhuTung.Location = New System.Drawing.Point(380, 58)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
         Me.cbMaPhuTung.Size = New System.Drawing.Size(122, 21)
         Me.cbMaPhuTung.TabIndex = 15
@@ -148,7 +144,7 @@ Partial Class frmPhieuSuaChua
         'cbTenPhuTung
         '
         Me.cbTenPhuTung.FormattingEnabled = True
-        Me.cbTenPhuTung.Location = New System.Drawing.Point(555, 56)
+        Me.cbTenPhuTung.Location = New System.Drawing.Point(620, 56)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
         Me.cbTenPhuTung.Size = New System.Drawing.Size(122, 21)
         Me.cbTenPhuTung.TabIndex = 16
@@ -156,7 +152,7 @@ Partial Class frmPhieuSuaChua
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(267, 85)
+        Me.Label8.Location = New System.Drawing.Point(302, 87)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(53, 13)
         Me.Label8.TabIndex = 17
@@ -164,7 +160,7 @@ Partial Class frmPhieuSuaChua
         '
         'txtTienCong
         '
-        Me.txtTienCong.Location = New System.Drawing.Point(345, 108)
+        Me.txtTienCong.Location = New System.Drawing.Point(380, 110)
         Me.txtTienCong.Name = "txtTienCong"
         Me.txtTienCong.Size = New System.Drawing.Size(122, 20)
         Me.txtTienCong.TabIndex = 20
@@ -172,7 +168,7 @@ Partial Class frmPhieuSuaChua
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(267, 111)
+        Me.Label9.Location = New System.Drawing.Point(302, 113)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(56, 13)
         Me.Label9.TabIndex = 19
@@ -180,7 +176,7 @@ Partial Class frmPhieuSuaChua
         '
         'txtThanhTien
         '
-        Me.txtThanhTien.Location = New System.Drawing.Point(555, 108)
+        Me.txtThanhTien.Location = New System.Drawing.Point(620, 108)
         Me.txtThanhTien.Name = "txtThanhTien"
         Me.txtThanhTien.ReadOnly = True
         Me.txtThanhTien.Size = New System.Drawing.Size(122, 20)
@@ -189,7 +185,7 @@ Partial Class frmPhieuSuaChua
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(473, 111)
+        Me.Label10.Location = New System.Drawing.Point(538, 111)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(62, 13)
         Me.Label10.TabIndex = 21
@@ -213,7 +209,7 @@ Partial Class frmPhieuSuaChua
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(140, 390)
+        Me.btLuu.Location = New System.Drawing.Point(185, 390)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(66, 29)
         Me.btLuu.TabIndex = 25
@@ -222,7 +218,7 @@ Partial Class frmPhieuSuaChua
         '
         'btXoa
         '
-        Me.btXoa.Location = New System.Drawing.Point(276, 390)
+        Me.btXoa.Location = New System.Drawing.Point(357, 390)
         Me.btXoa.Name = "btXoa"
         Me.btXoa.Size = New System.Drawing.Size(66, 29)
         Me.btXoa.TabIndex = 26
@@ -231,7 +227,7 @@ Partial Class frmPhieuSuaChua
         '
         'btThoat
         '
-        Me.btThoat.Location = New System.Drawing.Point(607, 390)
+        Me.btThoat.Location = New System.Drawing.Point(676, 390)
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(66, 29)
         Me.btThoat.TabIndex = 27
@@ -240,7 +236,7 @@ Partial Class frmPhieuSuaChua
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(436, 390)
+        Me.btCapNhat.Location = New System.Drawing.Point(518, 390)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(66, 29)
         Me.btCapNhat.TabIndex = 28
@@ -268,7 +264,7 @@ Partial Class frmPhieuSuaChua
         Me.txtNoiDung.Location = New System.Drawing.Point(129, 138)
         Me.txtNoiDung.Multiline = True
         Me.txtNoiDung.Name = "txtNoiDung"
-        Me.txtNoiDung.Size = New System.Drawing.Size(548, 20)
+        Me.txtNoiDung.Size = New System.Drawing.Size(613, 20)
         Me.txtNoiDung.TabIndex = 32
         '
         'Label11
@@ -282,7 +278,7 @@ Partial Class frmPhieuSuaChua
         '
         'txtDonGia
         '
-        Me.txtDonGia.Location = New System.Drawing.Point(555, 82)
+        Me.txtDonGia.Location = New System.Drawing.Point(620, 82)
         Me.txtDonGia.Name = "txtDonGia"
         Me.txtDonGia.ReadOnly = True
         Me.txtDonGia.Size = New System.Drawing.Size(122, 20)
@@ -291,7 +287,7 @@ Partial Class frmPhieuSuaChua
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(473, 85)
+        Me.Label12.Location = New System.Drawing.Point(538, 85)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(46, 13)
         Me.Label12.TabIndex = 33
@@ -300,7 +296,7 @@ Partial Class frmPhieuSuaChua
         'cbDonGia
         '
         Me.cbDonGia.FormattingEnabled = True
-        Me.cbDonGia.Location = New System.Drawing.Point(555, 29)
+        Me.cbDonGia.Location = New System.Drawing.Point(620, 29)
         Me.cbDonGia.Name = "cbDonGia"
         Me.cbDonGia.Size = New System.Drawing.Size(122, 21)
         Me.cbDonGia.TabIndex = 36
@@ -324,7 +320,7 @@ Partial Class frmPhieuSuaChua
         '
         'txtSoLuong
         '
-        Me.txtSoLuong.Location = New System.Drawing.Point(345, 82)
+        Me.txtSoLuong.Location = New System.Drawing.Point(380, 84)
         Me.txtSoLuong.Name = "txtSoLuong"
         Me.txtSoLuong.Size = New System.Drawing.Size(122, 20)
         Me.txtSoLuong.TabIndex = 39
@@ -332,16 +328,62 @@ Partial Class frmPhieuSuaChua
         'cbSoLuongTon
         '
         Me.cbSoLuongTon.FormattingEnabled = True
-        Me.cbSoLuongTon.Location = New System.Drawing.Point(345, 29)
+        Me.cbSoLuongTon.Location = New System.Drawing.Point(380, 31)
         Me.cbSoLuongTon.Name = "cbSoLuongTon"
         Me.cbSoLuongTon.Size = New System.Drawing.Size(122, 21)
         Me.cbSoLuongTon.TabIndex = 40
+        '
+        'dtpNgaySuaChua
+        '
+        Me.dtpNgaySuaChua.Location = New System.Drawing.Point(129, 217)
+        Me.dtpNgaySuaChua.Name = "dtpNgaySuaChua"
+        Me.dtpNgaySuaChua.Size = New System.Drawing.Size(200, 20)
+        Me.dtpNgaySuaChua.TabIndex = 41
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(9, 223)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(82, 13)
+        Me.Label14.TabIndex = 42
+        Me.Label14.Text = "Ngày Sửa Chữa"
+        '
+        'cbMaPhieuSuaChua
+        '
+        Me.cbMaPhieuSuaChua.FormattingEnabled = True
+        Me.cbMaPhieuSuaChua.Location = New System.Drawing.Point(129, 5)
+        Me.cbMaPhieuSuaChua.Name = "cbMaPhieuSuaChua"
+        Me.cbMaPhieuSuaChua.Size = New System.Drawing.Size(122, 21)
+        Me.cbMaPhieuSuaChua.TabIndex = 43
+        '
+        'btnTaoMoi
+        '
+        Me.btnTaoMoi.Location = New System.Drawing.Point(25, 390)
+        Me.btnTaoMoi.Name = "btnTaoMoi"
+        Me.btnTaoMoi.Size = New System.Drawing.Size(66, 29)
+        Me.btnTaoMoi.TabIndex = 44
+        Me.btnTaoMoi.Text = "Tạo Mới"
+        Me.btnTaoMoi.UseVisualStyleBackColor = True
+        '
+        'dgvPhieuChiTietSuaChua
+        '
+        Me.dgvPhieuChiTietSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPhieuChiTietSuaChua.Location = New System.Drawing.Point(345, 164)
+        Me.dgvPhieuChiTietSuaChua.Name = "dgvPhieuChiTietSuaChua"
+        Me.dgvPhieuChiTietSuaChua.Size = New System.Drawing.Size(397, 137)
+        Me.dgvPhieuChiTietSuaChua.TabIndex = 45
         '
         'frmPhieuSuaChua
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.dgvPhieuChiTietSuaChua)
+        Me.Controls.Add(Me.btnTaoMoi)
+        Me.Controls.Add(Me.cbMaPhieuSuaChua)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.dtpNgaySuaChua)
         Me.Controls.Add(Me.cbSoLuongTon)
         Me.Controls.Add(Me.txtSoLuong)
         Me.Controls.Add(Me.txtMaChiTietSuaChua)
@@ -366,7 +408,6 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cbTenPhuTung)
         Me.Controls.Add(Me.cbMaPhuTung)
-        Me.Controls.Add(Me.dgvPhieuSuaChua)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -377,7 +418,7 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmPhieuSuaChua"
         Me.Text = "frmPhieuSuaChua"
-        CType(Me.dgvPhieuSuaChua, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPhieuChiTietSuaChua, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -391,7 +432,6 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents dgvPhieuSuaChua As DataGridView
     Friend WithEvents cbMaPhuTung As ComboBox
     Friend WithEvents cbTenPhuTung As ComboBox
     Friend WithEvents Label8 As Label
@@ -416,4 +456,9 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents Label13 As Label
     Friend WithEvents txtSoLuong As TextBox
     Friend WithEvents cbSoLuongTon As ComboBox
+    Friend WithEvents dtpNgaySuaChua As DateTimePicker
+    Friend WithEvents Label14 As Label
+    Friend WithEvents cbMaPhieuSuaChua As ComboBox
+    Friend WithEvents btnTaoMoi As Button
+    Friend WithEvents dgvPhieuChiTietSuaChua As DataGridView
 End Class

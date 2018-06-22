@@ -51,8 +51,8 @@ Public Class PhuTungDAL
     Public Function insert(s As phutungDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblPhuTung] ([maphutung], [tenphutung],[soluongton])"
-        query &= "VALUES (@maphutung,@tenphutung,@soluongton)"
+        query &= "INSERT INTO [tblPhuTung] ([maphutung], [tenphutung],[soluongton],[dongia])"
+        query &= "VALUES (@maphutung,@tenphutung,@soluongton,@dongia)"
 
         'get MSHS
         Dim nextMHX = "1"
@@ -68,6 +68,7 @@ Public Class PhuTungDAL
                     .Parameters.AddWithValue("@maphutung", s.maphutung)
                     .Parameters.AddWithValue("@tenphutung", s.tenphutung)
                     .Parameters.AddWithValue("@soluongton", s.soluongton)
+                    .Parameters.AddWithValue("@dongia", s.dongia)
                 End With
                 Try
                     conn.Open()
@@ -112,7 +113,7 @@ Public Class PhuTungDAL
     Public Function selectALL(ByRef listphutung As List(Of phutungDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [maphutung], [tenphutung],[soluongton]"
+        query &= " SELECT [maphutung], [tenphutung],[soluongton],[dongia]"
         query &= " FROM [tblPhuTung]"
 
 
@@ -130,7 +131,7 @@ Public Class PhuTungDAL
                     If reader.HasRows = True Then
                         listphutung.Clear()
                         While reader.Read()
-                            listphutung.Add(New phutungDTO(reader("maphutung"), reader("tenphutung"), reader("soluongton")))
+                            listphutung.Add(New PhuTungDTO(reader("maphutung"), reader("tenphutung"), reader("soluongton"), reader("dongia")))
                         End While
                     End If
                 Catch ex As Exception
@@ -149,6 +150,7 @@ Public Class PhuTungDAL
         query &= " UPDATE [tblPhuTung] SET"
         query &= " [tenphutung] = @tenphutung "
         query &= " ,[soluongton] = @soluongton "
+        query &= " ,[dongia] = @dongia "
         query &= "WHERE "
         query &= " [maphutung] = @maphutung "
 
@@ -161,6 +163,7 @@ Public Class PhuTungDAL
                     .Parameters.AddWithValue("@maphutung", phutung.maphutung)
                     .Parameters.AddWithValue("@tenphutung", phutung.tenphutung)
                     .Parameters.AddWithValue("@soluongton", phutung.soluongton)
+                    .Parameters.AddWithValue("@dongia", phutung.dongia)
                 End With
                 Try
                     conn.Open()

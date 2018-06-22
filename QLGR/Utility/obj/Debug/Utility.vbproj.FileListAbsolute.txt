@@ -177,3 +177,13 @@ C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.GenerateResource.
 C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.dll
 C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.xml
 C:\Users\vu\Desktop\QLGR\QLGR\Utility\obj\Debug\Utility.pdb
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\bin\Debug\Utility.dll
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\bin\Debug\Utility.pdb
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\bin\Debug\Utility.xml
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.Resources.resources
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.GenerateResource.cache
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.dll
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.xml
+C:\Users\Administrator\Source\Repos\QLGR\QLGR\Utility\obj\Debug\Utility.pdb
