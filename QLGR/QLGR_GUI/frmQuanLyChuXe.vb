@@ -206,4 +206,8 @@ Public Class frmQuanLyChuXe
 
         End If
     End Sub
+
+    Private Sub dgvDanhSachChuXe_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachChuXe.CellContentClick
+
+    End Sub
 End Class

@@ -16,7 +16,7 @@ Public Class frmPhieuSuaChua
 
         txtThanhTien.Text = "0"
         txtTienCong.Text = "0"
-        btnTaoMoi.Enabled = False
+        btLuu.Enabled = False
         result = phieusuachuaBUS.buildmaphieusuachua(nextMPSC)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -74,7 +74,7 @@ Public Class frmPhieuSuaChua
 
 
 
-
+        loadlistchitietsuachua()
 
     End Sub
 
@@ -146,7 +146,9 @@ Public Class frmPhieuSuaChua
         chitietsuachuaDTO.soluong = txtSoLuong.Text
         chitietsuachuaDTO.tiencong = txtTienCong.Text
         chitietsuachuaDTO.dongia = txtDonGia.Text
-
+        If (kiemtrasoluong()) Then
+            Return
+        End If
         phutungDTO.maphutung = cbMaPhuTung.Text
         phutungDTO.tenphutung = cbTenPhuTung.Text
         phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) - Convert.ToInt32(txtSoLuong.Text)
@@ -189,14 +191,8 @@ Public Class frmPhieuSuaChua
         txtThanhTien.Text = Convert.ToInt32(txtThanhTien.Text) + Convert.ToInt32(txtTienCong.Text) + (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
 
 
-        Try
-            chitietsuachuaDTO = CType(cbMaPhieuSuaChua.SelectedItem, ChiTietSuaChuaDTO)
-            loadlistchitietsuachua(chitietsuachuaDTO.maphieusuachua)
-        Catch ex As Exception
-            System.Console.WriteLine(ex.StackTrace)
-            Return
-        End Try
 
+        loadlistchitietsuachua()
 
     End Sub
 
@@ -345,16 +341,17 @@ Public Class frmPhieuSuaChua
         End Try
     End Sub
 
-    Private Sub txtSoLuong_TextChanged(sender As Object, e As EventArgs) Handles txtSoLuong.TextChanged
-        'If (txtSoLuong.Text <> vbNullString) Then
+    Function kiemtrasoluong() As Boolean
+        If (txtSoLuong.Text <> vbNullString) Then
 
-        '    If (Convert.ToInt32(txtSoLuong.Text) > Convert.ToInt32(cbSoLuongTon.Text)) Then
-        '        MessageBox.Show("Số lượng còn lại của phụ tùng không đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '        System.Console.WriteLine()
-        '    End If
-
-        'End If
-    End Sub
+            If (Convert.ToInt32(txtSoLuong.Text) > Convert.ToInt32(cbSoLuongTon.Text)) Then
+                MessageBox.Show("Số lượng còn lại của phụ tùng không đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                System.Console.WriteLine()
+                Return True
+            End If
+            Return False
+        End If
+    End Function
 
     Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
         ' Get the current cell location.
@@ -373,14 +370,7 @@ Public Class frmPhieuSuaChua
                         If (result.FlagResult = True) Then
 
                             ' Re-Load chi tiet sua chua list
-                            'Try
-                            '    Dim phieusuachuaDTO = CType(cbMaPhieuSuaChua.SelectedItem, PhieuSuaChuaDTO)
-
-                            '    loadlistchitietsuachua(phieusuachuaDTO.maphieusuachua)
-                            'Catch ex As Exception
-                            '    System.Console.WriteLine(ex.StackTrace)
-                            '    Return
-                            'End Try
+                            loadlistchitietsuachua()
 
 
                             ' Hightlight the next row on table
@@ -388,6 +378,9 @@ Public Class frmPhieuSuaChua
                                 currentRowIndex = currentRowIndex - 1
                             End If
                             If (currentRowIndex >= 0) Then
+                                Dim phieusuachua As PhieuSuaChuaDTO
+                                phieusuachua = New PhieuSuaChuaDTO()
+                                phieusuachua.thanhtien = phieusuachua.thanhtien - Convert.ToInt32(txtTienCong.Text) - (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
                                 dgvPhieuChiTietSuaChua.Rows(currentRowIndex).Selected = True
                                 Try
                                     Dim chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
@@ -462,6 +455,7 @@ Public Class frmPhieuSuaChua
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO()
         Dim result As Result
+        btLuu.Enabled = True
 
 
         Dim nextPSC = "1"
@@ -498,7 +492,92 @@ Public Class frmPhieuSuaChua
 
     End Sub
 
-    Private Sub cbMaPhuTung_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaPhuTung.SelectedIndexChanged
 
+
+    Private Sub dgvPhieuChiTietSuaChua_SelectionChanged(sender As Object, e As EventArgs) Handles dgvPhieuChiTietSuaChua.SelectionChanged
+        ' Get the current cell location.
+        Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y 'current row selected
+        'Dim x As Integer = dgvQuanLyXe.CurrentCellAddress.X 'curent column selected
+
+        ' Write coordinates to console for debugging
+        'Console.WriteLine(y.ToString + " " + x.ToString)
+
+        'Verify that indexing OK
+        If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
+            Try
+                Dim chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
+                txtMaChiTietSuaChua.Text = chitietsuachuaDTO.machitietsuachua
+                txtMaPhieuSuaChua.Text = chitietsuachuaDTO.maphieusuachua
+                cbMaPhuTung.Text = chitietsuachuaDTO.maphutung
+                txtSoLuong.Text = chitietsuachuaDTO.soluong
+                txtDonGia.Text = chitietsuachuaDTO.dongia
+                txtTienCong.Text = chitietsuachuaDTO.tiencong
+
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace)
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+        ' Get the current cell location.
+        Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y 'current row selected
+
+
+        'Verify that indexing OK
+        If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
+            Try
+                Dim chitietsuachuaDTO As ChiTietSuaChuaDTO
+                chitietsuachuaDTO = New ChiTietSuaChuaDTO()
+
+                '1. Mapping data from GUI control
+                chitietsuachuaDTO.machitietsuachua = Convert.ToInt32(txtMaChiTietSuaChua.Text)
+                chitietsuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
+                chitietsuachuaDTO.maphutung = cbMaPhuTung.Text
+                chitietsuachuaDTO.soluong = txtSoLuong.Text
+                If (kiemtrasoluong()) Then
+                    Return
+                End If
+                chitietsuachuaDTO.dongia = txtDonGia.Text
+                chitietsuachuaDTO.tiencong = txtTienCong.Text
+
+
+                '3. Insert to DB
+
+                Dim result As Result
+                result = chitietsuachuaBUS.update(chitietsuachuaDTO)
+                If (result.FlagResult = True) Then
+                    ' Re-Load LoaiHocSinh list
+                    loadlistchitietsuachua()
+                    ' Hightlight the row has been updated on table
+                    dgvPhieuChiTietSuaChua.Rows(currentRowIndex).Selected = True
+                    Try
+                        chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
+                        txtMaChiTietSuaChua.Text = chitietsuachuaDTO.machitietsuachua
+                        txtMaPhieuSuaChua.Text = chitietsuachuaDTO.maphieusuachua
+                        cbMaPhuTung.Text = chitietsuachuaDTO.maphutung
+                        txtSoLuong.Text = chitietsuachuaDTO.soluong
+                        txtDonGia.Text = chitietsuachuaDTO.dongia
+                        txtTienCong.Text = chitietsuachuaDTO.tiencong
+
+
+                    Catch ex As Exception
+                        Console.WriteLine(ex.StackTrace)
+                    End Try
+                    MessageBox.Show("Cập nhật chi tiet thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Cập nhật chi tiet không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace)
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
+        Me.Close()
     End Sub
 End Class

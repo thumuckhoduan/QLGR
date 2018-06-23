@@ -153,8 +153,8 @@ Public Class ChiTietSuaChuaDAL
         query &= " FROM [tblChiTietSuaChua] "
         query &= "     ,[tblPhieuSuaChua] "
         query &= " WHERE "
-        query &= "     [tblChiTietSuaChua].[maphieusuachua] = [tblPhieuSuaChua].[maphieusuachua]"
-        query &= "     AND [tblChiTietSuaChua].[maphieusuachua] = @maphieusuachua"
+        query &= "     [tblChiTietSuaChua].[maphieusuachua] = [tblPhieuSuaChua].[maphieusuachua] "
+        query &= "     AND [tblChiTietSuaChua].[maphieusuachua] = @maphieusuachua "
 
 
 
@@ -164,6 +164,7 @@ Public Class ChiTietSuaChuaDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
+                    .Parameters.AddWithValue("@maphieusuachua", iMaPhieuSuaChua)
                 End With
                 Try
                     conn.Open()
@@ -175,11 +176,11 @@ Public Class ChiTietSuaChuaDAL
                             listChiTietSuaChua.Add(New ChiTietSuaChuaDTO(reader("machitietsuachua"), reader("maphieusuachua"), reader("maphutung"), reader("soluong"), reader("dongia"), reader("tiencong")))
                         End While
                     End If
+
                 Catch ex As Exception
-                    Console.WriteLine(ex.StackTrace)
                     conn.Close()
-                    ' them that bai!!!
-                    Return New Result(False, "Lấy tất cả chi tiết sửa chữa không thành công", ex.StackTrace)
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy tất cả chi tiết sửa chữa theo mã phiếu sửa chữa không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using
