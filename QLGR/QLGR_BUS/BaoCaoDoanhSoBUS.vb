@@ -1,7 +1,7 @@
 ﻿Imports QLGR_DAL
 Imports QLGR_DTO
 Imports Utility
-Public Class BaoCaoDoanhSo
+Public Class BaoCaoDoanhSoBUS
     Private baocaodoanhsoDAL As BaoCaoDoanhSoDAL
     Public Sub New()
         baocaodoanhsoDAL = New BaoCaoDoanhSoDAL()

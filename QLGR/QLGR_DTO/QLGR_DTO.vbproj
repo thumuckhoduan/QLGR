@@ -63,11 +63,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoTonDTO.vb" />
+    <Compile Include="ChiTietBaoCaoTonDTO.vb" />
     <Compile Include="ChiTietDoanhSoDTO.vb" />
     <Compile Include="ChiTietSuaChuaDTO.vb" />
     <Compile Include="ChuXeDTO.vb" />
     <Compile Include="BaoCaoDoanhSoDTO.vb" />
     <Compile Include="dgvbaocaodoanhso.vb" />
+    <Compile Include="dgvBaoCaoTon.vb" />
     <Compile Include="HieuXeDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

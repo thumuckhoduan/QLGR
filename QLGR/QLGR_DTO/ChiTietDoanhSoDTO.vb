@@ -4,7 +4,7 @@
     Private imahieuxe As Integer
     Private isoluotsua As Integer
     Private ithanhtien As Integer
-    Private itile As Single
+    Private stile As Single
 
 
     Public Sub New()
@@ -12,12 +12,12 @@
     End Sub
 
     Public Sub New(machitiet As Integer, madoanhso As Integer, mahieuxe As Integer, soluotsua As Integer, thanhtien As Integer, tongdoanhthu As Single)
-        Me.machitiet = machitiet
-        Me.madoanhso = madoanhso
-        Me.mahieuxe = mahieuxe
-        Me.soluotsua = soluotsua
-        Me.thanhtien = thanhtien
-        Me.tile = tile
+        Me.imachitiet = machitiet
+        Me.imadoanhso = madoanhso
+        Me.imahieuxe = mahieuxe
+        Me.isoluotsua = soluotsua
+        Me.ithanhtien = thanhtien
+        Me.stile = tile
     End Sub
 
     Public Property machitiet As Integer
@@ -67,10 +67,10 @@
 
     Public Property tile As Single
         Get
-            Return itile
+            Return stile
         End Get
         Set(value As Single)
-            itile = value
+            stile = value
         End Set
     End Property
 End Class

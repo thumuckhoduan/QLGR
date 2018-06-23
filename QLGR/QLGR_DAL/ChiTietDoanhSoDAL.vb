@@ -13,9 +13,9 @@ Public Class ChiTietDoanhSoDAL
     End Sub
     Public Function buildmachitiet(ByRef nextMCT As String) As Result 'ex: 18222229
         Dim query As String = String.Empty
-        query &= "SELECT TOP 1 [machitiet] "
+        query &= "SELECT TOP 1 [machitietdoanhso] "
         query &= "FROM [tblChiTietDoanhSo] "
-        query &= "ORDER BY [machitiet] DESC "
+        query &= "ORDER BY [machitietdoanhso] DESC "
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
@@ -32,7 +32,7 @@ Public Class ChiTietDoanhSoDAL
                     idOnDB = Nothing
                     If reader.HasRows = True Then
                         While reader.Read()
-                            idOnDB = reader("machitiet")
+                            idOnDB = reader("machitietdoanhso")
                         End While
                     End If
                     nextMCT = idOnDB + 1
@@ -48,8 +48,8 @@ Public Class ChiTietDoanhSoDAL
     Public Function insert(s As ChiTietDoanhSoDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblChiTietDoanhSo] ([machitiet], [madoanhso], [mahieuxe], [soluotsua],[thanhtien],[tile])"
-        query &= "VALUES (@machitiet, @madoanhso, @mahieuxe, @soluotsua,@thanhtien,@tile)"
+        query &= "INSERT INTO [tblChiTietDoanhSo] ([machitietdoanhso], [madoanhso], [mahieuxe], [soluotsua],[thanhtien],[tile])"
+        query &= "VALUES (@machitietdoanhso, @madoanhso, @mahieuxe, @soluotsua,@thanhtien,@tile)"
 
         'get MS
         Dim nextMCT = "1"
@@ -62,7 +62,7 @@ Public Class ChiTietDoanhSoDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@machitiet", s.machitiet)
+                    .Parameters.AddWithValue("@machitietdoanhso", s.machitiet)
                     .Parameters.AddWithValue("@madoanhso", s.madoanhso)
                     .Parameters.AddWithValue("@mahieuxe", s.mahieuxe)
                     .Parameters.AddWithValue("@soluotsua", s.soluotsua)

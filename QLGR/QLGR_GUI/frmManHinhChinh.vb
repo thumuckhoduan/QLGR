@@ -76,4 +76,16 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub BáoCáoTồnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BáoCáoTồnToolStripMenuItem.Click
+        Dim frm As frmBaoCaoTon = New frmBaoCaoTon()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub NhậpPhụTùngToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NhậpPhụTùngToolStripMenuItem.Click
+        Dim frm As frmNhapPhuTung = New frmNhapPhuTung()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

@@ -27,13 +27,16 @@ Partial Class frmBaoCaoTon
         Me.cbNam = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnLapBaoCao = New System.Windows.Forms.Button()
+        Me.btnDong = New System.Windows.Forms.Button()
+        Me.btnload = New System.Windows.Forms.Button()
         CType(Me.dgvBaoCaoTon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvBaoCaoTon
         '
         Me.dgvBaoCaoTon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBaoCaoTon.Location = New System.Drawing.Point(13, 108)
+        Me.dgvBaoCaoTon.Location = New System.Drawing.Point(13, 64)
         Me.dgvBaoCaoTon.Name = "dgvBaoCaoTon"
         Me.dgvBaoCaoTon.Size = New System.Drawing.Size(738, 330)
         Me.dgvBaoCaoTon.TabIndex = 0
@@ -41,6 +44,7 @@ Partial Class frmBaoCaoTon
         'cbThang
         '
         Me.cbThang.FormattingEnabled = True
+        Me.cbThang.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
         Me.cbThang.Location = New System.Drawing.Point(140, 13)
         Me.cbThang.Name = "cbThang"
         Me.cbThang.Size = New System.Drawing.Size(121, 21)
@@ -49,6 +53,7 @@ Partial Class frmBaoCaoTon
         'cbNam
         '
         Me.cbNam.FormattingEnabled = True
+        Me.cbNam.Items.AddRange(New Object() {"2017", "2018"})
         Me.cbNam.Location = New System.Drawing.Point(464, 13)
         Me.cbNam.Name = "cbNam"
         Me.cbNam.Size = New System.Drawing.Size(121, 21)
@@ -72,11 +77,41 @@ Partial Class frmBaoCaoTon
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Tháng"
         '
+        'btnLapBaoCao
+        '
+        Me.btnLapBaoCao.Location = New System.Drawing.Point(173, 415)
+        Me.btnLapBaoCao.Name = "btnLapBaoCao"
+        Me.btnLapBaoCao.Size = New System.Drawing.Size(98, 23)
+        Me.btnLapBaoCao.TabIndex = 5
+        Me.btnLapBaoCao.Text = "Lập Báo Cáo"
+        Me.btnLapBaoCao.UseVisualStyleBackColor = True
+        '
+        'btnDong
+        '
+        Me.btnDong.Location = New System.Drawing.Point(441, 415)
+        Me.btnDong.Name = "btnDong"
+        Me.btnDong.Size = New System.Drawing.Size(75, 23)
+        Me.btnDong.TabIndex = 6
+        Me.btnDong.Text = "Đóng"
+        Me.btnDong.UseVisualStyleBackColor = True
+        '
+        'btnload
+        '
+        Me.btnload.Location = New System.Drawing.Point(273, 35)
+        Me.btnload.Name = "btnload"
+        Me.btnload.Size = New System.Drawing.Size(98, 23)
+        Me.btnload.TabIndex = 7
+        Me.btnload.Text = "Loading"
+        Me.btnload.UseVisualStyleBackColor = True
+        '
         'frmBaoCaoTon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 450)
+        Me.Controls.Add(Me.btnload)
+        Me.Controls.Add(Me.btnDong)
+        Me.Controls.Add(Me.btnLapBaoCao)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbNam)
@@ -95,4 +130,7 @@ Partial Class frmBaoCaoTon
     Friend WithEvents cbNam As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnLapBaoCao As Button
+    Friend WithEvents btnDong As Button
+    Friend WithEvents btnload As Button
 End Class

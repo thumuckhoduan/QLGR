@@ -39,4 +39,10 @@ Public Class ChiTietSuaChuaBUS
         '2. insert to DB
         Return ChiTietSuaChuaDAL.delete(machitietsuachua)
     End Function
+    Public Function ban(thang As Integer, nam As Integer, ByRef list As List(Of dgvBaoCaoTonDTO)) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return ChiTietSuaChuaDAL.ban(thang, nam, list)
+    End Function
 End Class

@@ -3,14 +3,14 @@ Imports QLGR_BUS
 Imports Utility
 
 Public Class frmBaoCaoDoanhSo
-    Private baocaodoanhsoBUS As BaoCaoDoanhSo
+    Private baocaodoanhsoBUS As BaoCaoDoanhSoBUS
     Private chitietdoanhsoBUS As ChiTietDoanhSoBUS
     Private phieusuachuaBUS As PhieuSuaChuaBUS
     Private hieuxeBUS As HieuXeBUS
     Private baocao As List(Of dgvbaocaodoanhso)
 
     Private Sub frmDoanhSo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        baocaodoanhsoBUS = New BaoCaoDoanhSo()
+        baocaodoanhsoBUS = New BaoCaoDoanhSoBUS()
         chitietdoanhsoBUS = New ChiTietDoanhSoBUS()
         phieusuachuaBUS = New PhieuSuaChuaBUS()
         hieuxeBUS = New HieuXeBUS()
@@ -81,6 +81,7 @@ Public Class frmBaoCaoDoanhSo
             System.Console.WriteLine(result.SystemMessage)
             Return
         End If
+
         dgvDoanhThu.DataSource = Nothing
         dgvDoanhThu.Columns.Clear()
         dgvDoanhThu.AutoGenerateColumns = False
