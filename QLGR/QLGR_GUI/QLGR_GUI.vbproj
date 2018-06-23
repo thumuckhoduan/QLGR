@@ -78,10 +78,22 @@
     <Compile Include="frmBaoCaoDoanhSo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBaoCaoTon.Designer.vb">
+      <DependentUpon>frmBaoCaoTon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoTon.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmManHinhChinh.Designer.vb">
       <DependentUpon>frmManHinhChinh.vb</DependentUpon>
     </Compile>
     <Compile Include="frmManHinhChinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapPhuTung.Designer.vb">
+      <DependentUpon>frmNhapPhuTung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapPhuTung.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPhieuSuaChua.Designer.vb">
@@ -170,8 +182,14 @@
     <EmbeddedResource Include="frmBaoCaoDoanhSo.resx">
       <DependentUpon>frmBaoCaoDoanhSo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoTon.resx">
+      <DependentUpon>frmBaoCaoTon.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManHinhChinh.resx">
       <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapPhuTung.resx">
+      <DependentUpon>frmNhapPhuTung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuSuaChua.resx">
       <DependentUpon>frmPhieuSuaChua.vb</DependentUpon>

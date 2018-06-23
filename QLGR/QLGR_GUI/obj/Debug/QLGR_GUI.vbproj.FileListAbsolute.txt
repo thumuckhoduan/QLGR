@@ -178,3 +178,4 @@ C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyPhuTung.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbproj.GenerateResource.Cache
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoDoanhSo.resources
 C:\Users\Administrator\Source\Repos\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoDoanhSo.resources
+C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoTon.resources
