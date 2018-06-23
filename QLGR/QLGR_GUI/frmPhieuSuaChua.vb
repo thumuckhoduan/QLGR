@@ -351,6 +351,7 @@ Public Class frmPhieuSuaChua
             End If
             Return False
         End If
+        Return True
     End Function
 
     Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click

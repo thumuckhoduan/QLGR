@@ -87,6 +87,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NhapPhuTungDTO.vb" />
     <Compile Include="PhieuSuaChuaDTO.vb" />
     <Compile Include="PhieuThuTienDTO.vb" />
     <Compile Include="PhuTungDTO.vb" />

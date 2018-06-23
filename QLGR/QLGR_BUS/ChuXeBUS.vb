@@ -12,8 +12,8 @@ Public Class ChuXeBUS
     Public Function insert(s As ChuXeDTO) As Result
         Return ChuXeDAL.insert(s)
     End Function
-    Public Function buildMaChuXe(ByRef nextMCX As Integer) As Result
-        Return ChuXeDAL.buildmachuxe(nextMCX)
+    Public Function buildMaChuXe(ByRef nextMNPT As Integer) As Result
+        Return ChuXeDAL.buildmachuxe(nextMNPT)
     End Function
     Public Function selectAll(ByRef listChuXe As List(Of ChuXeDTO)) As Result
         '1. verify data here!!
