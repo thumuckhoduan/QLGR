@@ -33,4 +33,11 @@ Public Class NhapPhuTungBUS
         '2. insert to DB
         Return NhapPhuTungDAL.delete(manhapphutung)
     End Function
+    Public Function nhapthem(thang As Integer, nam As Integer, ByRef list As List(Of dgvBaoCaoTonDTO)) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return NhapPhuTungDAL.nhapthem(thang, nam, list)
+    End Function
+
 End Class

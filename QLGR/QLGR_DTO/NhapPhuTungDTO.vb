@@ -35,11 +35,11 @@
         End Set
     End Property
 
-    Public Property ngaytiepnhan As Date
+    Public Property ngaytiepnhan As DateTime
         Get
             Return dtpngaytiepnhan
         End Get
-        Set(value As Date)
+        Set(value As DateTime)
             dtpngaytiepnhan = value
         End Set
     End Property

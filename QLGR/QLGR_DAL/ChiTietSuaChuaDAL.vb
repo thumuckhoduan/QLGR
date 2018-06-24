@@ -259,6 +259,7 @@ Public Class ChiTietSuaChuaDAL
                             For Each item In list
                                 If (baocao.maphutung = item.maphutung) Then
                                     item.ban = baocao.ban
+                                    item.tondau = item.tondau + baocao.ban
                                 End If
                             Next
                         End While

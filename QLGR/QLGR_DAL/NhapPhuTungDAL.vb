@@ -178,4 +178,51 @@ Public Class NhapPhuTungDAL
         End Using
         Return New Result(True)
     End Function
+    Public Function nhapthem(thang As Integer, nam As Integer, ByRef list As List(Of dgvBaoCaoTonDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT [maphutung],SUM([soluong]) AS [nhapthem] "
+        query &= "FROM [tblNhapPhuTung] "
+        query &= "WHERE "
+        query &= "Year([ngaytiepnhan]) = @nam "
+        query &= "AND Month([ngaytiepnhan]) = @thang "
+        query &= "GROUP BY [maphutung] "
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@thang", thang)
+                    .Parameters.AddWithValue("@nam", nam)
+                End With
+                Try
+
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            Dim baocao = New dgvBaoCaoTonDTO()
+                            baocao.maphutung = reader("maphutung")
+                            baocao.nhapthem = reader("nhapthem")
+                            For Each item In list
+                                If (baocao.maphutung = item.maphutung) Then
+                                    item.nhapthem = baocao.nhapthem
+                                    item.tondau = item.tondau - baocao.nhapthem
+                                End If
+                            Next
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    Return New Result(False, "TÍnh số phụ tùng nhập thêm không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
 End Class
