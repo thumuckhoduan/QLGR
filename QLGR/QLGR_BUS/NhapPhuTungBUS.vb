@@ -39,5 +39,7 @@ Public Class NhapPhuTungBUS
         '2. insert to DB
         Return NhapPhuTungDAL.nhapthem(thang, nam, list)
     End Function
-
+    Public Function tinhlist(ByRef list As List(Of Integer)) As Result
+        Return NhapPhuTungDAL.tinhlist(list)
+    End Function
 End Class

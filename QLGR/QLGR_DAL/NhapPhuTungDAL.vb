@@ -199,7 +199,6 @@ Public Class NhapPhuTungDAL
                     .Parameters.AddWithValue("@nam", nam)
                 End With
                 Try
-
                     conn.Open()
                     Dim reader As SqlDataReader
                     reader = comm.ExecuteReader()
@@ -220,6 +219,44 @@ Public Class NhapPhuTungDAL
                     Console.WriteLine(ex.StackTrace)
                     conn.Close()
                     Return New Result(False, "TÍnh số phụ tùng nhập thêm không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+
+    Public Function tinhlist(ByRef list As List(Of Integer)) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT MIN(Year([ngaytiepnhan])) As [min] "
+        query &= "FROM [tblNhapPhuTung] "
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            list.Clear()
+                            Dim min = reader("min")
+                            For i = min To Now.Year
+                                list.Add(i)
+                            Next
+                        End While
+                    End If
+                Catch ex As Exception
+                    list.Add(Now.Year)
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    Return New Result(True)
                 End Try
             End Using
         End Using

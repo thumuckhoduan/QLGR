@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmBaoCaoTon
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmBaoCaoTon
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgvBaoCaoTon = New System.Windows.Forms.DataGridView()
         Me.cbThang = New System.Windows.Forms.ComboBox()
@@ -29,7 +29,6 @@ Partial Class frmBaoCaoTon
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLapBaoCao = New System.Windows.Forms.Button()
         Me.btnDong = New System.Windows.Forms.Button()
-        Me.btnload = New System.Windows.Forms.Button()
         CType(Me.dgvBaoCaoTon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +52,6 @@ Partial Class frmBaoCaoTon
         'cbNam
         '
         Me.cbNam.FormattingEnabled = True
-        Me.cbNam.Items.AddRange(New Object() {"2017", "2018"})
         Me.cbNam.Location = New System.Drawing.Point(464, 13)
         Me.cbNam.Name = "cbNam"
         Me.cbNam.Size = New System.Drawing.Size(121, 21)
@@ -95,21 +93,11 @@ Partial Class frmBaoCaoTon
         Me.btnDong.Text = "Đóng"
         Me.btnDong.UseVisualStyleBackColor = True
         '
-        'btnload
-        '
-        Me.btnload.Location = New System.Drawing.Point(273, 35)
-        Me.btnload.Name = "btnload"
-        Me.btnload.Size = New System.Drawing.Size(98, 23)
-        Me.btnload.TabIndex = 7
-        Me.btnload.Text = "Loading"
-        Me.btnload.UseVisualStyleBackColor = True
-        '
         'frmBaoCaoTon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 450)
-        Me.Controls.Add(Me.btnload)
         Me.Controls.Add(Me.btnDong)
         Me.Controls.Add(Me.btnLapBaoCao)
         Me.Controls.Add(Me.Label2)
@@ -132,5 +120,4 @@ Partial Class frmBaoCaoTon
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLapBaoCao As Button
     Friend WithEvents btnDong As Button
-    Friend WithEvents btnload As Button
 End Class
