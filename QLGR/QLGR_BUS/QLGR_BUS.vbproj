@@ -90,6 +90,7 @@
     <Compile Include="PhieuThuTienBUS.vb" />
     <Compile Include="PhuTungBUS.vb" />
     <Compile Include="TiepNhanSuaXeBUS.vb" />
+    <Compile Include="UserBUS.vb" />
     <Compile Include="XeBUS.vb" />
   </ItemGroup>
   <ItemGroup>

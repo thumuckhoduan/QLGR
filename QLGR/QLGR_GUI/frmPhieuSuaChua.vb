@@ -210,6 +210,7 @@ Public Class frmPhieuSuaChua
 
     Private Sub loadlistchitietsuachua(listchitietsuachua As List(Of dgvChiTietSuaChua))
 
+        dgvPhieuChiTietSuaChua.Columns.Clear()
         dgvPhieuChiTietSuaChua.AutoGenerateColumns = False
         dgvPhieuChiTietSuaChua.AllowUserToAddRows = False
         dgvPhieuChiTietSuaChua.DataSource = listchitietsuachua

@@ -1,9 +1,10 @@
-﻿Public Class frmManHinhChinh
+﻿Imports QLGR_DTO
+Imports QLGR_BUS
+Imports Utility
 
-
-    Private Sub frmManHinhChinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
+Public Class frmManHinhChinh
+    Private userBUS As UserBUS
+    Private userDTO As UserDTO
 
     Private Sub QuảnLýSữaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSữaXeToolStripMenuItem.Click
         Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
@@ -87,5 +88,51 @@
         Dim frm As frmNhapPhuTung = New frmNhapPhuTung()
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub btDangNhap_Click(sender As Object, e As EventArgs) Handles btDangNhap.Click
+        Dim result As Result
+        userDTO.username = txbusername.Text
+        userDTO.password = txbpassword.Text
+        If (userDTO.permissions = -1) Then
+            userBUS.get_permissions(userDTO)
+        ElseIf (userDTO.permissions = 0) Then
+            userDTO.permissions = Convert.ToInt32(cbpermissions.Text)
+            result = userBUS.insert(userDTO)
+            If (result.FlagResult = False) Then
+                MessageBox.Show("Đăng Ký không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                System.Console.WriteLine(result.SystemMessage)
+                Return
+            End If
+            userDTO.permissions = 0
+        End If
+        If (userDTO.permissions = -1) Then
+            MessageBox.Show("Tên Hoặc Mật khẩu không đúng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+        If (userDTO.permissions = -2) Then
+            MessageBox.Show("Lỗi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+        If (userDTO.permissions = 1) Then
+            MenuStrip1.Show()
+            txbusername.Hide()
+            txbpassword.Hide()
+            btDangNhap.Hide()
+            lbusername.Hide()
+            lbpassword.Hide()
+        End If
+        If (userDTO.permissions = 0) Then
+            btDangNhap.Text = "Đăng Ký"
+            lbpermissions.Show()
+            cbpermissions.Show()
+        End If
+    End Sub
+
+    Private Sub frmManHinhChinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        userDTO = New UserDTO()
+        userBUS = New UserBUS()
+        MenuStrip1.Hide()
+        userDTO.permissions = -1
+        lbpermissions.Hide()
+        cbpermissions.Hide()
     End Sub
 End Class

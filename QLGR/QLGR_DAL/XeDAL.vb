@@ -8,9 +8,11 @@ Public Class XeDAL
     Public Sub New()
         connectionString = ConfigurationManager.AppSettings("ConnectionString")
     End Sub
+
     Public Sub New(ConnectionString As String)
         Me.connectionString = ConnectionString
     End Sub
+
     Public Function buildMaXe(ByRef nextMX As String) As Result 'ex: 18222229
         Dim query As String = String.Empty
         query &= "SELECT TOP 1 [maxe] "
@@ -47,6 +49,7 @@ Public Class XeDAL
         End Using
         Return New Result(True)
     End Function
+
     Public Function insert(s As XeDTO) As Result
 
         Dim query As String = String.Empty

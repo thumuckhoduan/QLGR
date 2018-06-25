@@ -41,11 +41,18 @@ Partial Class frmManHinhChinh
         Me.PhụTùngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ThêmPhụTùngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýPhụTùngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NhậpPhụTùngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BáoCáoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DoanhSốToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.BáoCáoTồnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NhậpPhụTùngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.txbusername = New System.Windows.Forms.TextBox()
+        Me.txbpassword = New System.Windows.Forms.TextBox()
+        Me.lbusername = New System.Windows.Forms.Label()
+        Me.lbpassword = New System.Windows.Forms.Label()
+        Me.btDangNhap = New System.Windows.Forms.Button()
+        Me.lbpermissions = New System.Windows.Forms.Label()
+        Me.cbpermissions = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,7 +61,7 @@ Partial Class frmManHinhChinh
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SửaXeToolStripMenuItem, Me.XeToolStripMenuItem, Me.ChủXeToolStripMenuItem, Me.HiệuXeToolStripMenuItem, Me.TìmKiếmToolStripMenuItem, Me.PhiếuThuTiềnToolStripMenuItem, Me.PhụTùngToolStripMenuItem, Me.BáoCáoToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(941, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -166,6 +173,12 @@ Partial Class frmManHinhChinh
         Me.QuảnLýPhụTùngToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.QuảnLýPhụTùngToolStripMenuItem.Text = "Quản Lý Phụ Tùng"
         '
+        'NhậpPhụTùngToolStripMenuItem
+        '
+        Me.NhậpPhụTùngToolStripMenuItem.Name = "NhậpPhụTùngToolStripMenuItem"
+        Me.NhậpPhụTùngToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.NhậpPhụTùngToolStripMenuItem.Text = "Nhập Phụ Tùng"
+        '
         'BáoCáoToolStripMenuItem
         '
         Me.BáoCáoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DoanhSốToolStripMenuItem, Me.BáoCáoTồnToolStripMenuItem})
@@ -176,31 +189,92 @@ Partial Class frmManHinhChinh
         'DoanhSốToolStripMenuItem
         '
         Me.DoanhSốToolStripMenuItem.Name = "DoanhSốToolStripMenuItem"
-        Me.DoanhSốToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DoanhSốToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.DoanhSốToolStripMenuItem.Text = "Doanh Số"
+        '
+        'BáoCáoTồnToolStripMenuItem
+        '
+        Me.BáoCáoTồnToolStripMenuItem.Name = "BáoCáoTồnToolStripMenuItem"
+        Me.BáoCáoTồnToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.BáoCáoTồnToolStripMenuItem.Text = "Báo Cáo Tồn"
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'BáoCáoTồnToolStripMenuItem
+        'txbusername
         '
-        Me.BáoCáoTồnToolStripMenuItem.Name = "BáoCáoTồnToolStripMenuItem"
-        Me.BáoCáoTồnToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BáoCáoTồnToolStripMenuItem.Text = "Báo Cáo Tồn"
+        Me.txbusername.Location = New System.Drawing.Point(559, 239)
+        Me.txbusername.Name = "txbusername"
+        Me.txbusername.Size = New System.Drawing.Size(327, 20)
+        Me.txbusername.TabIndex = 2
         '
-        'NhậpPhụTùngToolStripMenuItem
+        'txbpassword
         '
-        Me.NhậpPhụTùngToolStripMenuItem.Name = "NhậpPhụTùngToolStripMenuItem"
-        Me.NhậpPhụTùngToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.NhậpPhụTùngToolStripMenuItem.Text = "Nhập Phụ Tùng"
+        Me.txbpassword.Location = New System.Drawing.Point(559, 308)
+        Me.txbpassword.Name = "txbpassword"
+        Me.txbpassword.Size = New System.Drawing.Size(327, 20)
+        Me.txbpassword.TabIndex = 3
+        '
+        'lbusername
+        '
+        Me.lbusername.AutoSize = True
+        Me.lbusername.Location = New System.Drawing.Point(396, 246)
+        Me.lbusername.Name = "lbusername"
+        Me.lbusername.Size = New System.Drawing.Size(53, 13)
+        Me.lbusername.TabIndex = 4
+        Me.lbusername.Text = "username"
+        '
+        'lbpassword
+        '
+        Me.lbpassword.AutoSize = True
+        Me.lbpassword.Location = New System.Drawing.Point(397, 308)
+        Me.lbpassword.Name = "lbpassword"
+        Me.lbpassword.Size = New System.Drawing.Size(52, 13)
+        Me.lbpassword.TabIndex = 5
+        Me.lbpassword.Text = "password"
+        '
+        'btDangNhap
+        '
+        Me.btDangNhap.Location = New System.Drawing.Point(708, 445)
+        Me.btDangNhap.Name = "btDangNhap"
+        Me.btDangNhap.Size = New System.Drawing.Size(75, 23)
+        Me.btDangNhap.TabIndex = 6
+        Me.btDangNhap.Text = "Đăng Nhập"
+        Me.btDangNhap.UseVisualStyleBackColor = True
+        '
+        'lbpermissions
+        '
+        Me.lbpermissions.AutoSize = True
+        Me.lbpermissions.Location = New System.Drawing.Point(396, 369)
+        Me.lbpermissions.Name = "lbpermissions"
+        Me.lbpermissions.Size = New System.Drawing.Size(61, 13)
+        Me.lbpermissions.TabIndex = 8
+        Me.lbpermissions.Text = "permissions"
+        '
+        'cbpermissions
+        '
+        Me.cbpermissions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbpermissions.FormattingEnabled = True
+        Me.cbpermissions.Items.AddRange(New Object() {"0", "1"})
+        Me.cbpermissions.Location = New System.Drawing.Point(559, 361)
+        Me.cbpermissions.Name = "cbpermissions"
+        Me.cbpermissions.Size = New System.Drawing.Size(327, 21)
+        Me.cbpermissions.TabIndex = 10
         '
         'frmManHinhChinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(941, 480)
+        Me.Controls.Add(Me.cbpermissions)
+        Me.Controls.Add(Me.lbpermissions)
+        Me.Controls.Add(Me.btDangNhap)
+        Me.Controls.Add(Me.lbpassword)
+        Me.Controls.Add(Me.lbusername)
+        Me.Controls.Add(Me.txbpassword)
+        Me.Controls.Add(Me.txbusername)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -237,4 +311,11 @@ Partial Class frmManHinhChinh
     Friend WithEvents DoanhSốToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BáoCáoTồnToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NhậpPhụTùngToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txbusername As TextBox
+    Friend WithEvents txbpassword As TextBox
+    Friend WithEvents lbusername As Label
+    Friend WithEvents lbpassword As Label
+    Friend WithEvents btDangNhap As Button
+    Friend WithEvents lbpermissions As Label
+    Friend WithEvents cbpermissions As ComboBox
 End Class
