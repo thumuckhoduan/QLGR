@@ -15,7 +15,7 @@ Public Class frmQuanLySuaXe
         Dim result As Result
         result = suaxeBUS.selectAll(listsuaxe)
         If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Lấy danh sách Sửa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Return
         End If
@@ -29,7 +29,7 @@ Public Class frmQuanLySuaXe
 
         Dim clmasuaxe = New DataGridViewTextBoxColumn()
         clmasuaxe.Name = "masuaxe"
-        clmasuaxe.HeaderText = "Mã Sữa Xe"
+        clmasuaxe.HeaderText = "Mã Sửa Xe"
         clmasuaxe.DataPropertyName = "masuaxe"
         dgvDanhSachSuaXe.Columns.Add(clmasuaxe)
 
@@ -73,9 +73,9 @@ Public Class frmQuanLySuaXe
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)
                     End Try
-                    MessageBox.Show("Cập nhật sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Cập nhật Sửa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MessageBox.Show("Cập nhật sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Cập nhật Sửa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     System.Console.WriteLine(result.SystemMessage)
                 End If
             Catch ex As Exception
@@ -102,7 +102,7 @@ Public Class frmQuanLySuaXe
     Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
         Dim currentRowIndex As Integer = dgvDanhSachSuaXe.CurrentCellAddress.Y
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachSuaXe.RowCount) Then
-            Select Case MsgBox("Bạn có thực sự muốn xóa đơn sữa xe có mã: " + txbMaSuaXe.Text, MsgBoxStyle.YesNo, "Information")
+            Select Case MsgBox("Bạn có thực sự muốn xóa đơn Sửa xe có mã: " + txbMaSuaXe.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
                         Dim result As Result
@@ -123,9 +123,9 @@ Public Class frmQuanLySuaXe
                                     Console.WriteLine(ex.StackTrace)
                                 End Try
                             End If
-                            MessageBox.Show("Xóa đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            MessageBox.Show("Xóa đơn Sửa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Else
-                            MessageBox.Show("Xóa đơn sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show("Xóa đơn Sửa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             System.Console.WriteLine(result.SystemMessage)
                         End If
                     Catch ex As Exception
@@ -140,5 +140,9 @@ Public Class frmQuanLySuaXe
 
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
+    End Sub
+
+    Private Sub dgvDanhSachSuaXe_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachSuaXe.CellContentClick
+
     End Sub
 End Class

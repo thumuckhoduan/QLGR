@@ -135,4 +135,16 @@ Public Class frmManHinhChinh
         lbpermissions.Hide()
         cbpermissions.Hide()
     End Sub
+
+    Private Sub QuảnLýPhiếuSửaChữaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýPhiếuSửaChữaToolStripMenuItem.Click
+        Dim frm As frmQuanLyPhieuSuaChua = New frmQuanLyPhieuSuaChua()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub QuảnLýChiTiếtSửaChữaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýChiTiếtSửaChữaToolStripMenuItem.Click
+        Dim frm As frmQuanLyChiTietSuaChua = New frmQuanLyChiTietSuaChua()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

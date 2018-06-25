@@ -138,7 +138,7 @@ Partial Class frmQuanLySuaXe
         Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(195, 20)
         Me.dtpNgayTiepNhan.TabIndex = 34
         '
-        'QuanLySuaXe
+        'frmQuanLySuaXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -154,7 +154,7 @@ Partial Class frmQuanLySuaXe
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btCapNhat)
         Me.Controls.Add(Me.txbMaSuaXe)
-        Me.Name = "QuanLySuaXe"
+        Me.Name = "frmQuanLySuaXe"
         Me.Text = "Quản Lý Sữa Xe"
         CType(Me.dgvDanhSachSuaXe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

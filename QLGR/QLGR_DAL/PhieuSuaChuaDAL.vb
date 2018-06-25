@@ -113,7 +113,7 @@ Public Class PhieuSuaChuaDAL
     Public Function selectALL(ByRef listchuxe As List(Of PhieuSuaChuaDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [maphieusuachua], [noidung], [masuaxe], [thanhtien],[ngaysuachua]"
+        query &= " SELECT [maphieusuachua], [noidung], [maxe], [thanhtien], [ngaysuachua]"
         query &= " FROM [tblPhieuSuaChua]"
 
 

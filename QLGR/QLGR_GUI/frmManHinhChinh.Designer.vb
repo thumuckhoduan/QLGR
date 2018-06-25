@@ -28,6 +28,7 @@ Partial Class frmManHinhChinh
         Me.QuảnLýSữaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiếpNhậnSữaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PhiếuSửaXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuảnLýPhiếuSửaChữaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuảnLýXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChủXeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,6 +54,7 @@ Partial Class frmManHinhChinh
         Me.btDangNhap = New System.Windows.Forms.Button()
         Me.lbpermissions = New System.Windows.Forms.Label()
         Me.cbpermissions = New System.Windows.Forms.ComboBox()
+        Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,7 +69,7 @@ Partial Class frmManHinhChinh
         '
         'SửaXeToolStripMenuItem
         '
-        Me.SửaXeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLýSữaXeToolStripMenuItem, Me.TiếpNhậnSữaXeToolStripMenuItem, Me.PhiếuSửaXeToolStripMenuItem})
+        Me.SửaXeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLýSữaXeToolStripMenuItem, Me.TiếpNhậnSữaXeToolStripMenuItem, Me.PhiếuSửaXeToolStripMenuItem, Me.QuảnLýPhiếuSửaChữaToolStripMenuItem, Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem})
         Me.SửaXeToolStripMenuItem.Name = "SửaXeToolStripMenuItem"
         Me.SửaXeToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.SửaXeToolStripMenuItem.Text = "Sửa Xe"
@@ -75,20 +77,26 @@ Partial Class frmManHinhChinh
         'QuảnLýSữaXeToolStripMenuItem
         '
         Me.QuảnLýSữaXeToolStripMenuItem.Name = "QuảnLýSữaXeToolStripMenuItem"
-        Me.QuảnLýSữaXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.QuảnLýSữaXeToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.QuảnLýSữaXeToolStripMenuItem.Text = "Quản Lý Sửa Xe"
         '
         'TiếpNhậnSữaXeToolStripMenuItem
         '
         Me.TiếpNhậnSữaXeToolStripMenuItem.Name = "TiếpNhậnSữaXeToolStripMenuItem"
-        Me.TiếpNhậnSữaXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.TiếpNhậnSữaXeToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.TiếpNhậnSữaXeToolStripMenuItem.Text = "Tiếp Nhận Sửa Xe"
         '
         'PhiếuSửaXeToolStripMenuItem
         '
         Me.PhiếuSửaXeToolStripMenuItem.Name = "PhiếuSửaXeToolStripMenuItem"
-        Me.PhiếuSửaXeToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.PhiếuSửaXeToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.PhiếuSửaXeToolStripMenuItem.Text = "Phiếu Sửa Xe"
+        '
+        'QuảnLýPhiếuSửaChữaToolStripMenuItem
+        '
+        Me.QuảnLýPhiếuSửaChữaToolStripMenuItem.Name = "QuảnLýPhiếuSửaChữaToolStripMenuItem"
+        Me.QuảnLýPhiếuSửaChữaToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.QuảnLýPhiếuSửaChữaToolStripMenuItem.Text = "Quản Lý Phiếu Sửa Chữa"
         '
         'XeToolStripMenuItem
         '
@@ -263,6 +271,12 @@ Partial Class frmManHinhChinh
         Me.cbpermissions.Size = New System.Drawing.Size(327, 21)
         Me.cbpermissions.TabIndex = 10
         '
+        'QuảnLýChiTiếtSửaChữaToolStripMenuItem
+        '
+        Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem.Name = "QuảnLýChiTiếtSửaChữaToolStripMenuItem"
+        Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem.Text = "Quản Lý Chi Tiết Sửa Chữa"
+        '
         'frmManHinhChinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -318,4 +332,6 @@ Partial Class frmManHinhChinh
     Friend WithEvents btDangNhap As Button
     Friend WithEvents lbpermissions As Label
     Friend WithEvents cbpermissions As ComboBox
+    Friend WithEvents QuảnLýPhiếuSửaChữaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuảnLýChiTiếtSửaChữaToolStripMenuItem As ToolStripMenuItem
 End Class
