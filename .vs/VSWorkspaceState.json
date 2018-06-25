@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QLGR",
+    "\\QLGR\\QLGR_DAL",
     "\\QLGR\\QLGR_GUI"
   ],
-  "SelectedNode": "\\QLGR\\QLGR.sln",
+  "SelectedNode": "\\QLGR\\QLGR_DAL\\My Project",
   "PreviewInSolutionExplorer": false
 }

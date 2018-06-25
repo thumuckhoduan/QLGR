@@ -29,7 +29,7 @@ Public Class frmNhapPhuTung
         Dim phutungBUS As PhuTungBUS
         phutungBUS = New PhuTungBUS()
         Dim listPhuTung = New List(Of PhuTungDTO)
-        Result = phutungBUS.selectAll(listPhuTung)
+        result = phutungBUS.selectAll(listPhuTung)
         'If (Result.FlagResult = False) Then
         '    MessageBox.Show("Lấy danh sách PhuTung không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         '    System.Console.WriteLine(Result.SystemMessage)
@@ -44,7 +44,7 @@ Public Class frmNhapPhuTung
         cbSoLuongTon.DataSource = cbMaPhuTung.DataSource
         cbMaPhuTung.ValueMember = "soluongton"
         cbSoLuongTon.DisplayMember = cbMaPhuTung.ValueMember
-
+        Return True
     End Function
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click

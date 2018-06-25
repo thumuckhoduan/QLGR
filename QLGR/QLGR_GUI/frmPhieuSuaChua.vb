@@ -2,6 +2,7 @@
 Imports Utility
 Imports QLGR_DTO
 
+
 Public Class frmPhieuSuaChua
 
     Private phieusuachuaBUS As PhieuSuaChuaBUS
@@ -9,13 +10,21 @@ Public Class frmPhieuSuaChua
     Private chuxeBUS As ChuXeBUS
     Private phutungBUS As PhuTungBUS
     Private chitietsuachuaBUS As ChiTietSuaChuaBUS
+    Private listchitietsuachua As List(Of dgvChiTietSuaChua)
     Private Sub frmPhieuSuaChua_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         phieusuachuaBUS = New PhieuSuaChuaBUS()
         Dim result As Result
         Dim nextMPSC = 0
+        cbMaChuXe.Hide()
+        txtMaChiTietSuaChua.Hide()
+        cbMaXe.Hide()
+        cbSoLuongTon.Hide()
+        cbDonGia.Hide()
+        listchitietsuachua = New List(Of dgvChiTietSuaChua)
 
         txtThanhTien.Text = "0"
         txtTienCong.Text = "0"
+        txtSoLuong.Text = "0"
         btLuu.Enabled = False
         result = phieusuachuaBUS.buildmaphieusuachua(nextMPSC)
         If (result.FlagResult = False) Then
@@ -74,7 +83,7 @@ Public Class frmPhieuSuaChua
 
 
 
-        loadlistchitietsuachua()
+        loadlistchitietsuachua(listchitietsuachua)
 
     End Sub
 
@@ -192,110 +201,26 @@ Public Class frmPhieuSuaChua
 
 
 
-        loadlistchitietsuachua()
+        loadlistchitietsuachua(listchitietsuachua)
 
     End Sub
 
-    Private Sub loadlistchitietsuachua()
 
-        dgvPhieuChiTietSuaChua.DataSource = Nothing
 
-        Dim listChiTietSuaChua = New List(Of ChiTietSuaChuaDTO)
-        Dim result As Result
-        result = chitietsuachuaBUS.selectAll(listChiTietSuaChua)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Return
-        End If
 
-        dgvPhieuChiTietSuaChua.Columns.Clear()
-        dgvPhieuChiTietSuaChua.DataSource = Nothing
+    Private Sub loadlistchitietsuachua(listchitietsuachua As List(Of dgvChiTietSuaChua))
 
         dgvPhieuChiTietSuaChua.AutoGenerateColumns = False
         dgvPhieuChiTietSuaChua.AllowUserToAddRows = False
-        dgvPhieuChiTietSuaChua.DataSource = listChiTietSuaChua
-
-        Dim clMaChiTietSuaChua = New DataGridViewTextBoxColumn()
-        clMaChiTietSuaChua.Name = "machitietsuachua"
-        clMaChiTietSuaChua.HeaderText = "Mã Chi Tiết Sửa Chữa"
-        clMaChiTietSuaChua.DataPropertyName = "machitietsuachua"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaChiTietSuaChua)
-
-        Dim clMaPhieuSuaChua = New DataGridViewTextBoxColumn()
-        clMaPhieuSuaChua.Name = "maphieusuachua"
-        clMaPhieuSuaChua.HeaderText = "Mã Phiếu Sửa Chữa"
-        clMaPhieuSuaChua.DataPropertyName = "maphieusuachua"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaPhieuSuaChua)
-
-        Dim clMaPhuTung = New DataGridViewTextBoxColumn()
-        clMaPhuTung.Name = "maphutung"
-        clMaPhuTung.HeaderText = "Mã Phụ Tùng"
-        clMaPhuTung.DataPropertyName = "maphutung"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaPhuTung)
-
-        Dim clSoLuong = New DataGridViewTextBoxColumn()
-        clSoLuong.Name = "soluong"
-        clSoLuong.HeaderText = "Số Lượng"
-        clSoLuong.DataPropertyName = "soluong"
-        dgvPhieuChiTietSuaChua.Columns.Add(clSoLuong)
-
-        Dim clDonGia = New DataGridViewTextBoxColumn()
-        clDonGia.Name = "dongia"
-        clDonGia.HeaderText = "Đơn Giá"
-        clDonGia.DataPropertyName = "dongia"
-        dgvPhieuChiTietSuaChua.Columns.Add(clDonGia)
-
-        Dim clTienCong = New DataGridViewTextBoxColumn()
-        clTienCong.Name = "tiencong"
-        clTienCong.HeaderText = "Tiền Công"
-        clTienCong.DataPropertyName = "tiencong"
-        dgvPhieuChiTietSuaChua.Columns.Add(clTienCong)
+        dgvPhieuChiTietSuaChua.DataSource = listchitietsuachua
 
 
 
-        Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvPhieuChiTietSuaChua.DataSource)
-        myCurrencyManager.Refresh()
-    End Sub
-
-
-    Private Sub loadlistchitietsuachua(maphieusuachua As Integer)
-
-        dgvPhieuChiTietSuaChua.DataSource = Nothing
-
-        Dim listChiTietSuaChua = New List(Of ChiTietSuaChuaDTO)
-        Dim result As Result
-        result = chitietsuachuaBUS.selectALL_ByMaPhieuSuaChua(maphieusuachua, listChiTietSuaChua)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Return
-        End If
-
-        dgvPhieuChiTietSuaChua.Columns.Clear()
-        dgvPhieuChiTietSuaChua.DataSource = Nothing
-
-        dgvPhieuChiTietSuaChua.AutoGenerateColumns = False
-        dgvPhieuChiTietSuaChua.AllowUserToAddRows = False
-        dgvPhieuChiTietSuaChua.DataSource = listChiTietSuaChua
-
-        Dim clMaChiTietSuaChua = New DataGridViewTextBoxColumn()
-        clMaChiTietSuaChua.Name = "machitietsuachua"
-        clMaChiTietSuaChua.HeaderText = "Mã Chi Tiết Sửa Chữa"
-        clMaChiTietSuaChua.DataPropertyName = "machitietsuachua"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaChiTietSuaChua)
-
-        Dim clMaPhieuSuaChua = New DataGridViewTextBoxColumn()
-        clMaPhieuSuaChua.Name = "maphieusuachua"
-        clMaPhieuSuaChua.HeaderText = "Mã Phiếu Sửa Chữa"
-        clMaPhieuSuaChua.DataPropertyName = "maphieusuachua"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaPhieuSuaChua)
-
-        Dim clMaPhuTung = New DataGridViewTextBoxColumn()
-        clMaPhuTung.Name = "maphutung"
-        clMaPhuTung.HeaderText = "Mã Phụ Tùng"
-        clMaPhuTung.DataPropertyName = "maphutung"
-        dgvPhieuChiTietSuaChua.Columns.Add(clMaPhuTung)
+        Dim clTenPhuTung = New DataGridViewTextBoxColumn()
+        clTenPhuTung.Name = "tenphutung"
+        clTenPhuTung.HeaderText = "Tên Phụ Tùng"
+        clTenPhuTung.DataPropertyName = "tenphutung"
+        dgvPhieuChiTietSuaChua.Columns.Add(clTenPhuTung)
 
         Dim clSoLuong = New DataGridViewTextBoxColumn()
         clSoLuong.Name = "soluong"
@@ -354,26 +279,20 @@ Public Class frmPhieuSuaChua
         Return True
     End Function
 
-    Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
+    Private Sub btXoa_Click_1(sender As Object, e As EventArgs)
         ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y 'current row selected
         Dim result As Result
-
         'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
             Select Case MsgBox("Bạn có thực sự muốn xóa chi tiết sửa chữa có mã: " + txtMaChiTietSuaChua.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
-
                         '1. Delete from DB
-
                         result = chitietsuachuaBUS.delete(Convert.ToInt32(txtMaChiTietSuaChua.Text))
                         If (result.FlagResult = True) Then
-
                             ' Re-Load chi tiet sua chua list
-                            loadlistchitietsuachua()
-
-
+                            loadlistchitietsuachua(listchitietsuachua)
                             ' Hightlight the next row on table
                             If (currentRowIndex >= dgvPhieuChiTietSuaChua.Rows.Count) Then
                                 currentRowIndex = currentRowIndex - 1
@@ -407,16 +326,12 @@ Public Class frmPhieuSuaChua
                 Case MsgBoxResult.No
                     Return
             End Select
-
         End If
-
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO()
         phutungDTO.maphutung = Convert.ToInt32(cbMaPhuTung.Text)
         phutungDTO.tenphutung = cbTenPhuTung.Text
         phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) + Convert.ToInt32(txtSoLuong.Text)
-
-
         result = phutungBUS.update(phutungDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Cập nhật phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -424,13 +339,10 @@ Public Class frmPhieuSuaChua
             MessageBox.Show("Cập nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
-
-
     End Sub
 
     Private Sub cbSoLuongTon_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSoLuongTon.SelectedIndexChanged
-        txtSoLuong.Text = cbSoLuongTon.Text
-
+        txtSoLuongTon.Text = cbSoLuongTon.Text
     End Sub
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
@@ -439,12 +351,9 @@ Public Class frmPhieuSuaChua
 
 
 
-    Private Sub txtMaPhieuSuaChua_TextChanged(sender As Object, e As EventArgs) Handles txtMaPhieuSuaChua.TextChanged
-        cbMaPhieuSuaChua.Text = txtMaPhieuSuaChua.Text
-        cbMaPhieuSuaChua.Text = txtMaPhieuSuaChua.Text
-    End Sub
 
-    Private Sub cbMaPhieuSuaChua_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaPhieuSuaChua.SelectedIndexChanged
+
+    Private Sub cbMaPhieuSuaChua_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -479,11 +388,11 @@ Public Class frmPhieuSuaChua
         result = phieusuachuaBUS.insert(phieusuachuaDTO)
 
         If (result.FlagResult = True) Then
-                MessageBox.Show("Thêm phiếu sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Thêm phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                System.Console.WriteLine(result.SystemMessage)
-            End If
+            MessageBox.Show("Thêm phiếu sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("Thêm phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
 
 
         btnTaoMoi.Enabled = False
@@ -506,13 +415,12 @@ Public Class frmPhieuSuaChua
         'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
             Try
-                Dim chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
-                txtMaChiTietSuaChua.Text = chitietsuachuaDTO.machitietsuachua
-                txtMaPhieuSuaChua.Text = chitietsuachuaDTO.maphieusuachua
-                cbMaPhuTung.Text = chitietsuachuaDTO.maphutung
-                txtSoLuong.Text = chitietsuachuaDTO.soluong
-                txtDonGia.Text = chitietsuachuaDTO.dongia
-                txtTienCong.Text = chitietsuachuaDTO.tiencong
+                Dim chitietsuachua = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, dgvChiTietSuaChua)
+                cbMaPhuTung.Text = chitietsuachua.maphutung
+                cbTenPhuTung.Text = chitietsuachua.tenphutung
+                txtSoLuong.Text = chitietsuachua.soluong
+                txtDonGia.Text = chitietsuachua.dongia
+                txtTienCong.Text = chitietsuachua.tiencong
 
             Catch ex As Exception
                 Console.WriteLine(ex.StackTrace)
@@ -520,6 +428,8 @@ Public Class frmPhieuSuaChua
 
         End If
     End Sub
+
+
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
         ' Get the current cell location.
@@ -538,7 +448,6 @@ Public Class frmPhieuSuaChua
                 chitietsuachuaDTO.maphutung = cbMaPhuTung.Text
                 chitietsuachuaDTO.soluong = txtSoLuong.Text
                 If (kiemtrasoluong()) Then
-                    Return
                 End If
                 chitietsuachuaDTO.dongia = txtDonGia.Text
                 chitietsuachuaDTO.tiencong = txtTienCong.Text
@@ -550,7 +459,7 @@ Public Class frmPhieuSuaChua
                 result = chitietsuachuaBUS.update(chitietsuachuaDTO)
                 If (result.FlagResult = True) Then
                     ' Re-Load LoaiHocSinh list
-                    loadlistchitietsuachua()
+                    loadlistchitietsuachua(listchitietsuachua)
                     ' Hightlight the row has been updated on table
                     dgvPhieuChiTietSuaChua.Rows(currentRowIndex).Selected = True
                     Try
@@ -580,5 +489,72 @@ Public Class frmPhieuSuaChua
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
+    End Sub
+
+    Private Sub btThem_Click(sender As Object, e As EventArgs) Handles btThem.Click
+        If (Convert.ToInt32(txtSoLuong.Text) = 0) Then
+            MessageBox.Show("Số lượng không được bỏ trống.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+        If (kiemtrasoluong()) Then
+            MessageBox.Show("Số lượng còn lại không đủ.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+        txtThanhTien.Text = Convert.ToInt32(txtThanhTien.Text) + Convert.ToInt32(txtTienCong.Text) + (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
+
+        listchitietsuachua.Add(New dgvChiTietSuaChua(Convert.ToInt32(cbMaPhuTung.Text), cbTenPhuTung.Text, Convert.ToInt32(txtSoLuong.Text), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(txtTienCong.Text)))
+        loadlistchitietsuachua(listchitietsuachua)
+        Dim phutungDTO As PhuTungDTO
+        phutungDTO = New PhuTungDTO()
+        Dim phutungBUS As PhuTungBUS
+        phutungBUS = New PhuTungBUS()
+        phutungDTO.maphutung = cbMaPhuTung.Text
+        phutungDTO.tenphutung = cbTenPhuTung.Text
+        phutungDTO.dongia = txtDonGia.Text
+        phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) - Convert.ToInt32(txtSoLuong.Text)
+
+        phutungBUS.update(phutungDTO)
+        updatephutung()
+
+    End Sub
+
+    Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
+        Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y
+        Dim phutungDTO As PhuTungDTO
+        phutungDTO = New PhuTungDTO()
+        Dim phutungBUS As PhuTungBUS
+        phutungBUS = New PhuTungBUS()
+        phutungDTO.maphutung = cbMaPhuTung.Text
+        phutungDTO.tenphutung = cbTenPhuTung.Text
+        phutungDTO.dongia = txtDonGia.Text
+        phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) + Convert.ToInt32(txtSoLuong.Text)
+        txtThanhTien.Text = Convert.ToInt32(txtThanhTien.Text) - Convert.ToInt32(txtTienCong.Text) - (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
+        phutungBUS.update(phutungDTO)
+        updatephutung()
+
+        If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
+            Try
+                Dim chitietsuachua = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, dgvChiTietSuaChua)
+                listchitietsuachua.Remove(chitietsuachua)
+                loadlistchitietsuachua(listchitietsuachua)
+                Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvPhieuChiTietSuaChua.DataSource)
+                myCurrencyManager.Refresh()
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace)
+            End Try
+        End If
+    End Sub
+
+    Private Sub dgvPhieuChiTietSuaChua_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvPhieuChiTietSuaChua.RowPostPaint
+        Dim strRowNumber As String = (e.RowIndex + 1).ToString
+        While (strRowNumber.Length < dgvPhieuChiTietSuaChua.RowCount.ToString.Length)
+            strRowNumber = "0" & strRowNumber
+        End While
+        Dim Size As SizeF = e.Graphics.MeasureString(strRowNumber, MyBase.Font)
+        If (dgvPhieuChiTietSuaChua.RowHeadersWidth < Size.Width + 20) Then
+            dgvPhieuChiTietSuaChua.RowHeadersWidth = Size.Width + 20
+        End If
+        Dim b As Brush = SystemBrushes.ControlText
+        e.Graphics.DrawString(strRowNumber, MyBase.Font, b, e.RowBounds.Location.X + 15, e.RowBounds.Location.Y + ((e.RowBounds.Height - Size.Height) / 2))
     End Sub
 End Class

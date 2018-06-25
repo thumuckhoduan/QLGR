@@ -71,6 +71,7 @@
     <Compile Include="BaoCaoDoanhSoDTO.vb" />
     <Compile Include="dgvbaocaodoanhso.vb" />
     <Compile Include="dgvBaoCaoTon.vb" />
+    <Compile Include="dgvChiTietSuaChua.vb" />
     <Compile Include="HieuXeDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
