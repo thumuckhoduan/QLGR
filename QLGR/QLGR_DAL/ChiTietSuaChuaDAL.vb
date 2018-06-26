@@ -273,4 +273,43 @@ Public Class ChiTietSuaChuaDAL
         End Using
         Return New Result(True)
     End Function
+
+    Public Function selectAll_bymaphieu(maphieusuachua As Integer, ByRef listphieusuachua As List(Of dgvChiTietSuaChua)) As Result
+        Dim query As String = String.Empty
+        query &= "SELECT [machitietsuachua],[maphieusuachua] ,[tblChiTietSuaChua].[maphutung],[tenphutung],[soluong],[tblChitietSuaChua].[dongia],[tiencong] "
+        query &= "FROM [tblChiTietSuaChua],[tblPhuTung] "
+        query &= "WHERE "
+        query &= "[tblChiTietSuaChua].[maphutung] = [tblPhuTung].[maphutung] "
+        query &= "AND [maphieusuachua] = @maphieusuachua "
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maphieusuachua", maphieusuachua)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listphieusuachua.Clear()
+                        While reader.Read()
+                            listphieusuachua.Add(New dgvChiTietSuaChua(reader("machitietsuachua"), reader("maphieusuachua"), reader("maphutung"), reader("tenphutung"), reader("soluong"), reader("dongia"), reader("tiencong")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy tất cả chi tiết sửa chữa theo mã phiếu sửa chữa không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong    End Function
+    End Function
 End Class
