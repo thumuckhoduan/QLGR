@@ -37,9 +37,9 @@ Partial Class frmBaoCaoDoanhSo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(123, 34)
+        Me.Label1.Location = New System.Drawing.Point(123, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 13)
+        Me.Label1.Size = New System.Drawing.Size(37, 14)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tháng"
         '
@@ -47,59 +47,59 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.cbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbThang.FormattingEnabled = True
-        Me.cbThang.Location = New System.Drawing.Point(197, 25)
+        Me.cbThang.Location = New System.Drawing.Point(197, 27)
         Me.cbThang.Name = "cbThang"
-        Me.cbThang.Size = New System.Drawing.Size(121, 21)
+        Me.cbThang.Size = New System.Drawing.Size(121, 22)
         Me.cbThang.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(377, 34)
+        Me.Label2.Location = New System.Drawing.Point(377, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.Size = New System.Drawing.Size(29, 14)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Năm"
         '
         'dgvDoanhThu
         '
         Me.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDoanhThu.Location = New System.Drawing.Point(28, 99)
+        Me.dgvDoanhThu.Location = New System.Drawing.Point(28, 107)
         Me.dgvDoanhThu.Name = "dgvDoanhThu"
-        Me.dgvDoanhThu.Size = New System.Drawing.Size(744, 266)
+        Me.dgvDoanhThu.Size = New System.Drawing.Size(744, 286)
         Me.dgvDoanhThu.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(228, 83)
+        Me.Label3.Location = New System.Drawing.Point(228, 89)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 13)
+        Me.Label3.Size = New System.Drawing.Size(88, 14)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Tổng Doanh Thu"
         '
         'lbTongDoanhThu
         '
         Me.lbTongDoanhThu.AutoSize = True
-        Me.lbTongDoanhThu.Location = New System.Drawing.Point(337, 83)
+        Me.lbTongDoanhThu.Location = New System.Drawing.Point(337, 89)
         Me.lbTongDoanhThu.Name = "lbTongDoanhThu"
-        Me.lbTongDoanhThu.Size = New System.Drawing.Size(0, 13)
+        Me.lbTongDoanhThu.Size = New System.Drawing.Size(0, 14)
         Me.lbTongDoanhThu.TabIndex = 6
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(172, 391)
+        Me.btLuu.Location = New System.Drawing.Point(172, 421)
         Me.btLuu.Name = "btLuu"
-        Me.btLuu.Size = New System.Drawing.Size(100, 23)
+        Me.btLuu.Size = New System.Drawing.Size(100, 25)
         Me.btLuu.TabIndex = 7
         Me.btLuu.Text = "Lập Báo Cáo"
         Me.btLuu.UseVisualStyleBackColor = True
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(474, 391)
+        Me.btDong.Location = New System.Drawing.Point(474, 421)
         Me.btDong.Name = "btDong"
-        Me.btDong.Size = New System.Drawing.Size(75, 23)
+        Me.btDong.Size = New System.Drawing.Size(75, 25)
         Me.btDong.TabIndex = 8
         Me.btDong.Text = "Đóng"
         Me.btDong.UseVisualStyleBackColor = True
@@ -108,16 +108,16 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNam.FormattingEnabled = True
-        Me.cbNam.Location = New System.Drawing.Point(493, 31)
+        Me.cbNam.Location = New System.Drawing.Point(493, 33)
         Me.cbNam.Name = "cbNam"
-        Me.cbNam.Size = New System.Drawing.Size(121, 21)
+        Me.cbNam.Size = New System.Drawing.Size(121, 22)
         Me.cbNam.TabIndex = 9
         '
         'frmBaoCaoDoanhSo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 485)
         Me.Controls.Add(Me.cbNam)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btLuu)
@@ -127,6 +127,7 @@ Partial Class frmBaoCaoDoanhSo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbThang)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Times New Roman", 8.25!)
         Me.Name = "frmBaoCaoDoanhSo"
         Me.Text = "Báo Cáo Doanh Số"
         CType(Me.dgvDoanhThu, System.ComponentModel.ISupportInitialize).EndInit()

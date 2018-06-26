@@ -39,108 +39,108 @@ Partial Class frmNhapPhuTung
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(71, 52)
+        Me.Label1.Location = New System.Drawing.Point(83, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 13)
+        Me.Label1.Size = New System.Drawing.Size(74, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mã Phụ Tùng"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(71, 127)
+        Me.Label2.Location = New System.Drawing.Point(83, 147)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.Size = New System.Drawing.Size(76, 15)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Tên Phụ Tùng"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 189)
+        Me.Label3.Location = New System.Drawing.Point(86, 218)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(53, 15)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Số Lượng"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(74, 259)
+        Me.Label4.Location = New System.Drawing.Point(86, 299)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.Size = New System.Drawing.Size(88, 15)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Ngày Tiếp Nhận"
         '
         'txtSoLuong
         '
-        Me.txtSoLuong.Location = New System.Drawing.Point(193, 186)
+        Me.txtSoLuong.Location = New System.Drawing.Point(225, 215)
         Me.txtSoLuong.Name = "txtSoLuong"
-        Me.txtSoLuong.Size = New System.Drawing.Size(229, 20)
+        Me.txtSoLuong.Size = New System.Drawing.Size(266, 21)
         Me.txtSoLuong.TabIndex = 6
         '
         'cbMaPhuTung
         '
         Me.cbMaPhuTung.FormattingEnabled = True
-        Me.cbMaPhuTung.Location = New System.Drawing.Point(193, 52)
+        Me.cbMaPhuTung.Location = New System.Drawing.Point(225, 60)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
-        Me.cbMaPhuTung.Size = New System.Drawing.Size(229, 21)
+        Me.cbMaPhuTung.Size = New System.Drawing.Size(266, 23)
         Me.cbMaPhuTung.TabIndex = 8
         '
         'cbTenPhuTung
         '
         Me.cbTenPhuTung.FormattingEnabled = True
-        Me.cbTenPhuTung.Location = New System.Drawing.Point(193, 124)
+        Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 143)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
-        Me.cbTenPhuTung.Size = New System.Drawing.Size(229, 21)
+        Me.cbTenPhuTung.Size = New System.Drawing.Size(266, 23)
         Me.cbTenPhuTung.TabIndex = 9
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(193, 310)
+        Me.btLuu.Location = New System.Drawing.Point(225, 358)
         Me.btLuu.Name = "btLuu"
-        Me.btLuu.Size = New System.Drawing.Size(75, 23)
+        Me.btLuu.Size = New System.Drawing.Size(87, 27)
         Me.btLuu.TabIndex = 10
         Me.btLuu.Text = "Lưu"
         Me.btLuu.UseVisualStyleBackColor = True
         '
         'dtpNgayTiepNhan
         '
-        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(193, 253)
+        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(225, 292)
         Me.dtpNgayTiepNhan.Name = "dtpNgayTiepNhan"
-        Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(229, 20)
+        Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(266, 21)
         Me.dtpNgayTiepNhan.TabIndex = 11
         '
         'txtMaNhapPhuTung
         '
-        Me.txtMaNhapPhuTung.Location = New System.Drawing.Point(193, 12)
+        Me.txtMaNhapPhuTung.Location = New System.Drawing.Point(225, 14)
         Me.txtMaNhapPhuTung.Name = "txtMaNhapPhuTung"
-        Me.txtMaNhapPhuTung.Size = New System.Drawing.Size(229, 20)
+        Me.txtMaNhapPhuTung.Size = New System.Drawing.Size(266, 21)
         Me.txtMaNhapPhuTung.TabIndex = 12
         '
         'cbSoLuongTon
         '
         Me.cbSoLuongTon.FormattingEnabled = True
-        Me.cbSoLuongTon.Location = New System.Drawing.Point(446, 124)
+        Me.cbSoLuongTon.Location = New System.Drawing.Point(520, 143)
         Me.cbSoLuongTon.Name = "cbSoLuongTon"
-        Me.cbSoLuongTon.Size = New System.Drawing.Size(187, 21)
+        Me.cbSoLuongTon.Size = New System.Drawing.Size(217, 23)
         Me.cbSoLuongTon.TabIndex = 13
         '
         'btThoat
         '
-        Me.btThoat.Location = New System.Drawing.Point(347, 310)
+        Me.btThoat.Location = New System.Drawing.Point(405, 358)
         Me.btThoat.Name = "btThoat"
-        Me.btThoat.Size = New System.Drawing.Size(75, 23)
+        Me.btThoat.Size = New System.Drawing.Size(87, 27)
         Me.btThoat.TabIndex = 14
         Me.btThoat.Text = "Thoát"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'frmNhapPhuTung
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(645, 383)
+        Me.ClientSize = New System.Drawing.Size(752, 442)
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.cbSoLuongTon)
         Me.Controls.Add(Me.txtMaNhapPhuTung)
@@ -153,6 +153,7 @@ Partial Class frmNhapPhuTung
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.0!)
         Me.Name = "frmNhapPhuTung"
         Me.Text = "Nhập Vật Liệu"
         Me.ResumeLayout(False)
