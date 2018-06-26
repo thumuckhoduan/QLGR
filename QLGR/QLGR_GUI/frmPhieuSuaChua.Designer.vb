@@ -37,9 +37,6 @@ Partial Class frmPhieuSuaChua
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cbMaChuXe = New System.Windows.Forms.ComboBox()
         Me.cbTenChuXe = New System.Windows.Forms.ComboBox()
-        Me.btLuu = New System.Windows.Forms.Button()
-        Me.btThoat = New System.Windows.Forms.Button()
-        Me.btCapNhat = New System.Windows.Forms.Button()
         Me.cbMaXe = New System.Windows.Forms.ComboBox()
         Me.cbBienSo = New System.Windows.Forms.ComboBox()
         Me.txtNoiDung = New System.Windows.Forms.TextBox()
@@ -52,7 +49,6 @@ Partial Class frmPhieuSuaChua
         Me.cbSoLuongTon = New System.Windows.Forms.ComboBox()
         Me.dtpNgaySuaChua = New System.Windows.Forms.DateTimePicker()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btnTaoMoi = New System.Windows.Forms.Button()
         Me.dgvPhieuChiTietSuaChua = New System.Windows.Forms.DataGridView()
         Me.btThem = New System.Windows.Forms.Button()
         Me.btXoa = New System.Windows.Forms.Button()
@@ -188,33 +184,6 @@ Partial Class frmPhieuSuaChua
         Me.cbTenChuXe.Size = New System.Drawing.Size(200, 21)
         Me.cbTenChuXe.TabIndex = 24
         '
-        'btLuu
-        '
-        Me.btLuu.Location = New System.Drawing.Point(185, 390)
-        Me.btLuu.Name = "btLuu"
-        Me.btLuu.Size = New System.Drawing.Size(66, 29)
-        Me.btLuu.TabIndex = 25
-        Me.btLuu.Text = "Lưu"
-        Me.btLuu.UseVisualStyleBackColor = True
-        '
-        'btThoat
-        '
-        Me.btThoat.Location = New System.Drawing.Point(676, 390)
-        Me.btThoat.Name = "btThoat"
-        Me.btThoat.Size = New System.Drawing.Size(66, 29)
-        Me.btThoat.TabIndex = 27
-        Me.btThoat.Text = "Thoát"
-        Me.btThoat.UseVisualStyleBackColor = True
-        '
-        'btCapNhat
-        '
-        Me.btCapNhat.Location = New System.Drawing.Point(518, 390)
-        Me.btCapNhat.Name = "btCapNhat"
-        Me.btCapNhat.Size = New System.Drawing.Size(66, 29)
-        Me.btCapNhat.TabIndex = 28
-        Me.btCapNhat.Text = "Cập Nhật"
-        Me.btCapNhat.UseVisualStyleBackColor = True
-        '
         'cbMaXe
         '
         Me.cbMaXe.FormattingEnabled = True
@@ -312,15 +281,6 @@ Partial Class frmPhieuSuaChua
         Me.Label14.TabIndex = 42
         Me.Label14.Text = "Ngày Sửa Chữa"
         '
-        'btnTaoMoi
-        '
-        Me.btnTaoMoi.Location = New System.Drawing.Point(25, 390)
-        Me.btnTaoMoi.Name = "btnTaoMoi"
-        Me.btnTaoMoi.Size = New System.Drawing.Size(66, 29)
-        Me.btnTaoMoi.TabIndex = 44
-        Me.btnTaoMoi.Text = "Tạo Mới"
-        Me.btnTaoMoi.UseVisualStyleBackColor = True
-        '
         'dgvPhieuChiTietSuaChua
         '
         Me.dgvPhieuChiTietSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -374,7 +334,6 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.btXoa)
         Me.Controls.Add(Me.btThem)
         Me.Controls.Add(Me.dgvPhieuChiTietSuaChua)
-        Me.Controls.Add(Me.btnTaoMoi)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.dtpNgaySuaChua)
         Me.Controls.Add(Me.cbSoLuongTon)
@@ -387,9 +346,6 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.cbBienSo)
         Me.Controls.Add(Me.cbMaXe)
-        Me.Controls.Add(Me.btCapNhat)
-        Me.Controls.Add(Me.btThoat)
-        Me.Controls.Add(Me.btLuu)
         Me.Controls.Add(Me.cbTenChuXe)
         Me.Controls.Add(Me.cbMaChuXe)
         Me.Controls.Add(Me.txtThanhTien)
@@ -428,9 +384,6 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents Label10 As Label
     Friend WithEvents cbMaChuXe As ComboBox
     Friend WithEvents cbTenChuXe As ComboBox
-    Friend WithEvents btLuu As Button
-    Friend WithEvents btThoat As Button
-    Friend WithEvents btCapNhat As Button
     Friend WithEvents cbMaXe As ComboBox
     Friend WithEvents cbBienSo As ComboBox
     Friend WithEvents txtNoiDung As TextBox
@@ -443,7 +396,6 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents cbSoLuongTon As ComboBox
     Friend WithEvents dtpNgaySuaChua As DateTimePicker
     Friend WithEvents Label14 As Label
-    Friend WithEvents btnTaoMoi As Button
     Friend WithEvents dgvPhieuChiTietSuaChua As DataGridView
     Friend WithEvents btThem As Button
     Friend WithEvents btXoa As Button

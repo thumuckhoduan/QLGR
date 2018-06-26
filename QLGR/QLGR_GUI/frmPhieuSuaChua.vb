@@ -25,7 +25,6 @@ Public Class frmPhieuSuaChua
         txtThanhTien.Text = "0"
         txtTienCong.Text = "0"
         txtSoLuong.Text = "0"
-        btLuu.Enabled = False
         result = phieusuachuaBUS.buildmaphieusuachua(nextMPSC)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -80,9 +79,6 @@ Public Class frmPhieuSuaChua
 
         updatephutung()
 
-
-
-
         loadlistchitietsuachua(listchitietsuachua)
 
     End Sub
@@ -136,76 +132,6 @@ Public Class frmPhieuSuaChua
         cbMaXe.DisplayMember = cbBienSo.ValueMember
 
     End Sub
-
-    Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
-        btnTaoMoi.Enabled = True
-        Dim phieusuachuaDTO As PhieuSuaChuaDTO
-        phieusuachuaDTO = New PhieuSuaChuaDTO()
-        Dim chitietsuachuaDTO As ChiTietSuaChuaDTO
-        chitietsuachuaDTO = New ChiTietSuaChuaDTO()
-        Dim phutungDTO As PhuTungDTO
-        phutungDTO = New PhuTungDTO()
-
-        '1. Mapping data from GUI control
-
-
-        chitietsuachuaDTO.machitietsuachua = Convert.ToInt32(txtMaChiTietSuaChua.Text)
-        chitietsuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
-        chitietsuachuaDTO.maphutung = Convert.ToInt32(cbMaPhuTung.Text)
-        chitietsuachuaDTO.soluong = txtSoLuong.Text
-        chitietsuachuaDTO.tiencong = txtTienCong.Text
-        chitietsuachuaDTO.dongia = txtDonGia.Text
-        If (kiemtrasoluong()) Then
-            Return
-        End If
-        phutungDTO.maphutung = cbMaPhuTung.Text
-        phutungDTO.tenphutung = cbTenPhuTung.Text
-        phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) - Convert.ToInt32(txtSoLuong.Text)
-        phutungDTO.dongia = Convert.ToInt32(txtDonGia.Text)
-
-
-        '3. Insert to DB
-
-        Dim result As Result
-
-
-
-        result = chitietsuachuaBUS.insert(chitietsuachuaDTO)
-        If (result.FlagResult = True) Then
-            MessageBox.Show("Thêm chi tiết sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'set MCTSC auto
-            Dim nextMCTSC = "1"
-            result = chitietsuachuaBUS.buildMaChiTietSuaChua(nextMCTSC)
-            If (result.FlagResult = False) Then
-                MessageBox.Show("Lấy danh tự động chi tiết sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Me.Close()
-                Return
-            End If
-            txtMaChiTietSuaChua.Text = nextMCTSC
-        Else
-            MessageBox.Show("Thêm chi tiết sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-        End If
-
-
-
-        result = phutungBUS.update(phutungDTO)
-        If (result.FlagResult = True) Then
-            MessageBox.Show("Cập nhật phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            MessageBox.Show("Cập nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-        End If
-        updatephutung()
-        txtThanhTien.Text = Convert.ToInt32(txtThanhTien.Text) + Convert.ToInt32(txtTienCong.Text) + (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
-
-
-
-        loadlistchitietsuachua(listchitietsuachua)
-
-    End Sub
-
-
 
 
     Private Sub loadlistchitietsuachua(listchitietsuachua As List(Of dgvChiTietSuaChua))
@@ -268,79 +194,14 @@ Public Class frmPhieuSuaChua
     End Sub
 
     Function kiemtrasoluong() As Boolean
-        If (txtSoLuong.Text <> vbNullString) Then
 
-            If (Convert.ToInt32(txtSoLuong.Text) > Convert.ToInt32(cbSoLuongTon.Text)) Then
+        If (Convert.ToInt32(txtSoLuong.Text) > Convert.ToInt32(cbSoLuongTon.Text)) Then
                 MessageBox.Show("Số lượng còn lại của phụ tùng không đủ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 System.Console.WriteLine()
-                Return True
-            End If
-            Return False
+            Return True
         End If
-        Return True
+        Return False
     End Function
-
-    Private Sub btXoa_Click_1(sender As Object, e As EventArgs)
-        ' Get the current cell location.
-        Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y 'current row selected
-        Dim result As Result
-        'Verify that indexing OK
-        If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
-            Select Case MsgBox("Bạn có thực sự muốn xóa chi tiết sửa chữa có mã: " + txtMaChiTietSuaChua.Text, MsgBoxStyle.YesNo, "Information")
-                Case MsgBoxResult.Yes
-                    Try
-                        '1. Delete from DB
-                        result = chitietsuachuaBUS.delete(Convert.ToInt32(txtMaChiTietSuaChua.Text))
-                        If (result.FlagResult = True) Then
-                            ' Re-Load chi tiet sua chua list
-                            loadlistchitietsuachua(listchitietsuachua)
-                            ' Hightlight the next row on table
-                            If (currentRowIndex >= dgvPhieuChiTietSuaChua.Rows.Count) Then
-                                currentRowIndex = currentRowIndex - 1
-                            End If
-                            If (currentRowIndex >= 0) Then
-                                Dim phieusuachua As PhieuSuaChuaDTO
-                                phieusuachua = New PhieuSuaChuaDTO()
-                                phieusuachua.thanhtien = phieusuachua.thanhtien - Convert.ToInt32(txtTienCong.Text) - (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
-                                dgvPhieuChiTietSuaChua.Rows(currentRowIndex).Selected = True
-                                Try
-                                    Dim chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
-                                    txtMaChiTietSuaChua.Text = chitietsuachuaDTO.machitietsuachua
-                                    txtMaPhieuSuaChua.Text = chitietsuachuaDTO.maphieusuachua
-                                    cbMaPhuTung.Text = chitietsuachuaDTO.maphutung
-                                    txtSoLuong.Text = chitietsuachuaDTO.soluong
-                                    txtDonGia.Text = chitietsuachuaDTO.dongia
-                                    txtTienCong.Text = chitietsuachuaDTO.tiencong
-
-                                Catch ex As Exception
-                                    Console.WriteLine(ex.StackTrace)
-                                End Try
-                            End If
-                            MessageBox.Show("Xóa chi tiết sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Else
-                            MessageBox.Show("Xóa chi tiết sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            System.Console.WriteLine(result.SystemMessage)
-                        End If
-                    Catch ex As Exception
-                        Console.WriteLine(ex.StackTrace)
-                    End Try
-                Case MsgBoxResult.No
-                    Return
-            End Select
-        End If
-        Dim phutungDTO As PhuTungDTO
-        phutungDTO = New PhuTungDTO()
-        phutungDTO.maphutung = Convert.ToInt32(cbMaPhuTung.Text)
-        phutungDTO.tenphutung = cbTenPhuTung.Text
-        phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) + Convert.ToInt32(txtSoLuong.Text)
-        result = phutungBUS.update(phutungDTO)
-        If (result.FlagResult = True) Then
-            MessageBox.Show("Cập nhật phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            MessageBox.Show("Cập nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-        End If
-    End Sub
 
     Private Sub cbSoLuongTon_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSoLuongTon.SelectedIndexChanged
         txtSoLuongTon.Text = cbSoLuongTon.Text
@@ -348,59 +209,6 @@ Public Class frmPhieuSuaChua
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
         txtDonGia.Text = cbDonGia.Text
-    End Sub
-
-
-
-
-
-    Private Sub cbMaPhieuSuaChua_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnTaoMoi_Click(sender As Object, e As EventArgs) Handles btnTaoMoi.Click
-        Dim phieusuachuaDTO As PhieuSuaChuaDTO
-        phieusuachuaDTO = New PhieuSuaChuaDTO()
-        Dim chitietsuachuaDTO As ChiTietSuaChuaDTO
-        chitietsuachuaDTO = New ChiTietSuaChuaDTO()
-        Dim phutungDTO As PhuTungDTO
-        phutungDTO = New PhuTungDTO()
-        Dim result As Result
-        btLuu.Enabled = True
-
-
-        Dim nextPSC = "1"
-        result = phieusuachuaBUS.buildmaphieusuachua(nextPSC)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh tự động chi tiết sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.Close()
-            Return
-        End If
-        txtMaPhieuSuaChua.Text = nextPSC
-
-        phieusuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
-        phieusuachuaDTO.maxe = Convert.ToInt32(cbMaXe.Text)
-        phieusuachuaDTO.noidung = txtNoiDung.Text
-        phieusuachuaDTO.thanhtien = Convert.ToInt32(txtThanhTien.Text) + Convert.ToInt32(txtTienCong.Text) + (Convert.ToInt32(txtDonGia.Text) * Convert.ToInt32(txtSoLuong.Text))
-        phieusuachuaDTO.ngaysuachua = dtpNgaySuaChua.Value
-
-
-
-        result = phieusuachuaBUS.insert(phieusuachuaDTO)
-
-        If (result.FlagResult = True) Then
-            MessageBox.Show("Thêm phiếu sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            MessageBox.Show("Thêm phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-        End If
-
-
-        btnTaoMoi.Enabled = False
-    End Sub
-
-    Private Sub txtMaChiTietSuaChua_TextChanged(sender As Object, e As EventArgs) Handles txtMaChiTietSuaChua.TextChanged
-
     End Sub
 
 
@@ -430,65 +238,7 @@ Public Class frmPhieuSuaChua
         End If
     End Sub
 
-
-
-    Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
-        ' Get the current cell location.
-        Dim currentRowIndex As Integer = dgvPhieuChiTietSuaChua.CurrentCellAddress.Y 'current row selected
-
-
-        'Verify that indexing OK
-        If (-1 < currentRowIndex And currentRowIndex < dgvPhieuChiTietSuaChua.RowCount) Then
-            Try
-                Dim chitietsuachuaDTO As ChiTietSuaChuaDTO
-                chitietsuachuaDTO = New ChiTietSuaChuaDTO()
-
-                '1. Mapping data from GUI control
-                chitietsuachuaDTO.machitietsuachua = Convert.ToInt32(txtMaChiTietSuaChua.Text)
-                chitietsuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
-                chitietsuachuaDTO.maphutung = cbMaPhuTung.Text
-                chitietsuachuaDTO.soluong = txtSoLuong.Text
-                If (kiemtrasoluong()) Then
-                End If
-                chitietsuachuaDTO.dongia = txtDonGia.Text
-                chitietsuachuaDTO.tiencong = txtTienCong.Text
-
-
-                '3. Insert to DB
-
-                Dim result As Result
-                result = chitietsuachuaBUS.update(chitietsuachuaDTO)
-                If (result.FlagResult = True) Then
-                    ' Re-Load LoaiHocSinh list
-                    loadlistchitietsuachua(listchitietsuachua)
-                    ' Hightlight the row has been updated on table
-                    dgvPhieuChiTietSuaChua.Rows(currentRowIndex).Selected = True
-                    Try
-                        chitietsuachuaDTO = CType(dgvPhieuChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, ChiTietSuaChuaDTO)
-                        txtMaChiTietSuaChua.Text = chitietsuachuaDTO.machitietsuachua
-                        txtMaPhieuSuaChua.Text = chitietsuachuaDTO.maphieusuachua
-                        cbMaPhuTung.Text = chitietsuachuaDTO.maphutung
-                        txtSoLuong.Text = chitietsuachuaDTO.soluong
-                        txtDonGia.Text = chitietsuachuaDTO.dongia
-                        txtTienCong.Text = chitietsuachuaDTO.tiencong
-
-
-                    Catch ex As Exception
-                        Console.WriteLine(ex.StackTrace)
-                    End Try
-                    MessageBox.Show("Cập nhật chi tiet thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Cập nhật chi tiet không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    System.Console.WriteLine(result.SystemMessage)
-                End If
-            Catch ex As Exception
-                Console.WriteLine(ex.StackTrace)
-            End Try
-
-        End If
-    End Sub
-
-    Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
+    Private Sub btThoat_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -507,15 +257,15 @@ Public Class frmPhieuSuaChua
         loadlistchitietsuachua(listchitietsuachua)
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO()
-        Dim phutungBUS As PhuTungBUS
-        phutungBUS = New PhuTungBUS()
-        phutungDTO.maphutung = cbMaPhuTung.Text
-        phutungDTO.tenphutung = cbTenPhuTung.Text
-        phutungDTO.dongia = txtDonGia.Text
-        phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) - Convert.ToInt32(txtSoLuong.Text)
+        'Dim phutungBUS As PhuTungBUS
+        'phutungBUS = New PhuTungBUS()
+        'phutungDTO.maphutung = cbMaPhuTung.Text
+        'phutungDTO.tenphutung = cbTenPhuTung.Text
+        'phutungDTO.dongia = txtDonGia.Text
+        'phutungDTO.soluongton = Convert.ToInt32(cbSoLuongTon.Text) - Convert.ToInt32(txtSoLuong.Text)
 
-        phutungBUS.update(phutungDTO)
-        updatephutung()
+        'phutungBUS.update(phutungDTO)
+        'updatephutung()
 
     End Sub
 
