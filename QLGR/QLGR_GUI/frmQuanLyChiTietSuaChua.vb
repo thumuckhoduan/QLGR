@@ -8,12 +8,12 @@ Public Class frmQuanLyChiTietSuaChua
     Private col_index As Integer = 0
     Private row_index As Integer = 0
     Private Sub frmQuanLyChiTietSuaChua_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'txtMaChiTietSuaChua.Hide()
-        'txtMaPhieuSuaChua.Hide()
-        'txtMaPhuTung.Hide()
-        'txtSoLuong.Hide()
-        'txtDonGia.Hide()
-        'txtTienCong.Hide()
+        txtMaChiTietSuaChua.Hide()
+        txtMaPhieuSuaChua.Hide()
+        txtMaPhuTung.Hide()
+        txtSoLuong.Hide()
+        txtDonGia.Hide()
+        txtTienCong.Hide()
         ChiTietSuaChuaBUS = New ChiTietSuaChuaBUS()
         ChiTietSuaChuaDTO = New ChiTietSuaChuaDTO()
         loadlistChiTietSuaChua()

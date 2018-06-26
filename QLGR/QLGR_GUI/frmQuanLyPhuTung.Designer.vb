@@ -47,10 +47,11 @@ Partial Class frmQuanLyPhuTung
         '
         'dgvDanhSachPhuTung
         '
+        Me.dgvDanhSachPhuTung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(155, 26)
+        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(225, 25)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
-        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(447, 213)
+        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(296, 213)
         Me.dgvDanhSachPhuTung.TabIndex = 9
         '
         'Label1

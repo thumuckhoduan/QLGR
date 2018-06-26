@@ -35,9 +35,9 @@ Partial Class frmBaoCaoTon
         'dgvBaoCaoTon
         '
         Me.dgvBaoCaoTon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBaoCaoTon.Location = New System.Drawing.Point(13, 64)
+        Me.dgvBaoCaoTon.Location = New System.Drawing.Point(54, 58)
         Me.dgvBaoCaoTon.Name = "dgvBaoCaoTon"
-        Me.dgvBaoCaoTon.Size = New System.Drawing.Size(738, 330)
+        Me.dgvBaoCaoTon.Size = New System.Drawing.Size(553, 330)
         Me.dgvBaoCaoTon.TabIndex = 0
         '
         'cbThang
@@ -97,7 +97,7 @@ Partial Class frmBaoCaoTon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 450)
+        Me.ClientSize = New System.Drawing.Size(676, 450)
         Me.Controls.Add(Me.btnDong)
         Me.Controls.Add(Me.btnLapBaoCao)
         Me.Controls.Add(Me.Label2)

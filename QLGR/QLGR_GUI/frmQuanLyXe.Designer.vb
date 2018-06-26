@@ -53,16 +53,16 @@ Partial Class frmQuanLyXe
         'dgvQuanLyXe
         '
         Me.dgvQuanLyXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvQuanLyXe.Location = New System.Drawing.Point(202, 37)
+        Me.dgvQuanLyXe.Location = New System.Drawing.Point(231, 37)
         Me.dgvQuanLyXe.Name = "dgvQuanLyXe"
         Me.dgvQuanLyXe.ReadOnly = True
-        Me.dgvQuanLyXe.Size = New System.Drawing.Size(446, 194)
+        Me.dgvQuanLyXe.Size = New System.Drawing.Size(380, 194)
         Me.dgvQuanLyXe.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(199, 21)
+        Me.Label1.Location = New System.Drawing.Point(231, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 1

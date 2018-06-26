@@ -37,9 +37,9 @@ Partial Class frmQuanLyPhieuSuaChua
         'dgvPhieuSuaChua
         '
         Me.dgvPhieuSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPhieuSuaChua.Location = New System.Drawing.Point(114, 47)
+        Me.dgvPhieuSuaChua.Location = New System.Drawing.Point(153, 53)
         Me.dgvPhieuSuaChua.Name = "dgvPhieuSuaChua"
-        Me.dgvPhieuSuaChua.Size = New System.Drawing.Size(555, 150)
+        Me.dgvPhieuSuaChua.Size = New System.Drawing.Size(482, 150)
         Me.dgvPhieuSuaChua.TabIndex = 0
         '
         'btCapNhat
