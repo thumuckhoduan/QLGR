@@ -1,23 +1,23 @@
 ﻿Public Class dgvChiTietSuaChua
+    Private imachitietsuachua As Integer
+    Private imaphieusuachua As Integer
     Private imaphutung As Integer
     Private strtenphutung As String
     Private isoluong As Integer
     Private idongia As Integer
     Private itiencong As Integer
-
     Public Sub New()
 
     End Sub
 
-    Public Sub New(maphutung As Integer, tenphutung As String, soluong As Integer, dongia As Integer, tiencong As Integer)
-
-
+    Public Sub New(machitietsuachua As Integer, maphieusuachua As Integer, maphutung As Integer, tenphutung As String, soluong As Integer, dongia As Integer, tiencong As Integer)
+        Me.imachitietsuachua = machitietsuachua
+        Me.imaphieusuachua = maphieusuachua
         Me.imaphutung = maphutung
         Me.strtenphutung = tenphutung
         Me.isoluong = soluong
         Me.idongia = dongia
         Me.itiencong = tiencong
-
     End Sub
 
 
@@ -64,6 +64,24 @@
         End Get
         Set(value As String)
             strtenphutung = value
+        End Set
+    End Property
+
+    Public Property maphieusuachua As Integer
+        Get
+            Return imaphieusuachua
+        End Get
+        Set(value As Integer)
+            imaphieusuachua = value
+        End Set
+    End Property
+
+    Public Property machitietsuachua As Integer
+        Get
+            Return imachitietsuachua
+        End Get
+        Set(value As Integer)
+            imachitietsuachua = value
         End Set
     End Property
 End Class
