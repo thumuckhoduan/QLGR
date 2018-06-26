@@ -56,6 +56,7 @@ Partial Class frmManHinhChinh
         Me.btDangNhap = New System.Windows.Forms.Button()
         Me.lbpermissions = New System.Windows.Forms.Label()
         Me.cbpermissions = New System.Windows.Forms.ComboBox()
+        Me.ChiTiếtSữaChữaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +73,7 @@ Partial Class frmManHinhChinh
         '
         'SửaXeToolStripMenuItem
         '
-        Me.SửaXeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLýSữaXeToolStripMenuItem, Me.TiếpNhậnSữaXeToolStripMenuItem, Me.PhiếuSửaXeToolStripMenuItem, Me.QuảnLýPhiếuSửaChữaToolStripMenuItem, Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem})
+        Me.SửaXeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLýSữaXeToolStripMenuItem, Me.TiếpNhậnSữaXeToolStripMenuItem, Me.PhiếuSửaXeToolStripMenuItem, Me.QuảnLýPhiếuSửaChữaToolStripMenuItem, Me.QuảnLýChiTiếtSửaChữaToolStripMenuItem, Me.ChiTiếtSữaChữaToolStripMenuItem})
         Me.SửaXeToolStripMenuItem.Name = "SửaXeToolStripMenuItem"
         Me.SửaXeToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.SửaXeToolStripMenuItem.Text = "Sửa Xe"
@@ -206,13 +207,13 @@ Partial Class frmManHinhChinh
         'DoanhSốToolStripMenuItem
         '
         Me.DoanhSốToolStripMenuItem.Name = "DoanhSốToolStripMenuItem"
-        Me.DoanhSốToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DoanhSốToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.DoanhSốToolStripMenuItem.Text = "Doanh Số"
         '
         'BáoCáoTồnToolStripMenuItem
         '
         Me.BáoCáoTồnToolStripMenuItem.Name = "BáoCáoTồnToolStripMenuItem"
-        Me.BáoCáoTồnToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BáoCáoTồnToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.BáoCáoTồnToolStripMenuItem.Text = "Báo Cáo Tồn"
         '
         'ContextMenuStrip1
@@ -280,6 +281,12 @@ Partial Class frmManHinhChinh
         Me.cbpermissions.Size = New System.Drawing.Size(381, 23)
         Me.cbpermissions.TabIndex = 10
         '
+        'ChiTiếtSữaChữaToolStripMenuItem
+        '
+        Me.ChiTiếtSữaChữaToolStripMenuItem.Name = "ChiTiếtSữaChữaToolStripMenuItem"
+        Me.ChiTiếtSữaChữaToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
+        Me.ChiTiếtSữaChữaToolStripMenuItem.Text = "Chi Tiết Sữa Chữa"
+        '
         'frmManHinhChinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -339,4 +346,5 @@ Partial Class frmManHinhChinh
     Friend WithEvents cbpermissions As ComboBox
     Friend WithEvents QuảnLýPhiếuSửaChữaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuảnLýChiTiếtSửaChữaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChiTiếtSữaChữaToolStripMenuItem As ToolStripMenuItem
 End Class

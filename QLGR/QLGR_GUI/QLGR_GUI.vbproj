@@ -87,6 +87,12 @@
     <Compile Include="frmBaoCaoTon.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmChiTietSuaChua.Designer.vb">
+      <DependentUpon>frmChiTietSuaChua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietSuaChua.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmManHinhChinh.Designer.vb">
       <DependentUpon>frmManHinhChinh.vb</DependentUpon>
     </Compile>
