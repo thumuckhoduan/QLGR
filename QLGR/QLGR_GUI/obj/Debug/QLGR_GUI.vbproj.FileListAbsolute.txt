@@ -301,3 +301,9 @@ C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
 C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChiTietSuaChua.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChiTietSuaChua.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyPhieuSuaChua.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoDoanhSo.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoTon.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmNhapPhuTung.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmPhieuSuaChua.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChiTietSuaChua.resources
+C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyPhieuSuaChua.resources

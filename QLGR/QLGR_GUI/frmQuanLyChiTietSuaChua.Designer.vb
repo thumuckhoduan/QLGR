@@ -116,7 +116,7 @@ Partial Class frmQuanLyChiTietSuaChua
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 355)
         Me.Controls.Add(Me.txtTienCong)
         Me.Controls.Add(Me.txtDonGia)
         Me.Controls.Add(Me.txtMaPhieuSuaChua)

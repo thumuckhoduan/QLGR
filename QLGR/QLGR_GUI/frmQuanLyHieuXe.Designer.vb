@@ -119,11 +119,11 @@ Partial Class frmQuanLyHieuXe
         Me.btDong.Text = "Đóng"
         Me.btDong.UseVisualStyleBackColor = True
         '
-        'QuanLyHieuXe
+        'frmQuanLyHieuXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 376)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.dgvDanhSachHieuXe)
@@ -133,7 +133,7 @@ Partial Class frmQuanLyHieuXe
         Me.Controls.Add(Me.txbTenHieuXe)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "QuanLyHieuXe"
+        Me.Name = "frmQuanLyHieuXe"
         Me.Text = "Quản Lý Hiệu Xe"
         CType(Me.dgvDanhSachHieuXe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
