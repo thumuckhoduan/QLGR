@@ -45,4 +45,7 @@ Public Class ChiTietSuaChuaBUS
         '2. insert to DB
         Return ChiTietSuaChuaDAL.ban(thang, nam, list)
     End Function
+    Public Function selectAll_bymaphieu(maphieu As Integer, ByRef listphieusuachua As List(Of dgvChiTietSuaChua)) As Result
+        Return ChiTietSuaChuaDAL.selectAll_bymaphieu(maphieu, listphieusuachua)
+    End Function
 End Class
