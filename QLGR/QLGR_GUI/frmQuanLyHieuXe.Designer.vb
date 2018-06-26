@@ -69,7 +69,7 @@ Partial Class frmQuanLyHieuXe
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(167, 333)
+        Me.btCapNhat.Location = New System.Drawing.Point(106, 333)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btCapNhat.TabIndex = 4
@@ -78,7 +78,7 @@ Partial Class frmQuanLyHieuXe
         '
         'btXoa
         '
-        Me.btXoa.Location = New System.Drawing.Point(356, 333)
+        Me.btXoa.Location = New System.Drawing.Point(295, 333)
         Me.btXoa.Name = "btXoa"
         Me.btXoa.Size = New System.Drawing.Size(75, 23)
         Me.btXoa.TabIndex = 5
@@ -112,7 +112,7 @@ Partial Class frmQuanLyHieuXe
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(546, 333)
+        Me.btDong.Location = New System.Drawing.Point(485, 333)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 8
@@ -123,7 +123,7 @@ Partial Class frmQuanLyHieuXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 376)
+        Me.ClientSize = New System.Drawing.Size(673, 376)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.dgvDanhSachHieuXe)

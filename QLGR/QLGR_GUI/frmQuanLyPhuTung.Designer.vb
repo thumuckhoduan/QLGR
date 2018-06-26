@@ -39,7 +39,7 @@ Partial Class frmQuanLyPhuTung
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(128, 9)
+        Me.Label3.Location = New System.Drawing.Point(48, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(111, 13)
         Me.Label3.TabIndex = 8
@@ -49,7 +49,7 @@ Partial Class frmQuanLyPhuTung
         '
         Me.dgvDanhSachPhuTung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(225, 25)
+        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(145, 36)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
         Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(296, 213)
         Me.dgvDanhSachPhuTung.TabIndex = 9
@@ -57,7 +57,7 @@ Partial Class frmQuanLyPhuTung
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(176, 262)
+        Me.Label1.Location = New System.Drawing.Point(96, 273)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 10
@@ -66,7 +66,7 @@ Partial Class frmQuanLyPhuTung
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(176, 305)
+        Me.Label2.Location = New System.Drawing.Point(96, 316)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 13)
         Me.Label2.TabIndex = 11
@@ -74,7 +74,7 @@ Partial Class frmQuanLyPhuTung
         '
         'txbMaPhuTung
         '
-        Me.txbMaPhuTung.Location = New System.Drawing.Point(325, 259)
+        Me.txbMaPhuTung.Location = New System.Drawing.Point(245, 270)
         Me.txbMaPhuTung.Name = "txbMaPhuTung"
         Me.txbMaPhuTung.ReadOnly = True
         Me.txbMaPhuTung.Size = New System.Drawing.Size(237, 20)
@@ -82,14 +82,14 @@ Partial Class frmQuanLyPhuTung
         '
         'txbTenPhuTung
         '
-        Me.txbTenPhuTung.Location = New System.Drawing.Point(325, 302)
+        Me.txbTenPhuTung.Location = New System.Drawing.Point(245, 313)
         Me.txbTenPhuTung.Name = "txbTenPhuTung"
         Me.txbTenPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbTenPhuTung.TabIndex = 13
         '
         'txbSoLuongTon
         '
-        Me.txbSoLuongTon.Location = New System.Drawing.Point(325, 353)
+        Me.txbSoLuongTon.Location = New System.Drawing.Point(245, 364)
         Me.txbSoLuongTon.Name = "txbSoLuongTon"
         Me.txbSoLuongTon.Size = New System.Drawing.Size(237, 20)
         Me.txbSoLuongTon.TabIndex = 14
@@ -97,7 +97,7 @@ Partial Class frmQuanLyPhuTung
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(176, 360)
+        Me.Label4.Location = New System.Drawing.Point(96, 371)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 15
@@ -105,7 +105,7 @@ Partial Class frmQuanLyPhuTung
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(205, 403)
+        Me.btCapNhat.Location = New System.Drawing.Point(108, 414)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btCapNhat.TabIndex = 16
@@ -114,7 +114,7 @@ Partial Class frmQuanLyPhuTung
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(490, 402)
+        Me.btDong.Location = New System.Drawing.Point(393, 413)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 17
@@ -123,7 +123,7 @@ Partial Class frmQuanLyPhuTung
         '
         'btXoa
         '
-        Me.btXoa.Location = New System.Drawing.Point(351, 403)
+        Me.btXoa.Location = New System.Drawing.Point(254, 414)
         Me.btXoa.Name = "btXoa"
         Me.btXoa.Size = New System.Drawing.Size(75, 23)
         Me.btXoa.TabIndex = 18
@@ -134,7 +134,7 @@ Partial Class frmQuanLyPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(598, 450)
         Me.Controls.Add(Me.btXoa)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btCapNhat)

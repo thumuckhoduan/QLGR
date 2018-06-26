@@ -124,7 +124,7 @@ Partial Class frmNhapPhuTung
         Me.cbSoLuongTon.FormattingEnabled = True
         Me.cbSoLuongTon.Location = New System.Drawing.Point(520, 143)
         Me.cbSoLuongTon.Name = "cbSoLuongTon"
-        Me.cbSoLuongTon.Size = New System.Drawing.Size(217, 23)
+        Me.cbSoLuongTon.Size = New System.Drawing.Size(84, 23)
         Me.cbSoLuongTon.TabIndex = 13
         '
         'btThoat
@@ -140,7 +140,7 @@ Partial Class frmNhapPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(752, 442)
+        Me.ClientSize = New System.Drawing.Size(664, 442)
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.cbSoLuongTon)
         Me.Controls.Add(Me.txtMaNhapPhuTung)

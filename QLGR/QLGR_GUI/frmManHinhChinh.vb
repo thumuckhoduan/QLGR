@@ -5,11 +5,13 @@ Imports Utility
 Public Class frmManHinhChinh
     Private userBUS As UserBUS
     Private userDTO As UserDTO
+    Dim X As Integer = 0
 
     Private Sub QuảnLýSữaXeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýSữaXeToolStripMenuItem.Click
         Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -17,6 +19,7 @@ Public Class frmManHinhChinh
         Dim frm As frmTiepNhanSuaXe = New frmTiepNhanSuaXe()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -24,6 +27,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyXe = New frmQuanLyXe()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -31,6 +35,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyChuXe = New frmQuanLyChuXe
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -38,6 +43,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyHieuXe = New frmQuanLyHieuXe()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -45,6 +51,7 @@ Public Class frmManHinhChinh
         Dim frm As frmThemHieuXe = New frmThemHieuXe()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -52,6 +59,7 @@ Public Class frmManHinhChinh
         Dim frm As frmTimKiem = New frmTimKiem()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -59,6 +67,7 @@ Public Class frmManHinhChinh
         Dim frm As frmPhieuThuTien = New frmPhieuThuTien()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -66,6 +75,7 @@ Public Class frmManHinhChinh
         Dim frm As frmThemPhuTung = New frmThemPhuTung()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -73,6 +83,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyPhuTung = New frmQuanLyPhuTung()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -80,6 +91,7 @@ Public Class frmManHinhChinh
         Dim frm As frmPhieuSuaChua = New frmPhieuSuaChua()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -87,12 +99,14 @@ Public Class frmManHinhChinh
         Dim frm As frmBaoCaoDoanhSo = New frmBaoCaoDoanhSo()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
     Private Sub BáoCáoTồnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BáoCáoTồnToolStripMenuItem.Click
         Dim frm As frmBaoCaoTon = New frmBaoCaoTon()
         frm.MdiParent = Me
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
     End Sub
@@ -100,6 +114,9 @@ Public Class frmManHinhChinh
     Private Sub NhậpPhụTùngToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NhậpPhụTùngToolStripMenuItem.Click
         Dim frm As frmNhapPhuTung = New frmNhapPhuTung()
         frm.MdiParent = Me
+        frm.StartPosition = FormStartPosition.CenterScreen
+        frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+
         frm.Show()
     End Sub
 
@@ -144,6 +161,7 @@ Public Class frmManHinhChinh
         Me.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         userDTO = New UserDTO()
         userBUS = New UserBUS()
+        X = Me.Size.Height
         'MenuStrip1.Hide()
         userDTO.permissions = -1
         lbpermissions.Hide()
@@ -159,6 +177,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyPhieuSuaChua = New frmQuanLyPhieuSuaChua()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 
@@ -166,6 +185,7 @@ Public Class frmManHinhChinh
         Dim frm As frmQuanLyChiTietSuaChua = New frmQuanLyChiTietSuaChua()
         frm.MdiParent = Me
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.Show()
     End Sub
 End Class

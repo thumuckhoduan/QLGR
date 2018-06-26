@@ -47,7 +47,7 @@ Partial Class frmTiepNhanSuaXe
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(178, 49)
+        Me.Label1.Location = New System.Drawing.Point(58, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class frmTiepNhanSuaXe
         '
         'txtMaSuaXe
         '
-        Me.txtMaSuaXe.Location = New System.Drawing.Point(312, 42)
+        Me.txtMaSuaXe.Location = New System.Drawing.Point(192, 34)
         Me.txtMaSuaXe.Name = "txtMaSuaXe"
         Me.txtMaSuaXe.ReadOnly = True
         Me.txtMaSuaXe.Size = New System.Drawing.Size(184, 20)
@@ -64,7 +64,7 @@ Partial Class frmTiepNhanSuaXe
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(175, 77)
+        Me.Label2.Location = New System.Drawing.Point(55, 69)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class frmTiepNhanSuaXe
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(178, 117)
+        Me.Label3.Location = New System.Drawing.Point(58, 109)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 13)
         Me.Label3.TabIndex = 3
@@ -82,7 +82,7 @@ Partial Class frmTiepNhanSuaXe
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(175, 156)
+        Me.Label4.Location = New System.Drawing.Point(55, 148)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class frmTiepNhanSuaXe
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(175, 221)
+        Me.Label5.Location = New System.Drawing.Point(55, 213)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 13)
         Me.Label5.TabIndex = 5
@@ -100,7 +100,7 @@ Partial Class frmTiepNhanSuaXe
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(175, 254)
+        Me.Label6.Location = New System.Drawing.Point(55, 246)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 13)
         Me.Label6.TabIndex = 6
@@ -109,7 +109,7 @@ Partial Class frmTiepNhanSuaXe
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(175, 339)
+        Me.Label7.Location = New System.Drawing.Point(55, 331)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(85, 13)
         Me.Label7.TabIndex = 7
@@ -118,7 +118,7 @@ Partial Class frmTiepNhanSuaXe
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(175, 189)
+        Me.Label8.Location = New System.Drawing.Point(55, 181)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 13)
         Me.Label8.TabIndex = 8
@@ -127,14 +127,14 @@ Partial Class frmTiepNhanSuaXe
         'cbHieuXe
         '
         Me.cbHieuXe.FormattingEnabled = True
-        Me.cbHieuXe.Location = New System.Drawing.Point(312, 117)
+        Me.cbHieuXe.Location = New System.Drawing.Point(192, 109)
         Me.cbHieuXe.Name = "cbHieuXe"
         Me.cbHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbHieuXe.TabIndex = 9
         '
         'txtMaHieuXe
         '
-        Me.txtMaHieuXe.Location = New System.Drawing.Point(312, 77)
+        Me.txtMaHieuXe.Location = New System.Drawing.Point(192, 69)
         Me.txtMaHieuXe.Name = "txtMaHieuXe"
         Me.txtMaHieuXe.ReadOnly = True
         Me.txtMaHieuXe.Size = New System.Drawing.Size(184, 20)
@@ -142,42 +142,42 @@ Partial Class frmTiepNhanSuaXe
         '
         'txtDiaChi
         '
-        Me.txtDiaChi.Location = New System.Drawing.Point(312, 218)
+        Me.txtDiaChi.Location = New System.Drawing.Point(192, 210)
         Me.txtDiaChi.Name = "txtDiaChi"
         Me.txtDiaChi.Size = New System.Drawing.Size(184, 20)
         Me.txtDiaChi.TabIndex = 11
         '
         'txtDienThoai
         '
-        Me.txtDienThoai.Location = New System.Drawing.Point(312, 247)
+        Me.txtDienThoai.Location = New System.Drawing.Point(192, 239)
         Me.txtDienThoai.Name = "txtDienThoai"
         Me.txtDienThoai.Size = New System.Drawing.Size(184, 20)
         Me.txtDienThoai.TabIndex = 12
         '
         'txtBienSo
         '
-        Me.txtBienSo.Location = New System.Drawing.Point(312, 186)
+        Me.txtBienSo.Location = New System.Drawing.Point(192, 178)
         Me.txtBienSo.Name = "txtBienSo"
         Me.txtBienSo.Size = New System.Drawing.Size(184, 20)
         Me.txtBienSo.TabIndex = 13
         '
         'txtChuXe
         '
-        Me.txtChuXe.Location = New System.Drawing.Point(312, 156)
+        Me.txtChuXe.Location = New System.Drawing.Point(192, 148)
         Me.txtChuXe.Name = "txtChuXe"
         Me.txtChuXe.Size = New System.Drawing.Size(184, 20)
         Me.txtChuXe.TabIndex = 14
         '
         'dtpNgayTiepNhan
         '
-        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(312, 333)
+        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(192, 325)
         Me.dtpNgayTiepNhan.Name = "dtpNgayTiepNhan"
         Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(184, 20)
         Me.dtpNgayTiepNhan.TabIndex = 15
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(141, 392)
+        Me.btLuu.Location = New System.Drawing.Point(58, 384)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(75, 23)
         Me.btLuu.TabIndex = 16
@@ -186,7 +186,7 @@ Partial Class frmTiepNhanSuaXe
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(544, 392)
+        Me.btDong.Location = New System.Drawing.Point(301, 384)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 17
@@ -196,7 +196,7 @@ Partial Class frmTiepNhanSuaXe
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(175, 299)
+        Me.Label9.Location = New System.Drawing.Point(55, 291)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(32, 13)
         Me.Label9.TabIndex = 18
@@ -204,7 +204,7 @@ Partial Class frmTiepNhanSuaXe
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(312, 292)
+        Me.txtEmail.Location = New System.Drawing.Point(192, 284)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(184, 20)
         Me.txtEmail.TabIndex = 19
@@ -213,7 +213,7 @@ Partial Class frmTiepNhanSuaXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(797, 450)
+        Me.ClientSize = New System.Drawing.Size(454, 450)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btDong)
