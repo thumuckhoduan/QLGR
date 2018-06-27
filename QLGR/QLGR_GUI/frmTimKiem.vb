@@ -6,14 +6,16 @@ Public Class frmTimKiem
     Private hieuxeBUS As HieuXeBUS
     Private xeBUS As XeBUS
     Private Sub frmTimKiem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtTienNoMax.Text = "2000000000"
-        txtTienNoMin.Text = "0"
+
 
         hieuxeBUS = New HieuXeBUS()
         xeBUS = New XeBUS()
         Dim result As Result
 
         Dim listHieuXe = New List(Of HieuXeDTO)
+        Dim x = New HieuXeDTO()
+        x.mahieuxe = 0
+        x.tenhieuxe = ""
         result = hieuxeBUS.selectAll(listHieuXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lay danh sách hieu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -41,8 +43,8 @@ Public Class frmTimKiem
         Dim chuxe As String
         Dim hieuxe As String
         Dim bienso As String
-        Dim tiennomin As Integer
-        Dim tiennomax As Integer
+        Dim tiennomin As String
+        Dim tiennomax As String
         Dim listtimkiem = New List(Of TimKiemDTO)
 
         chuxe = txtChuXe.Text
@@ -90,4 +92,5 @@ Public Class frmTimKiem
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
     End Sub
+
 End Class

@@ -223,16 +223,15 @@ Public Class XeDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As Integer, tiennomax As Integer, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
+    Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As String, tiennomax As String, ByRef listtimkiem As List(Of TimKiemDTO)) As Result
         Dim query As String = String.Empty
         query &= " SELECT [tblChuXe].[tenchuxe], [tblHieuXe].[tenhieuxe],[tblXe].[bienso],[tblChuXe].[tienno]"
         query &= " FROM [tblXe],[tblHieuXe],[tblChuXe]"
         query &= " WHERE [tblXe].[mahieuxe]=[tblHieuXe].[mahieuxe] "
         query &= " AND [tblChuXe].[machuxe]=[tblXe].[machuxe] "
         query &= " AND [tblChuXe].[tenchuxe] like '%' + @tenchuxe + '%' "
-        query &= " AND [tblHieuXe].[tenhieuxe] = @tenhieuxe "
-        'query &= " AND [tblXe].[bienso] LIKE @bienso "
-        'query &= " AND [tblChuXe].[tienno] BETWEEN @tiennomin AND @tiennomax "
+        query &= " AND [tblHieuXe].[tenhieuxe] like '%' + @tenhieuxe + '%' "
+        query &= " AND [tblXe].[bienso] like '%' + @bienso + '%' "
 
 
 
@@ -244,9 +243,7 @@ Public Class XeDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@tenchuxe", chuxe)
                     .Parameters.AddWithValue("@tenhieuxe", hieuxe)
-                    '.Parameters.AddWithValue("@bienso", bienso)
-                    '.Parameters.AddWithValue("@tiennomin", tiennomin)
-                    '.Parameters.AddWithValue("@tiennomax", tiennomax)
+                    .Parameters.AddWithValue("@bienso", bienso)
                 End With
                 Try
                     conn.Open()
@@ -255,7 +252,23 @@ Public Class XeDAL
                     If reader.HasRows = True Then
                         listtimkiem.Clear()
                         While reader.Read()
-                            listtimkiem.Add(New TimKiemDTO(reader("tenchuxe"), reader("tenhieuxe"), reader("bienso"), reader("tienno")))
+                            Dim x As Integer
+                            Dim test As Boolean
+                            test = True
+                            x = reader("tienno")
+                            If (tiennomin <> vbNullString) Then
+                                If (x < tiennomin) Then
+                                    test = False
+                                End If
+                            End If
+                            If (tiennomax <> vbNullString) Then
+                                If (x > tiennomax) Then
+                                    test = False
+                                End If
+                            End If
+                            If (test) Then
+                                listtimkiem.Add(New TimKiemDTO(reader("tenchuxe"), reader("tenhieuxe"), reader("bienso"), reader("tienno")))
+                            End If
                         End While
                     End If
                 Catch ex As Exception
