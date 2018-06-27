@@ -130,7 +130,7 @@ Public Class NhapPhuTungDAL
                     If reader.HasRows = True Then
                         listnhapphutung.Clear()
                         While reader.Read()
-                            listnhapphutung.Add(New NhapPhuTungDTO(reader("manhapphutung"), reader("maphutung"), reader("soluong"), reader("ngaytiepnhan")))
+                            listnhapphutung.Add(New NhapPhuTungDTO(reader("manhapphutung"), reader("maphutung"), reader("soluong"), reader("ngaytiepnhan"), reader("dongia")))
                         End While
                     End If
                 Catch ex As Exception
