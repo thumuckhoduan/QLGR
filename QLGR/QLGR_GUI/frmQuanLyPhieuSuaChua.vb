@@ -77,10 +77,10 @@ Public Class frmQuanLyPhieuSuaChua
         Dim currentRowIndex As Integer = dgvPhieuSuaChua.CurrentCellAddress.Y
         If (-1 < currentRowIndex And currentRowIndex < dgvPhieuSuaChua.RowCount) Then
             Try
-                phieusuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
+                phieusuachuaDTO.maphieusuachua = Convert.ToInt64(txtMaPhieuSuaChua.Text)
                 phieusuachuaDTO.noidung = txtNoiDung.Text
-                phieusuachuaDTO.maxe = Convert.ToInt32(txtMaXe.Text)
-                phieusuachuaDTO.thanhtien = Convert.ToInt32(txtThanhTien.Text)
+                phieusuachuaDTO.maxe = Convert.ToInt64(txtMaXe.Text)
+                phieusuachuaDTO.thanhtien = Convert.ToInt64(txtThanhTien.Text)
                 phieusuachuaDTO.ngaysuachua = dtpNgaySuaChua.Value
 
                 Dim result As Result
@@ -116,7 +116,7 @@ Public Class frmQuanLyPhieuSuaChua
                 Case MsgBoxResult.Yes
                     Try
                         Dim result As Result
-                        result = phieusuachuaBUS.delete(Convert.ToInt32(txtMaPhieuSuaChua.Text))
+                        result = phieusuachuaBUS.delete(Convert.ToInt64(txtMaPhieuSuaChua.Text))
                         If (result.FlagResult = True) Then
                             loadlistphieusuachua()
                             If (currentRowIndex >= dgvPhieuSuaChua.Rows.Count) Then
