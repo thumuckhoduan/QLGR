@@ -113,7 +113,7 @@ Partial Class frmPhieuSuaChua
         Me.txtNoiDung.Multiline = True
         Me.txtNoiDung.Name = "txtNoiDung"
         Me.txtNoiDung.Size = New System.Drawing.Size(200, 20)
-        Me.txtNoiDung.TabIndex = 32
+        Me.txtNoiDung.TabIndex = 64
         '
         'Label11
         '

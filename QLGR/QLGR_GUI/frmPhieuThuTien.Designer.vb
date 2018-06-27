@@ -47,11 +47,13 @@ Partial Class frmPhieuThuTien
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
         Me.cbMaXe = New System.Windows.Forms.ComboBox()
         Me.cbTienNo = New System.Windows.Forms.ComboBox()
+        Me.txtSoTienNo = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtDienThoai
         '
-        Me.txtDienThoai.Location = New System.Drawing.Point(201, 257)
+        Me.txtDienThoai.Location = New System.Drawing.Point(201, 176)
         Me.txtDienThoai.Name = "txtDienThoai"
         Me.txtDienThoai.ReadOnly = True
         Me.txtDienThoai.Size = New System.Drawing.Size(187, 20)
@@ -60,7 +62,7 @@ Partial Class frmPhieuThuTien
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(107, 102)
+        Me.Label1.Location = New System.Drawing.Point(105, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 1
@@ -69,7 +71,7 @@ Partial Class frmPhieuThuTien
         'cbTenChuXe
         '
         Me.cbTenChuXe.FormattingEnabled = True
-        Me.cbTenChuXe.Location = New System.Drawing.Point(201, 94)
+        Me.cbTenChuXe.Location = New System.Drawing.Point(201, 70)
         Me.cbTenChuXe.Name = "cbTenChuXe"
         Me.cbTenChuXe.Size = New System.Drawing.Size(187, 21)
         Me.cbTenChuXe.TabIndex = 2
@@ -77,7 +79,7 @@ Partial Class frmPhieuThuTien
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(107, 143)
+        Me.Label2.Location = New System.Drawing.Point(105, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 3
@@ -86,7 +88,7 @@ Partial Class frmPhieuThuTien
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(107, 187)
+        Me.Label3.Location = New System.Drawing.Point(105, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 5
@@ -95,7 +97,7 @@ Partial Class frmPhieuThuTien
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(107, 257)
+        Me.Label4.Location = New System.Drawing.Point(105, 176)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 13)
         Me.Label4.TabIndex = 6
@@ -103,7 +105,7 @@ Partial Class frmPhieuThuTien
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(201, 184)
+        Me.txtEmail.Location = New System.Drawing.Point(201, 124)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.ReadOnly = True
         Me.txtEmail.Size = New System.Drawing.Size(187, 20)
@@ -112,7 +114,7 @@ Partial Class frmPhieuThuTien
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(107, 306)
+        Me.Label5.Location = New System.Drawing.Point(105, 231)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 13)
         Me.Label5.TabIndex = 8
@@ -121,7 +123,7 @@ Partial Class frmPhieuThuTien
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(107, 356)
+        Me.Label6.Location = New System.Drawing.Point(105, 260)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 13)
         Me.Label6.TabIndex = 9
@@ -129,21 +131,21 @@ Partial Class frmPhieuThuTien
         '
         'txtSoTienThu
         '
-        Me.txtSoTienThu.Location = New System.Drawing.Point(201, 299)
+        Me.txtSoTienThu.Location = New System.Drawing.Point(201, 228)
         Me.txtSoTienThu.Name = "txtSoTienThu"
         Me.txtSoTienThu.Size = New System.Drawing.Size(187, 20)
         Me.txtSoTienThu.TabIndex = 10
         '
         'dtpNgayThuTien
         '
-        Me.dtpNgayThuTien.Location = New System.Drawing.Point(201, 350)
+        Me.dtpNgayThuTien.Location = New System.Drawing.Point(201, 254)
         Me.dtpNgayThuTien.Name = "dtpNgayThuTien"
         Me.dtpNgayThuTien.Size = New System.Drawing.Size(187, 20)
         Me.dtpNgayThuTien.TabIndex = 11
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(120, 399)
+        Me.btLuu.Location = New System.Drawing.Point(120, 303)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(75, 23)
         Me.btLuu.TabIndex = 12
@@ -152,7 +154,7 @@ Partial Class frmPhieuThuTien
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(394, 398)
+        Me.btDong.Location = New System.Drawing.Point(394, 302)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 13
@@ -162,7 +164,7 @@ Partial Class frmPhieuThuTien
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(105, 66)
+        Me.Label7.Location = New System.Drawing.Point(105, 46)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 13)
         Me.Label7.TabIndex = 14
@@ -171,7 +173,7 @@ Partial Class frmPhieuThuTien
         'cbMaChuXe
         '
         Me.cbMaChuXe.FormattingEnabled = True
-        Me.cbMaChuXe.Location = New System.Drawing.Point(201, 58)
+        Me.cbMaChuXe.Location = New System.Drawing.Point(201, 43)
         Me.cbMaChuXe.Name = "cbMaChuXe"
         Me.cbMaChuXe.Size = New System.Drawing.Size(187, 21)
         Me.cbMaChuXe.TabIndex = 15
@@ -179,7 +181,7 @@ Partial Class frmPhieuThuTien
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(106, 24)
+        Me.Label8.Location = New System.Drawing.Point(105, 20)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(74, 13)
         Me.Label8.TabIndex = 16
@@ -196,7 +198,7 @@ Partial Class frmPhieuThuTien
         'cbDiaChi
         '
         Me.cbDiaChi.FormattingEnabled = True
-        Me.cbDiaChi.Location = New System.Drawing.Point(401, 219)
+        Me.cbDiaChi.Location = New System.Drawing.Point(401, 150)
         Me.cbDiaChi.Name = "cbDiaChi"
         Me.cbDiaChi.Size = New System.Drawing.Size(68, 21)
         Me.cbDiaChi.TabIndex = 19
@@ -204,7 +206,7 @@ Partial Class frmPhieuThuTien
         'cbEmail
         '
         Me.cbEmail.FormattingEnabled = True
-        Me.cbEmail.Location = New System.Drawing.Point(401, 184)
+        Me.cbEmail.Location = New System.Drawing.Point(401, 124)
         Me.cbEmail.Name = "cbEmail"
         Me.cbEmail.Size = New System.Drawing.Size(68, 21)
         Me.cbEmail.TabIndex = 20
@@ -212,7 +214,7 @@ Partial Class frmPhieuThuTien
         'cbDienThoai
         '
         Me.cbDienThoai.FormattingEnabled = True
-        Me.cbDienThoai.Location = New System.Drawing.Point(401, 257)
+        Me.cbDienThoai.Location = New System.Drawing.Point(401, 176)
         Me.cbDienThoai.Name = "cbDienThoai"
         Me.cbDienThoai.Size = New System.Drawing.Size(68, 21)
         Me.cbDienThoai.TabIndex = 21
@@ -220,7 +222,7 @@ Partial Class frmPhieuThuTien
         'cbBienSo
         '
         Me.cbBienSo.FormattingEnabled = True
-        Me.cbBienSo.Location = New System.Drawing.Point(201, 140)
+        Me.cbBienSo.Location = New System.Drawing.Point(201, 97)
         Me.cbBienSo.Name = "cbBienSo"
         Me.cbBienSo.Size = New System.Drawing.Size(187, 21)
         Me.cbBienSo.TabIndex = 22
@@ -228,7 +230,7 @@ Partial Class frmPhieuThuTien
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(107, 219)
+        Me.Label9.Location = New System.Drawing.Point(105, 150)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 13)
         Me.Label9.TabIndex = 24
@@ -236,7 +238,7 @@ Partial Class frmPhieuThuTien
         '
         'txtDiaChi
         '
-        Me.txtDiaChi.Location = New System.Drawing.Point(201, 219)
+        Me.txtDiaChi.Location = New System.Drawing.Point(201, 150)
         Me.txtDiaChi.Name = "txtDiaChi"
         Me.txtDiaChi.ReadOnly = True
         Me.txtDiaChi.Size = New System.Drawing.Size(187, 20)
@@ -245,7 +247,7 @@ Partial Class frmPhieuThuTien
         'cbMaXe
         '
         Me.cbMaXe.FormattingEnabled = True
-        Me.cbMaXe.Location = New System.Drawing.Point(401, 140)
+        Me.cbMaXe.Location = New System.Drawing.Point(401, 97)
         Me.cbMaXe.Name = "cbMaXe"
         Me.cbMaXe.Size = New System.Drawing.Size(68, 21)
         Me.cbMaXe.TabIndex = 25
@@ -253,16 +255,35 @@ Partial Class frmPhieuThuTien
         'cbTienNo
         '
         Me.cbTienNo.FormattingEnabled = True
-        Me.cbTienNo.Location = New System.Drawing.Point(401, 299)
+        Me.cbTienNo.Location = New System.Drawing.Point(401, 201)
         Me.cbTienNo.Name = "cbTienNo"
         Me.cbTienNo.Size = New System.Drawing.Size(68, 21)
         Me.cbTienNo.TabIndex = 26
+        '
+        'txtSoTienNo
+        '
+        Me.txtSoTienNo.Location = New System.Drawing.Point(201, 202)
+        Me.txtSoTienNo.Name = "txtSoTienNo"
+        Me.txtSoTienNo.ReadOnly = True
+        Me.txtSoTienNo.Size = New System.Drawing.Size(187, 20)
+        Me.txtSoTienNo.TabIndex = 28
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(105, 205)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(61, 13)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "Số Tiền Nợ"
         '
         'frmPhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(581, 450)
+        Me.ClientSize = New System.Drawing.Size(581, 345)
+        Me.Controls.Add(Me.txtSoTienNo)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cbTienNo)
         Me.Controls.Add(Me.cbMaXe)
         Me.Controls.Add(Me.Label9)
@@ -320,4 +341,6 @@ Partial Class frmPhieuThuTien
     Friend WithEvents txtDiaChi As TextBox
     Friend WithEvents cbMaXe As ComboBox
     Friend WithEvents cbTienNo As ComboBox
+    Friend WithEvents txtSoTienNo As TextBox
+    Friend WithEvents Label10 As Label
 End Class

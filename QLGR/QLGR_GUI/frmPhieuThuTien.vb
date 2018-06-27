@@ -7,7 +7,7 @@ Public Class frmPhieuThuTien
     Private xeBUS As XeBUS
 
     Private Sub PhieuThuTien_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtSoTienThu.Text = 0
         cbEmail.Hide()
         cbDiaChi.Hide()
         cbDiaChi.Hide()
@@ -90,17 +90,19 @@ Public Class frmPhieuThuTien
         phieuthuDTO = New PhieuThuTienDTO()
         Dim chuxeDTO As ChuXeDTO
         chuxeDTO = New ChuXeDTO()
-
+        If (kiemtrasotienthu()) Then
+            Return
+        End If
         '1. Mapping data from GUI control
-        phieuthuDTO.maphieuthu = Convert.ToInt32(txtMaPhieuThuTien.Text)
-        phieuthuDTO.maxe = Convert.ToInt32(cbMaXe.Text)
+        phieuthuDTO.maphieuthu = Convert.ToInt64(txtMaPhieuThuTien.Text)
+        phieuthuDTO.maxe = Convert.ToInt64(cbMaXe.Text)
         phieuthuDTO.sotienthu = txtSoTienThu.Text
         phieuthuDTO.ngaythu = dtpNgayThuTien.Value
         chuxeDTO.machuxe = cbMaChuXe.Text
         chuxeDTO.tenchuxe = cbTenChuXe.Text
         chuxeDTO.diachi = txtDiaChi.Text
         chuxeDTO.dienthoai = txtDienThoai.Text
-        chuxeDTO.tienno = Convert.ToInt32(cbTienNo.Text) - Convert.ToInt32(txtSoTienThu.Text)
+        chuxeDTO.tienno = Convert.ToInt64(cbTienNo.Text) - Convert.ToInt64(txtSoTienThu.Text)
         chuxeDTO.email = txtEmail.Text
 
 
@@ -139,7 +141,13 @@ Public Class frmPhieuThuTien
 
     End Sub
 
-
+    Function kiemtrasotienthu() As Boolean
+        If (Convert.ToInt64(txtSoTienThu.Text) > Convert.ToInt64(cbTienNo.Text)) Then
+            MessageBox.Show("Số tiền thu vượt quá số tiền nợ.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return True
+        End If
+        Return False
+    End Function
 
     Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
         Try
@@ -178,5 +186,13 @@ Public Class frmPhieuThuTien
 
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
+    End Sub
+
+    Private Sub cbTienNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTienNo.SelectedIndexChanged
+        txtSoTienNo.Text = cbTienNo.Text
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
     End Sub
 End Class

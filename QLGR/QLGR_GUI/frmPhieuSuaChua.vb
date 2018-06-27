@@ -87,9 +87,9 @@ Public Class frmPhieuSuaChua
         Dim phieusuachuaDTO As PhieuSuaChuaDTO
         phieusuachuaDTO = New PhieuSuaChuaDTO()
 
-        phieusuachuaDTO.maphieusuachua = Convert.ToInt32(txtMaPhieuSuaChua.Text)
+        phieusuachuaDTO.maphieusuachua = Convert.ToInt64(txtMaPhieuSuaChua.Text)
         phieusuachuaDTO.noidung = txtNoiDung.Text
-        phieusuachuaDTO.maxe = Convert.ToInt32(cbMaXe.Text)
+        phieusuachuaDTO.maxe = Convert.ToInt64(cbMaXe.Text)
         phieusuachuaDTO.thanhtien = 0
         phieusuachuaDTO.ngaysuachua = dtpNgaySuaChua.Value
 
@@ -111,7 +111,9 @@ Public Class frmPhieuSuaChua
         End If
 
 
-
+        Dim frm As frmChiTietSuaChua
+        frm = New frmChiTietSuaChua()
+        frm.Show()
 
     End Sub
 
@@ -128,5 +130,9 @@ Public Class frmPhieuSuaChua
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
+    End Sub
+
+    Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
+
     End Sub
 End Class
