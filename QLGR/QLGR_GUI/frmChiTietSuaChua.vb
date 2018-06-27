@@ -56,28 +56,8 @@ Public Class frmChiTietSuaChua
 
 
 
-    Private Sub dgvChiTietSuaChua_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvChiTietSuaChua.CellContentClick
-        ' Get the current cell location.
-        Dim currentRowIndex As Integer = dgvChiTietSuaChua.CurrentCellAddress.Y 'current row selected
-        'Dim x As Integer = dgvListHS.CurrentCellAddress.X 'curent column selected
+    Private Sub dgvChiTietSuaChua_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-        ' Write coordinates to console for debugging
-        'Console.WriteLine(y.ToString + " " + x.ToString)
-
-        'Verify that indexing OK
-        If (-1 < currentRowIndex And currentRowIndex < dgvChiTietSuaChua.RowCount) Then
-            Try
-                Dim phutung = CType(dgvChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, dgvChiTietSuaChua)
-                cbMaPhuTung.Text = phutung.maphutung
-                cbTenPhuTung.Text = phutung.tenphutung
-                txbSoLuong.Text = phutung.soluong
-                txbDonGia.Text = phutung.dongia
-                txbTienCong.Text = phutung.tiencong
-            Catch ex As Exception
-                Console.WriteLine(ex.StackTrace)
-            End Try
-
-        End If
     End Sub
 
     Private Sub loaddgv()
@@ -270,5 +250,29 @@ Public Class frmChiTietSuaChua
 
     Private Sub txbThanhTien_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub dgvChiTietSuaChua_SelectionChanged(sender As Object, e As EventArgs) Handles dgvChiTietSuaChua.SelectionChanged
+        ' Get the current cell location.
+        Dim currentRowIndex As Integer = dgvChiTietSuaChua.CurrentCellAddress.Y 'current row selected
+        'Dim x As Integer = dgvListHS.CurrentCellAddress.X 'curent column selected
+
+        ' Write coordinates to console for debugging
+        'Console.WriteLine(y.ToString + " " + x.ToString)
+
+        'Verify that indexing OK
+        If (-1 < currentRowIndex And currentRowIndex < dgvChiTietSuaChua.RowCount) Then
+            Try
+                Dim phutung = CType(dgvChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, dgvChiTietSuaChua)
+                cbMaPhuTung.Text = phutung.maphutung
+                cbTenPhuTung.Text = phutung.tenphutung
+                txbSoLuong.Text = phutung.soluong
+                txbDonGia.Text = phutung.dongia
+                txbTienCong.Text = phutung.tiencong
+            Catch ex As Exception
+                Console.WriteLine(ex.StackTrace)
+            End Try
+
+        End If
     End Sub
 End Class
