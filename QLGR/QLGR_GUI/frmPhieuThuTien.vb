@@ -29,11 +29,35 @@ Public Class frmPhieuThuTien
         End If
         txtMaPhieuThuTien.Text = nextMPTT
         chuxeBUS = New ChuXeBUS()
+        loaddata()
+    End Sub
+
+    Private Sub loadBienSo(MaChuXe As Integer)
+
+        Dim listXe = New List(Of XeDTO)
+        Dim result As Result
+        result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
+        If (Result.FlagResult = False) Then
+            MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(Result.SystemMessage)
+            Me.Close()
+            Return
+        End If
+        cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
+        cbBienSo.DisplayMember = "bienso"
+        cbBienSo.ValueMember = "maxe"
+
+        cbMaXe.DataSource = cbBienSo.DataSource
+        cbMaXe.DisplayMember = cbBienSo.ValueMember
+
+    End Sub
+    Private Sub loaddata()
+        Dim result As Result
         Dim listChuXe = New List(Of ChuXeDTO)
-        result = chuxeBUS.selectAll(listChuXe)
-        If (result.FlagResult = False) Then
+        Result = chuxeBUS.selectAll(listChuXe)
+        If (Result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
+            System.Console.WriteLine(Result.SystemMessage)
             Me.Close()
             Return
         End If
@@ -62,27 +86,6 @@ Public Class frmPhieuThuTien
         txtEmail.Text = cbEmail.Text
         txtDiaChi.Text = cbDiaChi.Text
         txtDienThoai.Text = cbDienThoai.Text
-
-    End Sub
-
-    Private Sub loadBienSo(MaChuXe As Integer)
-
-        Dim listXe = New List(Of XeDTO)
-        Dim result As Result
-        result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
-        If (Result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(Result.SystemMessage)
-            Me.Close()
-            Return
-        End If
-        cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
-        cbBienSo.DisplayMember = "bienso"
-        cbBienSo.ValueMember = "maxe"
-
-        cbMaXe.DataSource = cbBienSo.DataSource
-        cbMaXe.DisplayMember = cbBienSo.ValueMember
-
     End Sub
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
@@ -104,7 +107,6 @@ Public Class frmPhieuThuTien
         chuxeDTO.dienthoai = txtDienThoai.Text
         chuxeDTO.tienno = Convert.ToInt64(cbTienNo.Text) - Convert.ToInt64(txtSoTienThu.Text)
         chuxeDTO.email = txtEmail.Text
-
 
         '3. Insert to DB
         Dim result As Result
@@ -137,8 +139,8 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Cộng số tiền thu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
-
-
+        loaddata()
+        txtSoTienThu.Text = 0
     End Sub
 
     Function kiemtrasotienthu() As Boolean

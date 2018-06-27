@@ -275,6 +275,7 @@ Public Class ChiTietSuaChuaDAL
     End Function
 
     Public Function selectAll_bymaphieu(maphieusuachua As Integer, ByRef listphieusuachua As List(Of dgvChiTietSuaChua)) As Result
+        listphieusuachua.Clear()
         Dim query As String = String.Empty
         query &= "SELECT [machitietsuachua],[maphieusuachua] ,[tblChiTietSuaChua].[maphutung],[tenphutung],[soluong],[tblChitietSuaChua].[dongia],[tiencong] "
         query &= "FROM [tblChiTietSuaChua],[tblPhuTung] "

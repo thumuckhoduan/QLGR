@@ -7,6 +7,7 @@ Public Class frmNhapPhuTung
     Private Sub frmNhapVatLieu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtMaNhapPhuTung.Hide()
         cbSoLuongTon.Hide()
+        cbDonGia.Hide()
         txtSoLuong.Text = 0
         Dim result As Result
         Dim nextMNPT = 0
@@ -44,6 +45,10 @@ Public Class frmNhapPhuTung
         cbSoLuongTon.DataSource = cbMaPhuTung.DataSource
         cbMaPhuTung.ValueMember = "soluongton"
         cbSoLuongTon.DisplayMember = cbMaPhuTung.ValueMember
+
+        cbDonGia.DataSource = cbMaPhuTung.DataSource
+        cbMaPhuTung.ValueMember = "dongia"
+        cbDonGia.DisplayMember = cbMaPhuTung.ValueMember
         Return True
     End Function
 
@@ -54,11 +59,11 @@ Public Class frmNhapPhuTung
         Dim nhapphutungDTO As NhapPhuTungDTO
         nhapphutungDTO = New NhapPhuTungDTO()
 
-        nhapphutungDTO.manhapphutung = Convert.ToInt32(txtMaNhapPhuTung.Text)
-        nhapphutungDTO.maphutung = Convert.ToInt32(cbMaPhuTung.Text)
-        nhapphutungDTO.soluong = Convert.ToInt32(txtSoLuong.Text)
+        nhapphutungDTO.manhapphutung = txtMaNhapPhuTung.Text
+        nhapphutungDTO.maphutung = cbMaPhuTung.Text
+        nhapphutungDTO.soluong = txtSoLuong.Text
         nhapphutungDTO.ngaytiepnhan = dtpNgayTiepNhan.Value
-
+        nhapphutungDTO.dongia = cbDonGia.Text
         result = nhapphutungBUS.insert(nhapphutungDTO)
         If (Result.FlagResult = True) Then
             MessageBox.Show("Thêm nhập phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -81,9 +86,10 @@ Public Class frmNhapPhuTung
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO()
 
-        phutungDTO.maphutung = Convert.ToInt32(cbMaPhuTung.Text)
+        phutungDTO.maphutung = cbMaPhuTung.Text
         phutungDTO.tenphutung = cbTenPhuTung.Text
         phutungDTO.soluongton = Convert.ToInt32(txtSoLuong.Text) + Convert.ToInt32(cbSoLuongTon.Text)
+        phutungDTO.dongia = cbDonGia.Text
         result = phutungBUS.update(phutungDTO)
         If (result.FlagResult = True) Then
             'MessageBox.Show("Thêm phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -99,5 +105,9 @@ Public Class frmNhapPhuTung
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
+    End Sub
+
+    Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
+        txtDonGia.Text = cbDonGia.Text
     End Sub
 End Class

@@ -34,6 +34,9 @@ Partial Class frmNhapPhuTung
         Me.txtMaNhapPhuTung = New System.Windows.Forms.TextBox()
         Me.cbSoLuongTon = New System.Windows.Forms.ComboBox()
         Me.btThoat = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cbDonGia = New System.Windows.Forms.ComboBox()
+        Me.txtDonGia = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,7 +51,7 @@ Partial Class frmNhapPhuTung
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(83, 147)
+        Me.Label2.Location = New System.Drawing.Point(83, 101)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 15)
         Me.Label2.TabIndex = 3
@@ -57,7 +60,7 @@ Partial Class frmNhapPhuTung
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(86, 218)
+        Me.Label3.Location = New System.Drawing.Point(83, 198)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 15)
         Me.Label3.TabIndex = 4
@@ -66,7 +69,7 @@ Partial Class frmNhapPhuTung
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(86, 299)
+        Me.Label4.Location = New System.Drawing.Point(83, 250)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label4.Size = New System.Drawing.Size(88, 15)
@@ -75,7 +78,7 @@ Partial Class frmNhapPhuTung
         '
         'txtSoLuong
         '
-        Me.txtSoLuong.Location = New System.Drawing.Point(225, 215)
+        Me.txtSoLuong.Location = New System.Drawing.Point(226, 198)
         Me.txtSoLuong.Name = "txtSoLuong"
         Me.txtSoLuong.Size = New System.Drawing.Size(266, 21)
         Me.txtSoLuong.TabIndex = 6
@@ -83,7 +86,7 @@ Partial Class frmNhapPhuTung
         'cbMaPhuTung
         '
         Me.cbMaPhuTung.FormattingEnabled = True
-        Me.cbMaPhuTung.Location = New System.Drawing.Point(225, 60)
+        Me.cbMaPhuTung.Location = New System.Drawing.Point(226, 52)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
         Me.cbMaPhuTung.Size = New System.Drawing.Size(266, 23)
         Me.cbMaPhuTung.TabIndex = 8
@@ -91,7 +94,7 @@ Partial Class frmNhapPhuTung
         'cbTenPhuTung
         '
         Me.cbTenPhuTung.FormattingEnabled = True
-        Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 143)
+        Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 93)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
         Me.cbTenPhuTung.Size = New System.Drawing.Size(266, 23)
         Me.cbTenPhuTung.TabIndex = 9
@@ -107,7 +110,7 @@ Partial Class frmNhapPhuTung
         '
         'dtpNgayTiepNhan
         '
-        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(225, 292)
+        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(225, 244)
         Me.dtpNgayTiepNhan.Name = "dtpNgayTiepNhan"
         Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(266, 21)
         Me.dtpNgayTiepNhan.TabIndex = 11
@@ -122,7 +125,7 @@ Partial Class frmNhapPhuTung
         'cbSoLuongTon
         '
         Me.cbSoLuongTon.FormattingEnabled = True
-        Me.cbSoLuongTon.Location = New System.Drawing.Point(520, 143)
+        Me.cbSoLuongTon.Location = New System.Drawing.Point(523, 196)
         Me.cbSoLuongTon.Name = "cbSoLuongTon"
         Me.cbSoLuongTon.Size = New System.Drawing.Size(84, 23)
         Me.cbSoLuongTon.TabIndex = 13
@@ -136,11 +139,39 @@ Partial Class frmNhapPhuTung
         Me.btThoat.Text = "Thoát"
         Me.btThoat.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(83, 151)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(48, 15)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Đơn Giá"
+        '
+        'cbDonGia
+        '
+        Me.cbDonGia.FormattingEnabled = True
+        Me.cbDonGia.Location = New System.Drawing.Point(523, 148)
+        Me.cbDonGia.Name = "cbDonGia"
+        Me.cbDonGia.Size = New System.Drawing.Size(84, 23)
+        Me.cbDonGia.TabIndex = 16
+        '
+        'txtDonGia
+        '
+        Me.txtDonGia.Location = New System.Drawing.Point(226, 150)
+        Me.txtDonGia.Name = "txtDonGia"
+        Me.txtDonGia.ReadOnly = True
+        Me.txtDonGia.Size = New System.Drawing.Size(266, 21)
+        Me.txtDonGia.TabIndex = 17
+        '
         'frmNhapPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(664, 442)
+        Me.Controls.Add(Me.txtDonGia)
+        Me.Controls.Add(Me.cbDonGia)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.cbSoLuongTon)
         Me.Controls.Add(Me.txtMaNhapPhuTung)
@@ -173,4 +204,7 @@ Partial Class frmNhapPhuTung
     Friend WithEvents txtMaNhapPhuTung As TextBox
     Friend WithEvents cbSoLuongTon As ComboBox
     Friend WithEvents btThoat As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cbDonGia As ComboBox
+    Friend WithEvents txtDonGia As TextBox
 End Class
