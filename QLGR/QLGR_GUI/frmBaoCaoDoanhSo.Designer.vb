@@ -64,7 +64,7 @@ Partial Class frmBaoCaoDoanhSo
         'dgvDoanhThu
         '
         Me.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDoanhThu.Location = New System.Drawing.Point(135, 106)
+        Me.dgvDoanhThu.Location = New System.Drawing.Point(147, 104)
         Me.dgvDoanhThu.Name = "dgvDoanhThu"
         Me.dgvDoanhThu.Size = New System.Drawing.Size(467, 286)
         Me.dgvDoanhThu.TabIndex = 4
@@ -72,7 +72,7 @@ Partial Class frmBaoCaoDoanhSo
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(328, 89)
+        Me.Label3.Location = New System.Drawing.Point(243, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 14)
         Me.Label3.TabIndex = 5
@@ -81,10 +81,11 @@ Partial Class frmBaoCaoDoanhSo
         'lbTongDoanhThu
         '
         Me.lbTongDoanhThu.AutoSize = True
-        Me.lbTongDoanhThu.Location = New System.Drawing.Point(337, 89)
+        Me.lbTongDoanhThu.Location = New System.Drawing.Point(366, 77)
         Me.lbTongDoanhThu.Name = "lbTongDoanhThu"
-        Me.lbTongDoanhThu.Size = New System.Drawing.Size(0, 14)
+        Me.lbTongDoanhThu.Size = New System.Drawing.Size(13, 14)
         Me.lbTongDoanhThu.TabIndex = 6
+        Me.lbTongDoanhThu.Text = "0"
         '
         'btLuu
         '

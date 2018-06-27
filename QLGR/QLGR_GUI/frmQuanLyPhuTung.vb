@@ -44,6 +44,12 @@ Public Class frmQuanLyPhuTung
         clsoluongton.DataPropertyName = "soluongton"
         dgvDanhSachPhuTung.Columns.Add(clsoluongton)
 
+        Dim cldongia = New DataGridViewTextBoxColumn()
+        cldongia.Name = "dongia"
+        cldongia.HeaderText = "Đơn Giá"
+        cldongia.DataPropertyName = "dongia"
+        dgvDanhSachPhuTung.Columns.Add(cldongia)
+
         Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvDanhSachPhuTung.DataSource)
         myCurrencyManager.Refresh()
     End Sub
@@ -74,6 +80,7 @@ Public Class frmQuanLyPhuTung
                                     txbMaPhuTung.Text = phutungDTO.maphutung
                                     txbTenPhuTung.Text = phutungDTO.tenphutung
                                     txbSoLuongTon.Text = phutungDTO.soluongton
+
                                 Catch ex As Exception
                                     Console.WriteLine(ex.StackTrace)
                                 End Try
@@ -106,6 +113,7 @@ Public Class frmQuanLyPhuTung
                 txbMaPhuTung.Text = phutung.maphutung
                 txbTenPhuTung.Text = phutung.tenphutung
                 txbSoLuongTon.Text = phutung.soluongton
+                txtDonGia.Text = phutung.dongia
             Catch ex As Exception
                 Console.WriteLine(ex.StackTrace)
             End Try
@@ -119,9 +127,10 @@ Public Class frmQuanLyPhuTung
             Try
                 Dim phutungDTO As PhuTungDTO
                 phutungDTO = New PhuTungDTO()
-                phutungDTO.maphutung = Convert.ToInt32(txbMaPhuTung.Text)
+                phutungDTO.maphutung = txbMaPhuTung.Text
                 phutungDTO.tenphutung = txbTenPhuTung.Text
-                phutungDTO.soluongton = Convert.ToInt32(txbSoLuongTon.Text)
+                phutungDTO.soluongton = txbSoLuongTon.Text
+                phutungDTO.dongia = txtDonGia.Text
                 Dim result As Result
                 result = phutungBUS.update(phutungDTO)
                 If (result.FlagResult = True) Then
@@ -132,6 +141,7 @@ Public Class frmQuanLyPhuTung
                         txbMaPhuTung.Text = phutungDTO.maphutung
                         txbTenPhuTung.Text = phutungDTO.tenphutung
                         txbSoLuongTon.Text = phutungDTO.soluongton
+                        txtDonGia.Text = phutungDTO.dongia
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)
                     End Try

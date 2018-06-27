@@ -299,7 +299,6 @@ C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
 C:\Users\Administrator\Source\Repos\QLGR4\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChiTietSuaChua.resources
-C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyChiTietSuaChua.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyPhieuSuaChua.resources
 C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoDoanhSo.resources
 C:\Users\Administrator\Source\Repos\QLGR5\QLGR\QLGR_GUI\obj\Debug\QLGR.frmBaoCaoTon.resources
@@ -346,3 +345,4 @@ C:\Users\vu\Downloads\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyHieuXe.resource
 C:\Users\vu\Downloads\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmTimKiem.resources
 C:\Users\vu\Downloads\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyPhuTung.resources
 C:\Users\vu\Downloads\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbproj.GenerateResource.Cache
+C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmChiTietSuaChua.resources

@@ -33,6 +33,8 @@ Partial Class frmQuanLyPhuTung
         Me.btCapNhat = New System.Windows.Forms.Button()
         Me.btDong = New System.Windows.Forms.Button()
         Me.btXoa = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDonGia = New System.Windows.Forms.TextBox()
         CType(Me.dgvDanhSachPhuTung, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,9 +51,9 @@ Partial Class frmQuanLyPhuTung
         '
         Me.dgvDanhSachPhuTung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(145, 36)
+        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(140, 36)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
-        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(296, 213)
+        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(362, 213)
         Me.dgvDanhSachPhuTung.TabIndex = 9
         '
         'Label1
@@ -66,7 +68,7 @@ Partial Class frmQuanLyPhuTung
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(96, 316)
+        Me.Label2.Location = New System.Drawing.Point(96, 300)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 13)
         Me.Label2.TabIndex = 11
@@ -74,7 +76,7 @@ Partial Class frmQuanLyPhuTung
         '
         'txbMaPhuTung
         '
-        Me.txbMaPhuTung.Location = New System.Drawing.Point(245, 270)
+        Me.txbMaPhuTung.Location = New System.Drawing.Point(245, 266)
         Me.txbMaPhuTung.Name = "txbMaPhuTung"
         Me.txbMaPhuTung.ReadOnly = True
         Me.txbMaPhuTung.Size = New System.Drawing.Size(237, 20)
@@ -82,14 +84,14 @@ Partial Class frmQuanLyPhuTung
         '
         'txbTenPhuTung
         '
-        Me.txbTenPhuTung.Location = New System.Drawing.Point(245, 313)
+        Me.txbTenPhuTung.Location = New System.Drawing.Point(245, 293)
         Me.txbTenPhuTung.Name = "txbTenPhuTung"
         Me.txbTenPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbTenPhuTung.TabIndex = 13
         '
         'txbSoLuongTon
         '
-        Me.txbSoLuongTon.Location = New System.Drawing.Point(245, 364)
+        Me.txbSoLuongTon.Location = New System.Drawing.Point(245, 332)
         Me.txbSoLuongTon.Name = "txbSoLuongTon"
         Me.txbSoLuongTon.Size = New System.Drawing.Size(237, 20)
         Me.txbSoLuongTon.TabIndex = 14
@@ -97,7 +99,7 @@ Partial Class frmQuanLyPhuTung
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(96, 371)
+        Me.Label4.Location = New System.Drawing.Point(96, 339)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 15
@@ -130,11 +132,29 @@ Partial Class frmQuanLyPhuTung
         Me.btXoa.Text = "Xóa"
         Me.btXoa.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(97, 381)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 13)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Đơn Giá"
+        '
+        'txtDonGia
+        '
+        Me.txtDonGia.Location = New System.Drawing.Point(245, 374)
+        Me.txtDonGia.Name = "txtDonGia"
+        Me.txtDonGia.Size = New System.Drawing.Size(237, 20)
+        Me.txtDonGia.TabIndex = 20
+        '
         'frmQuanLyPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 450)
+        Me.Controls.Add(Me.txtDonGia)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btXoa)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btCapNhat)
@@ -165,4 +185,6 @@ Partial Class frmQuanLyPhuTung
     Friend WithEvents btCapNhat As Button
     Friend WithEvents btDong As Button
     Friend WithEvents btXoa As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtDonGia As TextBox
 End Class

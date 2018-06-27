@@ -286,4 +286,35 @@ Public Class PhieuSuaChuaDAL
         End Using
         Return New Result(True) '
     End Function
+
+
+    Public Function update(maphieusuachua As Integer, thanhtien As Integer) As Result
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblPhieuSuaChua] SET"
+        query &= "[thanhtien] =@thanhtien "
+        query &= "WHERE "
+        query &= "[maphieusuachua] = @maphieusuachua"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maphieusuachua", maphieusuachua)
+                    .Parameters.AddWithValue("@thanhtien", thanhtien)
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    Return New Result(False, "Cập nhật phiếu sửa chữa không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
 End Class

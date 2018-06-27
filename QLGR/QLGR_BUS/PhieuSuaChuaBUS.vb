@@ -45,4 +45,7 @@ Public Class PhieuSuaChuaBUS
     Public Function select_nam(ByRef listnam As List(Of Integer)) As Result
         Return phieusuachuaDAL.select_nam(listnam)
     End Function
+    Public Function update(maphieusuachua As Integer, thanhtien As Integer) As Result
+        Return phieusuachuaDAL.update(maphieusuachua, thanhtien)
+    End Function
 End Class

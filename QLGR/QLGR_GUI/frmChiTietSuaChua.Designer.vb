@@ -158,14 +158,14 @@ Partial Class frmChiTietSuaChua
         'dgvChiTietSuaChua
         '
         Me.dgvChiTietSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(55, 185)
+        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(60, 170)
         Me.dgvChiTietSuaChua.Name = "dgvChiTietSuaChua"
         Me.dgvChiTietSuaChua.Size = New System.Drawing.Size(588, 148)
         Me.dgvChiTietSuaChua.TabIndex = 65
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(160, 365)
+        Me.btCapNhat.Location = New System.Drawing.Point(121, 374)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btCapNhat.TabIndex = 66
@@ -174,7 +174,7 @@ Partial Class frmChiTietSuaChua
         '
         'btXoa
         '
-        Me.btXoa.Location = New System.Drawing.Point(466, 365)
+        Me.btXoa.Location = New System.Drawing.Point(513, 374)
         Me.btXoa.Name = "btXoa"
         Me.btXoa.Size = New System.Drawing.Size(75, 23)
         Me.btXoa.TabIndex = 67

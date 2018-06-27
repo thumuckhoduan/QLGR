@@ -181,13 +181,7 @@ Public Class frmManHinhChinh
         frm.Show()
     End Sub
 
-    Private Sub QuảnLýChiTiếtSửaChữaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuảnLýChiTiếtSửaChữaToolStripMenuItem.Click
-        Dim frm As frmQuanLyChiTietSuaChua = New frmQuanLyChiTietSuaChua()
-        frm.MdiParent = Me
-        frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
-        frm.StartPosition = FormStartPosition.CenterScreen
-        frm.Show()
-    End Sub
+
 
     Private Sub ChiTiếtSữaChữaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChiTiếtSữaChữaToolStripMenuItem.Click
         Dim frm As frmChiTietSuaChua = New frmChiTietSuaChua()

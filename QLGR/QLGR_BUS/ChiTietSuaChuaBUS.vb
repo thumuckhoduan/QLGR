@@ -48,4 +48,5 @@ Public Class ChiTietSuaChuaBUS
     Public Function selectAll_bymaphieu(maphieu As Integer, ByRef listphieusuachua As List(Of dgvChiTietSuaChua)) As Result
         Return ChiTietSuaChuaDAL.selectAll_bymaphieu(maphieu, listphieusuachua)
     End Function
+
 End Class

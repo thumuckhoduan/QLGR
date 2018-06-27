@@ -158,6 +158,8 @@ Public Class frmChiTietSuaChua
         Dim test = True
         Dim chitiet = New ChiTietSuaChuaDTO
         Dim phutung = New PhuTungDTO()
+        Dim thanhtien As Integer
+        thanhtien = 0
         For Each item In list
             If (item.maphutung = cbMaPhuTung.Text) Then
                 chitiet.machitietsuachua = item.machitietsuachua
@@ -194,8 +196,13 @@ Public Class frmChiTietSuaChua
             phutung.dongia = cbDonGia.Text
             phutungBUS.update(phutung)
         End If
+
         loaddgv()
         loadcb()
+        For Each item In list
+            thanhtien = thanhtien + item.soluong * item.dongia + item.tiencong
+        Next
+        phieusuachuaBUS.update(cbMaPhieuSuaChua.Text, thanhtien)
     End Sub
 
     Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
@@ -208,9 +215,13 @@ Public Class frmChiTietSuaChua
             Select Case MsgBox("Bạn có thực sự muốn xóa phụ tùng có mã số: " + Convert.ToString(phutung.maphutung), MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
+
                         Dim result As Result
                         Dim maphieu As Integer
                         Dim phutungDTO = New PhuTungDTO()
+                        Dim thanhtien As Integer
+                        thanhtien = 0
+
 
                         maphieu = phutung.machitietsuachua
                         phutungDTO.maphutung = phutung.maphutung
@@ -222,10 +233,13 @@ Public Class frmChiTietSuaChua
                         result = chitietsuachuaBUS.delete(maphieu)
 
 
-
                         If (result.FlagResult = True) Then
                             loadcb()
                             loaddgv()
+                            For Each item In list
+                                thanhtien = thanhtien + item.soluong * item.dongia + item.tiencong
+                                phieusuachuaBUS.update(cbMaPhieuSuaChua.Text, thanhtien)
+                            Next
                             ' Hightlight the next row on table
                             If (currentRowIndex >= dgvChiTietSuaChua.Rows.Count) Then
                                 currentRowIndex = currentRowIndex - 1
@@ -252,5 +266,9 @@ Public Class frmChiTietSuaChua
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
         txbDonGia.Text = cbDonGia.Text
+    End Sub
+
+    Private Sub txbThanhTien_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class
