@@ -4,17 +4,19 @@
     Private imaphutung As Integer
     Private isoluong As Integer
     Private dtpngaytiepnhan As DateTime
+    Private idongia As Integer
 
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(manhapphutung As Integer, maphutung As Integer, soluong As Integer, ngaytiepnhan As DateTime)
+    Public Sub New(manhapphutung As Integer, maphutung As Integer, soluong As Integer, ngaytiepnhan As DateTime, dongia As Integer)
         Me.imanhapphutung = manhapphutung
         Me.imaphutung = maphutung
         Me.isoluong = soluong
         Me.dtpngaytiepnhan = ngaytiepnhan
+        Me.idongia = dongia
     End Sub
 
     Public Property manhapphutung As Integer
@@ -50,6 +52,15 @@
         End Get
         Set(value As Integer)
             imaphutung = value
+        End Set
+    End Property
+
+    Public Property dongia As Integer
+        Get
+            Return idongia
+        End Get
+        Set(value As Integer)
+            idongia = value
         End Set
     End Property
 End Class
