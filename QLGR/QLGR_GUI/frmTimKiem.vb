@@ -6,6 +6,9 @@ Public Class frmTimKiem
     Private hieuxeBUS As HieuXeBUS
     Private xeBUS As XeBUS
     Private Sub frmTimKiem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtTienNoMax.Text = "2000000000"
+        txtTienNoMin.Text = "0"
+
         hieuxeBUS = New HieuXeBUS()
         xeBUS = New XeBUS()
         Dim result As Result
@@ -26,9 +29,7 @@ Public Class frmTimKiem
 
         txtChuXe.Text = String.Empty
         txtBienSo.Text = String.Empty
-        txtTienNoMin.Text = 0
-        txtTienNoMax.Text = 0
-
+        cbHieuXe.Text = String.Empty
     End Sub
 
     Private Sub btTimKiem_Click(sender As Object, e As EventArgs) Handles btTimKiem.Click
@@ -84,5 +85,9 @@ Public Class frmTimKiem
 
         Dim myCurrencyManager As CurrencyManager = Me.BindingContext(dgvTimKiem.DataSource)
         myCurrencyManager.Refresh()
+    End Sub
+
+    Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
+        Me.Close()
     End Sub
 End Class
