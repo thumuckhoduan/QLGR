@@ -27,9 +27,6 @@ Partial Class frmChiTietSuaChua
         Me.txbSoLuong = New System.Windows.Forms.TextBox()
         Me.txbDonGia = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtThanhTien = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtTienCong = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cbTenPhuTung = New System.Windows.Forms.ComboBox()
         Me.cbMaPhuTung = New System.Windows.Forms.ComboBox()
@@ -88,30 +85,6 @@ Partial Class frmChiTietSuaChua
         Me.Label12.TabIndex = 58
         Me.Label12.Text = "Đơn Giá"
         '
-        'txtThanhTien
-        '
-        Me.txtThanhTien.Location = New System.Drawing.Point(466, 249)
-        Me.txtThanhTien.Name = "txtThanhTien"
-        Me.txtThanhTien.ReadOnly = True
-        Me.txtThanhTien.Size = New System.Drawing.Size(122, 20)
-        Me.txtThanhTien.TabIndex = 57
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(384, 252)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 13)
-        Me.Label10.TabIndex = 56
-        Me.Label10.Text = "Thành Tiền"
-        '
-        'txtTienCong
-        '
-        Me.txtTienCong.Location = New System.Drawing.Point(226, 251)
-        Me.txtTienCong.Name = "txtTienCong"
-        Me.txtTienCong.Size = New System.Drawing.Size(122, 20)
-        Me.txtTienCong.TabIndex = 55
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -158,14 +131,14 @@ Partial Class frmChiTietSuaChua
         'dgvChiTietSuaChua
         '
         Me.dgvChiTietSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(60, 170)
+        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(122, 198)
         Me.dgvChiTietSuaChua.Name = "dgvChiTietSuaChua"
-        Me.dgvChiTietSuaChua.Size = New System.Drawing.Size(588, 148)
+        Me.dgvChiTietSuaChua.Size = New System.Drawing.Size(466, 148)
         Me.dgvChiTietSuaChua.TabIndex = 65
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(121, 374)
+        Me.btCapNhat.Location = New System.Drawing.Point(122, 374)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btCapNhat.TabIndex = 66
@@ -250,9 +223,6 @@ Partial Class frmChiTietSuaChua
         Me.Controls.Add(Me.txbSoLuong)
         Me.Controls.Add(Me.txbDonGia)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.txtThanhTien)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.txtTienCong)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cbTenPhuTung)
         Me.Controls.Add(Me.cbMaPhuTung)
@@ -271,9 +241,6 @@ Partial Class frmChiTietSuaChua
     Friend WithEvents txbSoLuong As TextBox
     Friend WithEvents txbDonGia As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents txtThanhTien As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents txtTienCong As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents cbTenPhuTung As ComboBox
     Friend WithEvents cbMaPhuTung As ComboBox
