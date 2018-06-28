@@ -22,6 +22,7 @@ Partial Class frmQuanLyXe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuanLyXe))
         Me.dgvQuanLyXe = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnXoa = New System.Windows.Forms.Button()
@@ -293,6 +294,7 @@ Partial Class frmQuanLyXe
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvQuanLyXe)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyXe"
         Me.Text = "frmQuanLyXe"
         CType(Me.dgvQuanLyXe, System.ComponentModel.ISupportInitialize).EndInit()

@@ -336,6 +336,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Picture4 %281%29.ico" />
+    <None Include="Resources\quanlytaikhoan.png" />
+    <None Include="Resources\dangkytaikhoan.png" />
+    <None Include="Resources\timkiem1.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\baocaoton.png" />
+    <None Include="Resources\baocaodoanhso %282%29.png" />
+    <None Include="Resources\themphutung.png" />
+    <None Include="Resources\quanlyphutung_2.png" />
+    <None Include="Resources\themhieuxe.png" />
+    <None Include="Resources\quanlysuaxe.png" />
+    <None Include="Resources\quanlyhieuxe.png" />
+    <None Include="Resources\quanlyphieusuachua.png" />
+    <None Include="Resources\quanlychuxe.png" />
+    <None Include="Resources\quanlyxe.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\chitietsuachua_2.png" />
+    <None Include="Resources\chitietsuachua.png" />
+    <None Include="Resources\timkiem.png" />
+    <None Include="Resources\suaxe.png" />
+    <None Include="Resources\nhapphutung_2.png" />
+    <None Include="Resources\phieusuachua_2.png" />
+    <None Include="Resources\phieuthutien.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

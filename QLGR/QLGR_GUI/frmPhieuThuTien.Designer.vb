@@ -22,6 +22,7 @@ Partial Class frmPhieuThuTien
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPhieuThuTien))
         Me.txtDienThoai = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbTenChuXe = New System.Windows.Forms.ComboBox()
@@ -309,6 +310,7 @@ Partial Class frmPhieuThuTien
         Me.Controls.Add(Me.cbTenChuXe)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtDienThoai)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPhieuThuTien"
         Me.Text = "Phiếu Thu Tiền"
         Me.ResumeLayout(False)

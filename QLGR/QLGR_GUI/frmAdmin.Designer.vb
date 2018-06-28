@@ -22,53 +22,64 @@ Partial Class frmAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btDangKyTaiKhoan = New System.Windows.Forms.Button()
-        Me.btQuanLyTaiKhoan = New System.Windows.Forms.Button()
-        Me.btDangXuat = New System.Windows.Forms.Button()
+        Me.pbDangXuat = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyTaiKhoan = New System.Windows.Forms.PictureBox()
+        Me.pbDangKyTaiKhoan = New System.Windows.Forms.PictureBox()
+        CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyTaiKhoan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDangKyTaiKhoan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btDangKyTaiKhoan
+        'pbDangXuat
         '
-        Me.btDangKyTaiKhoan.Location = New System.Drawing.Point(68, 46)
-        Me.btDangKyTaiKhoan.Name = "btDangKyTaiKhoan"
-        Me.btDangKyTaiKhoan.Size = New System.Drawing.Size(118, 23)
-        Me.btDangKyTaiKhoan.TabIndex = 0
-        Me.btDangKyTaiKhoan.Text = "Đăng Ký Tài Khoản"
-        Me.btDangKyTaiKhoan.UseVisualStyleBackColor = True
+        Me.pbDangXuat.ErrorImage = Global.QLGR.My.Resources.Resources.close
+        Me.pbDangXuat.Image = Global.QLGR.My.Resources.Resources.close
+        Me.pbDangXuat.Location = New System.Drawing.Point(87, 215)
+        Me.pbDangXuat.Name = "pbDangXuat"
+        Me.pbDangXuat.Size = New System.Drawing.Size(100, 97)
+        Me.pbDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDangXuat.TabIndex = 8
+        Me.pbDangXuat.TabStop = False
         '
-        'btQuanLyTaiKhoan
+        'pbQuanLyTaiKhoan
         '
-        Me.btQuanLyTaiKhoan.Location = New System.Drawing.Point(68, 90)
-        Me.btQuanLyTaiKhoan.Name = "btQuanLyTaiKhoan"
-        Me.btQuanLyTaiKhoan.Size = New System.Drawing.Size(118, 23)
-        Me.btQuanLyTaiKhoan.TabIndex = 1
-        Me.btQuanLyTaiKhoan.Text = "Quản Lý Tài Khoản"
-        Me.btQuanLyTaiKhoan.UseVisualStyleBackColor = True
+        Me.pbQuanLyTaiKhoan.ErrorImage = Global.QLGR.My.Resources.Resources.quanlytaikhoan
+        Me.pbQuanLyTaiKhoan.Image = Global.QLGR.My.Resources.Resources.quanlytaikhoan
+        Me.pbQuanLyTaiKhoan.Location = New System.Drawing.Point(87, 115)
+        Me.pbQuanLyTaiKhoan.Name = "pbQuanLyTaiKhoan"
+        Me.pbQuanLyTaiKhoan.Size = New System.Drawing.Size(100, 97)
+        Me.pbQuanLyTaiKhoan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyTaiKhoan.TabIndex = 7
+        Me.pbQuanLyTaiKhoan.TabStop = False
         '
-        'btDangXuat
+        'pbDangKyTaiKhoan
         '
-        Me.btDangXuat.Location = New System.Drawing.Point(68, 139)
-        Me.btDangXuat.Name = "btDangXuat"
-        Me.btDangXuat.Size = New System.Drawing.Size(118, 23)
-        Me.btDangXuat.TabIndex = 2
-        Me.btDangXuat.Text = "Đăng Xuất"
-        Me.btDangXuat.UseVisualStyleBackColor = True
+        Me.pbDangKyTaiKhoan.ErrorImage = Global.QLGR.My.Resources.Resources.dangkytaikhoan
+        Me.pbDangKyTaiKhoan.Image = Global.QLGR.My.Resources.Resources.dangkytaikhoan
+        Me.pbDangKyTaiKhoan.Location = New System.Drawing.Point(87, 12)
+        Me.pbDangKyTaiKhoan.Name = "pbDangKyTaiKhoan"
+        Me.pbDangKyTaiKhoan.Size = New System.Drawing.Size(100, 97)
+        Me.pbDangKyTaiKhoan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDangKyTaiKhoan.TabIndex = 6
+        Me.pbDangKyTaiKhoan.TabStop = False
         '
         'frmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(252, 206)
-        Me.Controls.Add(Me.btDangXuat)
-        Me.Controls.Add(Me.btQuanLyTaiKhoan)
-        Me.Controls.Add(Me.btDangKyTaiKhoan)
+        Me.ClientSize = New System.Drawing.Size(274, 325)
+        Me.Controls.Add(Me.pbDangXuat)
+        Me.Controls.Add(Me.pbQuanLyTaiKhoan)
+        Me.Controls.Add(Me.pbDangKyTaiKhoan)
         Me.Name = "frmAdmin"
         Me.Text = "Admin"
+        CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyTaiKhoan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDangKyTaiKhoan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btDangKyTaiKhoan As Button
-    Friend WithEvents btQuanLyTaiKhoan As Button
-    Friend WithEvents btDangXuat As Button
+    Friend WithEvents pbDangXuat As PictureBox
+    Friend WithEvents pbQuanLyTaiKhoan As PictureBox
+    Friend WithEvents pbDangKyTaiKhoan As PictureBox
 End Class

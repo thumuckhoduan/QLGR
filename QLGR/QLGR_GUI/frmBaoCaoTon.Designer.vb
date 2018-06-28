@@ -22,6 +22,7 @@ Partial Class frmBaoCaoTon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBaoCaoTon))
         Me.dgvBaoCaoTon = New System.Windows.Forms.DataGridView()
         Me.cbThang = New System.Windows.Forms.ComboBox()
         Me.cbNam = New System.Windows.Forms.ComboBox()
@@ -105,6 +106,7 @@ Partial Class frmBaoCaoTon
         Me.Controls.Add(Me.cbNam)
         Me.Controls.Add(Me.cbThang)
         Me.Controls.Add(Me.dgvBaoCaoTon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBaoCaoTon"
         Me.Text = "Báo Cáo Tồn"
         CType(Me.dgvBaoCaoTon, System.ComponentModel.ISupportInitialize).EndInit()

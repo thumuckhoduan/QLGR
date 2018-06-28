@@ -22,6 +22,7 @@ Partial Class frmPhieuSuaChua
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPhieuSuaChua))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtMaPhieuSuaChua = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -175,6 +176,7 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtMaPhieuSuaChua)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPhieuSuaChua"
         Me.Text = "frmPhieuSuaChua"
         Me.ResumeLayout(False)

@@ -22,6 +22,7 @@ Partial Class frmManHinh
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManHinh))
         Me.btManHinh = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,16 +34,18 @@ Partial Class frmManHinh
         '
         'btManHinh
         '
+        Me.btManHinh.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btManHinh.Location = New System.Drawing.Point(47, 115)
         Me.btManHinh.Name = "btManHinh"
         Me.btManHinh.Size = New System.Drawing.Size(133, 23)
         Me.btManHinh.TabIndex = 0
         Me.btManHinh.Text = "Đăng Nhập"
-        Me.btManHinh.UseVisualStyleBackColor = True
+        Me.btManHinh.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(85, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
@@ -52,6 +55,7 @@ Partial Class frmManHinh
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(88, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
@@ -75,21 +79,23 @@ Partial Class frmManHinh
         '
         'btDoiMatKhau
         '
+        Me.btDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btDoiMatKhau.Location = New System.Drawing.Point(289, 115)
         Me.btDoiMatKhau.Name = "btDoiMatKhau"
         Me.btDoiMatKhau.Size = New System.Drawing.Size(133, 23)
         Me.btDoiMatKhau.TabIndex = 5
         Me.btDoiMatKhau.Text = "Đổi Mật Khẩu"
-        Me.btDoiMatKhau.UseVisualStyleBackColor = True
+        Me.btDoiMatKhau.UseVisualStyleBackColor = False
         '
         'btThoat
         '
+        Me.btThoat.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btThoat.Location = New System.Drawing.Point(160, 157)
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(133, 23)
         Me.btThoat.TabIndex = 6
         Me.btThoat.Text = "Thoát"
-        Me.btThoat.UseVisualStyleBackColor = True
+        Me.btThoat.UseVisualStyleBackColor = False
         '
         'frmManHinh
         '
@@ -103,6 +109,7 @@ Partial Class frmManHinh
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btManHinh)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmManHinh"
         Me.Text = "Màn Hình"
         Me.ResumeLayout(False)

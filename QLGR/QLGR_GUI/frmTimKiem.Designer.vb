@@ -22,6 +22,7 @@ Partial Class frmTimKiem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTimKiem))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtChuXe = New System.Windows.Forms.TextBox()
         Me.cbHieuXe = New System.Windows.Forms.ComboBox()
@@ -174,6 +175,7 @@ Partial Class frmTimKiem
         Me.Controls.Add(Me.cbHieuXe)
         Me.Controls.Add(Me.txtChuXe)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmTimKiem"
         Me.Text = "Tìm Kiếm"
         CType(Me.dgvTimKiem, System.ComponentModel.ISupportInitialize).EndInit()

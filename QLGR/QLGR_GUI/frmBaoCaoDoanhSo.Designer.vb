@@ -22,6 +22,7 @@ Partial Class frmBaoCaoDoanhSo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBaoCaoDoanhSo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbThang = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -129,6 +130,7 @@ Partial Class frmBaoCaoDoanhSo
         Me.Controls.Add(Me.cbThang)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Times New Roman", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBaoCaoDoanhSo"
         Me.Text = "Báo Cáo Doanh Số"
         CType(Me.dgvDoanhThu, System.ComponentModel.ISupportInitialize).EndInit()

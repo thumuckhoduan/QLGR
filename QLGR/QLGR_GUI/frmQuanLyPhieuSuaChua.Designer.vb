@@ -22,6 +22,7 @@ Partial Class frmQuanLyPhieuSuaChua
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuanLyPhieuSuaChua))
         Me.dgvPhieuSuaChua = New System.Windows.Forms.DataGridView()
         Me.btCapNhat = New System.Windows.Forms.Button()
         Me.btXoa = New System.Windows.Forms.Button()
@@ -118,6 +119,7 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.Controls.Add(Me.btXoa)
         Me.Controls.Add(Me.btCapNhat)
         Me.Controls.Add(Me.dgvPhieuSuaChua)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyPhieuSuaChua"
         Me.Text = "QuanLyPhieuSuaXe"
         CType(Me.dgvPhieuSuaChua, System.ComponentModel.ISupportInitialize).EndInit()

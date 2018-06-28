@@ -22,6 +22,7 @@ Partial Class frmQuanLyTaiKhoan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuanLyTaiKhoan))
         Me.dgvQuanLyTaiKhoan = New System.Windows.Forms.DataGridView()
         Me.txtTaiKhoan = New System.Windows.Forms.TextBox()
         Me.txtMatKhau = New System.Windows.Forms.TextBox()
@@ -136,6 +137,7 @@ Partial Class frmQuanLyTaiKhoan
         Me.Controls.Add(Me.txtMatKhau)
         Me.Controls.Add(Me.txtTaiKhoan)
         Me.Controls.Add(Me.dgvQuanLyTaiKhoan)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyTaiKhoan"
         Me.Text = "Quản Lý Tài Khoản"
         CType(Me.dgvQuanLyTaiKhoan, System.ComponentModel.ISupportInitialize).EndInit()

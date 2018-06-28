@@ -22,149 +22,210 @@ Partial Class frmQuanLy
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btBaoCaoDoanhsSo = New System.Windows.Forms.Button()
-        Me.btThemPhuTung = New System.Windows.Forms.Button()
-        Me.btQuanLyPhuTung = New System.Windows.Forms.Button()
-        Me.btBaoCaoTon = New System.Windows.Forms.Button()
-        Me.btQuanLyXe = New System.Windows.Forms.Button()
-        Me.btQuanLyChuXe = New System.Windows.Forms.Button()
-        Me.btThemHieuXe = New System.Windows.Forms.Button()
-        Me.btQuanLyPhieuSuaChua = New System.Windows.Forms.Button()
-        Me.btQuanLySuaXe = New System.Windows.Forms.Button()
-        Me.btQuanLyHieuXe = New System.Windows.Forms.Button()
-        Me.btDangXuat = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuanLy))
+        Me.pbTimKiem = New System.Windows.Forms.PictureBox()
+        Me.pbDangXuat = New System.Windows.Forms.PictureBox()
+        Me.pbBaoCaoTon = New System.Windows.Forms.PictureBox()
+        Me.pbBaoCaoDoanhSo = New System.Windows.Forms.PictureBox()
+        Me.pbThemPhuTung = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyPhuTung = New System.Windows.Forms.PictureBox()
+        Me.pbThemHieuXe = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLySuaXe = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyHieuXe = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyXe = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyPhieuSuaChua = New System.Windows.Forms.PictureBox()
+        Me.pbQuanLyChuXe = New System.Windows.Forms.PictureBox()
+        CType(Me.pbTimKiem, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBaoCaoTon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBaoCaoDoanhSo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbThemPhuTung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyPhuTung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbThemHieuXe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLySuaXe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyHieuXe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyXe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyPhieuSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbQuanLyChuXe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btBaoCaoDoanhsSo
+        'pbTimKiem
         '
-        Me.btBaoCaoDoanhsSo.Location = New System.Drawing.Point(310, 210)
-        Me.btBaoCaoDoanhsSo.Name = "btBaoCaoDoanhsSo"
-        Me.btBaoCaoDoanhsSo.Size = New System.Drawing.Size(141, 23)
-        Me.btBaoCaoDoanhsSo.TabIndex = 25
-        Me.btBaoCaoDoanhsSo.Text = "Báo Cáo Doanh Số"
-        Me.btBaoCaoDoanhsSo.UseVisualStyleBackColor = True
+        Me.pbTimKiem.ErrorImage = Global.QLGR.My.Resources.Resources.timkiem1
+        Me.pbTimKiem.Image = Global.QLGR.My.Resources.Resources.timkiem1
+        Me.pbTimKiem.Location = New System.Drawing.Point(378, 43)
+        Me.pbTimKiem.Name = "pbTimKiem"
+        Me.pbTimKiem.Size = New System.Drawing.Size(100, 96)
+        Me.pbTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbTimKiem.TabIndex = 39
+        Me.pbTimKiem.TabStop = False
         '
-        'btThemPhuTung
+        'pbDangXuat
         '
-        Me.btThemPhuTung.Location = New System.Drawing.Point(390, 151)
-        Me.btThemPhuTung.Name = "btThemPhuTung"
-        Me.btThemPhuTung.Size = New System.Drawing.Size(135, 23)
-        Me.btThemPhuTung.TabIndex = 24
-        Me.btThemPhuTung.Text = "Thêm Phụ Tùng"
-        Me.btThemPhuTung.UseVisualStyleBackColor = True
+        Me.pbDangXuat.ErrorImage = Global.QLGR.My.Resources.Resources.close
+        Me.pbDangXuat.Image = Global.QLGR.My.Resources.Resources.close
+        Me.pbDangXuat.Location = New System.Drawing.Point(378, 247)
+        Me.pbDangXuat.Name = "pbDangXuat"
+        Me.pbDangXuat.Size = New System.Drawing.Size(100, 96)
+        Me.pbDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDangXuat.TabIndex = 38
+        Me.pbDangXuat.TabStop = False
         '
-        'btQuanLyPhuTung
+        'pbBaoCaoTon
         '
-        Me.btQuanLyPhuTung.Location = New System.Drawing.Point(390, 95)
-        Me.btQuanLyPhuTung.Name = "btQuanLyPhuTung"
-        Me.btQuanLyPhuTung.Size = New System.Drawing.Size(135, 23)
-        Me.btQuanLyPhuTung.TabIndex = 23
-        Me.btQuanLyPhuTung.Text = "Quản Lý Phụ Tùng"
-        Me.btQuanLyPhuTung.UseVisualStyleBackColor = True
+        Me.pbBaoCaoTon.ErrorImage = Global.QLGR.My.Resources.Resources.baocaoton
+        Me.pbBaoCaoTon.Image = Global.QLGR.My.Resources.Resources.baocaoton
+        Me.pbBaoCaoTon.Location = New System.Drawing.Point(272, 247)
+        Me.pbBaoCaoTon.Name = "pbBaoCaoTon"
+        Me.pbBaoCaoTon.Size = New System.Drawing.Size(100, 96)
+        Me.pbBaoCaoTon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBaoCaoTon.TabIndex = 37
+        Me.pbBaoCaoTon.TabStop = False
         '
-        'btBaoCaoTon
+        'pbBaoCaoDoanhSo
         '
-        Me.btBaoCaoTon.Location = New System.Drawing.Point(109, 210)
-        Me.btBaoCaoTon.Name = "btBaoCaoTon"
-        Me.btBaoCaoTon.Size = New System.Drawing.Size(153, 23)
-        Me.btBaoCaoTon.TabIndex = 22
-        Me.btBaoCaoTon.Text = "Báo Cáo Tồn"
-        Me.btBaoCaoTon.UseVisualStyleBackColor = True
+        Me.pbBaoCaoDoanhSo.ErrorImage = Global.QLGR.My.Resources.Resources.baocaodoanhso__2_
+        Me.pbBaoCaoDoanhSo.Image = Global.QLGR.My.Resources.Resources.baocaodoanhso__2_
+        Me.pbBaoCaoDoanhSo.Location = New System.Drawing.Point(166, 247)
+        Me.pbBaoCaoDoanhSo.Name = "pbBaoCaoDoanhSo"
+        Me.pbBaoCaoDoanhSo.Size = New System.Drawing.Size(100, 96)
+        Me.pbBaoCaoDoanhSo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBaoCaoDoanhSo.TabIndex = 36
+        Me.pbBaoCaoDoanhSo.TabStop = False
         '
-        'btQuanLyXe
+        'pbThemPhuTung
         '
-        Me.btQuanLyXe.Location = New System.Drawing.Point(46, 151)
-        Me.btQuanLyXe.Name = "btQuanLyXe"
-        Me.btQuanLyXe.Size = New System.Drawing.Size(128, 23)
-        Me.btQuanLyXe.TabIndex = 21
-        Me.btQuanLyXe.Text = "Quản Lý Xe"
-        Me.btQuanLyXe.UseVisualStyleBackColor = True
+        Me.pbThemPhuTung.ErrorImage = Global.QLGR.My.Resources.Resources.themphutung
+        Me.pbThemPhuTung.Image = Global.QLGR.My.Resources.Resources.themphutung
+        Me.pbThemPhuTung.Location = New System.Drawing.Point(272, 43)
+        Me.pbThemPhuTung.Name = "pbThemPhuTung"
+        Me.pbThemPhuTung.Size = New System.Drawing.Size(100, 96)
+        Me.pbThemPhuTung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbThemPhuTung.TabIndex = 35
+        Me.pbThemPhuTung.TabStop = False
         '
-        'btQuanLyChuXe
+        'pbQuanLyPhuTung
         '
-        Me.btQuanLyChuXe.Location = New System.Drawing.Point(46, 95)
-        Me.btQuanLyChuXe.Name = "btQuanLyChuXe"
-        Me.btQuanLyChuXe.Size = New System.Drawing.Size(128, 23)
-        Me.btQuanLyChuXe.TabIndex = 20
-        Me.btQuanLyChuXe.Text = "Quản Lý Chủ Xe"
-        Me.btQuanLyChuXe.UseVisualStyleBackColor = True
+        Me.pbQuanLyPhuTung.ErrorImage = Global.QLGR.My.Resources.Resources.quanlyphutung_2
+        Me.pbQuanLyPhuTung.Image = Global.QLGR.My.Resources.Resources.quanlyphutung_2
+        Me.pbQuanLyPhuTung.Location = New System.Drawing.Point(538, 145)
+        Me.pbQuanLyPhuTung.Name = "pbQuanLyPhuTung"
+        Me.pbQuanLyPhuTung.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLyPhuTung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyPhuTung.TabIndex = 34
+        Me.pbQuanLyPhuTung.TabStop = False
         '
-        'btThemHieuXe
+        'pbThemHieuXe
         '
-        Me.btThemHieuXe.Location = New System.Drawing.Point(208, 95)
-        Me.btThemHieuXe.Name = "btThemHieuXe"
-        Me.btThemHieuXe.Size = New System.Drawing.Size(129, 23)
-        Me.btThemHieuXe.TabIndex = 19
-        Me.btThemHieuXe.Text = "Thêm Hiệu Xe"
-        Me.btThemHieuXe.UseVisualStyleBackColor = True
+        Me.pbThemHieuXe.ErrorImage = Global.QLGR.My.Resources.Resources.themhieuxe
+        Me.pbThemHieuXe.Image = Global.QLGR.My.Resources.Resources.themhieuxe
+        Me.pbThemHieuXe.Location = New System.Drawing.Point(166, 43)
+        Me.pbThemHieuXe.Name = "pbThemHieuXe"
+        Me.pbThemHieuXe.Size = New System.Drawing.Size(100, 96)
+        Me.pbThemHieuXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbThemHieuXe.TabIndex = 33
+        Me.pbThemHieuXe.TabStop = False
         '
-        'btQuanLyPhieuSuaChua
+        'pbQuanLySuaXe
         '
-        Me.btQuanLyPhieuSuaChua.Location = New System.Drawing.Point(310, 33)
-        Me.btQuanLyPhieuSuaChua.Name = "btQuanLyPhieuSuaChua"
-        Me.btQuanLyPhieuSuaChua.Size = New System.Drawing.Size(141, 23)
-        Me.btQuanLyPhieuSuaChua.TabIndex = 18
-        Me.btQuanLyPhieuSuaChua.Text = "Quản Lý Phiếu Sữa Chữa"
-        Me.btQuanLyPhieuSuaChua.UseVisualStyleBackColor = True
+        Me.pbQuanLySuaXe.ErrorImage = Global.QLGR.My.Resources.Resources.quanlysuaxe
+        Me.pbQuanLySuaXe.Image = Global.QLGR.My.Resources.Resources.quanlysuaxe
+        Me.pbQuanLySuaXe.Location = New System.Drawing.Point(8, 145)
+        Me.pbQuanLySuaXe.Name = "pbQuanLySuaXe"
+        Me.pbQuanLySuaXe.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLySuaXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLySuaXe.TabIndex = 32
+        Me.pbQuanLySuaXe.TabStop = False
         '
-        'btQuanLySuaXe
+        'pbQuanLyHieuXe
         '
-        Me.btQuanLySuaXe.Location = New System.Drawing.Point(109, 33)
-        Me.btQuanLySuaXe.Name = "btQuanLySuaXe"
-        Me.btQuanLySuaXe.Size = New System.Drawing.Size(153, 23)
-        Me.btQuanLySuaXe.TabIndex = 17
-        Me.btQuanLySuaXe.Text = "Quản Lý Sữa Xe"
-        Me.btQuanLySuaXe.UseVisualStyleBackColor = True
+        Me.pbQuanLyHieuXe.ErrorImage = Global.QLGR.My.Resources.Resources.quanlyhieuxe
+        Me.pbQuanLyHieuXe.Image = Global.QLGR.My.Resources.Resources.quanlyhieuxe
+        Me.pbQuanLyHieuXe.Location = New System.Drawing.Point(220, 145)
+        Me.pbQuanLyHieuXe.Name = "pbQuanLyHieuXe"
+        Me.pbQuanLyHieuXe.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLyHieuXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyHieuXe.TabIndex = 31
+        Me.pbQuanLyHieuXe.TabStop = False
         '
-        'btQuanLyHieuXe
+        'pbQuanLyXe
         '
-        Me.btQuanLyHieuXe.Location = New System.Drawing.Point(208, 151)
-        Me.btQuanLyHieuXe.Name = "btQuanLyHieuXe"
-        Me.btQuanLyHieuXe.Size = New System.Drawing.Size(129, 23)
-        Me.btQuanLyHieuXe.TabIndex = 26
-        Me.btQuanLyHieuXe.Text = "Quản Lý Hiệu Xe"
-        Me.btQuanLyHieuXe.UseVisualStyleBackColor = True
+        Me.pbQuanLyXe.ErrorImage = Global.QLGR.My.Resources.Resources.quanlyxe
+        Me.pbQuanLyXe.Image = Global.QLGR.My.Resources.Resources.quanlyxe
+        Me.pbQuanLyXe.Location = New System.Drawing.Point(432, 145)
+        Me.pbQuanLyXe.Name = "pbQuanLyXe"
+        Me.pbQuanLyXe.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLyXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyXe.TabIndex = 30
+        Me.pbQuanLyXe.TabStop = False
         '
-        'btDangXuat
+        'pbQuanLyPhieuSuaChua
         '
-        Me.btDangXuat.Location = New System.Drawing.Point(208, 255)
-        Me.btDangXuat.Name = "btDangXuat"
-        Me.btDangXuat.Size = New System.Drawing.Size(165, 23)
-        Me.btDangXuat.TabIndex = 27
-        Me.btDangXuat.Text = "Đăng Xuất"
-        Me.btDangXuat.UseVisualStyleBackColor = True
+        Me.pbQuanLyPhieuSuaChua.ErrorImage = Global.QLGR.My.Resources.Resources.quanlyphieusuachua
+        Me.pbQuanLyPhieuSuaChua.Image = Global.QLGR.My.Resources.Resources.quanlyphieusuachua
+        Me.pbQuanLyPhieuSuaChua.Location = New System.Drawing.Point(114, 145)
+        Me.pbQuanLyPhieuSuaChua.Name = "pbQuanLyPhieuSuaChua"
+        Me.pbQuanLyPhieuSuaChua.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLyPhieuSuaChua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyPhieuSuaChua.TabIndex = 29
+        Me.pbQuanLyPhieuSuaChua.TabStop = False
+        '
+        'pbQuanLyChuXe
+        '
+        Me.pbQuanLyChuXe.ErrorImage = Global.QLGR.My.Resources.Resources.quanlychuxe
+        Me.pbQuanLyChuXe.Image = Global.QLGR.My.Resources.Resources.quanlychuxe
+        Me.pbQuanLyChuXe.Location = New System.Drawing.Point(326, 145)
+        Me.pbQuanLyChuXe.Name = "pbQuanLyChuXe"
+        Me.pbQuanLyChuXe.Size = New System.Drawing.Size(100, 96)
+        Me.pbQuanLyChuXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbQuanLyChuXe.TabIndex = 28
+        Me.pbQuanLyChuXe.TabStop = False
         '
         'frmQuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(613, 301)
-        Me.Controls.Add(Me.btDangXuat)
-        Me.Controls.Add(Me.btQuanLyHieuXe)
-        Me.Controls.Add(Me.btBaoCaoDoanhsSo)
-        Me.Controls.Add(Me.btThemPhuTung)
-        Me.Controls.Add(Me.btQuanLyPhuTung)
-        Me.Controls.Add(Me.btBaoCaoTon)
-        Me.Controls.Add(Me.btQuanLyXe)
-        Me.Controls.Add(Me.btQuanLyChuXe)
-        Me.Controls.Add(Me.btThemHieuXe)
-        Me.Controls.Add(Me.btQuanLyPhieuSuaChua)
-        Me.Controls.Add(Me.btQuanLySuaXe)
+        Me.ClientSize = New System.Drawing.Size(649, 478)
+        Me.Controls.Add(Me.pbTimKiem)
+        Me.Controls.Add(Me.pbDangXuat)
+        Me.Controls.Add(Me.pbBaoCaoTon)
+        Me.Controls.Add(Me.pbBaoCaoDoanhSo)
+        Me.Controls.Add(Me.pbThemPhuTung)
+        Me.Controls.Add(Me.pbQuanLyPhuTung)
+        Me.Controls.Add(Me.pbThemHieuXe)
+        Me.Controls.Add(Me.pbQuanLySuaXe)
+        Me.Controls.Add(Me.pbQuanLyHieuXe)
+        Me.Controls.Add(Me.pbQuanLyXe)
+        Me.Controls.Add(Me.pbQuanLyPhieuSuaChua)
+        Me.Controls.Add(Me.pbQuanLyChuXe)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLy"
         Me.Text = "Quản Lý"
+        CType(Me.pbTimKiem, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBaoCaoTon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBaoCaoDoanhSo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbThemPhuTung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyPhuTung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbThemHieuXe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLySuaXe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyHieuXe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyXe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyPhieuSuaChua, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbQuanLyChuXe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btBaoCaoDoanhsSo As Button
-    Friend WithEvents btThemPhuTung As Button
-    Friend WithEvents btQuanLyPhuTung As Button
-    Friend WithEvents btBaoCaoTon As Button
-    Friend WithEvents btQuanLyXe As Button
-    Friend WithEvents btQuanLyChuXe As Button
-    Friend WithEvents btThemHieuXe As Button
-    Friend WithEvents btQuanLyPhieuSuaChua As Button
-    Friend WithEvents btQuanLySuaXe As Button
-    Friend WithEvents btQuanLyHieuXe As Button
-    Friend WithEvents btDangXuat As Button
+    Friend WithEvents pbQuanLyHieuXe As PictureBox
+    Friend WithEvents pbQuanLyXe As PictureBox
+    Friend WithEvents pbQuanLyPhieuSuaChua As PictureBox
+    Friend WithEvents pbQuanLyChuXe As PictureBox
+    Friend WithEvents pbQuanLySuaXe As PictureBox
+    Friend WithEvents pbThemHieuXe As PictureBox
+    Friend WithEvents pbQuanLyPhuTung As PictureBox
+    Friend WithEvents pbThemPhuTung As PictureBox
+    Friend WithEvents pbBaoCaoDoanhSo As PictureBox
+    Friend WithEvents pbBaoCaoTon As PictureBox
+    Friend WithEvents pbDangXuat As PictureBox
+    Friend WithEvents pbTimKiem As PictureBox
 End Class

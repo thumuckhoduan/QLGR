@@ -22,6 +22,7 @@ Partial Class frmDoiMatKhau
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDoiMatKhau))
         Me.btLuu = New System.Windows.Forms.Button()
         Me.btThoat = New System.Windows.Forms.Button()
         Me.txtTaiKhoan = New System.Windows.Forms.TextBox()
@@ -36,21 +37,23 @@ Partial Class frmDoiMatKhau
         '
         'btLuu
         '
+        Me.btLuu.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btLuu.Location = New System.Drawing.Point(46, 181)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(75, 23)
         Me.btLuu.TabIndex = 0
         Me.btLuu.Text = "Lưu"
-        Me.btLuu.UseVisualStyleBackColor = True
+        Me.btLuu.UseVisualStyleBackColor = False
         '
         'btThoat
         '
+        Me.btThoat.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btThoat.Location = New System.Drawing.Point(262, 181)
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 1
         Me.btThoat.Text = "Thoát"
-        Me.btThoat.UseVisualStyleBackColor = True
+        Me.btThoat.UseVisualStyleBackColor = False
         '
         'txtTaiKhoan
         '
@@ -86,6 +89,7 @@ Partial Class frmDoiMatKhau
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(26, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
@@ -95,6 +99,7 @@ Partial Class frmDoiMatKhau
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(26, 97)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 13)
@@ -104,6 +109,7 @@ Partial Class frmDoiMatKhau
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(26, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 13)
@@ -113,6 +119,7 @@ Partial Class frmDoiMatKhau
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(22, 137)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(99, 13)
@@ -134,6 +141,7 @@ Partial Class frmDoiMatKhau
         Me.Controls.Add(Me.txtTaiKhoan)
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.btLuu)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDoiMatKhau"
         Me.Text = "Đổi Mật Khẩu"
         Me.ResumeLayout(False)
