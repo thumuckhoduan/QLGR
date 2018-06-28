@@ -27,11 +27,13 @@ Partial Class frmManHinh
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtTaiKhoan = New System.Windows.Forms.TextBox()
         Me.txtMatKhau = New System.Windows.Forms.TextBox()
+        Me.btDoiMatKhau = New System.Windows.Forms.Button()
+        Me.btThoat = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btManHinh
         '
-        Me.btManHinh.Location = New System.Drawing.Point(209, 163)
+        Me.btManHinh.Location = New System.Drawing.Point(47, 115)
         Me.btManHinh.Name = "btManHinh"
         Me.btManHinh.Size = New System.Drawing.Size(133, 23)
         Me.btManHinh.TabIndex = 0
@@ -41,7 +43,7 @@ Partial Class frmManHinh
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(85, 56)
+        Me.Label1.Location = New System.Drawing.Point(85, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 1
@@ -50,7 +52,7 @@ Partial Class frmManHinh
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(88, 104)
+        Me.Label2.Location = New System.Drawing.Point(88, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 2
@@ -58,24 +60,44 @@ Partial Class frmManHinh
         '
         'txtTaiKhoan
         '
-        Me.txtTaiKhoan.Location = New System.Drawing.Point(192, 46)
+        Me.txtTaiKhoan.Location = New System.Drawing.Point(192, 25)
         Me.txtTaiKhoan.Name = "txtTaiKhoan"
         Me.txtTaiKhoan.Size = New System.Drawing.Size(170, 20)
         Me.txtTaiKhoan.TabIndex = 3
         '
         'txtMatKhau
         '
-        Me.txtMatKhau.Location = New System.Drawing.Point(192, 97)
+        Me.txtMatKhau.Location = New System.Drawing.Point(192, 72)
         Me.txtMatKhau.Name = "txtMatKhau"
         Me.txtMatKhau.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtMatKhau.Size = New System.Drawing.Size(170, 20)
         Me.txtMatKhau.TabIndex = 4
         '
+        'btDoiMatKhau
+        '
+        Me.btDoiMatKhau.Location = New System.Drawing.Point(289, 115)
+        Me.btDoiMatKhau.Name = "btDoiMatKhau"
+        Me.btDoiMatKhau.Size = New System.Drawing.Size(133, 23)
+        Me.btDoiMatKhau.TabIndex = 5
+        Me.btDoiMatKhau.Text = "Đổi Mật Khẩu"
+        Me.btDoiMatKhau.UseVisualStyleBackColor = True
+        '
+        'btThoat
+        '
+        Me.btThoat.Location = New System.Drawing.Point(160, 157)
+        Me.btThoat.Name = "btThoat"
+        Me.btThoat.Size = New System.Drawing.Size(133, 23)
+        Me.btThoat.TabIndex = 6
+        Me.btThoat.Text = "Thoát"
+        Me.btThoat.UseVisualStyleBackColor = True
+        '
         'frmManHinh
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(544, 218)
+        Me.ClientSize = New System.Drawing.Size(462, 197)
+        Me.Controls.Add(Me.btThoat)
+        Me.Controls.Add(Me.btDoiMatKhau)
         Me.Controls.Add(Me.txtMatKhau)
         Me.Controls.Add(Me.txtTaiKhoan)
         Me.Controls.Add(Me.Label2)
@@ -93,4 +115,6 @@ Partial Class frmManHinh
     Friend WithEvents Label2 As Label
     Friend WithEvents txtTaiKhoan As TextBox
     Friend WithEvents txtMatKhau As TextBox
+    Friend WithEvents btDoiMatKhau As Button
+    Friend WithEvents btThoat As Button
 End Class

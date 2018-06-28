@@ -6,7 +6,7 @@
 
     End Sub
 
-    Public Sub New(taikhoan As Integer, matkhau As Integer, quyen As String)
+    Public Sub New(taikhoan As String, matkhau As String, quyen As String)
         Me.strtaikhoan = taikhoan
         Me.strmatkhau = matkhau
         Me.iquyen = quyen

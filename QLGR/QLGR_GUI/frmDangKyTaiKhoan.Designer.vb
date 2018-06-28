@@ -50,7 +50,7 @@ Partial Class frmDangKyTaiKhoan
         '
         Me.cbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbQuyen.FormattingEnabled = True
-        Me.cbQuyen.Items.AddRange(New Object() {"admin", "user"})
+        Me.cbQuyen.Items.AddRange(New Object() {"admin", "user", "quan ly"})
         Me.cbQuyen.Location = New System.Drawing.Point(167, 165)
         Me.cbQuyen.Name = "cbQuyen"
         Me.cbQuyen.Size = New System.Drawing.Size(121, 21)

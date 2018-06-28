@@ -391,3 +391,5 @@ C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmAdmin.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmDangKyTaiKhoan.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLyTaiKhoan.resources
 C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmUser.resources
+C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmDoiMatKhau.resources
+C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmQuanLy.resources

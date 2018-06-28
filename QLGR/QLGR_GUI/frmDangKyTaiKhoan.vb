@@ -28,4 +28,5 @@ Public Class frmDangKyTaiKhoan
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
     End Sub
+
 End Class

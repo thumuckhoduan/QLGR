@@ -29,7 +29,7 @@ Partial Class frmAdmin
         '
         'btDangKyTaiKhoan
         '
-        Me.btDangKyTaiKhoan.Location = New System.Drawing.Point(81, 45)
+        Me.btDangKyTaiKhoan.Location = New System.Drawing.Point(68, 46)
         Me.btDangKyTaiKhoan.Name = "btDangKyTaiKhoan"
         Me.btDangKyTaiKhoan.Size = New System.Drawing.Size(118, 23)
         Me.btDangKyTaiKhoan.TabIndex = 0
@@ -38,7 +38,7 @@ Partial Class frmAdmin
         '
         'btQuanLyTaiKhoan
         '
-        Me.btQuanLyTaiKhoan.Location = New System.Drawing.Point(81, 102)
+        Me.btQuanLyTaiKhoan.Location = New System.Drawing.Point(68, 90)
         Me.btQuanLyTaiKhoan.Name = "btQuanLyTaiKhoan"
         Me.btQuanLyTaiKhoan.Size = New System.Drawing.Size(118, 23)
         Me.btQuanLyTaiKhoan.TabIndex = 1
@@ -47,7 +47,7 @@ Partial Class frmAdmin
         '
         'btDangXuat
         '
-        Me.btDangXuat.Location = New System.Drawing.Point(81, 172)
+        Me.btDangXuat.Location = New System.Drawing.Point(68, 139)
         Me.btDangXuat.Name = "btDangXuat"
         Me.btDangXuat.Size = New System.Drawing.Size(118, 23)
         Me.btDangXuat.TabIndex = 2
@@ -58,13 +58,12 @@ Partial Class frmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(321, 261)
+        Me.ClientSize = New System.Drawing.Size(252, 206)
         Me.Controls.Add(Me.btDangXuat)
         Me.Controls.Add(Me.btQuanLyTaiKhoan)
         Me.Controls.Add(Me.btDangKyTaiKhoan)
         Me.Name = "frmAdmin"
         Me.Text = "Admin"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

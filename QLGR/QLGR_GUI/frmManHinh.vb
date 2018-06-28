@@ -18,7 +18,7 @@ Public Class frmManHinh
         Dim taikhoanDTO As New TaiKhoanDTO()
         taikhoanDTO.taikhoan = txtTaiKhoan.Text
         taikhoanDTO.matkhau = txtMatKhau.Text
-        taikhoanBUS.get_maquyen(taikhoanDTO)
+        taikhoanBUS.get_quyen(taikhoanDTO)
         If (taikhoanDTO.quyen = "") Then
             MessageBox.Show("Tên Hoặc Mật Khẩu Sai")
         ElseIf (taikhoanDTO.quyen = "user") Then
@@ -27,6 +27,18 @@ Public Class frmManHinh
         ElseIf (taikhoanDTO.quyen = "admin") Then
             Dim frm = New frmAdmin()
             frm.ShowDialog(Me)
+        ElseIf (taikhoanDTO.quyen = "quan ly") Then
+            Dim frm = New frmQuanLy()
+            frm.ShowDialog(Me)
         End If
+    End Sub
+
+    Private Sub btDoiMatKhau_Click(sender As Object, e As EventArgs) Handles btDoiMatKhau.Click
+        Dim frm = New frmDoiMatKhau()
+        frm.ShowDialog(Me)
+    End Sub
+
+    Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
+        Me.Close()
     End Sub
 End Class
