@@ -75,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdmin.Designer.vb">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBaoCaoDoanhSo.Designer.vb">
       <DependentUpon>frmBaoCaoDoanhSo.vb</DependentUpon>
     </Compile>
@@ -93,10 +99,22 @@
     <Compile Include="frmChiTietSuaChua.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManHinhChinh.Designer.vb">
-      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    <Compile Include="frmDangKyTaiKhoan.Designer.vb">
+      <DependentUpon>frmDangKyTaiKhoan.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmManHinhChinh.vb">
+    <Compile Include="frmDangKyTaiKhoan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHinh.Designer.vb">
+      <DependentUpon>frmManHinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManHinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNhapPhuTung.Designer.vb">
@@ -192,8 +210,17 @@
     <Compile Include="frmQuanLyPhieuSuaChua.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmQuanLyTaiKhoan.Designer.vb">
+      <DependentUpon>frmQuanLyTaiKhoan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyTaiKhoan.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoDoanhSo.resx">
       <DependentUpon>frmBaoCaoDoanhSo.vb</DependentUpon>
     </EmbeddedResource>
@@ -203,8 +230,14 @@
     <EmbeddedResource Include="frmChiTietSuaChua.resx">
       <DependentUpon>frmChiTietSuaChua.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManHinhChinh.resx">
-      <DependentUpon>frmManHinhChinh.vb</DependentUpon>
+    <EmbeddedResource Include="frmDangKyTaiKhoan.resx">
+      <DependentUpon>frmDangKyTaiKhoan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManHinh.resx">
+      <DependentUpon>frmManHinh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapPhuTung.resx">
       <DependentUpon>frmNhapPhuTung.vb</DependentUpon>
@@ -220,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyPhieuSuaChua.resx">
       <DependentUpon>frmQuanLyPhieuSuaChua.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyTaiKhoan.resx">
+      <DependentUpon>frmQuanLyTaiKhoan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyXe.resx">
       <DependentUpon>frmQuanLyXe.vb</DependentUpon>

@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports QLGR_DTO
 Imports Utility
 
-Public Class UserDAL
+Public Class TaiKhoanDAL
     Private connectionString As String
 
     Public Sub New()
@@ -14,11 +14,11 @@ Public Class UserDAL
         Me.connectionString = ConnectionString
     End Sub
 
-    Public Function insert(s As UserDTO) As Result
+    Public Function insert(s As TaiKhoanDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblUser] ([username], [password], [permissions]) "
-        query &= "VALUES (@username,@password,@permissions)"
+        query &= "INSERT INTO [tblTaiKhoan] ([taikhoan], [matkhau], [quyen]) "
+        query &= "VALUES (@taikhoan,@matkhau,@quyen)"
 
 
         Using conn As New SqlConnection(connectionString)
@@ -27,9 +27,9 @@ Public Class UserDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@username", s.username)
-                    .Parameters.AddWithValue("@password", s.password)
-                    .Parameters.AddWithValue("@permissions", s.permissions)
+                    .Parameters.AddWithValue("@taikhoan", s.taikhoan)
+                    .Parameters.AddWithValue("@matkhau", s.matkhau)
+                    .Parameters.AddWithValue("@quyen", s.quyen)
                 End With
                 Try
                     conn.Open()
@@ -37,20 +37,20 @@ Public Class UserDAL
                 Catch ex As Exception
                     conn.Close()
                     System.Console.WriteLine(ex.StackTrace)
-                    Return New Result(False, "Thêm User không thành công", ex.StackTrace)
+                    Return New Result(False, "Thêm Tài khoản không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using
         Return New Result(True)
     End Function
 
-    Public Function get_permissions(ByRef s As UserDTO) As Result
+    Public Function get_maquyen(ByRef s As TaiKhoanDTO) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT [permissions] "
-        query &= "FROM [tblUser] "
-        query &= "WHERE [username]=@username "
-        query &= "AND [password]=@password"
+        query &= "SELECT [quyen] "
+        query &= "FROM [tblTaiKhoan] "
+        query &= "WHERE [taikhoan]=@taikhoan "
+        query &= "AND [matkhau]=@matkhau"
 
 
         Using conn As New SqlConnection(connectionString)
@@ -59,8 +59,8 @@ Public Class UserDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@username", s.username)
-                    .Parameters.AddWithValue("@password", s.password)
+                    .Parameters.AddWithValue("@taikhoan", s.taikhoan)
+                    .Parameters.AddWithValue("@matkhau", s.matkhau)
                 End With
                 Try
                     conn.Open()
@@ -68,14 +68,14 @@ Public Class UserDAL
                     reader = comm.ExecuteReader()
                     If reader.HasRows = True Then
                         While reader.Read()
-                            s.permissions = reader("permissions")
+                            s.quyen = reader("quyen")
                         End While
                     Else
-                        s.permissions = -1
+                        s.quyen = ""
                     End If
                 Catch ex As Exception
                     conn.Close()
-                    s.permissions = -2
+                    s.quyen = ""
                     Return New Result(False, "EEROR", ex.StackTrace)
                 End Try
             End Using
