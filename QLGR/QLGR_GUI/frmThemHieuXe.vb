@@ -17,7 +17,7 @@ Public Class frmThemHieuXe
         result = hieuxeBUS.insert(hieuxeDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Thêm hiệu xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'set MSSH auto
+
             Dim nextMHX = 0
             result = hieuxeBUS.buildMaHieuXe(nextMHX)
             If (result.FlagResult = False) Then
@@ -42,8 +42,6 @@ Public Class frmThemHieuXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh tự động mã nhập sách không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-            Return
         End If
         txbMaHieuXe.Text = nextMHX
         txbTenHieuXe.Text = String.Empty
@@ -52,6 +50,5 @@ Public Class frmThemHieuXe
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
     End Sub
-
 
 End Class

@@ -13,8 +13,6 @@ Public Class frmThemPhuTung
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh tự động mã phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-            Return
         End If
         txbMaPhuTung.Text = nextMPT
         txbTenPhuTung.Text = String.Empty

@@ -35,14 +35,14 @@ Partial Class frmDangKyTaiKhoan
         '
         'txtTaiKhoan
         '
-        Me.txtTaiKhoan.Location = New System.Drawing.Point(167, 66)
+        Me.txtTaiKhoan.Location = New System.Drawing.Point(167, 30)
         Me.txtTaiKhoan.Name = "txtTaiKhoan"
         Me.txtTaiKhoan.Size = New System.Drawing.Size(121, 20)
         Me.txtTaiKhoan.TabIndex = 0
         '
         'txtMatKhau
         '
-        Me.txtMatKhau.Location = New System.Drawing.Point(167, 114)
+        Me.txtMatKhau.Location = New System.Drawing.Point(167, 70)
         Me.txtMatKhau.Name = "txtMatKhau"
         Me.txtMatKhau.Size = New System.Drawing.Size(121, 20)
         Me.txtMatKhau.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class frmDangKyTaiKhoan
         Me.cbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbQuyen.FormattingEnabled = True
         Me.cbQuyen.Items.AddRange(New Object() {"admin", "user", "quan ly"})
-        Me.cbQuyen.Location = New System.Drawing.Point(167, 165)
+        Me.cbQuyen.Location = New System.Drawing.Point(167, 116)
         Me.cbQuyen.Name = "cbQuyen"
         Me.cbQuyen.Size = New System.Drawing.Size(121, 21)
         Me.cbQuyen.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class frmDangKyTaiKhoan
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(72, 73)
+        Me.Label1.Location = New System.Drawing.Point(72, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class frmDangKyTaiKhoan
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(72, 121)
+        Me.Label2.Location = New System.Drawing.Point(72, 73)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 4
@@ -78,7 +78,7 @@ Partial Class frmDangKyTaiKhoan
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(72, 165)
+        Me.Label3.Location = New System.Drawing.Point(72, 116)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 5
@@ -86,7 +86,7 @@ Partial Class frmDangKyTaiKhoan
         '
         'btDangKy
         '
-        Me.btDangKy.Location = New System.Drawing.Point(96, 216)
+        Me.btDangKy.Location = New System.Drawing.Point(50, 167)
         Me.btDangKy.Name = "btDangKy"
         Me.btDangKy.Size = New System.Drawing.Size(75, 23)
         Me.btDangKy.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class frmDangKyTaiKhoan
         '
         'btThoat
         '
-        Me.btThoat.Location = New System.Drawing.Point(255, 216)
+        Me.btThoat.Location = New System.Drawing.Point(254, 167)
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 7
@@ -106,7 +106,7 @@ Partial Class frmDangKyTaiKhoan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(419, 261)
+        Me.ClientSize = New System.Drawing.Size(370, 211)
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.btDangKy)
         Me.Controls.Add(Me.Label3)

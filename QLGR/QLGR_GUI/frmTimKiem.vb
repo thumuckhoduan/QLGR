@@ -20,8 +20,6 @@ Public Class frmTimKiem
         If (result.FlagResult = False) Then
             MessageBox.Show("Lay danh sách hieu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-            Return
         End If
         cbHieuXe.DataSource = New BindingSource(listHieuXe, String.Empty)
         cbHieuXe.DataSource = cbHieuXe.DataSource

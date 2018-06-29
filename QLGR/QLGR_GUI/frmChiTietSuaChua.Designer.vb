@@ -42,6 +42,7 @@ Partial Class frmChiTietSuaChua
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbMaPhieuSuaChua = New System.Windows.Forms.ComboBox()
         Me.cbDonGia = New System.Windows.Forms.ComboBox()
+        Me.btThoat = New System.Windows.Forms.Button()
         CType(Me.dgvChiTietSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -97,6 +98,7 @@ Partial Class frmChiTietSuaChua
         '
         'cbTenPhuTung
         '
+        Me.cbTenPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenPhuTung.FormattingEnabled = True
         Me.cbTenPhuTung.Location = New System.Drawing.Point(475, 48)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
@@ -105,6 +107,7 @@ Partial Class frmChiTietSuaChua
         '
         'cbMaPhuTung
         '
+        Me.cbMaPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaPhuTung.FormattingEnabled = True
         Me.cbMaPhuTung.Location = New System.Drawing.Point(186, 40)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
@@ -132,14 +135,14 @@ Partial Class frmChiTietSuaChua
         'dgvChiTietSuaChua
         '
         Me.dgvChiTietSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(122, 198)
+        Me.dgvChiTietSuaChua.Location = New System.Drawing.Point(69, 198)
         Me.dgvChiTietSuaChua.Name = "dgvChiTietSuaChua"
-        Me.dgvChiTietSuaChua.Size = New System.Drawing.Size(466, 148)
+        Me.dgvChiTietSuaChua.Size = New System.Drawing.Size(544, 148)
         Me.dgvChiTietSuaChua.TabIndex = 65
         '
         'btCapNhat
         '
-        Me.btCapNhat.Location = New System.Drawing.Point(122, 374)
+        Me.btCapNhat.Location = New System.Drawing.Point(69, 374)
         Me.btCapNhat.Name = "btCapNhat"
         Me.btCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btCapNhat.TabIndex = 66
@@ -148,7 +151,7 @@ Partial Class frmChiTietSuaChua
         '
         'btXoa
         '
-        Me.btXoa.Location = New System.Drawing.Point(513, 374)
+        Me.btXoa.Location = New System.Drawing.Point(335, 374)
         Me.btXoa.Name = "btXoa"
         Me.btXoa.Size = New System.Drawing.Size(75, 23)
         Me.btXoa.TabIndex = 67
@@ -205,11 +208,21 @@ Partial Class frmChiTietSuaChua
         Me.cbDonGia.Size = New System.Drawing.Size(122, 21)
         Me.cbDonGia.TabIndex = 74
         '
+        'btThoat
+        '
+        Me.btThoat.Location = New System.Drawing.Point(568, 374)
+        Me.btThoat.Name = "btThoat"
+        Me.btThoat.Size = New System.Drawing.Size(75, 23)
+        Me.btThoat.TabIndex = 75
+        Me.btThoat.Text = "Thoát"
+        Me.btThoat.UseVisualStyleBackColor = True
+        '
         'frmChiTietSuaChua
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(736, 409)
+        Me.ClientSize = New System.Drawing.Size(706, 409)
+        Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.cbDonGia)
         Me.Controls.Add(Me.cbMaPhieuSuaChua)
         Me.Controls.Add(Me.Label2)
@@ -257,4 +270,5 @@ Partial Class frmChiTietSuaChua
     Friend WithEvents Label2 As Label
     Friend WithEvents cbMaPhieuSuaChua As ComboBox
     Friend WithEvents cbDonGia As ComboBox
+    Friend WithEvents btThoat As Button
 End Class

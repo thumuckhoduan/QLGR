@@ -15,10 +15,9 @@ Public Class frmThayDoiQuyDInh
         result = thamsoBUS.update(ThamSoDTO)
         If (result.FlagResult = False) Then
             MessageBox.Show("Thay Đổi Quy Định không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
+            System.Console.WriteLine(result.SystemMessage)
         Else
-            MessageBox.Show("Thay Đổi Quy Định thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
+            MessageBox.Show("Thay Đổi Quy Định thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -30,7 +29,7 @@ Public Class frmThayDoiQuyDInh
         txtTiepNhanToiDa.Text = ThamSoDTO.tiepnhantoida
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy Tham Số không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
+            System.Console.WriteLine(result.SystemMessage)
         End If
     End Sub
 End Class

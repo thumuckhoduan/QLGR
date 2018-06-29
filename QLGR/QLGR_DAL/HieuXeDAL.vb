@@ -206,5 +206,79 @@ Public Class HieuXeDAL
         End Using
         Return New Result(True)
     End Function
+
+    Public Function select_byMaHieuXe(mahieuxe As Integer, ByRef hieuxeDTO As HieuXeDTO) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT [mahieuxe], [tenhieuxe]"
+        query &= " FROM [tblHieuXe]"
+        query &= " WHERE [mahieuxe]=@mahieuxe"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@mahieuxe", mahieuxe)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            hieuxeDTO = New HieuXeDTO(reader("mahieuxe"), reader("tenhieuxe"))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy hiệu xe theo mã hiệu xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
+    Public Function kiemtra(hieuxeDTO As HieuXeDTO) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT count(*) As [count]"
+        query &= " FROM [tblHieuXe]"
+        query &= " WHERE [tenhieuxe]=@tenhieuxe"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@tenhieuxe", hieuxeDTO.tenhieuxe)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            Dim x = reader("count")
+                            If (x > 0) Then
+                            Else
+                                hieuxeDTO.mahieuxe = 0
+                            End If
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Kiểm Tra không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class
 

@@ -16,7 +16,6 @@ Public Class frmQuanLyPhuTung
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvDanhSachPhuTung.Columns.Clear()

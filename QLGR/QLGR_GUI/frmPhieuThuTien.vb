@@ -25,7 +25,6 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Lấy mã phiếu thu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
-            Return
         End If
         txtMaPhieuThuTien.Text = nextMPTT
         chuxeBUS = New ChuXeBUS()
@@ -41,7 +40,6 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(Result.SystemMessage)
             Me.Close()
-            Return
         End If
         cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
         cbBienSo.DisplayMember = "bienso"
@@ -59,7 +57,6 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(Result.SystemMessage)
             Me.Close()
-            Return
         End If
         cbMaChuXe.DataSource = New BindingSource(listChuXe, String.Empty)
         cbTenChuXe.DataSource = cbMaChuXe.DataSource
@@ -101,7 +98,7 @@ Public Class frmPhieuThuTien
         If (kiemtrasotienthu()) Then
             Return
         End If
-        '1. Mapping data from GUI control
+
         phieuthuDTO.maphieuthu = Convert.ToInt64(txtMaPhieuThuTien.Text)
         phieuthuDTO.maxe = Convert.ToInt64(cbMaXe.Text)
         phieuthuDTO.sotienthu = txtSoTienThu.Text
@@ -113,19 +110,15 @@ Public Class frmPhieuThuTien
         chuxeDTO.tienno = Convert.ToInt64(cbTienNo.Text) - Convert.ToInt64(txtSoTienThu.Text)
         chuxeDTO.email = txtEmail.Text
 
-        '3. Insert to DB
         Dim result As Result
         phieuthutienBUS = New PhieuThuTienBUS()
         result = phieuthutienBUS.insert(phieuthuDTO)
         If (result.FlagResult = True) Then
-            MessageBox.Show("Thêm phiếu thu tiền thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'set MSSH auto
             Dim nextMPTT = "1"
             result = phieuthutienBUS.buildMaPhieuThu(nextMPTT)
             If (result.FlagResult = False) Then
                 MessageBox.Show("Lấy danh tự động phiếu thu tiền không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Me.Close()
-                Return
             End If
             txtMaPhieuThuTien.Text = nextMPTT
         Else
@@ -141,6 +134,7 @@ Public Class frmPhieuThuTien
             MessageBox.Show("Cộng số tiền thu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
+        MessageBox.Show("Thêm phiếu thu tiền thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         loaddata()
         txtSoTienThu.Text = 0
     End Sub
@@ -176,8 +170,6 @@ Public Class frmPhieuThuTien
 
     Private Sub cbEmail_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmail.SelectedIndexChanged
         txtEmail.Text = cbEmail.Text
-
-
     End Sub
 
     Private Sub cbDiaChi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDiaChi.SelectedIndexChanged
@@ -194,9 +186,5 @@ Public Class frmPhieuThuTien
 
     Private Sub cbTienNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTienNo.SelectedIndexChanged
         txtSoTienNo.Text = cbTienNo.Text
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
     End Sub
 End Class

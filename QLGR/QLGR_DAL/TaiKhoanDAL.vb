@@ -127,7 +127,7 @@ Public Class TaiKhoanDAL
     Public Function update_matkhau(ByRef taikhoanDTO As TaiKhoanDTO) As Result
         Dim query As String = String.Empty
         query &= " UPDATE [tblTaiKhoan] SET"
-        query &= " [matkhau] = @matkhau "
+        query &= " [matkhau] = @matkhau"
         query &= "WHERE "
         query &= " [taikhoan] = @taikhoan "
 

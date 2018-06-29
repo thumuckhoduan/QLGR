@@ -3,10 +3,14 @@ Imports QLGR_DTO
 Imports Utility
 Public Class frmQuanLySuaXe
     Private xeBUS As XeBUS
+    Private chuxeBUS As ChuXeBUS
+    Private hieuxeBUS As HieuXeBUS
     Private suaxeBUS As TiepNhanSuaXeBUS
 
     Private Sub QuanLySuaXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         xeBUS = New XeBUS()
+        chuxeBUS = New ChuXeBUS()
+        hieuxeBUS = New HieuXeBUS()
         suaxeBUS = New TiepNhanSuaXeBUS()
         loadListsuaxe()
     End Sub
@@ -17,7 +21,6 @@ Public Class frmQuanLySuaXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách Sửa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvDanhSachSuaXe.Columns.Clear()
@@ -85,6 +88,19 @@ Public Class frmQuanLySuaXe
     End Sub
 
     Private Sub dgvDanhSachSuaXe_SELECTionChanged(sender As Object, e As EventArgs) Handles dgvDanhSachSuaXe.SelectionChanged
+        If (txbMaXe.Text <> vbNullString) Then
+            Dim xeDTO = New XeDTO()
+            Dim chuxeDTO = New ChuXeDTO()
+            Dim hieuxeDTO = New HieuXeDTO()
+            xeBUS.select_byMaXe(txbMaXe.Text, xeDTO)
+            chuxeBUS.select_byMaChuXe(xeDTO.machuxe, chuxeDTO)
+            hieuxeBUS.select_byMaHieuXe(xeDTO.mahieuxe, hieuxeDTO)
+            txtTenChuXe.Text = chuxeDTO.tenchuxe
+            txtDienThoai.Text = chuxeDTO.dienthoai
+            txtDiaChi.Text = chuxeDTO.diachi
+            txtEmail.Text = chuxeDTO.email
+            txtHieuXe.Text = hieuxeDTO.tenhieuxe
+        End If
         Dim currentRowIndex As Integer = dgvDanhSachSuaXe.CurrentCellAddress.Y 'current row selected
 
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachSuaXe.RowCount) Then
@@ -140,9 +156,5 @@ Public Class frmQuanLySuaXe
 
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
-    End Sub
-
-    Private Sub dgvDanhSachSuaXe_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachSuaXe.CellContentClick
-
     End Sub
 End Class

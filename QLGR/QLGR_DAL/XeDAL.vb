@@ -281,4 +281,42 @@ Public Class XeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+    Public Function select_byMaXe(maxe As Integer, ByRef XeDTO As XeDTO) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT [maxe], [mahieuxe], [machuxe],[bienso] "
+        query &= " FROM [tblXe] "
+        query &= " WHERE "
+        query &= " [maxe] = @maxe "
+
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@maxe", maxe)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            XeDTO = New XeDTO(reader("maxe"), reader("mahieuxe"), reader("machuxe"), reader("bienso"))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy theo Mã Xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
 End Class

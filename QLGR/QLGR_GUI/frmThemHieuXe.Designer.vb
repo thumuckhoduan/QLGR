@@ -33,16 +33,16 @@ Partial Class frmThemHieuXe
         '
         'txbMaHieuXe
         '
-        Me.txbMaHieuXe.Location = New System.Drawing.Point(213, 51)
+        Me.txbMaHieuXe.Location = New System.Drawing.Point(121, 22)
         Me.txbMaHieuXe.Name = "txbMaHieuXe"
         Me.txbMaHieuXe.ReadOnly = True
-        Me.txbMaHieuXe.Size = New System.Drawing.Size(268, 20)
+        Me.txbMaHieuXe.Size = New System.Drawing.Size(174, 20)
         Me.txbMaHieuXe.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(97, 58)
+        Me.Label1.Location = New System.Drawing.Point(12, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 1
@@ -50,7 +50,7 @@ Partial Class frmThemHieuXe
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(160, 143)
+        Me.btLuu.Location = New System.Drawing.Point(28, 109)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(75, 23)
         Me.btLuu.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class frmThemHieuXe
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(97, 96)
+        Me.Label2.Location = New System.Drawing.Point(12, 71)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 3
@@ -68,14 +68,14 @@ Partial Class frmThemHieuXe
         '
         'txbTenHieuXe
         '
-        Me.txbTenHieuXe.Location = New System.Drawing.Point(213, 89)
+        Me.txbTenHieuXe.Location = New System.Drawing.Point(121, 64)
         Me.txbTenHieuXe.Name = "txbTenHieuXe"
-        Me.txbTenHieuXe.Size = New System.Drawing.Size(268, 20)
+        Me.txbTenHieuXe.Size = New System.Drawing.Size(174, 20)
         Me.txbTenHieuXe.TabIndex = 4
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(385, 143)
+        Me.btDong.Location = New System.Drawing.Point(254, 109)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 5
@@ -86,7 +86,7 @@ Partial Class frmThemHieuXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 219)
+        Me.ClientSize = New System.Drawing.Size(370, 153)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.txbTenHieuXe)
         Me.Controls.Add(Me.Label2)

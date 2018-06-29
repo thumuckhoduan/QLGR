@@ -35,13 +35,11 @@ Public Class frmBaoCaoTon
             If (result.FlagResult = False) Then
                 MessageBox.Show("Tính số lượng phụ tùng đã bán không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 System.Console.WriteLine(result.SystemMessage)
-                Return
             End If
             result = nhapphutung.nhapthem(thang, nam, baocao)
             If (result.FlagResult = False) Then
                 MessageBox.Show("Tính số lượng phụ tùng đã nhập không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 System.Console.WriteLine(result.SystemMessage)
-                Return
             End If
             thang = thang + 1
             If (thang = 13) Then
@@ -87,13 +85,11 @@ Public Class frmBaoCaoTon
         If (result.FlagResult = False) Then
             MessageBox.Show("Tính số lượng phụ tùng đã bán không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
         result = nhapphutung.nhapthem(cbThang.Text, cbNam.Text, baocao)
         If (result.FlagResult = False) Then
             MessageBox.Show("Tính số lượng phụ tùng đã nhập không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
         For Each item In baocao
             item.toncuoi = item.tondau + item.nhapthem - item.ban
@@ -187,13 +183,17 @@ Public Class frmBaoCaoTon
         Dim result As Result
         Dim nextma = 0
         result = baocaotonBUS.buildmabaocaoton(nextma)
+        If (result.FlagResult = True) Then
+        Else
+            MessageBox.Show("Thêm mã báo cáo tồn không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
         baocaotonDTO.mabaocaoton = nextma
         baocaotonDTO.thang = cbThang.Text
         baocaotonDTO.nam = cbNam.Text
         baocaotonDTO.ngaytao = Now
         result = baocaotonBUS.insert(baocaotonDTO)
         If (result.FlagResult = True) Then
-            MessageBox.Show("Lập báo cáo thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             MessageBox.Show("Lập báo cáo không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -221,6 +221,6 @@ Public Class frmBaoCaoTon
                 System.Console.WriteLine(result.SystemMessage)
             End If
         Next
-
+        MessageBox.Show("Lập Báo Cáo thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

@@ -214,7 +214,7 @@ Partial Class frmTiepNhanSuaXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(454, 450)
+        Me.ClientSize = New System.Drawing.Size(454, 429)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btDong)

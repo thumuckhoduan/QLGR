@@ -18,8 +18,6 @@ Public Class frmPhieuSuaChua
         result = phieusuachuaBUS.buildmaphieusuachua(nextMPSC)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-
         End If
         txtMaPhieuSuaChua.Text = nextMPSC
 
@@ -32,7 +30,6 @@ Public Class frmPhieuSuaChua
             MessageBox.Show("Lấy danh sách xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
-            Return
         End If
         cbMaXe.DataSource = New BindingSource(listXe, String.Empty)
         cbBienSo.DataSource = cbMaXe.DataSource
@@ -49,7 +46,6 @@ Public Class frmPhieuSuaChua
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
-            Return
         End If
         cbTenChuXe.DataSource = New BindingSource(listChuXe, String.Empty)
         cbTenChuXe.DisplayMember = "tenchuxe"
@@ -71,7 +67,6 @@ Public Class frmPhieuSuaChua
             MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
             Me.Close()
-            Return
         End If
         cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
         cbBienSo.DisplayMember = "bienso"
@@ -96,23 +91,17 @@ Public Class frmPhieuSuaChua
         result = phieusuachuaBUS.insert(phieusuachuaDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Thêm phiếu sửa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'set auto
             Dim nextMPSC = "1"
             result = phieusuachuaBUS.buildmaphieusuachua(nextMPSC)
             If (result.FlagResult = False) Then
                 MessageBox.Show("Lấy danh tự động phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Me.Close()
-                Return
             End If
             txtMaPhieuSuaChua.Text = nextMPSC
         Else
             MessageBox.Show("Thêm phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
-
-
-
-
     End Sub
 
 
@@ -129,11 +118,6 @@ Public Class frmPhieuSuaChua
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
     End Sub
-
-    Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
-
-    End Sub
-
     Private Sub btChiTietSuaChua_Click_1(sender As Object, e As EventArgs) Handles btChiTietSuaChua.Click
         Me.Hide()
         Dim frm As frmChiTietSuaChua

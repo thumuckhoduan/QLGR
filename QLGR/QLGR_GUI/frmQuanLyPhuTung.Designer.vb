@@ -52,7 +52,7 @@ Partial Class frmQuanLyPhuTung
         '
         Me.dgvDanhSachPhuTung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(140, 36)
+        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(99, 36)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
         Me.dgvDanhSachPhuTung.ReadOnly = True
         Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(362, 213)
@@ -155,7 +155,7 @@ Partial Class frmQuanLyPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(598, 450)
+        Me.ClientSize = New System.Drawing.Size(552, 450)
         Me.Controls.Add(Me.txtDonGia)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btXoa)

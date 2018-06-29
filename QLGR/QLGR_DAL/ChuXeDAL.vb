@@ -184,4 +184,39 @@ Public Class ChuXeDAL
         End Using
         Return New Result(True)
     End Function
+
+    Public Function select_byMaChuXe(machuxe As Integer, ByRef chuxeDTO As ChuXeDTO) As Result
+        Dim query As String = String.Empty
+        query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno] "
+        query &= " FROM [tblChuXe] "
+        query &= " WHERE [machuxe]=@machuxe"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@machuxe", machuxe)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            chuxeDTO = New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno"))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy theo mã chủ xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class

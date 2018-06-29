@@ -34,7 +34,9 @@
         Dim frm As frmQuanLyChuXe = New frmQuanLyChuXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLyXe_Click(sender As Object, e As EventArgs) Handles pbQuanLyXe.Click

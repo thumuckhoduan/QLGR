@@ -17,7 +17,6 @@ Public Class frmQuanLyHieuXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách hiệu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvDanhSachHieuXe.Columns.Clear()
@@ -79,7 +78,6 @@ Public Class frmQuanLyHieuXe
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)
                     End Try
-
                     MessageBox.Show("Cập nhật Hiệu Xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     MessageBox.Show("Cập nhật Hiệu Xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -97,7 +95,6 @@ Public Class frmQuanLyHieuXe
             Select Case MsgBox("Bạn có thực sự muốn xóa hiệu xe có mã: " + txbMaHieuXe.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
-
                         Dim result As Result
                         result = hieuxeBUS.delete(Convert.ToInt32(txbMaHieuXe.Text))
                         If (result.FlagResult = True) Then
@@ -129,7 +126,6 @@ Public Class frmQuanLyHieuXe
                 Case MsgBoxResult.No
                     Return
             End Select
-
         End If
     End Sub
 

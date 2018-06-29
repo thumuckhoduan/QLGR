@@ -39,6 +39,12 @@ Public Class XeBUS
         '2. insert to DB
         Return XeDAL.selectALL_ByMaChuXe(iMaChuXe, listXe)
     End Function
+    Public Function select_byMaXe(imaxe As Integer, ByRef XeDTO As XeDTO) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return XeDAL.select_byMaXe(imaxe, XeDTO)
+    End Function
     Public Function tracuu(chuxe As String, hieuxe As String, bienso As String, tiennomin As String, tiennomax As String, ByRef timkiem As List(Of TimKiemDTO)) As Result
         '1. verify data here!!
 

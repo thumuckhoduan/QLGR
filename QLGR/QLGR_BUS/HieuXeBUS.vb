@@ -16,6 +16,10 @@ Public Class HieuXeBUS
 
         Return hieuxeDAL.selectALL(listhieuxe)
     End Function
+    Public Function select_byMaHieuXe(mahieuxe As Integer, ByRef hieuxeDTO As HieuXeDTO) As Result
+
+        Return hieuxeDAL.select_byMaHieuXe(mahieuxe, hieuxeDTO)
+    End Function
     Public Function buildMaHieuXe(ByRef nextMHX As Integer) As Result
         Return hieuxeDAL.buildMaHieuXe(nextMHX)
     End Function
@@ -27,5 +31,8 @@ Public Class HieuXeBUS
     End Function
     Public Function change(hieuxe As HieuXeDTO) As Result
         Return hieuxeDAL.change(hieuxe)
+    End Function
+    Public Function kiemtra(hieuxeDTO As HieuXeDTO) As Result
+        Return hieuxeDAL.kiemtra(hieuxeDTO)
     End Function
 End Class

@@ -7,26 +7,26 @@ Public Class frmDangKyTaiKhoan
     Private Sub btDangKy_Click(sender As Object, e As EventArgs) Handles btDangKy.Click
         Dim taikhoanDTO = New TaiKhoanDTO()
         Dim result As Result
+
+        If (txtTaiKhoan.Text.Length >= 5 And txtTaiKhoan.Text.Length <= 10) Then
+        Else
+            MessageBox.Show("Tên tài khoản chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+        If (txtMatKhau.Text.Length >= 5 And txtMatKhau.Text.Length <= 10) Then
+        Else
+            MessageBox.Show("Tên mật khẩu chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         taikhoanDTO.taikhoan = txtTaiKhoan.Text
         taikhoanDTO.matkhau = txtMatKhau.Text
         taikhoanDTO.quyen = cbQuyen.Text
-        If (txtTaiKhoan.Text.Length >= 6 And txtTaiKhoan.Text.Length <= 10) Then
-            MessageBox.Show("Tên tài khoản chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        Else
-        End If
-        If (txtMatKhau.Text.Length >= 6 And txtMatKhau.Text.Length <= 10) Then
-        Else
-            MessageBox.Show("Tên mật khẩu chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
         result = taikhoanBUS.insert(taikhoanDTO)
         If (result.FlagResult = False) Then
-            MessageBox.Show("Đăng Ký không thành công thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Đăng Ký không thành công ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         Else
-            MessageBox.Show("Đăng Ký thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Đăng Ký Tài Khoản thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             System.Console.WriteLine(result.SystemMessage)
         End If
     End Sub

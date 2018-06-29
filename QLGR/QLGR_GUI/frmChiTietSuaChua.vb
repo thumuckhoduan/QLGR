@@ -14,11 +14,17 @@ Public Class frmChiTietSuaChua
         phutungBUS = New PhuTungBUS()
         listphutung = New List(Of PhuTungDTO)
         listphieu = New List(Of PhieuSuaChuaDTO)
+        Dim result As Result
         cbSoluongTon.Hide()
         cbDonGia.Hide()
         list = New List(Of dgvChiTietSuaChua)
         phieusuachuaBUS = New PhieuSuaChuaBUS()
-        phieusuachuaBUS.selectAll(listphieu)
+        result = phieusuachuaBUS.selectAll(listphieu)
+        If (Result.FlagResult = True) Then
+        Else
+            MessageBox.Show("Thêm list phiếu sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(Result.SystemMessage)
+        End If
         cbMaPhieuSuaChua.DataSource = New BindingSource(listphieu, String.Empty)
         cbMaPhieuSuaChua.DisplayMember = "maphieusuachua"
         cbMaPhieuSuaChua.ValueMember = "maphieusuachua"
@@ -55,15 +61,15 @@ Public Class frmChiTietSuaChua
     End Sub
 
 
-
-    Private Sub dgvChiTietSuaChua_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
     Private Sub loaddgv()
         Dim maphieu = Convert.ToInt32(cbMaPhieuSuaChua.SelectedValue)
-        chitietsuachuaBUS.selectAll_bymaphieu(maphieu, list)
-
+        Dim result As Result
+        result = chitietsuachuaBUS.selectAll_bymaphieu(maphieu, list)
+        If (result.FlagResult = True) Then
+        Else
+            MessageBox.Show("Thêm list phiếu sữa chữa theo mã phiếu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
 
         dgvChiTietSuaChua.Columns.Clear()
         dgvChiTietSuaChua.DataSource = Nothing
@@ -135,6 +141,7 @@ Public Class frmChiTietSuaChua
     End Sub
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+
         If ((IsNumeric(txbSoLuong.Text) Or txbSoLuong.Text = vbNullString) And txbSoLuong.Text > "0") Then
         Else
             MessageBox.Show("Số Lượng Phải Là Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -145,10 +152,12 @@ Public Class frmChiTietSuaChua
             MessageBox.Show("Tiền Công Phải Là Số Không Âm", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
+
         Dim test = True
         Dim chitiet = New ChiTietSuaChuaDTO
         Dim phutung = New PhuTungDTO()
         Dim thanhtien As Integer
+        Dim result As Result
         thanhtien = 0
         For Each item In list
             If (item.maphutung = cbMaPhuTung.Text) Then
@@ -158,13 +167,22 @@ Public Class frmChiTietSuaChua
                 chitiet.soluong = txbSoLuong.Text
                 chitiet.dongia = txbDonGia.Text
                 chitiet.tiencong = txbTienCong.Text
-                chitietsuachuaBUS.update(chitiet)
-
+                result = chitietsuachuaBUS.update(chitiet)
+                If (result.FlagResult = True) Then
+                Else
+                    MessageBox.Show("Cập Nhật chi tiết sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
                 phutung.maphutung = cbMaPhuTung.Text
                 phutung.tenphutung = cbTenPhuTung.Text
                 phutung.soluongton = cbSoluongTon.Text - txbSoLuong.Text + item.soluong
                 phutung.dongia = cbDonGia.Text
-                phutungBUS.update(phutung)
+                result = phutungBUS.update(phutung)
+                If (result.FlagResult = True) Then
+                Else
+                    MessageBox.Show("Cập Nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
                 test = False
             End If
         Next
@@ -178,13 +196,22 @@ Public Class frmChiTietSuaChua
             chitiet.soluong = txbSoLuong.Text
             chitiet.dongia = txbDonGia.Text
             chitiet.tiencong = txbTienCong.Text
-            chitietsuachuaBUS.insert(chitiet)
-
+            result = chitietsuachuaBUS.insert(chitiet)
+            If (result.FlagResult = True) Then
+            Else
+                MessageBox.Show("Thêm chi tiết sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                System.Console.WriteLine(result.SystemMessage)
+            End If
             phutung.maphutung = cbMaPhuTung.Text
             phutung.tenphutung = cbTenPhuTung.Text
             phutung.soluongton = cbSoluongTon.Text - txbSoLuong.Text
             phutung.dongia = cbDonGia.Text
-            phutungBUS.update(phutung)
+            result = phutungBUS.update(phutung)
+            If (result.FlagResult = True) Then
+            Else
+                MessageBox.Show("Cập Nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                System.Console.WriteLine(result.SystemMessage)
+            End If
         End If
 
         loaddgv()
@@ -192,7 +219,12 @@ Public Class frmChiTietSuaChua
         For Each item In list
             thanhtien = thanhtien + item.soluong * item.dongia + item.tiencong
         Next
-        phieusuachuaBUS.update(cbMaPhieuSuaChua.Text, thanhtien)
+        result = phieusuachuaBUS.update(cbMaPhieuSuaChua.Text, thanhtien)
+        If (result.FlagResult = True) Then
+        Else
+            MessageBox.Show("Cập Nhật phiếu sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
     End Sub
 
     Private Sub btXoa_Click(sender As Object, e As EventArgs) Handles btXoa.Click
@@ -218,8 +250,12 @@ Public Class frmChiTietSuaChua
                         phutungDTO.tenphutung = phutung.tenphutung
                         phutungDTO.soluongton = cbSoluongTon.Text + phutung.soluong
                         phutungDTO.dongia = phutung.dongia
-                        phutungBUS.update(phutungDTO)
-
+                        result = phutungBUS.update(phutungDTO)
+                        If (result.FlagResult = True) Then
+                        Else
+                            MessageBox.Show("Cập Nhật phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            System.Console.WriteLine(result.SystemMessage)
+                        End If
                         result = chitietsuachuaBUS.delete(maphieu)
 
 
@@ -238,7 +274,6 @@ Public Class frmChiTietSuaChua
                                 dgvChiTietSuaChua.Rows(currentRowIndex).Selected = True
                             End If
 
-                            MessageBox.Show("Xóa chi tiết sữa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Else
                             MessageBox.Show("Xóa chi tiết sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             System.Console.WriteLine(result.SystemMessage)
@@ -249,8 +284,7 @@ Public Class frmChiTietSuaChua
                 Case MsgBoxResult.No
                     Return
             End Select
-
-
+            MessageBox.Show("Xóa chi tiết sữa chữa thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -263,14 +297,8 @@ Public Class frmChiTietSuaChua
     End Sub
 
     Private Sub dgvChiTietSuaChua_SelectionChanged(sender As Object, e As EventArgs) Handles dgvChiTietSuaChua.SelectionChanged
-        ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvChiTietSuaChua.CurrentCellAddress.Y 'current row selected
-        'Dim x As Integer = dgvListHS.CurrentCellAddress.X 'curent column selected
 
-        ' Write coordinates to console for debugging
-        'Console.WriteLine(y.ToString + " " + x.ToString)
-
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvChiTietSuaChua.RowCount) Then
             Try
                 Dim phutung = CType(dgvChiTietSuaChua.Rows(currentRowIndex).DataBoundItem, dgvChiTietSuaChua)
@@ -284,5 +312,9 @@ Public Class frmChiTietSuaChua
             End Try
 
         End If
+    End Sub
+
+    Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
+        Me.Close()
     End Sub
 End Class

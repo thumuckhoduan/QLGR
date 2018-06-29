@@ -52,16 +52,16 @@ Partial Class frmQuanLyXe
         'dgvQuanLyXe
         '
         Me.dgvQuanLyXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvQuanLyXe.Location = New System.Drawing.Point(231, 37)
+        Me.dgvQuanLyXe.Location = New System.Drawing.Point(60, 37)
         Me.dgvQuanLyXe.Name = "dgvQuanLyXe"
         Me.dgvQuanLyXe.ReadOnly = True
-        Me.dgvQuanLyXe.Size = New System.Drawing.Size(380, 194)
+        Me.dgvQuanLyXe.Size = New System.Drawing.Size(444, 194)
         Me.dgvQuanLyXe.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(231, 21)
+        Me.Label1.Location = New System.Drawing.Point(12, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 1
@@ -69,7 +69,7 @@ Partial Class frmQuanLyXe
         '
         'btnXoa
         '
-        Me.btnXoa.Location = New System.Drawing.Point(372, 489)
+        Me.btnXoa.Location = New System.Drawing.Point(225, 489)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(75, 23)
         Me.btnXoa.TabIndex = 35
@@ -78,7 +78,7 @@ Partial Class frmQuanLyXe
         '
         'btnCapNhat
         '
-        Me.btnCapNhat.Location = New System.Drawing.Point(157, 489)
+        Me.btnCapNhat.Location = New System.Drawing.Point(30, 489)
         Me.btnCapNhat.Name = "btnCapNhat"
         Me.btnCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btnCapNhat.TabIndex = 34
@@ -87,7 +87,7 @@ Partial Class frmQuanLyXe
         '
         'txtMaXe
         '
-        Me.txtMaXe.Location = New System.Drawing.Point(348, 253)
+        Me.txtMaXe.Location = New System.Drawing.Point(241, 256)
         Me.txtMaXe.Name = "txtMaXe"
         Me.txtMaXe.ReadOnly = True
         Me.txtMaXe.Size = New System.Drawing.Size(184, 20)
@@ -97,7 +97,7 @@ Partial Class frmQuanLyXe
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(249, 261)
+        Me.Label3.Location = New System.Drawing.Point(107, 256)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 32
@@ -105,14 +105,14 @@ Partial Class frmQuanLyXe
         '
         'txtBienSo
         '
-        Me.txtBienSo.Location = New System.Drawing.Point(348, 391)
+        Me.txtBienSo.Location = New System.Drawing.Point(241, 393)
         Me.txtBienSo.Name = "txtBienSo"
         Me.txtBienSo.Size = New System.Drawing.Size(184, 20)
         Me.txtBienSo.TabIndex = 46
         '
         'txtDienThoai
         '
-        Me.txtDienThoai.Location = New System.Drawing.Point(348, 452)
+        Me.txtDienThoai.Location = New System.Drawing.Point(241, 455)
         Me.txtDienThoai.Name = "txtDienThoai"
         Me.txtDienThoai.ReadOnly = True
         Me.txtDienThoai.Size = New System.Drawing.Size(184, 20)
@@ -120,7 +120,7 @@ Partial Class frmQuanLyXe
         '
         'txtDiaChi
         '
-        Me.txtDiaChi.Location = New System.Drawing.Point(348, 419)
+        Me.txtDiaChi.Location = New System.Drawing.Point(241, 420)
         Me.txtDiaChi.Name = "txtDiaChi"
         Me.txtDiaChi.ReadOnly = True
         Me.txtDiaChi.Size = New System.Drawing.Size(184, 20)
@@ -129,7 +129,7 @@ Partial Class frmQuanLyXe
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(249, 394)
+        Me.Label8.Location = New System.Drawing.Point(107, 391)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 13)
         Me.Label8.TabIndex = 41
@@ -138,7 +138,7 @@ Partial Class frmQuanLyXe
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(249, 455)
+        Me.Label6.Location = New System.Drawing.Point(107, 455)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 13)
         Me.Label6.TabIndex = 40
@@ -147,7 +147,7 @@ Partial Class frmQuanLyXe
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(249, 422)
+        Me.Label5.Location = New System.Drawing.Point(107, 419)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 13)
         Me.Label5.TabIndex = 39
@@ -156,7 +156,7 @@ Partial Class frmQuanLyXe
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(249, 364)
+        Me.Label4.Location = New System.Drawing.Point(107, 364)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 38
@@ -165,7 +165,7 @@ Partial Class frmQuanLyXe
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(249, 282)
+        Me.Label7.Location = New System.Drawing.Point(107, 282)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 13)
         Me.Label7.TabIndex = 36
@@ -174,7 +174,7 @@ Partial Class frmQuanLyXe
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(249, 308)
+        Me.Label2.Location = New System.Drawing.Point(107, 314)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 37
@@ -184,7 +184,7 @@ Partial Class frmQuanLyXe
         '
         Me.cbMaHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaHieuXe.FormattingEnabled = True
-        Me.cbMaHieuXe.Location = New System.Drawing.Point(348, 279)
+        Me.cbMaHieuXe.Location = New System.Drawing.Point(241, 284)
         Me.cbMaHieuXe.Name = "cbMaHieuXe"
         Me.cbMaHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbMaHieuXe.TabIndex = 49
@@ -193,14 +193,14 @@ Partial Class frmQuanLyXe
         '
         Me.cbHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbHieuXe.FormattingEnabled = True
-        Me.cbHieuXe.Location = New System.Drawing.Point(348, 306)
+        Me.cbHieuXe.Location = New System.Drawing.Point(241, 311)
         Me.cbHieuXe.Name = "cbHieuXe"
         Me.cbHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbHieuXe.TabIndex = 50
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(616, 489)
+        Me.btDong.Location = New System.Drawing.Point(446, 489)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 51
@@ -211,7 +211,7 @@ Partial Class frmQuanLyXe
         '
         Me.cbMaChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaChuXe.FormattingEnabled = True
-        Me.cbMaChuXe.Location = New System.Drawing.Point(348, 331)
+        Me.cbMaChuXe.Location = New System.Drawing.Point(241, 336)
         Me.cbMaChuXe.Name = "cbMaChuXe"
         Me.cbMaChuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbMaChuXe.TabIndex = 52
@@ -219,24 +219,24 @@ Partial Class frmQuanLyXe
         'cbDiaChi
         '
         Me.cbDiaChi.FormattingEnabled = True
-        Me.cbDiaChi.Location = New System.Drawing.Point(538, 419)
+        Me.cbDiaChi.Location = New System.Drawing.Point(444, 419)
         Me.cbDiaChi.Name = "cbDiaChi"
-        Me.cbDiaChi.Size = New System.Drawing.Size(175, 21)
+        Me.cbDiaChi.Size = New System.Drawing.Size(51, 21)
         Me.cbDiaChi.TabIndex = 54
         '
         'cbDienThoai
         '
         Me.cbDienThoai.FormattingEnabled = True
-        Me.cbDienThoai.Location = New System.Drawing.Point(538, 452)
+        Me.cbDienThoai.Location = New System.Drawing.Point(444, 454)
         Me.cbDienThoai.Name = "cbDienThoai"
-        Me.cbDienThoai.Size = New System.Drawing.Size(175, 21)
+        Me.cbDienThoai.Size = New System.Drawing.Size(51, 21)
         Me.cbDienThoai.TabIndex = 55
         '
         'cbChuXe
         '
         Me.cbChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbChuXe.FormattingEnabled = True
-        Me.cbChuXe.Location = New System.Drawing.Point(348, 361)
+        Me.cbChuXe.Location = New System.Drawing.Point(241, 361)
         Me.cbChuXe.Name = "cbChuXe"
         Me.cbChuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbChuXe.TabIndex = 58
@@ -244,7 +244,7 @@ Partial Class frmQuanLyXe
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(249, 334)
+        Me.Label9.Location = New System.Drawing.Point(107, 339)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 13)
         Me.Label9.TabIndex = 59
@@ -254,7 +254,7 @@ Partial Class frmQuanLyXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(865, 524)
+        Me.ClientSize = New System.Drawing.Size(533, 524)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cbChuXe)
         Me.Controls.Add(Me.cbDienThoai)

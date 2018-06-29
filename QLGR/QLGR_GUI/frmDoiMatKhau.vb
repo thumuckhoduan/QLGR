@@ -14,7 +14,6 @@ Public Class frmDoiMatKhau
         If (result.FlagResult = False) Then
             MessageBox.Show("Lỗi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
         If (test) Then
             MessageBox.Show("Tài Khoản Hoặc Mật Khẩu không chính xác", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -29,11 +28,9 @@ Public Class frmDoiMatKhau
         If (result.FlagResult = True) Then
             MessageBox.Show("Bạn Đã Đổi Mật Khẩu Thành Công", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         Else
             MessageBox.Show("Lỗi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
     End Sub
 
@@ -44,13 +41,5 @@ Public Class frmDoiMatKhau
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
     End Sub
 End Class

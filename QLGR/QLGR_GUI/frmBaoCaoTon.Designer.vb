@@ -78,7 +78,7 @@ Partial Class frmBaoCaoTon
         '
         'btnLapBaoCao
         '
-        Me.btnLapBaoCao.Location = New System.Drawing.Point(173, 415)
+        Me.btnLapBaoCao.Location = New System.Drawing.Point(89, 415)
         Me.btnLapBaoCao.Name = "btnLapBaoCao"
         Me.btnLapBaoCao.Size = New System.Drawing.Size(98, 23)
         Me.btnLapBaoCao.TabIndex = 5
@@ -87,7 +87,7 @@ Partial Class frmBaoCaoTon
         '
         'btnDong
         '
-        Me.btnDong.Location = New System.Drawing.Point(441, 415)
+        Me.btnDong.Location = New System.Drawing.Point(496, 415)
         Me.btnDong.Name = "btnDong"
         Me.btnDong.Size = New System.Drawing.Size(75, 23)
         Me.btnDong.TabIndex = 6

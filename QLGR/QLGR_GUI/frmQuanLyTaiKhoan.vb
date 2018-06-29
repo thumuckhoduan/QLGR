@@ -17,7 +17,6 @@ Public Class frmQuanLyTaiKhoan
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách tai khoan không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvQuanLyTaiKhoan.Columns.Clear()
@@ -52,21 +51,21 @@ Public Class frmQuanLyTaiKhoan
 
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
         Dim test = False
-        If (txtTaiKhoan.Text.Length >= 6 And txtTaiKhoan.Text.Length <= 10) Then
+        If (txtTaiKhoan.Text.Length >= 5 And txtTaiKhoan.Text.Length <= 10) Then
             test = True
         End If
         If (test) Then
         Else
-            MessageBox.Show("Tên tài khoản chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Tên tài khoản chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
         test = False
-        If (txtMatKhau.Text.Length >= 6 And txtMatKhau.Text.Length <= 10) Then
+        If (txtMatKhau.Text.Length >= 5 And txtMatKhau.Text.Length <= 10) Then
             test = True
         End If
         If (test) Then
         Else
-            MessageBox.Show("Tên mật khẩu chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Tên mật khẩu chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
         Dim currentRowIndex As Integer = dgvQuanLyTaiKhoan.CurrentCellAddress.Y
@@ -148,6 +147,7 @@ Public Class frmQuanLyTaiKhoan
                         Else
                             MessageBox.Show("Xóa tài khoản không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             System.Console.WriteLine(result.SystemMessage)
+
                         End If
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)

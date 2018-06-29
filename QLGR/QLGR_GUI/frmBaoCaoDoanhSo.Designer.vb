@@ -38,7 +38,7 @@ Partial Class frmBaoCaoDoanhSo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(123, 37)
+        Me.Label1.Location = New System.Drawing.Point(31, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 14)
         Me.Label1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.cbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbThang.FormattingEnabled = True
-        Me.cbThang.Location = New System.Drawing.Point(197, 27)
+        Me.cbThang.Location = New System.Drawing.Point(93, 27)
         Me.cbThang.Name = "cbThang"
         Me.cbThang.Size = New System.Drawing.Size(121, 22)
         Me.cbThang.TabIndex = 1
@@ -56,7 +56,7 @@ Partial Class frmBaoCaoDoanhSo
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(377, 37)
+        Me.Label2.Location = New System.Drawing.Point(350, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 14)
         Me.Label2.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class frmBaoCaoDoanhSo
         'dgvDoanhThu
         '
         Me.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDoanhThu.Location = New System.Drawing.Point(147, 104)
+        Me.dgvDoanhThu.Location = New System.Drawing.Point(64, 103)
         Me.dgvDoanhThu.Name = "dgvDoanhThu"
         Me.dgvDoanhThu.Size = New System.Drawing.Size(467, 286)
         Me.dgvDoanhThu.TabIndex = 4
@@ -73,7 +73,7 @@ Partial Class frmBaoCaoDoanhSo
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(243, 77)
+        Me.Label3.Location = New System.Drawing.Point(159, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 14)
         Me.Label3.TabIndex = 5
@@ -82,7 +82,7 @@ Partial Class frmBaoCaoDoanhSo
         'lbTongDoanhThu
         '
         Me.lbTongDoanhThu.AutoSize = True
-        Me.lbTongDoanhThu.Location = New System.Drawing.Point(366, 77)
+        Me.lbTongDoanhThu.Location = New System.Drawing.Point(325, 77)
         Me.lbTongDoanhThu.Name = "lbTongDoanhThu"
         Me.lbTongDoanhThu.Size = New System.Drawing.Size(13, 14)
         Me.lbTongDoanhThu.TabIndex = 6
@@ -90,7 +90,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(172, 421)
+        Me.btLuu.Location = New System.Drawing.Point(34, 421)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(100, 25)
         Me.btLuu.TabIndex = 7
@@ -99,7 +99,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(474, 421)
+        Me.btDong.Location = New System.Drawing.Point(476, 421)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 25)
         Me.btDong.TabIndex = 8
@@ -110,7 +110,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNam.FormattingEnabled = True
-        Me.cbNam.Location = New System.Drawing.Point(493, 33)
+        Me.cbNam.Location = New System.Drawing.Point(419, 35)
         Me.cbNam.Name = "cbNam"
         Me.cbNam.Size = New System.Drawing.Size(121, 22)
         Me.cbNam.TabIndex = 9
@@ -119,7 +119,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 485)
+        Me.ClientSize = New System.Drawing.Size(613, 472)
         Me.Controls.Add(Me.cbNam)
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.btLuu)

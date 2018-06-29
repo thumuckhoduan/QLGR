@@ -25,7 +25,6 @@ Public Class frmQuanLyPhieuSuaChua
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvPhieuSuaChua.Columns.Clear()
@@ -142,7 +141,6 @@ Public Class frmQuanLyPhieuSuaChua
                 Case MsgBoxResult.No
                     Return
             End Select
-
         End If
     End Sub
 
@@ -165,9 +163,5 @@ Public Class frmQuanLyPhieuSuaChua
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
     End Sub
 End Class

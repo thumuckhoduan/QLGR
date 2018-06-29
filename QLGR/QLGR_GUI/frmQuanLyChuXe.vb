@@ -20,7 +20,6 @@ Public Class frmQuanLyChuXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvDanhSachChuXe.Columns.Clear()
@@ -86,19 +85,16 @@ Public Class frmQuanLyChuXe
         End If
         If (txtDienThoai.Text = vbNullString And txtEmail.Text = vbNullString) Then
             MessageBox.Show("Không Được để trống điện thoại hoặc email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Return
         End If
         ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvDanhSachChuXe.CurrentCellAddress.Y 'current row selected
 
 
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachChuXe.RowCount) Then
             Try
                 Dim chuXeDTO As ChuXeDTO
                 chuXeDTO = New ChuXeDTO()
 
-                '1. Mapping data from GUI control
                 chuXeDTO.machuxe = Convert.ToInt32(txtMaChuXe.Text)
                 chuXeDTO.tenchuxe = txtTenChuXe.Text
                 chuXeDTO.diachi = txtDiaChi.Text
@@ -107,14 +103,11 @@ Public Class frmQuanLyChuXe
                 chuXeDTO.tienno = txtTienNo.Text
 
 
-                '3. Insert to DB
 
                 Dim result As Result
                 result = chuxeBUS.update(chuXeDTO)
                 If (result.FlagResult = True) Then
-                    ' Re-Load LoaiHocSinh list
                     loadListChuXe()
-                    ' Hightlight the row has been updated on table
                     dgvDanhSachChuXe.Rows(currentRowIndex).Selected = True
                     Try
                         chuXeDTO = CType(dgvDanhSachChuXe.Rows(currentRowIndex).DataBoundItem, ChuXeDTO)
@@ -141,25 +134,20 @@ Public Class frmQuanLyChuXe
     End Sub
 
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
-        ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvDanhSachChuXe.CurrentCellAddress.Y 'current row selected
 
 
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachChuXe.RowCount) Then
             Select Case MsgBox("Bạn có thực sự muốn xóa xe có mã: " + txtMaChuXe.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
 
-                        '1. Delete from DB
                         Dim result As Result
                         result = chuxeBUS.delete(Convert.ToInt32(txtMaChuXe.Text))
                         If (result.FlagResult = True) Then
 
-                            ' Re-Load LoaiHocSinh list
                             loadListChuXe()
 
-                            ' Hightlight the next row on table
                             If (currentRowIndex >= dgvDanhSachChuXe.Rows.Count) Then
                                 currentRowIndex = currentRowIndex - 1
                             End If
@@ -198,14 +186,8 @@ Public Class frmQuanLyChuXe
     End Sub
 
     Private Sub dgvDanhSachChuXe_SelectionChanged(sender As Object, e As EventArgs) Handles dgvDanhSachChuXe.SelectionChanged
-        ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvDanhSachChuXe.CurrentCellAddress.Y 'current row selected
-        'Dim x As Integer = dgvQuanLyXe.CurrentCellAddress.X 'curent column selected
 
-        ' Write coordinates to console for debugging
-        'Console.WriteLine(y.ToString + " " + x.ToString)
-
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachChuXe.RowCount) Then
             Try
                 Dim chuxeDTO = CType(dgvDanhSachChuXe.Rows(currentRowIndex).DataBoundItem, ChuXeDTO)
@@ -220,9 +202,5 @@ Public Class frmQuanLyChuXe
             End Try
 
         End If
-    End Sub
-
-    Private Sub dgvDanhSachChuXe_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDanhSachChuXe.CellContentClick
-
     End Sub
 End Class

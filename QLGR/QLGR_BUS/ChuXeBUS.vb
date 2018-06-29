@@ -21,6 +21,12 @@ Public Class ChuXeBUS
         '2. insert to DB
         Return ChuXeDAL.selectALL(listChuXe)
     End Function
+    Public Function select_byMaChuXe(machuxe As Integer, ByRef chuxeDTO As ChuXeDTO) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return ChuXeDAL.select_byMaChuXe(machuxe, chuxeDTO)
+    End Function
     Public Function update(ChuXeDTO As ChuXeDTO) As Result
         '1. verify data here!!
 

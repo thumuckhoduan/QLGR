@@ -41,7 +41,6 @@ Public Class frmBaoCaoDoanhSo
         baocaodoanhsoDTO.ngaytao = Now
         result = baocaodoanhsoBUS.insert(baocaodoanhsoDTO)
         If (result.FlagResult = True) Then
-            MessageBox.Show("Thêm doanh số thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             MessageBox.Show("Thêm doanh số không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -68,7 +67,7 @@ Public Class frmBaoCaoDoanhSo
                 System.Console.WriteLine(result.SystemMessage)
             End If
         Next
-
+        MessageBox.Show("Lập Báo Cáo thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
         Me.Close()
@@ -79,7 +78,6 @@ Public Class frmBaoCaoDoanhSo
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách báo cáo không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvDoanhThu.DataSource = Nothing
@@ -149,6 +147,11 @@ Public Class frmBaoCaoDoanhSo
         lbTongDoanhThu.Text = "0"
         Dim result As Result
         result = phieusuachuaBUS.tongthanhtien(cbThang.Text, cbNam.Text, lbTongDoanhThu.Text)
+        If (result.FlagResult = True) Then
+        Else
+            MessageBox.Show("Tính Tổng Thành tiền không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
         change()
     End Sub
 End Class

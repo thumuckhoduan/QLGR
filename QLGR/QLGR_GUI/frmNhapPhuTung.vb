@@ -14,10 +14,9 @@ Public Class frmNhapPhuTung
         Dim nhapphutungBUS As NhapPhuTungBUS
         nhapphutungBUS = New NhapPhuTungBUS()
         result = nhapphutungBUS.buildmanhapphutung(nextMNPT)
-        'If (result.FlagResult = False) Then
-        '    MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return
-        'End If
+        If (result.FlagResult = False) Then
+            MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
         txtMaNhapPhuTung.Text = nextMNPT
         loadphutung()
 
@@ -31,11 +30,11 @@ Public Class frmNhapPhuTung
         phutungBUS = New PhuTungBUS()
         Dim listPhuTung = New List(Of PhuTungDTO)
         result = phutungBUS.selectAll(listPhuTung)
-        'If (Result.FlagResult = False) Then
-        '    MessageBox.Show("Lấy danh sách PhuTung không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    System.Console.WriteLine(Result.SystemMessage)
-        '    Me.Close()
-        'End If
+        If (result.FlagResult = False) Then
+            MessageBox.Show("Lấy danh sách Phụ Tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+            Me.Close()
+        End If
         cbMaPhuTung.DataSource = New BindingSource(listPhuTung, String.Empty)
         cbTenPhuTung.DataSource = cbMaPhuTung.DataSource
         cbMaPhuTung.DisplayMember = "maphutung"
@@ -49,7 +48,6 @@ Public Class frmNhapPhuTung
         cbDonGia.DataSource = cbMaPhuTung.DataSource
         cbMaPhuTung.ValueMember = "dongia"
         cbDonGia.DisplayMember = cbMaPhuTung.ValueMember
-        Return True
     End Function
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
@@ -71,15 +69,12 @@ Public Class frmNhapPhuTung
         nhapphutungDTO.dongia = cbDonGia.Text
         result = nhapphutungBUS.insert(nhapphutungDTO)
         If (result.FlagResult = True) Then
-            MessageBox.Show("Thêm nhập phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'set auto
             Dim nextMNPT = "1"
             result = nhapphutungBUS.buildmanhapphutung(nextMNPT)
-            'If (result.FlagResult = False) Then
-            '    MessageBox.Show("Lấy danh tự động nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            '    Me.Close()
-            '    Return
-            'End If
+            If (result.FlagResult = False) Then
+                MessageBox.Show("Lấy danh tự động nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
+            End If
             txtMaNhapPhuTung.Text = nextMNPT
         Else
             MessageBox.Show("Thêm nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -97,15 +92,12 @@ Public Class frmNhapPhuTung
         phutungDTO.dongia = cbDonGia.Text
         result = phutungBUS.update(phutungDTO)
         If (result.FlagResult = True) Then
-            'MessageBox.Show("Thêm phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-
+            MessageBox.Show("Thêm phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-            MessageBox.Show("Thêm phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
         loadphutung()
-
     End Sub
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
@@ -114,9 +106,5 @@ Public Class frmNhapPhuTung
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
         txtDonGia.Text = cbDonGia.Text
-    End Sub
-
-    Private Sub txtSoLuong_TextChanged(sender As Object, e As EventArgs) Handles txtSoLuong.TextChanged
-
     End Sub
 End Class

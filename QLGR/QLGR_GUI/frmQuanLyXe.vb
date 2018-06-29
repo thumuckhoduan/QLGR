@@ -21,8 +21,6 @@ Public Class frmQuanLyXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách hiệu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-            Return
         End If
         cbMaHieuXe.DataSource = New BindingSource(listHieuXe, String.Empty)
         cbHieuXe.DataSource = cbMaHieuXe.DataSource
@@ -37,8 +35,6 @@ Public Class frmQuanLyXe
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách chu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-            Return
         End If
         cbMaChuXe.DataSource = New BindingSource(listChuXe, String.Empty)
         cbChuXe.DataSource = cbMaChuXe.DataSource
@@ -59,14 +55,13 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub loadListXe()
-        ' Load LoaiXe list
+
         Dim listXe = New List(Of XeDTO)
         Dim result As Result
         result = xeBUS.selectAll(listXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
-            Return
         End If
 
         dgvQuanLyXe.Columns.Clear()
@@ -107,31 +102,26 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btnCapNhat.Click
-        ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvQuanLyXe.CurrentCellAddress.Y 'current row selected
 
 
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvQuanLyXe.RowCount) Then
             Try
                 Dim xeDTO As XeDTO
                 xeDTO = New XeDTO()
 
-                '1. Mapping data from GUI control
                 xeDTO.maxe = Convert.ToInt32(txtMaXe.Text)
                 xeDTO.mahieuxe = Convert.ToInt32(cbMaHieuXe.Text)
                 xeDTO.machuxe = Convert.ToInt32(cbMaChuXe.Text)
                 xeDTO.bienso = txtBienSo.Text
 
 
-                '3. Insert to DB
-
                 Dim result As Result
                 result = xeBUS.update(xeDTO)
                 If (result.FlagResult = True) Then
-                    ' Re-Load LoaiHocSinh list
+
                     loadListXe()
-                    ' Hightlight the row has been updated on table
+
                     dgvQuanLyXe.Rows(currentRowIndex).Selected = True
                     Try
                         xeDTO = CType(dgvQuanLyXe.Rows(currentRowIndex).DataBoundItem, XeDTO)
@@ -156,14 +146,8 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub dgvQuanLyXe_SelectionChanged(sender As Object, e As EventArgs) Handles dgvQuanLyXe.SelectionChanged
-        ' Get the current cell location.
-        Dim currentRowIndex As Integer = dgvQuanLyXe.CurrentCellAddress.Y 'current row selected
-        'Dim x As Integer = dgvQuanLyXe.CurrentCellAddress.X 'curent column selected
+        Dim currentRowIndex As Integer = dgvQuanLyXe.CurrentCellAddress.Y
 
-        ' Write coordinates to console for debugging
-        'Console.WriteLine(y.ToString + " " + x.ToString)
-
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvQuanLyXe.RowCount) Then
             Try
                 Dim xeDTO = CType(dgvQuanLyXe.Rows(currentRowIndex).DataBoundItem, XeDTO)
@@ -183,25 +167,20 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
-        ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvQuanLyXe.CurrentCellAddress.Y 'current row selected
 
 
-        'Verify that indexing OK
         If (-1 < currentRowIndex And currentRowIndex < dgvQuanLyXe.RowCount) Then
             Select Case MsgBox("Bạn có thực sự muốn xóa xe có mã: " + txtMaXe.Text, MsgBoxStyle.YesNo, "Information")
                 Case MsgBoxResult.Yes
                     Try
 
-                        '1. Delete from DB
                         Dim result As Result
                         result = xeBUS.delete(Convert.ToInt32(txtMaXe.Text))
                         If (result.FlagResult = True) Then
 
-                            ' Re-Load LoaiHocSinh list
                             loadListXe()
 
-                            ' Hightlight the next row on table
                             If (currentRowIndex >= dgvQuanLyXe.Rows.Count) Then
                                 currentRowIndex = currentRowIndex - 1
                             End If
@@ -237,11 +216,6 @@ Public Class frmQuanLyXe
         Me.Close()
     End Sub
 
-    Private Sub cbChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbChuXe.SelectedIndexChanged
-
-
-
-    End Sub
 
     Private Sub cbDienThoai_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDienThoai.SelectedIndexChanged
         txtDienThoai.Text = cbDienThoai.Text
@@ -252,7 +226,4 @@ Public Class frmQuanLyXe
         txtDiaChi.Text = cbDiaChi.Text
     End Sub
 
-    Private Sub cbHieuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHieuXe.SelectedIndexChanged
-
-    End Sub
 End Class
