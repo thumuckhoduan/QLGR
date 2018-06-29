@@ -80,6 +80,7 @@ Partial Class frmQuanLyPhieuSuaChua
         '
         Me.txtMaXe.Location = New System.Drawing.Point(329, 274)
         Me.txtMaXe.Name = "txtMaXe"
+        Me.txtMaXe.ReadOnly = True
         Me.txtMaXe.Size = New System.Drawing.Size(200, 20)
         Me.txtMaXe.TabIndex = 4
         '
@@ -87,6 +88,7 @@ Partial Class frmQuanLyPhieuSuaChua
         '
         Me.txtThanhTien.Location = New System.Drawing.Point(329, 300)
         Me.txtThanhTien.Name = "txtThanhTien"
+        Me.txtThanhTien.ReadOnly = True
         Me.txtThanhTien.Size = New System.Drawing.Size(200, 20)
         Me.txtThanhTien.TabIndex = 5
         '
@@ -94,6 +96,7 @@ Partial Class frmQuanLyPhieuSuaChua
         '
         Me.txtMaPhieuSuaChua.Location = New System.Drawing.Point(329, 222)
         Me.txtMaPhieuSuaChua.Name = "txtMaPhieuSuaChua"
+        Me.txtMaPhieuSuaChua.ReadOnly = True
         Me.txtMaPhieuSuaChua.Size = New System.Drawing.Size(200, 20)
         Me.txtMaPhieuSuaChua.TabIndex = 4
         '
@@ -187,7 +190,7 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.Controls.Add(Me.dgvPhieuSuaChua)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyPhieuSuaChua"
-        Me.Text = "QuanLyPhieuSuaXe"
+        Me.Text = "Quản Lý Phiếu Sửa  Chữa"
         CType(Me.dgvPhieuSuaChua, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

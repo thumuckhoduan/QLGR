@@ -24,14 +24,18 @@ Public Class frmUser
         Dim frm As frmPhieuThuTien = New frmPhieuThuTien()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbPhieuSuaChua_Click(sender As Object, e As EventArgs) Handles pbPhieuSuaChua.Click
         Dim frm As frmPhieuSuaChua = New frmPhieuSuaChua()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbDangXuat_Click(sender As Object, e As EventArgs) Handles pbDangXuat.Click
@@ -42,21 +46,27 @@ Public Class frmUser
         Dim frm As frmChiTietSuaChua = New frmChiTietSuaChua()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbTiepNhanSuaXe_Click(sender As Object, e As EventArgs) Handles pbTiepNhanSuaXe.Click
         Dim frm As frmTiepNhanSuaXe = New frmTiepNhanSuaXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbNhapPhuTung_Click(sender As Object, e As EventArgs) Handles pbNhapPhuTung.Click
         Dim frm As frmNhapPhuTung = New frmNhapPhuTung()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub frmUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

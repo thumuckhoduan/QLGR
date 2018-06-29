@@ -157,7 +157,7 @@ Partial Class frmQuanLySuaXe
         Me.Controls.Add(Me.txbMaSuaXe)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLySuaXe"
-        Me.Text = "Quản Lý Sữa Xe"
+        Me.Text = "Quản Lý Sửa Xe"
         CType(Me.dgvDanhSachSuaXe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

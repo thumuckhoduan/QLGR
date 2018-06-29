@@ -37,6 +37,7 @@ Partial Class frmPhieuSuaChua
         Me.cbMaChuXe = New System.Windows.Forms.ComboBox()
         Me.dtpNgaySuaChua = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btChiTietSuaChua = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -85,7 +86,7 @@ Partial Class frmPhieuSuaChua
         '
         'btLuu
         '
-        Me.btLuu.Location = New System.Drawing.Point(129, 172)
+        Me.btLuu.Location = New System.Drawing.Point(61, 190)
         Me.btLuu.Name = "btLuu"
         Me.btLuu.Size = New System.Drawing.Size(66, 29)
         Me.btLuu.TabIndex = 25
@@ -94,7 +95,7 @@ Partial Class frmPhieuSuaChua
         '
         'btThoat
         '
-        Me.btThoat.Location = New System.Drawing.Point(263, 172)
+        Me.btThoat.Location = New System.Drawing.Point(332, 190)
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(66, 29)
         Me.btThoat.TabIndex = 27
@@ -159,11 +160,21 @@ Partial Class frmPhieuSuaChua
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "Ngày Sửa Chữa"
         '
+        'btChiTietSuaChua
+        '
+        Me.btChiTietSuaChua.Location = New System.Drawing.Point(173, 190)
+        Me.btChiTietSuaChua.Name = "btChiTietSuaChua"
+        Me.btChiTietSuaChua.Size = New System.Drawing.Size(111, 29)
+        Me.btChiTietSuaChua.TabIndex = 65
+        Me.btChiTietSuaChua.Text = "Chi Tiết Sửa Chữa"
+        Me.btChiTietSuaChua.UseVisualStyleBackColor = True
+        '
         'frmPhieuSuaChua
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(411, 231)
+        Me.ClientSize = New System.Drawing.Size(481, 231)
+        Me.Controls.Add(Me.btChiTietSuaChua)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.dtpNgaySuaChua)
         Me.Controls.Add(Me.cbMaChuXe)
@@ -180,7 +191,7 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPhieuSuaChua"
-        Me.Text = "frmPhieuSuaChua"
+        Me.Text = "Phiếu Sửa Chữa"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -200,4 +211,5 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents cbMaChuXe As ComboBox
     Friend WithEvents dtpNgaySuaChua As DateTimePicker
     Friend WithEvents Label5 As Label
+    Friend WithEvents btChiTietSuaChua As Button
 End Class

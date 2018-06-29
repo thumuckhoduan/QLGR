@@ -298,7 +298,7 @@ Partial Class frmQuanLyXe
         Me.Controls.Add(Me.dgvQuanLyXe)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyXe"
-        Me.Text = "frmQuanLyXe"
+        Me.Text = "Quản Lý Xe"
         CType(Me.dgvQuanLyXe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

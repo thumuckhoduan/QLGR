@@ -111,9 +111,7 @@ Public Class frmPhieuSuaChua
         End If
 
 
-        Dim frm As frmChiTietSuaChua
-        frm = New frmChiTietSuaChua()
-        frm.Show()
+
 
     End Sub
 
@@ -134,5 +132,13 @@ Public Class frmPhieuSuaChua
 
     Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub btChiTietSuaChua_Click_1(sender As Object, e As EventArgs) Handles btChiTietSuaChua.Click
+        Me.Hide()
+        Dim frm As frmChiTietSuaChua
+        frm = New frmChiTietSuaChua()
+        frm.ShowDialog()
+        Me.Show()
     End Sub
 End Class

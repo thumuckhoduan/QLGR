@@ -25,7 +25,9 @@
         Dim frm As frmQuanLyHieuXe = New frmQuanLyHieuXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLyChuXe_Click(sender As Object, e As EventArgs) Handles pbQuanLyChuXe.Click
@@ -39,28 +41,36 @@
         Dim frm As frmQuanLyXe = New frmQuanLyXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLyPhieuSuaChua_Click(sender As Object, e As EventArgs) Handles pbQuanLyPhieuSuaChua.Click
         Dim frm As frmQuanLyPhieuSuaChua = New frmQuanLyPhieuSuaChua()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbThemHieuXe_Click(sender As Object, e As EventArgs) Handles pbThemHieuXe.Click
         Dim frm As frmThemHieuXe = New frmThemHieuXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLySuaXe_Click(sender As Object, e As EventArgs) Handles pbQuanLySuaXe.Click
         Dim frm As frmQuanLySuaXe = New frmQuanLySuaXe()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbThemPhuTung_Click(sender As Object, e As EventArgs) Handles pbThemPhuTung.Click
@@ -74,21 +84,27 @@
         Dim frm As frmBaoCaoDoanhSo = New frmBaoCaoDoanhSo()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbBaoCaoTon_Click(sender As Object, e As EventArgs) Handles pbBaoCaoTon.Click
         Dim frm As frmBaoCaoTon = New frmBaoCaoTon()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLyPhuTung_Click(sender As Object, e As EventArgs) Handles pbQuanLyPhuTung.Click
         Dim frm As frmQuanLyPhuTung = New frmQuanLyPhuTung()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbDangXuat_Click(sender As Object, e As EventArgs) Handles pbDangXuat.Click
@@ -99,13 +115,17 @@
         Dim frm As frmTimKiem = New frmTimKiem()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbQuanLyQuyDinh_Click(sender As Object, e As EventArgs) Handles pbQuanLyQuyDinh.Click
         Dim frm As frmThayDoiQuyDInh = New frmThayDoiQuyDInh()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
         frm.ShowDialog()
+        Me.Show()
     End Sub
 End Class

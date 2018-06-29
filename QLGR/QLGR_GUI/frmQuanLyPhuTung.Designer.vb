@@ -171,7 +171,7 @@ Partial Class frmQuanLyPhuTung
         Me.Controls.Add(Me.Label3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmQuanLyPhuTung"
-        Me.Text = "QuanLyPhuTung"
+        Me.Text = "Quản Lý Phụ Tùng"
         CType(Me.dgvDanhSachPhuTung, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

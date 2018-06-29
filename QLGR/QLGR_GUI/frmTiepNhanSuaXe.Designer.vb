@@ -237,7 +237,7 @@ Partial Class frmTiepNhanSuaXe
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmTiepNhanSuaXe"
-        Me.Text = "TiepNhanSuaXe"
+        Me.Text = "Tiếp Nhận Sửa Xe"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

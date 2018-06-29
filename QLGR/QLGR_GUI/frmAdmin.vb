@@ -8,7 +8,9 @@ Public Class frmAdmin
         Dim frm = New frmDangKyTaiKhoan()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
-        frm.ShowDialog(Me)
+        Me.Hide()
+        frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub pbDangXuat_Click(sender As Object, e As EventArgs) Handles pbDangXuat.Click
@@ -19,7 +21,9 @@ Public Class frmAdmin
         Dim frm = New frmQuanLyTaiKhoan()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen
-        frm.ShowDialog(Me)
+        Me.Hide()
+        frm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub hienghichu(pb As PictureBox, str As String)
