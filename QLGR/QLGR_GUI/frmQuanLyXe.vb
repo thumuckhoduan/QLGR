@@ -7,10 +7,10 @@ Public Class frmQuanLyXe
     Private chuxeBUS As ChuXeBUS
 
     Private Sub frmQuanLyXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbHieuXe.Hide()
+
         cbDiaChi.Hide()
         cbDienThoai.Hide()
-        cbChuXe.Hide()
+
         xeBUS = New XeBUS()
         loadListXe()
         Dim result As Result
@@ -170,11 +170,11 @@ Public Class frmQuanLyXe
                 txtMaXe.Text = xeDTO.maxe
                 cbMaHieuXe.Text = xeDTO.mahieuxe
                 cbMaChuXe.Text = xeDTO.machuxe
-                txtChuXe.Text = cbChuXe.Text
+
                 txtBienSo.Text = xeDTO.bienso
                 txtDienThoai.Text = cbDienThoai.Text
                 txtDiaChi.Text = cbDiaChi.Text
-                txtHieuXe.Text = cbHieuXe.Text
+
             Catch ex As Exception
                 Console.WriteLine(ex.StackTrace)
             End Try
@@ -212,7 +212,7 @@ Public Class frmQuanLyXe
                                     txtMaXe.Text = xeDTO.maxe
                                     cbMaHieuXe.Text = xeDTO.mahieuxe
                                     txtBienSo.Text = xeDTO.bienso
-                                    txtChuXe.Text = xeDTO.machuxe
+                                    cbChuXe.Text = xeDTO.machuxe
 
                                 Catch ex As Exception
                                     Console.WriteLine(ex.StackTrace)
@@ -238,7 +238,7 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub cbChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbChuXe.SelectedIndexChanged
-        txtChuXe.Text = cbChuXe.Text
+
 
 
     End Sub
@@ -253,6 +253,6 @@ Public Class frmQuanLyXe
     End Sub
 
     Private Sub cbHieuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHieuXe.SelectedIndexChanged
-        txtHieuXe.Text = cbHieuXe.Text
+
     End Sub
 End Class
