@@ -7,13 +7,14 @@ Public Class frmTiepNhanSuaXe
     Private xeBUS As XeBUS
     Private hieuxeBUS As HieuXeBUS
     Private chuxeBUS As ChuXeBUS
+    Private thamsoBUS As ThamSoBUS
     Private Sub TiepNhanSuaXe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         suaxeBUS = New TiepNhanSuaXeBUS()
         xeBUS = New XeBUS()
         chuxeBUS = New ChuXeBUS()
         hieuxeBUS = New HieuXeBUS()
-
+        thamsoBUS = New ThamSoBUS()
         Dim nextMSX = 0
         Dim result As Result
         result = suaxeBUS.buildMaSuaXe(nextMSX)
@@ -49,8 +50,14 @@ Public Class frmTiepNhanSuaXe
         txtMaHieuXe.Text = hieuxeDTO.mahieuxe
     End Sub
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
-        If (suaxeBUS.isfull(dtpNgayTiepNhan.Value) = False) Then
-            Dim result1 As Result
+        Dim result As Result
+        Dim thamsoDTO = New ThamSoDTO()
+        result = thamsoBUS.selectAll(thamsoDTO)
+        If (result.FlagResult = False) Then
+            MessageBox.Show("Lấy Tham Số không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+        If (suaxeBUS.isfull(dtpNgayTiepNhan.Value, thamsoDTO.tiepnhantoida) = False) Then
 
             Dim xeDTO As XeDTO
             xeDTO = New XeDTO()
@@ -70,23 +77,23 @@ Public Class frmTiepNhanSuaXe
             chuxeDTO.email = txtEmail.Text
             chuxeDTO.tenchuxe = txtChuXe.Text
             chuxeDTO.tienno = "0"
-            result1 = chuxeBUS.buildMaChuXe(nextma)
+            result = chuxeBUS.buildMaChuXe(nextma)
             chuxeDTO.machuxe = nextma
 
             xeDTO.machuxe = nextma
-            result1 = xeBUS.buildMaXe(nextma)
+            result = xeBUS.buildMaXe(nextma)
             xeDTO.maxe = nextma
             xeDTO.mahieuxe = txtMaHieuXe.Text
             xeDTO.bienso = txtBienSo.Text
 
-            result1 = chuxeBUS.insert(chuxeDTO)
-            result1 = xeBUS.insert(xeDTO)
-            result1 = suaxeBUS.insert(SuaXeDTO)
+            result = chuxeBUS.insert(chuxeDTO)
+            result = xeBUS.insert(xeDTO)
+            result = suaxeBUS.insert(SuaXeDTO)
 
-            If (result1.FlagResult = True) Then
+            If (result.FlagResult = True) Then
                 MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                result1 = suaxeBUS.buildMaSuaXe(nextma)
-                If (result1.FlagResult = False) Then
+                result = suaxeBUS.buildMaSuaXe(nextma)
+                If (result.FlagResult = False) Then
                     MessageBox.Show("Lấy danh tự động mã sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Me.Close()
                     Return

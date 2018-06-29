@@ -214,4 +214,14 @@ Public Class TiepNhanSuaXeDAL
         Return New Result(True)
     End Function
 
+    Public Function isfull(ngaytiepnhan As DateTime, tiepnhantoida As Integer) As Boolean
+
+        Dim dem As Integer
+        demdonsuaxe(ngaytiepnhan, dem)
+        If (dem >= tiepnhantoida) Then
+            Return True
+        End If
+        Return False
+    End Function
+
 End Class

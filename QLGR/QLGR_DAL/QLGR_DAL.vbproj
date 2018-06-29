@@ -90,6 +90,7 @@
     <Compile Include="PhieuSuaChuaDAL.vb" />
     <Compile Include="PhieuThuTienDAL.vb" />
     <Compile Include="PhuTungDAL.vb" />
+    <Compile Include="ThamSoDAL.vb" />
     <Compile Include="TiepNhanSuaXeDAL.vb" />
     <Compile Include="TaiKhoanDAL.vb" />
     <Compile Include="XeDAL.vb" />

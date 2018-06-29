@@ -440,3 +440,4 @@ C:\Users\Administrator\Source\Repos\QLGR16\QLGR\QLGR_GUI\obj\Debug\QLGR_GUI.vbpr
 C:\Users\Administrator\Source\Repos\QLGR16\QLGR\QLGR_GUI\obj\Debug\QLGR.exe
 C:\Users\Administrator\Source\Repos\QLGR16\QLGR\QLGR_GUI\obj\Debug\QLGR.xml
 C:\Users\Administrator\Source\Repos\QLGR16\QLGR\QLGR_GUI\obj\Debug\QLGR.pdb
+C:\Users\vu\Desktop\QLGR\QLGR\QLGR_GUI\obj\Debug\QLGR.frmThayDoiQuyDInh.resources

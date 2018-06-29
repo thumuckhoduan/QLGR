@@ -35,6 +35,7 @@ Partial Class frmQuanLy
         Me.pbQuanLyXe = New System.Windows.Forms.PictureBox()
         Me.pbQuanLyPhieuSuaChua = New System.Windows.Forms.PictureBox()
         Me.pbQuanLyChuXe = New System.Windows.Forms.PictureBox()
+        Me.btThayDoiQuyDinh = New System.Windows.Forms.Button()
         CType(Me.pbTimKiem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbBaoCaoTon, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,11 +182,21 @@ Partial Class frmQuanLy
         Me.pbQuanLyChuXe.TabIndex = 28
         Me.pbQuanLyChuXe.TabStop = False
         '
+        'btThayDoiQuyDinh
+        '
+        Me.btThayDoiQuyDinh.Location = New System.Drawing.Point(247, 14)
+        Me.btThayDoiQuyDinh.Name = "btThayDoiQuyDinh"
+        Me.btThayDoiQuyDinh.Size = New System.Drawing.Size(125, 23)
+        Me.btThayDoiQuyDinh.TabIndex = 40
+        Me.btThayDoiQuyDinh.Text = "Thay Đổi Quy Định"
+        Me.btThayDoiQuyDinh.UseVisualStyleBackColor = True
+        '
         'frmQuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(649, 478)
+        Me.Controls.Add(Me.btThayDoiQuyDinh)
         Me.Controls.Add(Me.pbTimKiem)
         Me.Controls.Add(Me.pbDangXuat)
         Me.Controls.Add(Me.pbBaoCaoTon)
@@ -228,4 +239,5 @@ Partial Class frmQuanLy
     Friend WithEvents pbBaoCaoTon As PictureBox
     Friend WithEvents pbDangXuat As PictureBox
     Friend WithEvents pbTimKiem As PictureBox
+    Friend WithEvents btThayDoiQuyDinh As Button
 End Class

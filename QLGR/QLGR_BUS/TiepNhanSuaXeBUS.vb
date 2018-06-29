@@ -9,13 +9,8 @@ Public Class TiepNhanSuaXeBUS
     Public Sub New(connectionString As String)
         TiepNhanSuaXeDAL = New TiepNhanSuaXeDAL(connectionString)
     End Sub
-    Public Function isfull(ngaytiepnhan As DateTime) As Boolean
-        Dim dem As Integer
-        demdonsuaxe(ngaytiepnhan, dem)
-        If (dem >= 30) Then
-            Return True
-        End If
-        Return False
+    Public Function isfull(ngaytiepnhan As DateTime, tiepnhantoida As Integer) As Boolean
+        Return TiepNhanSuaXeDAL.isfull(ngaytiepnhan, tiepnhantoida)
     End Function
     Public Function insert(s As TiepNhanSuaXeDTO) As Result
         Return TiepNhanSuaXeDAL.insert(s)
