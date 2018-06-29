@@ -72,6 +72,16 @@ QLGR
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:QLGR.My.Resources.Resources.phieuthutien_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:QLGR.My.Resources.Resources.quanly">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:QLGR.My.Resources.Resources.quanlychuxe">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -113,6 +123,11 @@ QLGR
 </summary>
 </member>
 <member name="P:QLGR.My.Resources.Resources.themhieuxe">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:QLGR.My.Resources.Resources.themhieuxe_2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

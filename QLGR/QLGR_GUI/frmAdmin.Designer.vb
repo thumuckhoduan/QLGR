@@ -36,7 +36,7 @@ Partial Class frmAdmin
         '
         Me.pbDangXuat.ErrorImage = Global.QLGR.My.Resources.Resources.close
         Me.pbDangXuat.Image = Global.QLGR.My.Resources.Resources.close
-        Me.pbDangXuat.Location = New System.Drawing.Point(84, 218)
+        Me.pbDangXuat.Location = New System.Drawing.Point(12, 218)
         Me.pbDangXuat.Name = "pbDangXuat"
         Me.pbDangXuat.Size = New System.Drawing.Size(100, 97)
         Me.pbDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
