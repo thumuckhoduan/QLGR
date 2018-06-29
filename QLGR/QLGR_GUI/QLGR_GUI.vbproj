@@ -369,6 +369,7 @@
     <Content Include="Picture4 %281%29.ico" />
     <Content Include="Resources\phieuthutien_2.png" />
     <None Include="Resources\phieuthutien_21.png" />
+    <None Include="Resources\Picture1.png" />
     <Content Include="Resources\quanly.png" />
     <None Include="Resources\quanly1.png" />
     <Content Include="Resources\themhieuxe_2.png" />
