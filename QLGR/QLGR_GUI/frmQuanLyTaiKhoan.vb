@@ -51,6 +51,24 @@ Public Class frmQuanLyTaiKhoan
     End Sub
 
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+        Dim test = False
+        If (txtTaiKhoan.Text.Length >= 6 And txtTaiKhoan.Text.Length <= 10) Then
+            test = True
+        End If
+        If (test) Then
+        Else
+            MessageBox.Show("Tên tài khoản chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+        test = False
+        If (txtMatKhau.Text.Length >= 6 And txtMatKhau.Text.Length <= 10) Then
+            test = True
+        End If
+        If (test) Then
+        Else
+            MessageBox.Show("Tên mật khẩu chỉ từ 6 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         Dim currentRowIndex As Integer = dgvQuanLyTaiKhoan.CurrentCellAddress.Y
         Dim taikhoan = CType(dgvQuanLyTaiKhoan.Rows(currentRowIndex).DataBoundItem, TaiKhoanDTO)
 

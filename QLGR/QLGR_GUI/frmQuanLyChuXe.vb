@@ -73,6 +73,21 @@ Public Class frmQuanLyChuXe
     End Sub
 
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btnCapNhat.Click
+        If (txtTenChuXe.Text = vbNullString) Then
+            MessageBox.Show("Không Được Để trống tên chủ xe", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+
+        If (IsNumeric(txtDienThoai.Text) Or txtDienThoai.Text = vbNullString) Then
+        Else
+            MessageBox.Show("Điện Thoại Phải Là Số", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+        If (txtDienThoai.Text = vbNullString And txtEmail.Text = vbNullString) Then
+            MessageBox.Show("Không Được để trống điện thoại hoặc email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvDanhSachChuXe.CurrentCellAddress.Y 'current row selected
 

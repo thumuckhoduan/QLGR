@@ -76,6 +76,7 @@ Partial Class frmPhieuSuaChua
         '
         'cbTenChuXe
         '
+        Me.cbTenChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenChuXe.FormattingEnabled = True
         Me.cbTenChuXe.Location = New System.Drawing.Point(129, 59)
         Me.cbTenChuXe.Name = "cbTenChuXe"
@@ -102,6 +103,7 @@ Partial Class frmPhieuSuaChua
         '
         'cbBienSo
         '
+        Me.cbBienSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBienSo.FormattingEnabled = True
         Me.cbBienSo.Location = New System.Drawing.Point(129, 86)
         Me.cbBienSo.Name = "cbBienSo"

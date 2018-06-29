@@ -200,6 +200,7 @@ Partial Class frmQuanLyXe
         '
         'cbMaHieuXe
         '
+        Me.cbMaHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaHieuXe.FormattingEnabled = True
         Me.cbMaHieuXe.Location = New System.Drawing.Point(348, 279)
         Me.cbMaHieuXe.Name = "cbMaHieuXe"
@@ -225,6 +226,7 @@ Partial Class frmQuanLyXe
         '
         'cbMaChuXe
         '
+        Me.cbMaChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaChuXe.FormattingEnabled = True
         Me.cbMaChuXe.Location = New System.Drawing.Point(348, 331)
         Me.cbMaChuXe.Name = "cbMaChuXe"

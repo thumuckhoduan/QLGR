@@ -86,6 +86,7 @@ Partial Class frmNhapPhuTung
         '
         'cbMaPhuTung
         '
+        Me.cbMaPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaPhuTung.FormattingEnabled = True
         Me.cbMaPhuTung.Location = New System.Drawing.Point(226, 52)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
@@ -94,6 +95,7 @@ Partial Class frmNhapPhuTung
         '
         'cbTenPhuTung
         '
+        Me.cbTenPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenPhuTung.FormattingEnabled = True
         Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 93)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
@@ -188,7 +190,7 @@ Partial Class frmNhapPhuTung
         Me.Font = New System.Drawing.Font("Times New Roman", 9.0!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmNhapPhuTung"
-        Me.Text = "Nhập Vật Liệu"
+        Me.Text = "Nhập Phụ Tùng"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

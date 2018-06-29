@@ -135,6 +135,16 @@ Public Class frmChiTietSuaChua
     End Sub
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+        If ((IsNumeric(txbSoLuong.Text) Or txbSoLuong.Text = vbNullString) And txbSoLuong.Text > "0") Then
+        Else
+            MessageBox.Show("Số Lượng Phải Là Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+        If ((IsNumeric(txbTienCong.Text) Or txbTienCong.Text = vbNullString) And txbSoLuong.Text >= "0") Then
+        Else
+            MessageBox.Show("Tiền Công Phải Là Số Không Âm", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim test = True
         Dim chitiet = New ChiTietSuaChuaDTO
         Dim phutung = New PhuTungDTO()

@@ -53,6 +53,11 @@ Public Class frmNhapPhuTung
     End Function
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
+        If ((IsNumeric(txtSoLuong.Text) Or txtSoLuong.Text = vbNullString) And txtSoLuong.Text > "0") Then
+        Else
+            MessageBox.Show("Số Lượng Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim result As Result
         Dim nhapphutungBUS As NhapPhuTungBUS
         nhapphutungBUS = New NhapPhuTungBUS()
@@ -65,7 +70,7 @@ Public Class frmNhapPhuTung
         nhapphutungDTO.ngaytiepnhan = dtpNgayTiepNhan.Value
         nhapphutungDTO.dongia = cbDonGia.Text
         result = nhapphutungBUS.insert(nhapphutungDTO)
-        If (Result.FlagResult = True) Then
+        If (result.FlagResult = True) Then
             MessageBox.Show("Thêm nhập phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             'set auto
             Dim nextMNPT = "1"
@@ -78,7 +83,7 @@ Public Class frmNhapPhuTung
             txtMaNhapPhuTung.Text = nextMNPT
         Else
             MessageBox.Show("Thêm nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(Result.SystemMessage)
+            System.Console.WriteLine(result.SystemMessage)
         End If
 
         Dim phutungBUS As PhuTungBUS
@@ -109,5 +114,9 @@ Public Class frmNhapPhuTung
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
         txtDonGia.Text = cbDonGia.Text
+    End Sub
+
+    Private Sub txtSoLuong_TextChanged(sender As Object, e As EventArgs) Handles txtSoLuong.TextChanged
+
     End Sub
 End Class

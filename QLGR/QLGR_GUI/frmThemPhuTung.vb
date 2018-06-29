@@ -5,6 +5,7 @@ Public Class frmThemPhuTung
     Private phutungBUS As PhuTungBUS
 
     Private Sub frmThemPhuTung_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         phutungBUS = New PhuTungBUS()
         Dim nextMPT = 0
         Dim result As Result
@@ -19,6 +20,10 @@ Public Class frmThemPhuTung
         txbTenPhuTung.Text = String.Empty
     End Sub
     Private Sub btThem_Click(sender As Object, e As EventArgs) Handles btThem.Click
+        If (txbTenPhuTung.Text = vbNullString) Then
+            MessageBox.Show("Không Được Để trống tên Phụ Tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO
         phutungDTO.maphutung = txbMaPhuTung.Text

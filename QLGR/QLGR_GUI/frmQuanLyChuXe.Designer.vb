@@ -135,6 +135,7 @@ Partial Class frmQuanLyChuXe
         '
         Me.txtTienNo.Location = New System.Drawing.Point(300, 393)
         Me.txtTienNo.Name = "txtTienNo"
+        Me.txtTienNo.ReadOnly = True
         Me.txtTienNo.Size = New System.Drawing.Size(184, 20)
         Me.txtTienNo.TabIndex = 73
         '
@@ -151,6 +152,7 @@ Partial Class frmQuanLyChuXe
         '
         Me.txtMaChuXe.Location = New System.Drawing.Point(300, 257)
         Me.txtMaChuXe.Name = "txtMaChuXe"
+        Me.txtMaChuXe.ReadOnly = True
         Me.txtMaChuXe.Size = New System.Drawing.Size(184, 20)
         Me.txtMaChuXe.TabIndex = 74
         '

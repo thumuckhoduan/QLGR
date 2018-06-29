@@ -89,6 +89,11 @@ Public Class frmPhieuThuTien
     End Sub
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
+        If ((IsNumeric(txtSoTienThu.Text) Or txtSoTienThu.Text = vbNullString) And txtSoTienThu.Text > "0") Then
+        Else
+            MessageBox.Show("Số Tiền Thu Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim phieuthuDTO As PhieuThuTienDTO
         phieuthuDTO = New PhieuThuTienDTO()
         Dim chuxeDTO As ChuXeDTO
@@ -123,8 +128,6 @@ Public Class frmPhieuThuTien
                 Return
             End If
             txtMaPhieuThuTien.Text = nextMPTT
-
-
         Else
             MessageBox.Show("Thêm phiếu thu tiền không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -134,7 +137,6 @@ Public Class frmPhieuThuTien
         chuxeBUS = New ChuXeBUS()
         result = chuxeBUS.update(chuxeDTO)
         If (result.FlagResult = True) Then
-            MessageBox.Show("Cộng số tiền thu thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             MessageBox.Show("Cộng số tiền thu không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)

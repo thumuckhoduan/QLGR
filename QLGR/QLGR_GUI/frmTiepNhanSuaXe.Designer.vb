@@ -150,7 +150,7 @@ Partial Class frmTiepNhanSuaXe
         '
         'txtDienThoai
         '
-        Me.txtDienThoai.Location = New System.Drawing.Point(192, 239)
+        Me.txtDienThoai.Location = New System.Drawing.Point(192, 246)
         Me.txtDienThoai.Name = "txtDienThoai"
         Me.txtDienThoai.Size = New System.Drawing.Size(184, 20)
         Me.txtDienThoai.TabIndex = 12

@@ -123,10 +123,10 @@
     <Compile Include="frmQuanLy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThayDoiQuyDInh.Designer.vb">
-      <DependentUpon>frmThayDoiQuyDInh.vb</DependentUpon>
+    <Compile Include="frmThayDoiQuyDinh.Designer.vb">
+      <DependentUpon>frmThayDoiQuyDinh.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmThayDoiQuyDInh.vb">
+    <Compile Include="frmThayDoiQuyDinh.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUser.Designer.vb">
@@ -260,8 +260,8 @@
     <EmbeddedResource Include="frmQuanLy.resx">
       <DependentUpon>frmQuanLy.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThayDoiQuyDInh.resx">
-      <DependentUpon>frmThayDoiQuyDInh.vb</DependentUpon>
+    <EmbeddedResource Include="frmThayDoiQuyDinh.resx">
+      <DependentUpon>frmThayDoiQuyDinh.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.vb</DependentUpon>

@@ -122,6 +122,15 @@ Public Class frmQuanLyPhuTung
     End Sub
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+        If (txbTenPhuTung.Text = vbNullString) Then
+            MessageBox.Show("Không Được Để trống tên phụ tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+        If ((IsNumeric(txtDonGia.Text) Or txtDonGia.Text = vbNullString) And txtDonGia.Text >= "0") Then
+        Else
+            MessageBox.Show("Số Lượng Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim currentRowIndex As Integer = dgvDanhSachPhuTung.CurrentCellAddress.Y
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachPhuTung.RowCount) Then
             Try

@@ -71,6 +71,7 @@ Partial Class frmPhieuThuTien
         '
         'cbTenChuXe
         '
+        Me.cbTenChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenChuXe.FormattingEnabled = True
         Me.cbTenChuXe.Location = New System.Drawing.Point(201, 70)
         Me.cbTenChuXe.Name = "cbTenChuXe"
@@ -173,6 +174,7 @@ Partial Class frmPhieuThuTien
         '
         'cbMaChuXe
         '
+        Me.cbMaChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaChuXe.FormattingEnabled = True
         Me.cbMaChuXe.Location = New System.Drawing.Point(201, 43)
         Me.cbMaChuXe.Name = "cbMaChuXe"
@@ -222,6 +224,7 @@ Partial Class frmPhieuThuTien
         '
         'cbBienSo
         '
+        Me.cbBienSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBienSo.FormattingEnabled = True
         Me.cbBienSo.Location = New System.Drawing.Point(201, 97)
         Me.cbBienSo.Name = "cbBienSo"

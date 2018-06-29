@@ -56,6 +56,10 @@ Public Class frmQuanLyHieuXe
         End If
     End Sub
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
+        If (txbTenHieuXe.Text = vbNullString) Then
+            MessageBox.Show("Không Được Để trống tên Phụ Tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim currentRowIndex As Integer = dgvDanhSachHieuXe.CurrentCellAddress.Y
         If (-1 < currentRowIndex And currentRowIndex < dgvDanhSachHieuXe.RowCount) Then
             Try

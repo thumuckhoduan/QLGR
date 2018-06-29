@@ -54,6 +54,7 @@ Partial Class frmQuanLyPhuTung
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(140, 36)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
+        Me.dgvDanhSachPhuTung.ReadOnly = True
         Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(362, 213)
         Me.dgvDanhSachPhuTung.TabIndex = 9
         '
@@ -85,7 +86,7 @@ Partial Class frmQuanLyPhuTung
         '
         'txbTenPhuTung
         '
-        Me.txbTenPhuTung.Location = New System.Drawing.Point(245, 293)
+        Me.txbTenPhuTung.Location = New System.Drawing.Point(245, 297)
         Me.txbTenPhuTung.Name = "txbTenPhuTung"
         Me.txbTenPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbTenPhuTung.TabIndex = 13
@@ -94,6 +95,7 @@ Partial Class frmQuanLyPhuTung
         '
         Me.txbSoLuongTon.Location = New System.Drawing.Point(245, 332)
         Me.txbSoLuongTon.Name = "txbSoLuongTon"
+        Me.txbSoLuongTon.ReadOnly = True
         Me.txbSoLuongTon.Size = New System.Drawing.Size(237, 20)
         Me.txbSoLuongTon.TabIndex = 14
         '
