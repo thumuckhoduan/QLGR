@@ -23,17 +23,17 @@ Partial Class frmUser
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUser))
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.pbDangXuat = New System.Windows.Forms.PictureBox()
         Me.pbChiTietSuaChua = New System.Windows.Forms.PictureBox()
         Me.pbTiepNhanSuaXe = New System.Windows.Forms.PictureBox()
         Me.pbNhapPhuTung = New System.Windows.Forms.PictureBox()
         Me.pbPhieuSuaChua = New System.Windows.Forms.PictureBox()
         Me.pbPhieuThuTien = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChiTietSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTiepNhanSuaXe, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +41,51 @@ Partial Class frmUser
         CType(Me.pbPhieuSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(130, 85)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(109, 15)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Tiếp Nhận Sửa Chữa"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(130, 188)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(97, 15)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "Chi Tiết Sửa Chữa"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(130, 291)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 15)
+        Me.Label3.TabIndex = 39
+        Me.Label3.Text = "Nhập Phụ Tùng"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(409, 85)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(104, 15)
+        Me.Label4.TabIndex = 40
+        Me.Label4.Text = "Lập Phiếu Thu Tiền"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(409, 187)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(106, 15)
+        Me.Label5.TabIndex = 41
+        Me.Label5.Text = "Lập Phiếu Sửa Chữa"
         '
         'pbDangXuat
         '
@@ -107,51 +152,6 @@ Partial Class frmUser
         Me.pbPhieuThuTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbPhieuThuTien.TabIndex = 30
         Me.pbPhieuThuTien.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(135, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 15)
-        Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Tiếp Nhận Sửa Chữa"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(135, 148)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 15)
-        Me.Label2.TabIndex = 38
-        Me.Label2.Text = "Chi Tiết Sửa Chữa"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(135, 251)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 15)
-        Me.Label3.TabIndex = 39
-        Me.Label3.Text = "Nhập Phụ Tùng"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(414, 45)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 15)
-        Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Lập Phiếu Thu Tiền"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(414, 147)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(106, 15)
-        Me.Label5.TabIndex = 41
-        Me.Label5.Text = "Lập Phiếu Sửa Chữa"
         '
         'frmUser
         '

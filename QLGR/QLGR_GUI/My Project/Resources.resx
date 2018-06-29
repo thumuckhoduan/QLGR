@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="quanly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quanly1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="phieuthutien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phieuthutien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quanlyhieuxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quanlyhieuxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="themhieuxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\themhieuxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +133,8 @@
   <data name="quanlyphieusuachua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quanlyphieusuachua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="timkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\timkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dangkytaikhoan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangkytaikhoan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="themhieuxe_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themhieuxe_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="baocaodoanhso (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baocaodoanhso (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +142,23 @@
   <data name="nhapphutung_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nhapphutung_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quanlychuxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quanlychuxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="baocaoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\baocaoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quanlychuxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quanlychuxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="suaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suaxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chitietsuachua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chitietsuachua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quanlytaikhoan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quanlytaikhoan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chitietsuachua_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chitietsuachua_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +166,14 @@
   <data name="phieusuachua_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phieusuachua_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="themphutung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\themphutung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dangkytaikhoan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dangkytaikhoan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quanlyxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quanlyxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="themphutung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\themphutung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quanlyphutung_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quanlyphutung_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,16 +181,16 @@
   <data name="quanlysuaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quanlysuaxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chitietsuachua" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chitietsuachua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="timkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\timkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="timkiem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\timkiem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="suaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\suaxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quanlytaikhoan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quanlytaikhoan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phieuthutien_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phieuthutien_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
