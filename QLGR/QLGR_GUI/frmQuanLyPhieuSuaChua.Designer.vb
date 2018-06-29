@@ -32,7 +32,6 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.txtMaPhieuSuaChua = New System.Windows.Forms.TextBox()
         Me.txtNoiDung = New System.Windows.Forms.TextBox()
         Me.dtpNgaySuaChua = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -114,15 +113,6 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.dtpNgaySuaChua.Size = New System.Drawing.Size(200, 20)
         Me.dtpNgaySuaChua.TabIndex = 6
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Label1"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -178,7 +168,6 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpNgaySuaChua)
         Me.Controls.Add(Me.txtNoiDung)
         Me.Controls.Add(Me.txtMaPhieuSuaChua)
@@ -206,7 +195,6 @@ Partial Class frmQuanLyPhieuSuaChua
     Friend WithEvents txtMaPhieuSuaChua As TextBox
     Friend WithEvents txtNoiDung As TextBox
     Friend WithEvents dtpNgaySuaChua As DateTimePicker
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

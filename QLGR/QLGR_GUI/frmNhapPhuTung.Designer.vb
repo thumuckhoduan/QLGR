@@ -52,7 +52,7 @@ Partial Class frmNhapPhuTung
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(83, 101)
+        Me.Label2.Location = New System.Drawing.Point(83, 107)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 15)
         Me.Label2.TabIndex = 3
@@ -97,7 +97,7 @@ Partial Class frmNhapPhuTung
         '
         Me.cbTenPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenPhuTung.FormattingEnabled = True
-        Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 93)
+        Me.cbTenPhuTung.Location = New System.Drawing.Point(225, 99)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"
         Me.cbTenPhuTung.Size = New System.Drawing.Size(266, 23)
         Me.cbTenPhuTung.TabIndex = 9

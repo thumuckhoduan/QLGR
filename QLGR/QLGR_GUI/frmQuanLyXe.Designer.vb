@@ -29,7 +29,6 @@ Partial Class frmQuanLyXe
         Me.btnCapNhat = New System.Windows.Forms.Button()
         Me.txtMaXe = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtChuXe = New System.Windows.Forms.TextBox()
         Me.txtBienSo = New System.Windows.Forms.TextBox()
         Me.txtDienThoai = New System.Windows.Forms.TextBox()
         Me.txtDiaChi = New System.Windows.Forms.TextBox()
@@ -39,7 +38,6 @@ Partial Class frmQuanLyXe
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtHieuXe = New System.Windows.Forms.TextBox()
         Me.cbMaHieuXe = New System.Windows.Forms.ComboBox()
         Me.cbHieuXe = New System.Windows.Forms.ComboBox()
         Me.btDong = New System.Windows.Forms.Button()
@@ -71,7 +69,7 @@ Partial Class frmQuanLyXe
         '
         'btnXoa
         '
-        Me.btnXoa.Location = New System.Drawing.Point(371, 480)
+        Me.btnXoa.Location = New System.Drawing.Point(372, 489)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(75, 23)
         Me.btnXoa.TabIndex = 35
@@ -80,7 +78,7 @@ Partial Class frmQuanLyXe
         '
         'btnCapNhat
         '
-        Me.btnCapNhat.Location = New System.Drawing.Point(156, 480)
+        Me.btnCapNhat.Location = New System.Drawing.Point(157, 489)
         Me.btnCapNhat.Name = "btnCapNhat"
         Me.btnCapNhat.Size = New System.Drawing.Size(75, 23)
         Me.btnCapNhat.TabIndex = 34
@@ -104,14 +102,6 @@ Partial Class frmQuanLyXe
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "Mã Xe"
-        '
-        'txtChuXe
-        '
-        Me.txtChuXe.Location = New System.Drawing.Point(348, 361)
-        Me.txtChuXe.Name = "txtChuXe"
-        Me.txtChuXe.ReadOnly = True
-        Me.txtChuXe.Size = New System.Drawing.Size(184, 20)
-        Me.txtChuXe.TabIndex = 47
         '
         'txtBienSo
         '
@@ -190,14 +180,6 @@ Partial Class frmQuanLyXe
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "Hiệu Xe"
         '
-        'txtHieuXe
-        '
-        Me.txtHieuXe.Location = New System.Drawing.Point(348, 305)
-        Me.txtHieuXe.Name = "txtHieuXe"
-        Me.txtHieuXe.ReadOnly = True
-        Me.txtHieuXe.Size = New System.Drawing.Size(184, 20)
-        Me.txtHieuXe.TabIndex = 48
-        '
         'cbMaHieuXe
         '
         Me.cbMaHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -209,15 +191,16 @@ Partial Class frmQuanLyXe
         '
         'cbHieuXe
         '
+        Me.cbHieuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbHieuXe.FormattingEnabled = True
-        Me.cbHieuXe.Location = New System.Drawing.Point(538, 305)
+        Me.cbHieuXe.Location = New System.Drawing.Point(348, 306)
         Me.cbHieuXe.Name = "cbHieuXe"
-        Me.cbHieuXe.Size = New System.Drawing.Size(175, 21)
+        Me.cbHieuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbHieuXe.TabIndex = 50
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(615, 480)
+        Me.btDong.Location = New System.Drawing.Point(616, 489)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 51
@@ -251,10 +234,11 @@ Partial Class frmQuanLyXe
         '
         'cbChuXe
         '
+        Me.cbChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbChuXe.FormattingEnabled = True
-        Me.cbChuXe.Location = New System.Drawing.Point(538, 361)
+        Me.cbChuXe.Location = New System.Drawing.Point(348, 361)
         Me.cbChuXe.Name = "cbChuXe"
-        Me.cbChuXe.Size = New System.Drawing.Size(175, 21)
+        Me.cbChuXe.Size = New System.Drawing.Size(184, 21)
         Me.cbChuXe.TabIndex = 58
         '
         'Label9
@@ -279,8 +263,6 @@ Partial Class frmQuanLyXe
         Me.Controls.Add(Me.btDong)
         Me.Controls.Add(Me.cbHieuXe)
         Me.Controls.Add(Me.cbMaHieuXe)
-        Me.Controls.Add(Me.txtHieuXe)
-        Me.Controls.Add(Me.txtChuXe)
         Me.Controls.Add(Me.txtBienSo)
         Me.Controls.Add(Me.txtDienThoai)
         Me.Controls.Add(Me.txtDiaChi)
@@ -311,7 +293,6 @@ Partial Class frmQuanLyXe
     Friend WithEvents btnCapNhat As Button
     Friend WithEvents txtMaXe As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtChuXe As TextBox
     Friend WithEvents txtBienSo As TextBox
     Friend WithEvents txtDienThoai As TextBox
     Friend WithEvents txtDiaChi As TextBox
@@ -321,7 +302,6 @@ Partial Class frmQuanLyXe
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtHieuXe As TextBox
     Friend WithEvents cbMaHieuXe As ComboBox
     Friend WithEvents cbHieuXe As ComboBox
     Friend WithEvents btDong As Button
