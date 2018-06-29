@@ -111,6 +111,7 @@ Partial Class frmManHinh
         Me.Controls.Add(Me.btManHinh)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmManHinh"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Màn Hình"
         Me.ResumeLayout(False)
         Me.PerformLayout()

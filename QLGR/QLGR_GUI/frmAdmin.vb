@@ -6,6 +6,8 @@ Public Class frmAdmin
 
     Private Sub pbDangKyTaiKhoan_Click(sender As Object, e As EventArgs) Handles pbDangKyTaiKhoan.Click
         Dim frm = New frmDangKyTaiKhoan()
+        frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.ShowDialog(Me)
     End Sub
 
@@ -15,6 +17,8 @@ Public Class frmAdmin
 
     Private Sub pbQuanLyTaiKhoan_Click(sender As Object, e As EventArgs) Handles pbQuanLyTaiKhoan.Click
         Dim frm = New frmQuanLyTaiKhoan()
+        frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.ShowDialog(Me)
     End Sub
 

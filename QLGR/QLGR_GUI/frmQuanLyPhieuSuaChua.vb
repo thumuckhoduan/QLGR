@@ -8,11 +8,7 @@ Public Class frmQuanLyPhieuSuaChua
     Private col_index As Integer = 0
     Private row_index As Integer = 0
     Private Sub frmQuanLyPhieuSuaChua_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtMaPhieuSuaChua.Hide()
-        txtMaXe.Hide()
-        txtNoiDung.Hide()
-        txtThanhTien.Hide()
-        dtpNgaySuaChua.Hide()
+
         phieusuachuaBUS = New PhieuSuaChuaBUS()
         phieusuachuaDTO = New PhieuSuaChuaDTO()
         loadlistphieusuachua()
@@ -169,5 +165,9 @@ Public Class frmQuanLyPhieuSuaChua
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
     End Sub
 End Class

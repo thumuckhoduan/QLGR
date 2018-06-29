@@ -102,7 +102,7 @@
         frm.ShowDialog()
     End Sub
 
-    Private Sub btThayDoiQuyDinh_Click(sender As Object, e As EventArgs) Handles btThayDoiQuyDinh.Click
+    Private Sub pbQuanLyQuyDinh_Click(sender As Object, e As EventArgs) Handles pbQuanLyQuyDinh.Click
         Dim frm As frmThayDoiQuyDInh = New frmThayDoiQuyDInh()
         frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
         frm.StartPosition = FormStartPosition.CenterScreen

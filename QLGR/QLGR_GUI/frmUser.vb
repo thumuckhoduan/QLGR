@@ -58,4 +58,8 @@ Public Class frmUser
         frm.StartPosition = FormStartPosition.CenterScreen
         frm.ShowDialog()
     End Sub
+
+    Private Sub frmUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+    End Sub
 End Class
