@@ -148,10 +148,6 @@ Public Class frmPhieuThuTien
         Return False
     End Function
 
-    Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
-
-    End Sub
-
     Private Sub cbMaChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaChuXe.SelectedIndexChanged
         txtMaChuXe.Text = cbMaChuXe.Text
     End Sub

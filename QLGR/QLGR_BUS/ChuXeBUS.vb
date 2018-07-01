@@ -45,4 +45,10 @@ Public Class ChuXeBUS
         '2. insert to DB
         Return ChuXeDAL.selectAll_sortbyTenChuXe(listChuXe)
     End Function
+    Public Function kiemtra(ChuXeDTO As ChuXeDTO,ByRef test As Boolean) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return ChuXeDAL.kiemtra(ChuXeDTO, test)
+    End Function
 End Class

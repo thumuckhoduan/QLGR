@@ -234,6 +234,7 @@ Public Class ChuXeDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
+
                 End With
                 Try
                     conn.Open()
@@ -256,5 +257,50 @@ Public Class ChuXeDAL
         Return New Result(True) ' thanh cong
     End Function
 
+    Public Function kiemtra(ChuXeDTO As ChuXeDTO, ByRef test As Boolean) As Result
 
+        Dim query As String = String.Empty
+        query &= " SELECT count(*) As [count]"
+        query &= " FROM [tblChuXe]"
+        query &= " WHERE [tenchuxe]=@tenchuxe"
+        query &= " AND [diachi]=@diachi"
+        query &= " AND [email]=@email"
+        query &= " AND [dienthoai]=@dienthoai"
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@tenchuxe", ChuXeDTO.tenchuxe)
+                    .Parameters.AddWithValue("@diachi", ChuXeDTO.diachi)
+                    .Parameters.AddWithValue("@email", ChuXeDTO.email)
+                    .Parameters.AddWithValue("@dienthoai", ChuXeDTO.dienthoai)
+
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            Dim x = reader("count")
+                            If (x = 0) Then
+                                test = True
+                            Else
+                                test = false
+                            End If
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả chu xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class

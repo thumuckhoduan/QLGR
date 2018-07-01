@@ -114,36 +114,39 @@ Public Class frmTiepNhanSuaXe
             xeDTO.maxe = nextma
             xeDTO.mahieuxe = txtMaHieuXe.Text
             xeDTO.bienso = txtBienSo.Text
-
-            result = chuxeBUS.insert(chuxeDTO)
-            If (result.FlagResult = False) Then
-                MessageBox.Show("Thêm Chủ Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                System.Console.WriteLine(result.SystemMessage)
-            End If
-            result = xeBUS.insert(xeDTO)
-            If (result.FlagResult = False) Then
-                MessageBox.Show("Thêm Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                System.Console.WriteLine(result.SystemMessage)
-            End If
-            result = suaxeBUS.insert(SuaXeDTO)
-            If (result.FlagResult = False) Then
-                MessageBox.Show("Thêm Sữa Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                System.Console.WriteLine(result.SystemMessage)
-            End If
-            If (result.FlagResult = True) Then
-                MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                result = suaxeBUS.buildMaSuaXe(nextma)
+            Dim test = True
+            result = chuxeBUS.kiemtra(chuxeDTO, test)
+            If (test) Then
+                result = chuxeBUS.insert(chuxeDTO)
                 If (result.FlagResult = False) Then
-                    MessageBox.Show("Lấy danh tự động mã sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Thêm Chủ Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     System.Console.WriteLine(result.SystemMessage)
                 End If
-                txtMaSuaXe.Text = nextma
-            Else
-                MessageBox.Show("Thêm đơn sữa xe không thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                System.Console.WriteLine(result.SystemMessage)
             End If
-        Else
-            MessageBox.Show("Đã Full")
+            result = xeBUS.insert(xeDTO)
+                If (result.FlagResult = False) Then
+                    MessageBox.Show("Thêm Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
+                result = suaxeBUS.insert(SuaXeDTO)
+                If (result.FlagResult = False) Then
+                    MessageBox.Show("Thêm Sữa Xe không thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
+                If (result.FlagResult = True) Then
+                    MessageBox.Show("Thêm đơn sữa xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    result = suaxeBUS.buildMaSuaXe(nextma)
+                    If (result.FlagResult = False) Then
+                        MessageBox.Show("Lấy danh tự động mã sữa xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        System.Console.WriteLine(result.SystemMessage)
+                    End If
+                    txtMaSuaXe.Text = nextma
+                Else
+                    MessageBox.Show("Thêm đơn sữa xe không thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    System.Console.WriteLine(result.SystemMessage)
+                End If
+            Else
+                MessageBox.Show("Đã Full")
         End If
     End Sub
     Private Sub btDong_Click(sender As Object, e As EventArgs) Handles btDong.Click
