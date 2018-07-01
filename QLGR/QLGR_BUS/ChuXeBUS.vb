@@ -39,4 +39,10 @@ Public Class ChuXeBUS
         '2. insert to DB
         Return ChuXeDAL.delete(machuxe)
     End Function
+    Public Function selectAll_sortbyTenChuXe(ByRef listChuXe As List(Of ChuXeDTO)) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return ChuXeDAL.selectAll_sortbyTenChuXe(listChuXe)
+    End Function
 End Class

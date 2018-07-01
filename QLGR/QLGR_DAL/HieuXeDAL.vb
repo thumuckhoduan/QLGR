@@ -280,5 +280,41 @@ Public Class HieuXeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+    Public Function selectAll_sortbytenhieuxe(ByRef listhieuxe As List(Of HieuXeDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= " SELECT [mahieuxe], [tenhieuxe]"
+        query &= " FROM [tblHieuXe]"
+        query &= " ORDER BY [tenhieuxe]"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listhieuxe.Clear()
+                        While reader.Read()
+                            listhieuxe.Add(New HieuXeDTO(reader("mahieuxe"), reader("tenhieuxe")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả loại hiệu xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class
 

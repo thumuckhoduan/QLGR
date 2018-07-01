@@ -1,5 +1,5 @@
 ﻿Public Class dgvBaoCaoTonDTO
-    Private imaphutung As Integer
+    Private imaphutung As String
     Private strtenphutung As String
     Private itondau As Integer
     Private inhapthem As Integer
@@ -12,7 +12,7 @@
 
     End Sub
 
-    Public Sub New(maphutung As Integer, tenphutung As String, tondau As Integer, nhapthem As Integer, ban As Integer, toncuoi As Integer)
+    Public Sub New(maphutung As String, tenphutung As String, tondau As Integer, nhapthem As Integer, ban As Integer, toncuoi As Integer)
         Me.imaphutung = maphutung
         Me.strtenphutung = tenphutung
         Me.itondau = tondau
@@ -21,11 +21,11 @@
         Me.itoncuoi = toncuoi
     End Sub
 
-    Public Property maphutung As Integer
+    Public Property maphutung As String
         Get
             Return imaphutung
         End Get
-        Set(value As Integer)
+        Set(value As String)
             imaphutung = value
         End Set
     End Property

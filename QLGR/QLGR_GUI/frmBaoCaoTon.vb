@@ -176,6 +176,7 @@ Public Class frmBaoCaoTon
 
     Private Sub cbThang_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbThang.SelectedIndexChanged
         loaddata()
+
     End Sub
 
     Private Sub btnLapBaoCao_Click(sender As Object, e As EventArgs) Handles btnLapBaoCao.Click

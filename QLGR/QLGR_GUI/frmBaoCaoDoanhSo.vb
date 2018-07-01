@@ -154,4 +154,5 @@ Public Class frmBaoCaoDoanhSo
         End If
         change()
     End Sub
+
 End Class

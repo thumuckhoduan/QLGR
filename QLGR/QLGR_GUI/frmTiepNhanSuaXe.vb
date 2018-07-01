@@ -30,7 +30,7 @@ Public Class frmTiepNhanSuaXe
     Private Sub loadlisthieuxe()
         Dim result As Result
         Dim listHieuXe = New List(Of HieuXeDTO)
-        Result = hieuxeBUS.selectAll(listHieuXe)
+        result = hieuxeBUS.selectAll_sortbytenhieuxe(listHieuXe)
         If (Result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách hiệu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(Result.SystemMessage)

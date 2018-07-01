@@ -82,7 +82,7 @@ Partial Class frmBaoCaoDoanhSo
         'lbTongDoanhThu
         '
         Me.lbTongDoanhThu.AutoSize = True
-        Me.lbTongDoanhThu.Location = New System.Drawing.Point(325, 77)
+        Me.lbTongDoanhThu.Location = New System.Drawing.Point(275, 77)
         Me.lbTongDoanhThu.Name = "lbTongDoanhThu"
         Me.lbTongDoanhThu.Size = New System.Drawing.Size(13, 14)
         Me.lbTongDoanhThu.TabIndex = 6

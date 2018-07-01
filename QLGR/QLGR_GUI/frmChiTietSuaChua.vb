@@ -6,24 +6,20 @@ Public Class frmChiTietSuaChua
     Private chitietsuachuaBUS As ChiTietSuaChuaBUS
     Private phieusuachuaBUS As PhieuSuaChuaBUS
     Private phutungBUS As PhuTungBUS
-    Private listphutung As List(Of PhuTungDTO)
     Private listphieu As List(Of PhieuSuaChuaDTO)
     Private list As List(Of dgvChiTietSuaChua)
     Private Sub frmChiTietSuaChua_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         chitietsuachuaBUS = New ChiTietSuaChuaBUS()
         phutungBUS = New PhuTungBUS()
-        listphutung = New List(Of PhuTungDTO)
         listphieu = New List(Of PhieuSuaChuaDTO)
         Dim result As Result
-        cbSoluongTon.Hide()
-        cbDonGia.Hide()
         list = New List(Of dgvChiTietSuaChua)
         phieusuachuaBUS = New PhieuSuaChuaBUS()
         result = phieusuachuaBUS.selectAll(listphieu)
-        If (Result.FlagResult = True) Then
+        If (result.FlagResult = True) Then
         Else
             MessageBox.Show("Thêm list phiếu sữa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(Result.SystemMessage)
+            System.Console.WriteLine(result.SystemMessage)
         End If
         cbMaPhieuSuaChua.DataSource = New BindingSource(listphieu, String.Empty)
         cbMaPhieuSuaChua.DisplayMember = "maphieusuachua"
@@ -31,34 +27,30 @@ Public Class frmChiTietSuaChua
 
         loaddgv()
 
-        loadcb()
+        loadcombobox()
     End Sub
 
-    Private Sub loadcb()
-        phutungBUS.selectAll(listphutung)
-        cbMaPhuTung.DataSource = New BindingSource(listphutung, String.Empty)
+    Private Sub loadcombobox()
+        Dim listmaphutung As List(Of PhuTungDTO)
+        listmaphutung = New List(Of PhuTungDTO)
+
+        phutungBUS.selectAll(listmaphutung)
+        cbMaPhuTung.DataSource = New BindingSource(listmaphutung, String.Empty)
         cbMaPhuTung.DisplayMember = "maphutung"
         cbMaPhuTung.ValueMember = "maphutung"
 
-        cbTenPhuTung.DataSource = cbMaPhuTung.DataSource
-        cbMaPhuTung.ValueMember = "tenphutung"
-        cbTenPhuTung.DisplayMember = cbMaPhuTung.ValueMember
+        Dim listtenphutung As List(Of PhuTungDTO)
+        listtenphutung = New List(Of PhuTungDTO)
 
-        cbSoluongTon.DataSource = cbMaPhuTung.DataSource
-        cbMaPhuTung.ValueMember = "soluongton"
-        cbSoluongTon.DisplayMember = cbMaPhuTung.ValueMember
-
-        cbDonGia.DataSource = cbMaPhuTung.DataSource
-        cbMaPhuTung.ValueMember = "dongia"
-        cbDonGia.DisplayMember = cbMaPhuTung.ValueMember
+        phutungBUS.selectAll_sorttenphutung(listtenphutung)
+        cbTenPhuTung.DataSource = New BindingSource(listtenphutung, String.Empty)
+        cbTenPhuTung.DisplayMember = "tenphutung"
+        cbTenPhuTung.ValueMember = "tenphutung"
 
 
-        cbMaPhuTung.ValueMember = "maphutung"
     End Sub
 
-    Private Sub cbSoluongTon_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSoluongTon.SelectedIndexChanged
-        txbSoLuongTon.Text = cbSoluongTon.Text
-    End Sub
+
 
 
     Private Sub loaddgv()
@@ -109,13 +101,6 @@ Public Class frmChiTietSuaChua
         dgvChiTietSuaChua.Columns.Add(cltiencong)
     End Sub
 
-    Private Sub cbMaPhieuSuaChua_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaPhieuSuaChua.SelectedIndexChanged
-        Try
-            loaddgv()
-            loaddata()
-        Catch ex As Exception
-        End Try
-    End Sub
 
     Private Sub loaddata()
         Dim test = True
@@ -136,9 +121,6 @@ Public Class frmChiTietSuaChua
             txbSoLuong.Text = "0"
         End If
     End Sub
-    Private Sub cbMaPhuTung_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaPhuTung.SelectedIndexChanged
-        loaddata()
-    End Sub
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
 
@@ -147,12 +129,11 @@ Public Class frmChiTietSuaChua
             MessageBox.Show("Số Lượng Phải Là Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
-        If ((IsNumeric(txbTienCong.Text) Or txbTienCong.Text = vbNullString) And txbSoLuong.Text >= "0") Then
+        If ((IsNumeric(txbTienCong.Text) Or txbTienCong.Text = vbNullString) And txbTienCong.Text >= "0") Then
         Else
             MessageBox.Show("Tiền Công Phải Là Số Không Âm", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
-
         Dim test = True
         Dim chitiet = New ChiTietSuaChuaDTO
         Dim phutung = New PhuTungDTO()
@@ -161,6 +142,10 @@ Public Class frmChiTietSuaChua
         thanhtien = 0
         For Each item In list
             If (item.maphutung = cbMaPhuTung.Text) Then
+                If (txbSoLuongTon.Text - txbSoLuong.Text + item.soluong < 0) Then
+                    MessageBox.Show("Không đủ phụ tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                End If
                 chitiet.machitietsuachua = item.machitietsuachua
                 chitiet.maphieusuachua = item.maphieusuachua
                 chitiet.maphutung = item.maphutung
@@ -175,8 +160,8 @@ Public Class frmChiTietSuaChua
                 End If
                 phutung.maphutung = cbMaPhuTung.Text
                 phutung.tenphutung = cbTenPhuTung.Text
-                phutung.soluongton = cbSoluongTon.Text - txbSoLuong.Text + item.soluong
-                phutung.dongia = cbDonGia.Text
+                phutung.soluongton = txbSoLuongTon.Text - txbSoLuong.Text + item.soluong
+                phutung.dongia = txbDonGia.Text
                 result = phutungBUS.update(phutung)
                 If (result.FlagResult = True) Then
                 Else
@@ -187,7 +172,10 @@ Public Class frmChiTietSuaChua
             End If
         Next
         If (test) Then
-
+            If (txbSoLuongTon.Text - txbSoLuong.Text < 0) Then
+                MessageBox.Show("Không đủ phụ tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Return
+            End If
             Dim ma = 0
             chitietsuachuaBUS.buildMaChiTietSuaChua(ma)
             chitiet.machitietsuachua = ma
@@ -204,8 +192,8 @@ Public Class frmChiTietSuaChua
             End If
             phutung.maphutung = cbMaPhuTung.Text
             phutung.tenphutung = cbTenPhuTung.Text
-            phutung.soluongton = cbSoluongTon.Text - txbSoLuong.Text
-            phutung.dongia = cbDonGia.Text
+            phutung.soluongton = txbSoLuongTon.Text - txbSoLuong.Text
+            phutung.dongia = txbDonGia.Text
             result = phutungBUS.update(phutung)
             If (result.FlagResult = True) Then
             Else
@@ -215,7 +203,9 @@ Public Class frmChiTietSuaChua
         End If
 
         loaddgv()
-        loadcb()
+        loadcombobox()
+        txbTienCong.Text = "0"
+        txbSoLuong.Text = "0"
         For Each item In list
             thanhtien = thanhtien + item.soluong * item.dongia + item.tiencong
         Next
@@ -248,7 +238,7 @@ Public Class frmChiTietSuaChua
                         maphieu = phutung.machitietsuachua
                         phutungDTO.maphutung = phutung.maphutung
                         phutungDTO.tenphutung = phutung.tenphutung
-                        phutungDTO.soluongton = cbSoluongTon.Text + phutung.soluong
+                        phutungDTO.soluongton = txbSoLuongTon.Text + phutung.soluong
                         phutungDTO.dongia = phutung.dongia
                         result = phutungBUS.update(phutungDTO)
                         If (result.FlagResult = True) Then
@@ -260,7 +250,7 @@ Public Class frmChiTietSuaChua
 
 
                         If (result.FlagResult = True) Then
-                            loadcb()
+                            loadcombobox()
                             loaddgv()
                             For Each item In list
                                 thanhtien = thanhtien + item.soluong * item.dongia + item.tiencong
@@ -288,9 +278,6 @@ Public Class frmChiTietSuaChua
         End If
     End Sub
 
-    Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
-        txbDonGia.Text = cbDonGia.Text
-    End Sub
 
     Private Sub txbThanhTien_TextChanged(sender As Object, e As EventArgs)
 
@@ -317,4 +304,46 @@ Public Class frmChiTietSuaChua
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
     End Sub
+
+
+
+    Private Sub cbMaPhuTung_TextChanged(sender As Object, e As EventArgs) Handles cbMaPhuTung.TextChanged
+        Try
+            Dim phutung = New PhuTungDTO()
+            phutungBUS.select_bymaphutung(cbMaPhuTung.Text, phutung)
+            cbTenPhuTung.Text = phutung.tenphutung
+            txbSoLuongTon.Text = phutung.soluongton
+            txbDonGia.Text = phutung.dongia
+            loaddata()
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
+    End Sub
+
+    Private Sub cbTenPhuTung_TextChanged(sender As Object, e As EventArgs) Handles cbTenPhuTung.TextChanged
+        Try
+            Dim phutung = New PhuTungDTO()
+            phutungBUS.select_bytenphutung(cbTenPhuTung.Text, phutung)
+            cbMaPhuTung.Text = phutung.maphutung
+            txbSoLuongTon.Text = phutung.soluongton
+            txbDonGia.Text = phutung.dongia
+            loaddata()
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
+    End Sub
+
+    Private Sub cbMaPhieuSuaChua_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaPhieuSuaChua.SelectedIndexChanged
+        Try
+            loaddgv()
+            loaddata()
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+        Return
+        End Try
+    End Sub
+
+
 End Class

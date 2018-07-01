@@ -1,7 +1,7 @@
 ﻿Public Class NhapPhuTungDTO
 
     Private imanhapphutung As Integer
-    Private imaphutung As Integer
+    Private imaphutung As String
     Private isoluong As Integer
     Private dtpngaytiepnhan As DateTime
     Private idongia As Integer
@@ -11,7 +11,7 @@
 
     End Sub
 
-    Public Sub New(manhapphutung As Integer, maphutung As Integer, soluong As Integer, ngaytiepnhan As DateTime, dongia As Integer)
+    Public Sub New(manhapphutung As Integer, maphutung As String, soluong As Integer, ngaytiepnhan As DateTime, dongia As Integer)
         Me.imanhapphutung = manhapphutung
         Me.imaphutung = maphutung
         Me.isoluong = soluong
@@ -46,11 +46,11 @@
         End Set
     End Property
 
-    Public Property maphutung As Integer
+    Public Property maphutung As String
         Get
             Return imaphutung
         End Get
-        Set(value As Integer)
+        Set(value As String)
             imaphutung = value
         End Set
     End Property

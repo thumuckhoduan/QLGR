@@ -4,51 +4,50 @@ Imports Utility
 
 
 Public Class frmNhapPhuTung
+    Private phutungBUS As PhuTungBUS
+    Private nhapphutungBUS As NhapPhuTungBUS
+
+
     Private Sub frmNhapVatLieu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        nhapphutungBUS = New NhapPhuTungBUS()
+        phutungBUS = New PhuTungBUS()
         txtMaNhapPhuTung.Hide()
         cbSoLuongTon.Hide()
         cbDonGia.Hide()
         txtSoLuong.Text = 0
         Dim result As Result
         Dim nextMNPT = 0
-        Dim nhapphutungBUS As NhapPhuTungBUS
-        nhapphutungBUS = New NhapPhuTungBUS()
+
         result = nhapphutungBUS.buildmanhapphutung(nextMNPT)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         txtMaNhapPhuTung.Text = nextMNPT
-        loadphutung()
+        loadcombobox()
 
 
 
     End Sub
+    Private Sub loadcombobox()
+        Dim listmaphutung As List(Of PhuTungDTO)
+        listmaphutung = New List(Of PhuTungDTO)
 
-    Function loadphutung()
-        Dim result As Result
-        Dim phutungBUS As PhuTungBUS
-        phutungBUS = New PhuTungBUS()
-        Dim listPhuTung = New List(Of PhuTungDTO)
-        result = phutungBUS.selectAll(listPhuTung)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách Phụ Tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-        End If
-        cbMaPhuTung.DataSource = New BindingSource(listPhuTung, String.Empty)
-        cbTenPhuTung.DataSource = cbMaPhuTung.DataSource
+        phutungBUS.selectAll(listmaphutung)
+        cbMaPhuTung.DataSource = New BindingSource(listmaphutung, String.Empty)
         cbMaPhuTung.DisplayMember = "maphutung"
-        cbMaPhuTung.ValueMember = "tenphutung"
-        cbTenPhuTung.DisplayMember = cbMaPhuTung.ValueMember
+        cbMaPhuTung.ValueMember = "maphutung"
 
-        cbSoLuongTon.DataSource = cbMaPhuTung.DataSource
-        cbMaPhuTung.ValueMember = "soluongton"
-        cbSoLuongTon.DisplayMember = cbMaPhuTung.ValueMember
+        Dim listtenphutung As List(Of PhuTungDTO)
+        listtenphutung = New List(Of PhuTungDTO)
 
-        cbDonGia.DataSource = cbMaPhuTung.DataSource
-        cbMaPhuTung.ValueMember = "dongia"
-        cbDonGia.DisplayMember = cbMaPhuTung.ValueMember
-    End Function
+        phutungBUS.selectAll_sorttenphutung(listtenphutung)
+        cbTenPhuTung.DataSource = New BindingSource(listtenphutung, String.Empty)
+        cbTenPhuTung.DisplayMember = "tenphutung"
+        cbTenPhuTung.ValueMember = "tenphutung"
+
+
+    End Sub
+
 
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
         If ((IsNumeric(txtSoLuong.Text) Or txtSoLuong.Text = vbNullString) And txtSoLuong.Text > "0") Then
@@ -56,9 +55,11 @@ Public Class frmNhapPhuTung
             MessageBox.Show("Số Lượng Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
+        If (cbMaPhuTung.Text = vbNullString Or cbTenPhuTung.Text = vbNullString) Then
+            MessageBox.Show("Không Tồn Tại Phụ Tùng bạn nhập", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         Dim result As Result
-        Dim nhapphutungBUS As NhapPhuTungBUS
-        nhapphutungBUS = New NhapPhuTungBUS()
         Dim nhapphutungDTO As NhapPhuTungDTO
         nhapphutungDTO = New NhapPhuTungDTO()
 
@@ -81,8 +82,6 @@ Public Class frmNhapPhuTung
             System.Console.WriteLine(result.SystemMessage)
         End If
 
-        Dim phutungBUS As PhuTungBUS
-        phutungBUS = New PhuTungBUS()
         Dim phutungDTO As PhuTungDTO
         phutungDTO = New PhuTungDTO()
 
@@ -90,14 +89,14 @@ Public Class frmNhapPhuTung
         phutungDTO.tenphutung = cbTenPhuTung.Text
         phutungDTO.soluongton = Convert.ToInt32(txtSoLuong.Text) + Convert.ToInt32(cbSoLuongTon.Text)
         phutungDTO.dongia = cbDonGia.Text
-        result = phutungBUS.update(phutungDTO)
+        result = PhuTungBUS.update(phutungDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Thêm phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             MessageBox.Show("Nhập phụ tùng không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
         End If
-        loadphutung()
+        loadcombobox()
     End Sub
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
@@ -106,5 +105,29 @@ Public Class frmNhapPhuTung
 
     Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
         txtDonGia.Text = cbDonGia.Text
+    End Sub
+
+    Private Sub cbMaPhuTung_TextChanged(sender As Object, e As EventArgs) Handles cbMaPhuTung.TextChanged
+        Try
+            Dim phutung = New PhuTungDTO()
+            PhuTungBUS.select_bymaphutung(cbMaPhuTung.Text, phutung)
+            cbTenPhuTung.Text = phutung.tenphutung
+            txtDonGia.Text = phutung.dongia
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
+    End Sub
+
+    Private Sub cbTenPhuTung_TextChanged(sender As Object, e As EventArgs) Handles cbTenPhuTung.TextChanged
+        Try
+            Dim phutung = New PhuTungDTO()
+            PhuTungBUS.select_bytenphutung(cbTenPhuTung.Text, phutung)
+            cbMaPhuTung.Text = phutung.maphutung
+            txtDonGia.Text = phutung.dongia
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
     End Sub
 End Class

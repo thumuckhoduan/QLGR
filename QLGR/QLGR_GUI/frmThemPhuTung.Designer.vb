@@ -29,11 +29,13 @@ Partial Class frmThemPhuTung
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txbMaPhuTung = New System.Windows.Forms.TextBox()
         Me.txbTenPhuTung = New System.Windows.Forms.TextBox()
+        Me.txtDonGia = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btThem
         '
-        Me.btThem.Location = New System.Drawing.Point(37, 106)
+        Me.btThem.Location = New System.Drawing.Point(32, 141)
         Me.btThem.Name = "btThem"
         Me.btThem.Size = New System.Drawing.Size(75, 23)
         Me.btThem.TabIndex = 0
@@ -42,7 +44,7 @@ Partial Class frmThemPhuTung
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(277, 106)
+        Me.btDong.Location = New System.Drawing.Point(277, 141)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 1
@@ -71,7 +73,6 @@ Partial Class frmThemPhuTung
         '
         Me.txbMaPhuTung.Location = New System.Drawing.Point(115, 23)
         Me.txbMaPhuTung.Name = "txbMaPhuTung"
-        Me.txbMaPhuTung.ReadOnly = True
         Me.txbMaPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbMaPhuTung.TabIndex = 4
         '
@@ -82,11 +83,29 @@ Partial Class frmThemPhuTung
         Me.txbTenPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbTenPhuTung.TabIndex = 5
         '
+        'txtDonGia
+        '
+        Me.txtDonGia.Location = New System.Drawing.Point(115, 97)
+        Me.txtDonGia.Name = "txtDonGia"
+        Me.txtDonGia.Size = New System.Drawing.Size(237, 20)
+        Me.txtDonGia.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 100)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Đơn Giá"
+        '
         'frmThemPhuTung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 149)
+        Me.ClientSize = New System.Drawing.Size(382, 181)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtDonGia)
         Me.Controls.Add(Me.txbTenPhuTung)
         Me.Controls.Add(Me.txbMaPhuTung)
         Me.Controls.Add(Me.Label2)
@@ -107,4 +126,6 @@ Partial Class frmThemPhuTung
     Friend WithEvents Label2 As Label
     Friend WithEvents txbMaPhuTung As TextBox
     Friend WithEvents txbTenPhuTung As TextBox
+    Friend WithEvents txtDonGia As TextBox
+    Friend WithEvents Label3 As Label
 End Class

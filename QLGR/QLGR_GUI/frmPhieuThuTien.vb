@@ -12,6 +12,7 @@ Public Class frmPhieuThuTien
         cbDiaChi.Hide()
         cbDiaChi.Hide()
         cbDienThoai.Hide()
+        cbMaChuXe.Hide()
         cbMaXe.Hide()
         cbTienNo.Hide()
         phieuthutienBUS = New PhieuThuTienBUS()
@@ -35,10 +36,10 @@ Public Class frmPhieuThuTien
 
         Dim listXe = New List(Of XeDTO)
         Dim result As Result
-        result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
-        If (Result.FlagResult = False) Then
+        result = xeBUS.selectall_ByMaChuXe_sortbybienso(MaChuXe, listXe)
+        If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(Result.SystemMessage)
+            System.Console.WriteLine(result.SystemMessage)
             Me.Close()
         End If
         cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
@@ -52,7 +53,7 @@ Public Class frmPhieuThuTien
     Private Sub loaddata()
         Dim result As Result
         Dim listChuXe = New List(Of ChuXeDTO)
-        Result = chuxeBUS.selectAll(listChuXe)
+        result = chuxeBUS.selectAll_sortbyTenChuXe(listChuXe)
         If (Result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(Result.SystemMessage)
@@ -148,24 +149,11 @@ Public Class frmPhieuThuTien
     End Function
 
     Private Sub cbTenChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTenChuXe.SelectedIndexChanged
-        Try
-            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
-            loadBienSo(chuxeDTO.machuxe)
-        Catch ex As Exception
-            System.Console.WriteLine(ex.StackTrace)
-            Return
-        End Try
+
     End Sub
 
     Private Sub cbMaChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaChuXe.SelectedIndexChanged
-        Try
-            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
-            loadBienSo(chuxeDTO.machuxe)
-        Catch ex As Exception
-            System.Console.WriteLine(ex.StackTrace)
-            Return
-
-        End Try
+        txtMaChuXe.Text = cbMaChuXe.Text
     End Sub
 
     Private Sub cbEmail_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmail.SelectedIndexChanged
@@ -186,5 +174,15 @@ Public Class frmPhieuThuTien
 
     Private Sub cbTienNo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTienNo.SelectedIndexChanged
         txtSoTienNo.Text = cbTienNo.Text
+    End Sub
+
+    Private Sub txtMaChuXe_TextChanged(sender As Object, e As EventArgs) Handles txtMaChuXe.TextChanged
+        Try
+            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
+            loadBienSo(chuxeDTO.machuxe)
+        Catch ex As Exception
+            System.Console.WriteLine(ex.StackTrace)
+            Return
+        End Try
     End Sub
 End Class

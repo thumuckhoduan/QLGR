@@ -80,7 +80,6 @@ Partial Class frmQuanLyPhuTung
         '
         Me.txbMaPhuTung.Location = New System.Drawing.Point(245, 266)
         Me.txbMaPhuTung.Name = "txbMaPhuTung"
-        Me.txbMaPhuTung.ReadOnly = True
         Me.txbMaPhuTung.Size = New System.Drawing.Size(237, 20)
         Me.txbMaPhuTung.TabIndex = 12
         '

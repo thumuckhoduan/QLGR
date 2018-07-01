@@ -50,6 +50,7 @@ Partial Class frmPhieuThuTien
         Me.cbTienNo = New System.Windows.Forms.ComboBox()
         Me.txtSoTienNo = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtMaChuXe = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtDienThoai
@@ -176,9 +177,9 @@ Partial Class frmPhieuThuTien
         '
         Me.cbMaChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaChuXe.FormattingEnabled = True
-        Me.cbMaChuXe.Location = New System.Drawing.Point(201, 43)
+        Me.cbMaChuXe.Location = New System.Drawing.Point(401, 46)
         Me.cbMaChuXe.Name = "cbMaChuXe"
-        Me.cbMaChuXe.Size = New System.Drawing.Size(187, 21)
+        Me.cbMaChuXe.Size = New System.Drawing.Size(68, 21)
         Me.cbMaChuXe.TabIndex = 15
         '
         'Label8
@@ -281,11 +282,20 @@ Partial Class frmPhieuThuTien
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Số Tiền Nợ"
         '
+        'txtMaChuXe
+        '
+        Me.txtMaChuXe.Location = New System.Drawing.Point(201, 43)
+        Me.txtMaChuXe.Name = "txtMaChuXe"
+        Me.txtMaChuXe.ReadOnly = True
+        Me.txtMaChuXe.Size = New System.Drawing.Size(187, 20)
+        Me.txtMaChuXe.TabIndex = 29
+        '
         'frmPhieuThuTien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(575, 345)
+        Me.Controls.Add(Me.txtMaChuXe)
         Me.Controls.Add(Me.txtSoTienNo)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cbTienNo)
@@ -348,4 +358,5 @@ Partial Class frmPhieuThuTien
     Friend WithEvents cbTienNo As ComboBox
     Friend WithEvents txtSoTienNo As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents txtMaChuXe As TextBox
 End Class

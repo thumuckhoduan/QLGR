@@ -86,7 +86,6 @@ Partial Class frmNhapPhuTung
         '
         'cbMaPhuTung
         '
-        Me.cbMaPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaPhuTung.FormattingEnabled = True
         Me.cbMaPhuTung.Location = New System.Drawing.Point(180, 52)
         Me.cbMaPhuTung.Name = "cbMaPhuTung"
@@ -95,7 +94,6 @@ Partial Class frmNhapPhuTung
         '
         'cbTenPhuTung
         '
-        Me.cbTenPhuTung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenPhuTung.FormattingEnabled = True
         Me.cbTenPhuTung.Location = New System.Drawing.Point(180, 99)
         Me.cbTenPhuTung.Name = "cbTenPhuTung"

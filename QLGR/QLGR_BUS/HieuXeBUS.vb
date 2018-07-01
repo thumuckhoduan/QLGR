@@ -12,6 +12,7 @@ Public Class HieuXeBUS
     Public Function insert(s As HieuXeDTO) As Result
         Return hieuxeDAL.insert(s)
     End Function
+
     Public Function selectAll(ByRef listhieuxe As List(Of HieuXeDTO)) As Result
 
         Return hieuxeDAL.selectALL(listhieuxe)
@@ -34,5 +35,9 @@ Public Class HieuXeBUS
     End Function
     Public Function kiemtra(hieuxeDTO As HieuXeDTO) As Result
         Return hieuxeDAL.kiemtra(hieuxeDTO)
+    End Function
+    Public Function selectAll_sortbytenhieuxe(ByRef listhieuxe As List(Of HieuXeDTO)) As Result
+
+        Return hieuxeDAL.selectAll_sortbytenhieuxe(listhieuxe)
     End Function
 End Class

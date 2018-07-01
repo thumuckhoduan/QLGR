@@ -41,7 +41,7 @@ Public Class frmPhieuSuaChua
 
         chuxeBUS = New ChuXeBUS()
         Dim listChuXe = New List(Of ChuXeDTO)
-        result = chuxeBUS.selectAll(listChuXe)
+        result = chuxeBUS.selectAll_sortbyTenChuXe(listChuXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -62,7 +62,7 @@ Public Class frmPhieuSuaChua
 
         Dim listXe = New List(Of XeDTO)
         Dim result As Result
-        result = xeBUS.selectall_ByMaChuXe(MaChuXe, listXe)
+        result = xeBUS.selectall_ByMaChuXe_sortbybienso(MaChuXe, listXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -125,4 +125,5 @@ Public Class frmPhieuSuaChua
         frm.ShowDialog()
         Me.Show()
     End Sub
+
 End Class

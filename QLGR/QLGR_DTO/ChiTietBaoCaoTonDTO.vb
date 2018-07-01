@@ -1,7 +1,7 @@
 ﻿Public Class ChiTietBaoCaoTonDTO
     Private imachitietbaocaoton As Integer
     Private imabaocaoton As Integer
-    Private imaphutung As Integer
+    Private imaphutung As String
     Private itondau As Integer
     Private inhapthem As Integer
     Private iban As Integer
@@ -13,7 +13,7 @@
 
     End Sub
 
-    Public Sub New(machitietbaocaoton As Integer, mabaocaoton As Integer, maphutung As Integer, tondau As Integer,
+    Public Sub New(machitietbaocaoton As Integer, mabaocaoton As Integer, maphutung As String, tondau As Integer,
                    nhapthem As Integer, ban As Integer, toncuoi As Integer)
         Me.imachitietbaocaoton = machitietbaocaoton
         Me.imabaocaoton = mabaocaoton

@@ -219,4 +219,42 @@ Public Class ChuXeDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+
+    Public Function selectAll_sortbyTenChuXe(ByRef listChuXe As List(Of ChuXeDTO)) As Result
+
+        Dim query As String = String.Empty
+        query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno]"
+        query &= " FROM [tblChuXe]"
+        query &= " ORDER BY [tenchuxe]"
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        listChuXe.Clear()
+                        While reader.Read()
+                            listChuXe.Add(New ChuXeDTO(reader("machuxe"), reader("tenchuxe"), reader("diachi"), reader("dienthoai"), reader("email"), reader("tienno")))
+                        End While
+                    End If
+                Catch ex As Exception
+                    Console.WriteLine(ex.StackTrace)
+                    conn.Close()
+                    ' them that bai!!!
+                    Return New Result(False, "Lấy tất cả chu xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
+
 End Class

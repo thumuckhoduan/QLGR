@@ -1,23 +1,23 @@
 ﻿Public Class PhuTungDTO
-    Private imaphutung As Integer
+    Private strmaphutung As String
     Private strtenphutung As String
     Private isoluongton As Integer
     Private idongia As Integer
     Public Sub New()
     End Sub
-    Public Sub New(maphutung As Integer, tenphutung As String, soluongton As Integer, dongia As Integer)
-        Me.maphutung = maphutung
-        Me.tenphutung = tenphutung
-        Me.soluongton = soluongton
+    Public Sub New(maphutung As String, tenphutung As String, soluongton As Integer, dongia As Integer)
+        Me.strmaphutung = maphutung
+        Me.strtenphutung = tenphutung
+        Me.isoluongton = soluongton
         Me.idongia = dongia
     End Sub
 
-    Public Property maphutung As Integer
+    Public Property maphutung As String
         Get
-            Return imaphutung
+            Return strmaphutung
         End Get
-        Set(value As Integer)
-            imaphutung = value
+        Set(value As String)
+            strmaphutung = value
         End Set
     End Property
 
