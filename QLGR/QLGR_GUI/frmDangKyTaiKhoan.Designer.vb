@@ -99,11 +99,12 @@ Partial Class frmDangKyTaiKhoan
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 7
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'frmDangKyTaiKhoan
         '
+        Me.AcceptButton = Me.btDangKy
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(370, 211)

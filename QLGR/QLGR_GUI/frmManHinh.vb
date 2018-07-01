@@ -65,4 +65,8 @@ Public Class frmManHinh
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
     End Sub
+
+    Private Sub frmManHinh_KeyPress(sender As Object, e As KeyPressEventArgs)
+
+    End Sub
 End Class

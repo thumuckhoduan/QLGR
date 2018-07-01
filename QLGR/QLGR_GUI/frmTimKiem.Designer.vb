@@ -22,6 +22,7 @@ Partial Class frmTimKiem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTimKiem))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtChuXe = New System.Windows.Forms.TextBox()
@@ -37,6 +38,7 @@ Partial Class frmTimKiem
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtBienSo = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         CType(Me.dgvTimKiem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -67,9 +69,9 @@ Partial Class frmTimKiem
         'dgvTimKiem
         '
         Me.dgvTimKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTimKiem.Location = New System.Drawing.Point(12, 128)
+        Me.dgvTimKiem.Location = New System.Drawing.Point(178, 121)
         Me.dgvTimKiem.Name = "dgvTimKiem"
-        Me.dgvTimKiem.Size = New System.Drawing.Size(760, 253)
+        Me.dgvTimKiem.Size = New System.Drawing.Size(392, 253)
         Me.dgvTimKiem.TabIndex = 3
         '
         'LaBel2
@@ -83,7 +85,7 @@ Partial Class frmTimKiem
         '
         'btTimKiem
         '
-        Me.btTimKiem.Location = New System.Drawing.Point(155, 415)
+        Me.btTimKiem.Location = New System.Drawing.Point(178, 415)
         Me.btTimKiem.Name = "btTimKiem"
         Me.btTimKiem.Size = New System.Drawing.Size(75, 23)
         Me.btTimKiem.TabIndex = 5
@@ -92,7 +94,7 @@ Partial Class frmTimKiem
         '
         'btDong
         '
-        Me.btDong.Location = New System.Drawing.Point(437, 415)
+        Me.btDong.Location = New System.Drawing.Point(495, 415)
         Me.btDong.Name = "btDong"
         Me.btDong.Size = New System.Drawing.Size(75, 23)
         Me.btDong.TabIndex = 6
@@ -156,8 +158,14 @@ Partial Class frmTimKiem
         Me.txtBienSo.Size = New System.Drawing.Size(157, 20)
         Me.txtBienSo.TabIndex = 15
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
         'frmTimKiem
         '
+        Me.AcceptButton = Me.btTimKiem
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
@@ -198,4 +206,5 @@ Partial Class frmTimKiem
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents txtBienSo As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

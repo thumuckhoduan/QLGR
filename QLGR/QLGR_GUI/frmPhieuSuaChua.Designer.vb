@@ -99,7 +99,7 @@ Partial Class frmPhieuSuaChua
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(66, 29)
         Me.btThoat.TabIndex = 27
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'cbBienSo
@@ -171,6 +171,7 @@ Partial Class frmPhieuSuaChua
         '
         'frmPhieuSuaChua
         '
+        Me.AcceptButton = Me.btLuu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(481, 231)

@@ -52,7 +52,7 @@ Partial Class frmDoiMatKhau
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 1
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = False
         '
         'txtTaiKhoan
@@ -128,6 +128,7 @@ Partial Class frmDoiMatKhau
         '
         'frmDoiMatKhau
         '
+        Me.AcceptButton = Me.btLuu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(379, 229)

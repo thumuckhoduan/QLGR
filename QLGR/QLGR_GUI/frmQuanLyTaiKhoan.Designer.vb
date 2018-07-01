@@ -39,9 +39,9 @@ Partial Class frmQuanLyTaiKhoan
         'dgvQuanLyTaiKhoan
         '
         Me.dgvQuanLyTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvQuanLyTaiKhoan.Location = New System.Drawing.Point(1, -2)
+        Me.dgvQuanLyTaiKhoan.Location = New System.Drawing.Point(66, 8)
         Me.dgvQuanLyTaiKhoan.Name = "dgvQuanLyTaiKhoan"
-        Me.dgvQuanLyTaiKhoan.Size = New System.Drawing.Size(405, 150)
+        Me.dgvQuanLyTaiKhoan.Size = New System.Drawing.Size(294, 150)
         Me.dgvQuanLyTaiKhoan.TabIndex = 0
         '
         'txtTaiKhoan
@@ -92,7 +92,7 @@ Partial Class frmQuanLyTaiKhoan
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 6
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'btXoa

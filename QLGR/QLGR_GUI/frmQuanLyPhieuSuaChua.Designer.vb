@@ -43,9 +43,9 @@ Partial Class frmQuanLyPhieuSuaChua
         'dgvPhieuSuaChua
         '
         Me.dgvPhieuSuaChua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPhieuSuaChua.Location = New System.Drawing.Point(12, 12)
+        Me.dgvPhieuSuaChua.Location = New System.Drawing.Point(82, 12)
         Me.dgvPhieuSuaChua.Name = "dgvPhieuSuaChua"
-        Me.dgvPhieuSuaChua.Size = New System.Drawing.Size(568, 150)
+        Me.dgvPhieuSuaChua.Size = New System.Drawing.Size(481, 150)
         Me.dgvPhieuSuaChua.TabIndex = 0
         '
         'btCapNhat
@@ -72,7 +72,7 @@ Partial Class frmQuanLyPhieuSuaChua
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 3
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'txtMaXe

@@ -42,7 +42,7 @@ Partial Class frmQuanLyPhuTung
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 20)
+        Me.Label3.Location = New System.Drawing.Point(105, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(111, 13)
         Me.Label3.TabIndex = 8
@@ -52,10 +52,10 @@ Partial Class frmQuanLyPhuTung
         '
         Me.dgvDanhSachPhuTung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDanhSachPhuTung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(99, 36)
+        Me.dgvDanhSachPhuTung.Location = New System.Drawing.Point(108, 36)
         Me.dgvDanhSachPhuTung.Name = "dgvDanhSachPhuTung"
         Me.dgvDanhSachPhuTung.ReadOnly = True
-        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(362, 213)
+        Me.dgvDanhSachPhuTung.Size = New System.Drawing.Size(360, 213)
         Me.dgvDanhSachPhuTung.TabIndex = 9
         '
         'Label1

@@ -195,7 +195,7 @@ Partial Class frmChiTietSuaChua
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(75, 23)
         Me.btThoat.TabIndex = 75
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'frmChiTietSuaChua

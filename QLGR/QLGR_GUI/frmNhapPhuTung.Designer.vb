@@ -137,7 +137,7 @@ Partial Class frmNhapPhuTung
         Me.btThoat.Name = "btThoat"
         Me.btThoat.Size = New System.Drawing.Size(87, 27)
         Me.btThoat.TabIndex = 14
-        Me.btThoat.Text = "Thoát"
+        Me.btThoat.Text = "Đóng"
         Me.btThoat.UseVisualStyleBackColor = True
         '
         'Label5
@@ -167,6 +167,7 @@ Partial Class frmNhapPhuTung
         '
         'frmNhapPhuTung
         '
+        Me.AcceptButton = Me.btLuu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 347)

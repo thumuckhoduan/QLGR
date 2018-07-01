@@ -52,16 +52,16 @@ Partial Class frmQuanLyXe
         'dgvQuanLyXe
         '
         Me.dgvQuanLyXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvQuanLyXe.Location = New System.Drawing.Point(60, 37)
+        Me.dgvQuanLyXe.Location = New System.Drawing.Point(92, 37)
         Me.dgvQuanLyXe.Name = "dgvQuanLyXe"
         Me.dgvQuanLyXe.ReadOnly = True
-        Me.dgvQuanLyXe.Size = New System.Drawing.Size(444, 194)
+        Me.dgvQuanLyXe.Size = New System.Drawing.Size(380, 194)
         Me.dgvQuanLyXe.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 21)
+        Me.Label1.Location = New System.Drawing.Point(79, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 1
@@ -69,7 +69,7 @@ Partial Class frmQuanLyXe
         '
         'btnXoa
         '
-        Me.btnXoa.Location = New System.Drawing.Point(225, 489)
+        Me.btnXoa.Location = New System.Drawing.Point(241, 489)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(75, 23)
         Me.btnXoa.TabIndex = 35
@@ -254,7 +254,7 @@ Partial Class frmQuanLyXe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 524)
+        Me.ClientSize = New System.Drawing.Size(530, 524)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cbChuXe)
         Me.Controls.Add(Me.cbDienThoai)
