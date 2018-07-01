@@ -123,7 +123,10 @@ Public Class frmChiTietSuaChua
     End Sub
 
     Private Sub btCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
-
+        If (cbMaPhuTung.Text = vbNullString Or cbTenPhuTung.Text = vbNullString) Then
+            MessageBox.Show("Không Tồn tại Phụ Tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
         If ((IsNumeric(txbSoLuong.Text) Or txbSoLuong.Text = vbNullString) And txbSoLuong.Text > "0") Then
         Else
             MessageBox.Show("Số Lượng Phải Là Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)

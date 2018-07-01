@@ -34,12 +34,15 @@ Partial Class frmUser
         Me.pbNhapPhuTung = New System.Windows.Forms.PictureBox()
         Me.pbPhieuSuaChua = New System.Windows.Forms.PictureBox()
         Me.pbPhieuThuTien = New System.Windows.Forms.PictureBox()
+        Me.pbTimKiem = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.pbDangXuat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbChiTietSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTiepNhanSuaXe, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbNhapPhuTung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhieuSuaChua, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPhieuThuTien, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbTimKiem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -91,7 +94,7 @@ Partial Class frmUser
         '
         Me.pbDangXuat.ErrorImage = Global.QLGR.My.Resources.Resources.close
         Me.pbDangXuat.Image = Global.QLGR.My.Resources.Resources.close
-        Me.pbDangXuat.Location = New System.Drawing.Point(282, 251)
+        Me.pbDangXuat.Location = New System.Drawing.Point(427, 362)
         Me.pbDangXuat.Name = "pbDangXuat"
         Me.pbDangXuat.Size = New System.Drawing.Size(100, 96)
         Me.pbDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -153,12 +156,34 @@ Partial Class frmUser
         Me.pbPhieuThuTien.TabIndex = 30
         Me.pbPhieuThuTien.TabStop = False
         '
+        'pbTimKiem
+        '
+        Me.pbTimKiem.ErrorImage = Global.QLGR.My.Resources.Resources.timkiem1
+        Me.pbTimKiem.Image = Global.QLGR.My.Resources.Resources.timkiem1
+        Me.pbTimKiem.Location = New System.Drawing.Point(282, 250)
+        Me.pbTimKiem.Name = "pbTimKiem"
+        Me.pbTimKiem.Size = New System.Drawing.Size(100, 97)
+        Me.pbTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbTimKiem.TabIndex = 42
+        Me.pbTimKiem.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(409, 291)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 15)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Tìm Kiếm"
+        '
         'frmUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(539, 379)
+        Me.ClientSize = New System.Drawing.Size(539, 470)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.pbTimKiem)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -180,6 +205,7 @@ Partial Class frmUser
         CType(Me.pbNhapPhuTung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPhieuSuaChua, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPhieuThuTien, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbTimKiem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +221,6 @@ Partial Class frmUser
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents pbTimKiem As PictureBox
+    Friend WithEvents Label6 As Label
 End Class

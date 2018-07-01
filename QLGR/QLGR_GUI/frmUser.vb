@@ -69,7 +69,12 @@ Public Class frmUser
         Me.Show()
     End Sub
 
-    Private Sub frmUser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
+    Private Sub pbTimKiem_Click(sender As Object, e As EventArgs) Handles pbTimKiem.Click
+        Dim frm As frmTimKiem = New frmTimKiem()
+        frm.Font = New Font("Times New Roman", 9, FontStyle.Regular)
+        frm.StartPosition = FormStartPosition.CenterScreen
+        Me.Hide()
+        frm.ShowDialog()
+        Me.Show()
     End Sub
 End Class
