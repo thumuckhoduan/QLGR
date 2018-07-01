@@ -19,6 +19,11 @@ Public Class frmDoiMatKhau
             MessageBox.Show("Tài Khoản Hoặc Mật Khẩu không chính xác", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
+        If (txtMatKhauMoi.Text.Length >= 5 And txtMatKhauMoi.Text.Length <= 10) Then
+        Else
+            MessageBox.Show("Tên mật khẩu chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         If (txtNhapLaiMatKhau.Text <> txtMatKhauMoi.Text) Then
             MessageBox.Show("Nhập Lại Mật Khẩu Mới không chính xác", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return

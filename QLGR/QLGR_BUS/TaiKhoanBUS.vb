@@ -37,4 +37,7 @@ Public Class TaiKhoanBUS
     Public Function selectALL(ByRef listtaikhoan As List(Of TaiKhoanDTO)) As Result
         Return taikhoanDAL.selectALL(listtaikhoan)
     End Function
+    Public Function kiemtra(taikhoan As String, ByRef test As Boolean) As Result
+        Return taikhoanDAL.kiemtra(taikhoan, test)
+    End Function
 End Class

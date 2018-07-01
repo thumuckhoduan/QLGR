@@ -127,7 +127,7 @@ Public Class TaiKhoanDAL
     Public Function update_matkhau(ByRef taikhoanDTO As TaiKhoanDTO) As Result
         Dim query As String = String.Empty
         query &= " UPDATE [tblTaiKhoan] SET"
-        query &= " [matkhau] = @matkhau"
+        query &= " [matkhau] = @matkhau "
         query &= "WHERE "
         query &= " [taikhoan] = @taikhoan "
 
@@ -240,6 +240,44 @@ Public Class TaiKhoanDAL
                 Try
                     conn.Open()
                     comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    conn.Close()
+                    Return New Result(False, "EEROR", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True)
+    End Function
+    Public Function kiemtra(taikhoan As String, ByRef test As Boolean) As Result
+        Dim query As String = String.Empty
+        query &= "SELECT count(*) As [count] "
+        query &= "FROM [tblTaiKhoan] "
+        query &= "WHERE [taikhoan]=@taikhoan "
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@taikhoan", taikhoan)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            Dim x = reader("count")
+                            If (x = 0) Then
+                                test = False
+                            Else
+                                test = True
+                            End If
+                        End While
+                    Else
+                    End If
                 Catch ex As Exception
                     conn.Close()
                     Return New Result(False, "EEROR", ex.StackTrace)

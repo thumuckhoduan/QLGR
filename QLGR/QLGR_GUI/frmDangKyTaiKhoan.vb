@@ -7,7 +7,16 @@ Public Class frmDangKyTaiKhoan
     Private Sub btDangKy_Click(sender As Object, e As EventArgs) Handles btDangKy.Click
         Dim taikhoanDTO = New TaiKhoanDTO()
         Dim result As Result
-
+        Dim test = False
+        result = taikhoanBUS.kiemtra(txtTaiKhoan.Text, test)
+        If (result.FlagResult = False) Then
+            MessageBox.Show("Lỗi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
+        If (test) Then
+            MessageBox.Show("Tên Tài Khoản Đã Có Người Đặt", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         If (txtTaiKhoan.Text.Length >= 5 And txtTaiKhoan.Text.Length <= 10) Then
         Else
             MessageBox.Show("Tên tài khoản chỉ từ 5 đến 10 kí tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
