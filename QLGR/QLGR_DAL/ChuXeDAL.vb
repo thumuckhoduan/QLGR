@@ -220,11 +220,13 @@ Public Class ChuXeDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function selectAll_sortbyTenChuXe(ByRef listChuXe As List(Of ChuXeDTO)) As Result
+    Public Function selectAll_bybienso_sortbyTenChuXe(bienso As String, ByRef listChuXe As List(Of ChuXeDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= " SELECT [machuxe], [tenchuxe], [diachi], [dienthoai], [email], [tienno]"
-        query &= " FROM [tblChuXe]"
+        query &= " SELECT [tblChuXe].[machuxe],[tenchuxe],[diachi],[dienthoai],[email],[tienno]"
+        query &= " FROM [tblChuXe],[tblXe]"
+        query &= " WHERE [tblChuXe].[machuxe]=[tblXe].[machuxe]"
+        query &= " AND [tblXe].[bienso]=@bienso"
         query &= " ORDER BY [tenchuxe]"
 
 
@@ -234,7 +236,7 @@ Public Class ChuXeDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-
+                    .Parameters.AddWithValue("@bienso", bienso)
                 End With
                 Try
                     conn.Open()
@@ -289,7 +291,7 @@ Public Class ChuXeDAL
                             If (x = 0) Then
                                 test = True
                             Else
-                                test = false
+                                test = False
                             End If
                         End While
                     End If

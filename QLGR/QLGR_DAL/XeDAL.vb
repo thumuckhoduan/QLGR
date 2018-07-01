@@ -319,15 +319,11 @@ Public Class XeDAL
         Return New Result(True) ' thanh cong
     End Function
 
-    Public Function selectALL_ByMaChuXe_sortbybienso(iMaChuXe As Integer, ByRef listXe As List(Of XeDTO)) As Result
+    Public Function selectall_sortbybienso(ByRef listXe As List(Of XeDTO)) As Result
 
         Dim query As String = String.Empty
-        query &= "SELECT [maxe], [mahieuxe], [tblXe].[machuxe],[bienso] "
+        query &= "SELECT distinct [bienso] "
         query &= "FROM [tblXe] "
-        query &= ",[tblChuXe] "
-        query &= "WHERE "
-        query &= "[tblXe].[machuxe] = [tblChuXe].[machuxe] "
-        query &= "AND [tblXe].[machuxe] = @machuxe "
         query &= "ORDER BY [bienso] "
 
 
@@ -337,7 +333,7 @@ Public Class XeDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@machuxe", iMaChuXe)
+
                 End With
                 Try
                     conn.Open()
@@ -346,7 +342,46 @@ Public Class XeDAL
                     If reader.HasRows = True Then
                         listXe.Clear()
                         While reader.Read()
-                            listXe.Add(New XeDTO(reader("maxe"), reader("mahieuxe"), reader("machuxe"), reader("bienso")))
+                            listXe.Add(New XeDTO(0, 0, 0, reader("bienso")))
+                        End While
+                    End If
+
+                Catch ex As Exception
+                    conn.Close()
+                    System.Console.WriteLine(ex.StackTrace)
+                    Return New Result(False, "Lấy tất cả xe theo chủ xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
+
+    Public Function getmaxe(tenchuxe As String, bienso As String, ByRef maxe As String) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT  [maxe] "
+        query &= "FROM [tblXe],[tblChuXe] "
+        query &= "WHERE [bienso]=@bienso "
+        query &= "AND [tenchuxe]=@tenchuxe "
+        query &= "AND [tblXe].[machuxe]=[tblChuXe].[machuxe] "
+
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@tenchuxe", tenchuxe)
+                    .Parameters.AddWithValue("@bienso", bienso)
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            maxe = reader("maxe")
                         End While
                     End If
 

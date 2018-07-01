@@ -52,10 +52,16 @@ Public Class XeBUS
         Return XeDAL.tracuu(chuxe, hieuxe, bienso, tiennomin, tiennomax, timkiem)
     End Function
 
-    Public Function selectall_ByMaChuXe_sortbybienso(iMaChuXe As Integer, ByRef listXe As List(Of XeDTO)) As Result
+    Public Function selectall_sortbybienso(ByRef listXe As List(Of XeDTO)) As Result
         '1. verify data here!!
 
         '2. insert to DB
-        Return XeDAL.selectALL_ByMaChuXe_sortbybienso(iMaChuXe, listXe)
+        Return XeDAL.selectall_sortbybienso(listXe)
+    End Function
+    Public Function getmaxe(tenchuxe As String, bienso As String, ByRef maxe As String) As Result
+        '1. verify data here!!
+
+        '2. insert to DB
+        Return XeDAL.getmaxe(tenchuxe, bienso, maxe)
     End Function
 End Class

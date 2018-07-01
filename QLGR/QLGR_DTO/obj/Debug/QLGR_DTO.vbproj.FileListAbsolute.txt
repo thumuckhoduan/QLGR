@@ -144,3 +144,12 @@ C:\Users\Administrator\Source\Repos\QLGR20\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbpr
 C:\Users\Administrator\Source\Repos\QLGR20\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
 C:\Users\Administrator\Source\Repos\QLGR20\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
 C:\Users\Administrator\Source\Repos\QLGR20\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.dll
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.pdb
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\bin\Debug\QLGR_DTO.xml
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbprojResolveAssemblyReference.cache
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.Resources.resources
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.vbproj.GenerateResource.Cache
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.dll
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.xml
+C:\Users\vu\Documents\QLGR\QLGR\QLGR_DTO\obj\Debug\QLGR_DTO.pdb

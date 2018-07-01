@@ -12,6 +12,8 @@ Public Class frmPhieuSuaChua
         cbMaChuXe.Hide()
         cbMaXe.Hide()
         phieusuachuaBUS = New PhieuSuaChuaBUS()
+        xeBUS = New XeBUS()
+        chuxeBUS = New ChuXeBUS()
         Dim result As Result
         Dim nextMPSC = 0
 
@@ -20,28 +22,16 @@ Public Class frmPhieuSuaChua
             MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         txtMaPhieuSuaChua.Text = nextMPSC
-
-
-
-        xeBUS = New XeBUS()
         Dim listXe = New List(Of XeDTO)
-        result = xeBUS.selectAll(listXe)
-        If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy danh sách xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            System.Console.WriteLine(result.SystemMessage)
-            Me.Close()
-        End If
-        cbMaXe.DataSource = New BindingSource(listXe, String.Empty)
-        cbBienSo.DataSource = cbMaXe.DataSource
-        cbMaXe.DisplayMember = "maxe"
-        cbMaXe.ValueMember = "bienso"
-        cbBienSo.DisplayMember = cbMaXe.ValueMember
 
+        loadBienSo()
+        loaddata()
 
-
-        chuxeBUS = New ChuXeBUS()
+    End Sub
+    Private Sub loaddata()
         Dim listChuXe = New List(Of ChuXeDTO)
-        result = chuxeBUS.selectAll_sortbyTenChuXe(listChuXe)
+        Dim result As Result
+        result = chuxeBUS.selectAll_bybienso_sortbyTenChuXe(cbBienSo.Text, listChuXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -50,19 +40,14 @@ Public Class frmPhieuSuaChua
         cbTenChuXe.DataSource = New BindingSource(listChuXe, String.Empty)
         cbTenChuXe.DisplayMember = "tenchuxe"
         cbTenChuXe.ValueMember = "tenchuxe"
-
-        cbMaChuXe.DataSource = cbTenChuXe.DataSource
-        cbTenChuXe.ValueMember = "machuxe"
-        cbMaChuXe.DisplayMember = cbTenChuXe.ValueMember
-
     End Sub
 
 
-    Private Sub loadBienSo(MaChuXe As Integer)
+    Private Sub loadBienSo()
 
         Dim listXe = New List(Of XeDTO)
         Dim result As Result
-        result = xeBUS.selectall_ByMaChuXe_sortbybienso(MaChuXe, listXe)
+        result = xeBUS.selectall_sortbybienso(listXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lấy danh sách xe theo chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)
@@ -70,10 +55,8 @@ Public Class frmPhieuSuaChua
         End If
         cbBienSo.DataSource = New BindingSource(listXe, String.Empty)
         cbBienSo.DisplayMember = "bienso"
-        cbBienSo.ValueMember = "maxe"
+        cbBienSo.ValueMember = "bienso"
 
-        cbMaXe.DataSource = cbBienSo.DataSource
-        cbMaXe.DisplayMember = cbBienSo.ValueMember
 
     End Sub
 
@@ -81,7 +64,11 @@ Public Class frmPhieuSuaChua
         Dim result As Result
         Dim phieusuachuaDTO As PhieuSuaChuaDTO
         phieusuachuaDTO = New PhieuSuaChuaDTO()
-
+        result = xeBUS.getmaxe(cbTenChuXe.Text, cbBienSo.Text, cbMaXe.Text)
+        If (result.FlagResult = False) Then
+            MessageBox.Show("Lỗi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            System.Console.WriteLine(result.SystemMessage)
+        End If
         phieusuachuaDTO.maphieusuachua = Convert.ToInt64(txtMaPhieuSuaChua.Text)
         phieusuachuaDTO.noidung = txtNoiDung.Text
         phieusuachuaDTO.maxe = Convert.ToInt64(cbMaXe.Text)
@@ -105,15 +92,7 @@ Public Class frmPhieuSuaChua
     End Sub
 
 
-    Private Sub cbMaChuXe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaChuXe.SelectedIndexChanged
-        Try
-            Dim chuxeDTO = CType(cbMaChuXe.SelectedItem, ChuXeDTO)
-            loadBienSo(chuxeDTO.machuxe)
-        Catch ex As Exception
-            System.Console.WriteLine(ex.StackTrace)
-            Return
-        End Try
-    End Sub
+
 
     Private Sub btThoat_Click(sender As Object, e As EventArgs) Handles btThoat.Click
         Me.Close()
@@ -126,4 +105,7 @@ Public Class frmPhieuSuaChua
         Me.Show()
     End Sub
 
+    Private Sub cbBienSo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbBienSo.SelectedIndexChanged
+        loaddata()
+    End Sub
 End Class
