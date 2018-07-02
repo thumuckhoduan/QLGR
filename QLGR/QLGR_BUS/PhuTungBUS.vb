@@ -19,13 +19,13 @@ Public Class PhuTungBUS
     Public Function buildmaphutung(ByRef nextMPT As Integer) As Result
         Return phutungDAL.buildmaphutung(nextMPT)
     End Function
-    Public Function delete(maphutung As Integer) As Result
+    Public Function delete(maphutung As String) As Result
         Return phutungDAL.delete(maphutung)
     End Function
     Public Function update(phutung As phutungDTO) As Result
         Return phutungDAL.update(phutung)
     End Function
-    Public Function kiemtra(maphutung As Integer, ByRef test As Boolean) As Result
+    Public Function kiemtra(maphutung As String, ByRef test As Boolean) As Result
         Return phutungDAL.kiemtra(maphutung, test)
     End Function
     Public Function selectAll_sorttenphutung(ByRef listphutung As List(Of PhuTungDTO)) As Result

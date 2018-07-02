@@ -101,6 +101,7 @@ Public Class frmPhieuSuaChua
         Me.Hide()
         Dim frm As frmChiTietSuaChua
         frm = New frmChiTietSuaChua()
+        frm.StartPosition = FormStartPosition.CenterScreen
         frm.ShowDialog()
         Me.Show()
     End Sub

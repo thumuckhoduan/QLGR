@@ -43,6 +43,7 @@ Partial Class frmBaoCaoTon
         '
         'cbThang
         '
+        Me.cbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbThang.FormattingEnabled = True
         Me.cbThang.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
         Me.cbThang.Location = New System.Drawing.Point(140, 13)
@@ -52,6 +53,7 @@ Partial Class frmBaoCaoTon
         '
         'cbNam
         '
+        Me.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNam.FormattingEnabled = True
         Me.cbNam.Location = New System.Drawing.Point(464, 13)
         Me.cbNam.Name = "cbNam"

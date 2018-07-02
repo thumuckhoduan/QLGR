@@ -31,8 +31,13 @@ Public Class frmThemPhuTung
     Private Sub btThem_Click(sender As Object, e As EventArgs) Handles btThem.Click
         Dim result As Result
         Dim test As Boolean
+        If ((IsNumeric(txtDonGia.Text) Or txtDonGia.Text = vbNullString) And txtDonGia.Text >= "0") Then
+        Else
+            MessageBox.Show("Đơn Giá Phải Số Dương", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         test = True
-        result = phutungBUS.kiemtra(txbMaPhuTung.Text, test)
+            result = phutungBUS.kiemtra(txbMaPhuTung.Text, test)
         If (Result.FlagResult = False) Then
             MessageBox.Show("Lỗi Kiểm tra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()

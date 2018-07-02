@@ -26,8 +26,6 @@ Partial Class frmPhieuSuaChua
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtMaPhieuSuaChua = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cbTenChuXe = New System.Windows.Forms.ComboBox()
         Me.btLuu = New System.Windows.Forms.Button()
         Me.btThoat = New System.Windows.Forms.Button()
         Me.cbBienSo = New System.Windows.Forms.ComboBox()
@@ -38,6 +36,8 @@ Partial Class frmPhieuSuaChua
         Me.dtpNgaySuaChua = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btChiTietSuaChua = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbTenChuXe = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -60,29 +60,11 @@ Partial Class frmPhieuSuaChua
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 89)
+        Me.Label3.Location = New System.Drawing.Point(9, 62)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Biển Số"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 13)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Tên Chủ Xe"
-        '
-        'cbTenChuXe
-        '
-        Me.cbTenChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTenChuXe.FormattingEnabled = True
-        Me.cbTenChuXe.Location = New System.Drawing.Point(129, 59)
-        Me.cbTenChuXe.Name = "cbTenChuXe"
-        Me.cbTenChuXe.Size = New System.Drawing.Size(200, 21)
-        Me.cbTenChuXe.TabIndex = 24
         '
         'btLuu
         '
@@ -106,7 +88,7 @@ Partial Class frmPhieuSuaChua
         '
         Me.cbBienSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBienSo.FormattingEnabled = True
-        Me.cbBienSo.Location = New System.Drawing.Point(129, 86)
+        Me.cbBienSo.Location = New System.Drawing.Point(129, 59)
         Me.cbBienSo.Name = "cbBienSo"
         Me.cbBienSo.Size = New System.Drawing.Size(200, 21)
         Me.cbBienSo.TabIndex = 30
@@ -169,6 +151,24 @@ Partial Class frmPhieuSuaChua
         Me.btChiTietSuaChua.Text = "Chi Tiết Sửa Chữa"
         Me.btChiTietSuaChua.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 90)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Tên Chủ Xe"
+        '
+        'cbTenChuXe
+        '
+        Me.cbTenChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTenChuXe.FormattingEnabled = True
+        Me.cbTenChuXe.Location = New System.Drawing.Point(129, 86)
+        Me.cbTenChuXe.Name = "cbTenChuXe"
+        Me.cbTenChuXe.Size = New System.Drawing.Size(200, 21)
+        Me.cbTenChuXe.TabIndex = 24
+        '
         'frmPhieuSuaChua
         '
         Me.AcceptButton = Me.btLuu
@@ -186,7 +186,7 @@ Partial Class frmPhieuSuaChua
         Me.Controls.Add(Me.btThoat)
         Me.Controls.Add(Me.btLuu)
         Me.Controls.Add(Me.cbTenChuXe)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtMaPhieuSuaChua)
         Me.Controls.Add(Me.Label1)
@@ -201,8 +201,6 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents Label1 As Label
     Friend WithEvents txtMaPhieuSuaChua As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents cbTenChuXe As ComboBox
     Friend WithEvents btLuu As Button
     Friend WithEvents btThoat As Button
     Friend WithEvents cbBienSo As ComboBox
@@ -213,4 +211,6 @@ Partial Class frmPhieuSuaChua
     Friend WithEvents dtpNgaySuaChua As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents btChiTietSuaChua As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbTenChuXe As ComboBox
 End Class

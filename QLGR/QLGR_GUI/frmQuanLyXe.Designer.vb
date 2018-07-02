@@ -55,7 +55,7 @@ Partial Class frmQuanLyXe
         Me.dgvQuanLyXe.Location = New System.Drawing.Point(92, 37)
         Me.dgvQuanLyXe.Name = "dgvQuanLyXe"
         Me.dgvQuanLyXe.ReadOnly = True
-        Me.dgvQuanLyXe.Size = New System.Drawing.Size(380, 194)
+        Me.dgvQuanLyXe.Size = New System.Drawing.Size(395, 194)
         Me.dgvQuanLyXe.TabIndex = 0
         '
         'Label1

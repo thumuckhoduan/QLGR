@@ -11,6 +11,11 @@ Public Class frmThayDoiQuyDInh
     Private Sub btLuu_Click(sender As Object, e As EventArgs) Handles btLuu.Click
         Dim ThamSoDTO = New ThamSoDTO()
         Dim result As Result
+        If ((IsNumeric(txtTiepNhanToiDa.Text) Or txtTiepNhanToiDa.Text = vbNullString) And txtTiepNhanToiDa.Text > "0") Then
+        Else
+            MessageBox.Show("Tiếp Nhận Phải Số Dương", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
         ThamSoDTO.tiepnhantoida = txtTiepNhanToiDa.Text
         result = thamsoBUS.update(ThamSoDTO)
         If (result.FlagResult = False) Then

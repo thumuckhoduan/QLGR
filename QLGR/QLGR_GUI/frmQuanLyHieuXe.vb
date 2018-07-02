@@ -56,7 +56,7 @@ Public Class frmQuanLyHieuXe
     End Sub
     Private Sub btnCapNhat_Click(sender As Object, e As EventArgs) Handles btCapNhat.Click
         If (txbTenHieuXe.Text = vbNullString) Then
-            MessageBox.Show("Không Được Để trống tên Phụ Tùng", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Không Được Để trống Tên hiệu xe", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
         Dim currentRowIndex As Integer = dgvDanhSachHieuXe.CurrentCellAddress.Y

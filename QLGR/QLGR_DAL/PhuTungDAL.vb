@@ -75,7 +75,7 @@ Public Class PhuTungDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
-    Public Function delete(maphutung As Integer) As Result
+    Public Function delete(maphutung As String) As Result
 
         Dim query As String = String.Empty
         query &= " DELETE FROM [tblPhuTung] "

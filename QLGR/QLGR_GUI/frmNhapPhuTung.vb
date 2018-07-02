@@ -11,16 +11,16 @@ Public Class frmNhapPhuTung
     Private Sub frmNhapVatLieu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         nhapphutungBUS = New NhapPhuTungBUS()
         phutungBUS = New PhuTungBUS()
+        txtSoLuongTon.Hide()
         txtMaNhapPhuTung.Hide()
-        cbSoLuongTon.Hide()
-        cbDonGia.Hide()
+
         txtSoLuong.Text = 0
         Dim result As Result
         Dim nextMNPT = 0
 
         result = nhapphutungBUS.buildmanhapphutung(nextMNPT)
         If (result.FlagResult = False) Then
-            MessageBox.Show("Lấy tự động mã phiếu sửa chữa không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Lấy tự động mã phiếu nhập không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         txtMaNhapPhuTung.Text = nextMNPT
         loadcombobox()
@@ -55,6 +55,7 @@ Public Class frmNhapPhuTung
             MessageBox.Show("Số Lượng Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
+
         If (cbMaPhuTung.Text = vbNullString Or cbTenPhuTung.Text = vbNullString) Then
             MessageBox.Show("Không Tồn Tại Phụ Tùng bạn nhập", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
@@ -67,7 +68,7 @@ Public Class frmNhapPhuTung
         nhapphutungDTO.maphutung = cbMaPhuTung.Text
         nhapphutungDTO.soluong = txtSoLuong.Text
         nhapphutungDTO.ngaytiepnhan = dtpNgayTiepNhan.Value
-        nhapphutungDTO.dongia = cbDonGia.Text
+        nhapphutungDTO.dongia = txtDonGia.Text
         result = nhapphutungBUS.insert(nhapphutungDTO)
         If (result.FlagResult = True) Then
             Dim nextMNPT = "1"
@@ -87,8 +88,8 @@ Public Class frmNhapPhuTung
 
         phutungDTO.maphutung = cbMaPhuTung.Text
         phutungDTO.tenphutung = cbTenPhuTung.Text
-        phutungDTO.soluongton = Convert.ToInt32(txtSoLuong.Text) + Convert.ToInt32(cbSoLuongTon.Text)
-        phutungDTO.dongia = cbDonGia.Text
+        phutungDTO.soluongton = Convert.ToInt32(txtSoLuong.Text) + Convert.ToInt32(txtSoLuongTon.Text)
+        phutungDTO.dongia = txtDonGia.Text
         result = PhuTungBUS.update(phutungDTO)
         If (result.FlagResult = True) Then
             MessageBox.Show("Thêm phụ tùng thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -103,9 +104,7 @@ Public Class frmNhapPhuTung
         Me.Close()
     End Sub
 
-    Private Sub cbDonGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDonGia.SelectedIndexChanged
-        txtDonGia.Text = cbDonGia.Text
-    End Sub
+
 
     Private Sub cbMaPhuTung_TextChanged(sender As Object, e As EventArgs) Handles cbMaPhuTung.TextChanged
         Try
@@ -113,6 +112,7 @@ Public Class frmNhapPhuTung
             PhuTungBUS.select_bymaphutung(cbMaPhuTung.Text, phutung)
             cbTenPhuTung.Text = phutung.tenphutung
             txtDonGia.Text = phutung.dongia
+            txtSoLuongTon.Text = phutung.soluongton
         Catch ex As Exception
             System.Console.WriteLine(ex.StackTrace)
             Return
@@ -125,6 +125,7 @@ Public Class frmNhapPhuTung
             PhuTungBUS.select_bytenphutung(cbTenPhuTung.Text, phutung)
             cbMaPhuTung.Text = phutung.maphutung
             txtDonGia.Text = phutung.dongia
+            txtSoLuongTon.Text = phutung.soluongton
         Catch ex As Exception
             System.Console.WriteLine(ex.StackTrace)
             Return

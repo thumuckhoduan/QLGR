@@ -16,7 +16,7 @@ Public Class frmTimKiem
         Dim x = New HieuXeDTO()
         x.mahieuxe = 0
         x.tenhieuxe = ""
-        result = hieuxeBUS.selectAll(listHieuXe)
+        result = hieuxeBUS.selectAll_sortbytenhieuxe(listHieuXe)
         If (result.FlagResult = False) Then
             MessageBox.Show("Lay danh sách hieu xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             System.Console.WriteLine(result.SystemMessage)

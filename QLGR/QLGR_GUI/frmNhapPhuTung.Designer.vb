@@ -33,11 +33,10 @@ Partial Class frmNhapPhuTung
         Me.btLuu = New System.Windows.Forms.Button()
         Me.dtpNgayTiepNhan = New System.Windows.Forms.DateTimePicker()
         Me.txtMaNhapPhuTung = New System.Windows.Forms.TextBox()
-        Me.cbSoLuongTon = New System.Windows.Forms.ComboBox()
         Me.btThoat = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbDonGia = New System.Windows.Forms.ComboBox()
         Me.txtDonGia = New System.Windows.Forms.TextBox()
+        Me.txtSoLuongTon = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -123,14 +122,6 @@ Partial Class frmNhapPhuTung
         Me.txtMaNhapPhuTung.Size = New System.Drawing.Size(266, 21)
         Me.txtMaNhapPhuTung.TabIndex = 12
         '
-        'cbSoLuongTon
-        '
-        Me.cbSoLuongTon.FormattingEnabled = True
-        Me.cbSoLuongTon.Location = New System.Drawing.Point(468, 194)
-        Me.cbSoLuongTon.Name = "cbSoLuongTon"
-        Me.cbSoLuongTon.Size = New System.Drawing.Size(84, 23)
-        Me.cbSoLuongTon.TabIndex = 13
-        '
         'btThoat
         '
         Me.btThoat.Location = New System.Drawing.Point(443, 297)
@@ -149,14 +140,6 @@ Partial Class frmNhapPhuTung
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Đơn Giá"
         '
-        'cbDonGia
-        '
-        Me.cbDonGia.FormattingEnabled = True
-        Me.cbDonGia.Location = New System.Drawing.Point(468, 148)
-        Me.cbDonGia.Name = "cbDonGia"
-        Me.cbDonGia.Size = New System.Drawing.Size(84, 23)
-        Me.cbDonGia.TabIndex = 16
-        '
         'txtDonGia
         '
         Me.txtDonGia.Location = New System.Drawing.Point(180, 153)
@@ -165,17 +148,23 @@ Partial Class frmNhapPhuTung
         Me.txtDonGia.Size = New System.Drawing.Size(266, 21)
         Me.txtDonGia.TabIndex = 17
         '
+        'txtSoLuongTon
+        '
+        Me.txtSoLuongTon.Location = New System.Drawing.Point(180, 126)
+        Me.txtSoLuongTon.Name = "txtSoLuongTon"
+        Me.txtSoLuongTon.Size = New System.Drawing.Size(266, 21)
+        Me.txtSoLuongTon.TabIndex = 18
+        '
         'frmNhapPhuTung
         '
         Me.AcceptButton = Me.btLuu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 347)
+        Me.Controls.Add(Me.txtSoLuongTon)
         Me.Controls.Add(Me.txtDonGia)
-        Me.Controls.Add(Me.cbDonGia)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btThoat)
-        Me.Controls.Add(Me.cbSoLuongTon)
         Me.Controls.Add(Me.txtMaNhapPhuTung)
         Me.Controls.Add(Me.dtpNgayTiepNhan)
         Me.Controls.Add(Me.btLuu)
@@ -205,9 +194,8 @@ Partial Class frmNhapPhuTung
     Friend WithEvents btLuu As Button
     Friend WithEvents dtpNgayTiepNhan As DateTimePicker
     Friend WithEvents txtMaNhapPhuTung As TextBox
-    Friend WithEvents cbSoLuongTon As ComboBox
     Friend WithEvents btThoat As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents cbDonGia As ComboBox
     Friend WithEvents txtDonGia As TextBox
+    Friend WithEvents txtSoLuongTon As TextBox
 End Class

@@ -85,6 +85,7 @@ Public Class frmQuanLyChuXe
         End If
         If (txtDienThoai.Text = vbNullString And txtEmail.Text = vbNullString) Then
             MessageBox.Show("Không Được để trống điện thoại hoặc email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
         End If
         ' Get the current cell location.
         Dim currentRowIndex As Integer = dgvDanhSachChuXe.CurrentCellAddress.Y 'current row selected
@@ -121,9 +122,9 @@ Public Class frmQuanLyChuXe
                     Catch ex As Exception
                         Console.WriteLine(ex.StackTrace)
                     End Try
-                    MessageBox.Show("Cập nhật chu Xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Cập nhật chủ xe thành công.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MessageBox.Show("Cập nhật chu Xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Cập nhật chủ xe không thành công.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     System.Console.WriteLine(result.SystemMessage)
                 End If
             Catch ex As Exception

@@ -63,7 +63,7 @@ Public Class frmQuanLyPhuTung
                     Try
 
                         Dim result As Result
-                        result = phutungBUS.delete(Convert.ToInt32(txbMaPhuTung.Text))
+                        result = phutungBUS.delete(txbMaPhuTung.Text)
                         If (result.FlagResult = True) Then
 
                             loadlistphutung()
@@ -127,7 +127,7 @@ Public Class frmQuanLyPhuTung
         End If
         If ((IsNumeric(txtDonGia.Text) Or txtDonGia.Text = vbNullString) And txtDonGia.Text >= "0") Then
         Else
-            MessageBox.Show("Số Lượng Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Đơn Giá Phải Là Số Dương", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
         Dim currentRowIndex As Integer = dgvDanhSachPhuTung.CurrentCellAddress.Y

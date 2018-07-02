@@ -64,7 +64,7 @@ Partial Class frmPhieuThuTien
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(105, 73)
+        Me.Label1.Location = New System.Drawing.Point(105, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 1
@@ -74,7 +74,7 @@ Partial Class frmPhieuThuTien
         '
         Me.cbTenChuXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTenChuXe.FormattingEnabled = True
-        Me.cbTenChuXe.Location = New System.Drawing.Point(201, 70)
+        Me.cbTenChuXe.Location = New System.Drawing.Point(201, 97)
         Me.cbTenChuXe.Name = "cbTenChuXe"
         Me.cbTenChuXe.Size = New System.Drawing.Size(187, 21)
         Me.cbTenChuXe.TabIndex = 2
@@ -82,7 +82,7 @@ Partial Class frmPhieuThuTien
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(105, 100)
+        Me.Label2.Location = New System.Drawing.Point(105, 73)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 3
@@ -227,7 +227,7 @@ Partial Class frmPhieuThuTien
         '
         Me.cbBienSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBienSo.FormattingEnabled = True
-        Me.cbBienSo.Location = New System.Drawing.Point(201, 97)
+        Me.cbBienSo.Location = New System.Drawing.Point(201, 70)
         Me.cbBienSo.Name = "cbBienSo"
         Me.cbBienSo.Size = New System.Drawing.Size(187, 21)
         Me.cbBienSo.TabIndex = 22

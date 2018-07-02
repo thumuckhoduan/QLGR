@@ -56,7 +56,7 @@ Partial Class frmBaoCaoDoanhSo
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(350, 38)
+        Me.Label2.Location = New System.Drawing.Point(353, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 14)
         Me.Label2.TabIndex = 2
@@ -110,7 +110,7 @@ Partial Class frmBaoCaoDoanhSo
         '
         Me.cbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbNam.FormattingEnabled = True
-        Me.cbNam.Location = New System.Drawing.Point(419, 35)
+        Me.cbNam.Location = New System.Drawing.Point(419, 27)
         Me.cbNam.Name = "cbNam"
         Me.cbNam.Size = New System.Drawing.Size(121, 22)
         Me.cbNam.TabIndex = 9

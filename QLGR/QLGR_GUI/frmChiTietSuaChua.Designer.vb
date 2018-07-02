@@ -200,6 +200,7 @@ Partial Class frmChiTietSuaChua
         '
         'frmChiTietSuaChua
         '
+        Me.AcceptButton = Me.btCapNhat
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(706, 409)
